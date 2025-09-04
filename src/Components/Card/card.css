@@ -1,0 +1,33 @@
+.info-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgb(0, 0, 0);
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(3, 29, 81, 0.25);
+}
+
+.info-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 122, 0, 0.15),
+    rgba(3, 29, 81, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+
+.info-card:hover::after {
+  opacity: 1;
+}
+
+.info-card Button:hover{
+  background-color: rgb(227, 131, 58) !important;
+}

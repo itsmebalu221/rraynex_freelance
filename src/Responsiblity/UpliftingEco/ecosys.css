@@ -1,0 +1,565 @@
+/* Ecosystem Page Styles */
+:root {
+  --orange: #F9954A;
+  --navy: #1a2a5a;
+  --ink: #222;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --green: #10b981;
+  --green-light: #d1fae5;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Animation setup */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Page shell */
+.ecosystem {
+  font-family: 'Lexend', sans-serif;
+  color: var(--ink);
+  background: linear-gradient(135deg, #f7f7f9 0%, #fef7f0 100%);
+  min-height: 100vh;
+}
+
+/* HERO */
+.ecosystem-hero {
+  background: linear-gradient(135deg, rgba(26, 42, 90, 0.9) 0%, rgba(249, 149, 74, 0.9) 100%), 
+              url("https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop") center/cover no-repeat;
+  color: #fff;
+  padding: 80px 20px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ecosystem-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-icon {
+  margin: 0 auto 20px;
+  width: fit-content;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 20px;
+  background: linear-gradient(135deg, #fff 0%, #fef7f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-lead {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* INTRO */
+.ecosystem-intro {
+  padding: 60px 20px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(249, 149, 74, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--navy) 100%);
+}
+
+.intro-card h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 16px;
+}
+
+.intro-card p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ECOSYSTEM AREAS */
+.ecosystem-areas {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 50px;
+}
+
+.section-heading.animate-in {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.ecosystem-grid.animate-in .ecosystem-card {
+  animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.ecosystem-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  opacity: 0;
+  transform: scale(0.9);
+  border: 1px solid rgba(249, 149, 74, 0.1);
+}
+
+.ecosystem-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(249, 149, 74, 0.05), transparent);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.ecosystem-card:hover::before {
+  left: 100%;
+}
+
+.ecosystem-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(249, 149, 74, 0.2);
+}
+
+.ecosystem-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.ecosystem-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ecosystem-card:hover .ecosystem-image img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: rgba(249, 149, 74, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.ecosystem-card:hover .image-overlay {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.ecosystem-content {
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.ecosystem-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 16px;
+}
+
+.ecosystem-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 20px;
+  text-align: justify;
+}
+
+.ecosystem-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--orange);
+  transition: transform 0.3s ease;
+}
+
+.ecosystem-card:hover .ecosystem-arrow {
+  transform: translateX(5px);
+}
+
+/* IMPACT METRICS */
+.impact-metrics {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.metrics-grid.animate-in .metric {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.metric {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(249, 149, 74, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  position: relative;
+  overflow: hidden;
+}
+
+.metric::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--navy) 100%);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.metric:hover::before {
+  transform: scaleX(1);
+}
+
+.metric:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(249, 149, 74, 0.2);
+}
+
+.metric-value {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--orange);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* COMMITMENT SECTION */
+.ecosystem-commitment {
+  padding: 60px 20px 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.commitment-card {
+  background: linear-gradient(135deg, #fff 0%, #fef9f5 100%);
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(249, 149, 74, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.commitment-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(249, 149, 74, 0.03) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.commitment-icon {
+  margin: 0 auto 24px;
+  width: fit-content;
+  padding: 20px;
+  background: rgba(249, 149, 74, 0.1);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.commitment-card h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.commitment-card p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.commitment-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Buttons */
+.btn {
+  font-family: inherit;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--orange) 0%, #e67e22 100%);
+  color: #fff;
+  border-color: var(--orange);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border-color: var(--orange);
+  background-color: rgba(249, 149, 74, 0.05);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .hero-lead {
+    font-size: 18px;
+  }
+  
+  .intro-card {
+    padding: 30px 20px;
+  }
+  
+  .commitment-card {
+    padding: 40px 20px;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .ecosystem-card {
+    margin-bottom: 20px;
+  }
+  
+  .ecosystem-content {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .commitment-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}

@@ -1,0 +1,146 @@
+.innovation {
+  font-family: "Segoe UI", sans-serif;
+  color: #000;
+}
+
+/* Banner */
+.inno-banner {
+  background: url("/src/Home/bg1.jpg")
+    center/cover no-repeat;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inno-overlay {
+  background: rgba(3, 29, 81, 0.7);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 800px;
+}
+
+.inno-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff7a00;
+}
+
+.inno-subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Layout */
+.inno-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.inno-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.inno-diagram img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.inno-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Section heading */
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #031d51;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff7a00;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Dosage cards */
+.inno-dosage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.dosage-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.dosage-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(3, 29, 81, 0.2);
+}
+
+.dosage-icon {
+  font-size: 2.5rem;
+  color: #ff7a00;
+  margin-bottom: 12px;
+}
+
+.dosage-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #031d51;
+  margin-bottom: 12px;
+}
+
+.dosage-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dosage-card li {
+  font-size: 0.95rem;
+  margin: 6px 0;
+  color: #000;
+}
+
+/* Intellectual Property */
+.ipr {
+  margin-top: 60px;
+}
+
+.ipr-box {
+  background: #031d51;
+  color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.ipr-icon {
+  font-size: 2.5rem;
+  color: #ff7a00;
+  margin-bottom: 20px;
+}

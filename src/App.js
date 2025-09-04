@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Routes, Route } from "react-router-dom";
+import Header from "./Header/header";
+import Home from "./Home/home";
+import Footer from "./Footer/footer";
+import AboutUs from "./About/AboutRraynex/aboutrray";
+import VisionValues from "./About/Values/Values";
+import MilestonesRecognitions from "./About/Milestones/MilestonesRecognitions";
+import Innovation from "./About/Innovation/Innovation";
+import Quality from "./About/Quality/Quality";
+import Responsibility from "./Responsiblity/Responsiblity";
+import Worldwide from "./Worldwide/Worldwide";
+import Contact from "./ContactUs/contact";
+import CSR from "./Responsiblity/CSR/CSR";
+import Sustainability from "./Responsiblity/Sustainability/sus";
+import EHS from "./Responsiblity/EHS/EHS";
+import Ecosystem from "./Responsiblity/UpliftingEco/uplifting";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/about/vision-&-values" element={<VisionValues />} />
+          <Route path="/about/milestone-and-recognitions" element={<MilestonesRecognitions />} />
+          <Route path="/about/innovation" element={<Innovation />} />
+          <Route path="/about/quality" element={<Quality />} />
+          <Route path="/responsibility" element={<Responsibility />} />
+          <Route path="/responsibility/csr" element={<CSR />} />
+          <Route path="/responsibility/sustainability" element={<Sustainability />} />
+          <Route path="/responsibility/ehs" element={<EHS />} />
+          <Route path="/responsibility/uplifting-ecosystem" element={<Ecosystem />} />
+          <Route path="/worldwide" element={<Worldwide />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }

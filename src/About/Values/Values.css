@@ -1,0 +1,179 @@
+.vision-values {
+  font-family: "Segoe UI", sans-serif;
+  color: #000;
+}
+
+/* Banner */
+.vv-banner {
+  background: url("/src/Home/bg1.jpg")
+    center/cover no-repeat;
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vv-banner__overlay {
+  background: rgba(3, 29, 81, 0.7);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.vv-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ff7a00;
+}
+
+.vv-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Container */
+.vv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Vision Card */
+.vision-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.vision-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(3, 29, 81, 0.2);
+}
+
+.vision-card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #031d51;
+  margin-bottom: 20px;
+}
+
+.vision-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #000;
+}
+
+/* Section Heading */
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #031d51;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff7a00;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Values Grid */
+.vv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.vv-card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.vv-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(3, 29, 81, 0.25);
+}
+
+.vv-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 122, 0, 0.15),
+    rgba(3, 29, 81, 0.15)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.vv-card:hover::after {
+  opacity: 1;
+}
+
+/* Icons */
+.vv-icon {
+  font-size: 2.5rem;
+  color: #ff7a00;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.vv-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #031d51;
+  position: relative;
+  z-index: 1;
+}
+
+.vv-card h4::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ff7a00;
+  margin: 6px auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.vv-card:hover h4::after {
+  width: 40px;
+}
+
+/* Text */
+.vv-card p {
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}

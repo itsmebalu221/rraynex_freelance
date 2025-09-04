@@ -1,0 +1,103 @@
+
+.worldwide {
+  font-family: "Lexend", sans-serif;
+  color: #000;
+  background-color: #C6D5DC;
+}
+
+/* Banner */
+.worldwide-banner {
+  background: url("../Home/bg1.jpg") center/cover no-repeat;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner-overlay {
+  background: rgba(3, 29, 81, 0.7);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  border-radius: 14px;
+  max-width: 850px;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff7a00;
+  margin-bottom: 12px;
+}
+
+.banner-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Tabs Section */
+.tabs-section {
+  max-width: 1000px;
+  margin: 60px auto 0px;
+  padding: 0 20px 50px;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  gap: 15px;
+  margin: 0px auto 30px auto;
+  width: 60%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #fff;
+
+}
+
+.tab-btn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #031d51;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: #ff7a00;
+  color: #031d51;
+}
+
+.tab-btn.active {
+  background: #ff7a00;
+  color: #031d51;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Tab Content */
+.tab-content {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.tab-content h2 {
+  font-size: 1.6rem;
+  color: #031d51;
+  margin-bottom: 12px;
+}
+
+.tab-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+}

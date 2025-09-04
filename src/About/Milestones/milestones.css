@@ -1,0 +1,149 @@
+.milestones {
+  font-family: "Segoe UI", sans-serif;
+  color: #000;
+}
+
+/* Banner */
+.ms-banner {
+  background: url("/src/Home/bg1.jpg")
+    center/cover no-repeat;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ms-banner__overlay {
+  background: rgba(3, 29, 81, 0.7);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  max-width: 800px;
+}
+
+.ms-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ff7a00;
+}
+
+.ms-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Container */
+.ms-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Section heading */
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #031d51;
+  margin: 50px 0 40px;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff7a00;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Grid */
+.ms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Cards */
+.ms-card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ms-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(3, 29, 81, 0.25);
+}
+
+.ms-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 122, 0, 0.15),
+    rgba(3, 29, 81, 0.15)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.ms-card:hover::after {
+  opacity: 1;
+}
+
+/* Icons */
+.ms-icon {
+  font-size: 2.5rem;
+  color: #ff7a00;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Text */
+.ms-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #031d51;
+  position: relative;
+  z-index: 1;
+}
+
+.ms-card h4::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ff7a00;
+  margin: 6px auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.ms-card:hover h4::after {
+  width: 40px;
+}
+
+.ms-card p {
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
