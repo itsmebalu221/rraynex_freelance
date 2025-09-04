@@ -41,7 +41,7 @@ body {
   right: 0;
   bottom: 0;
   height: 70%;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.304), rgba(255,255,255,0));
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.82), rgba(255,255,255,0));
   z-index: 2;
 }
 
