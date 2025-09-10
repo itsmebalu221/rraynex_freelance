@@ -6,7 +6,7 @@ import logo from "./logo.jpg";
 const slug = (s) => s.toLowerCase().replace(/\s+/g, "-");
 
 const menuItems = [
-  { name: "Home", path: "/", submenu: ["Overview", "Updates"] },
+  { name: "Home", path: "/", submenu: [] },
   { name: "About", path: "/about", submenu: ["Vision & Values", "Milestone and Recognitions", "Innovation","Quality"] },
   { name: "Responsibility", path: "/responsibility", submenu: ["CSR", "Sustainability", "EHS","Uplifting Ecosystem"] },
   { name: "Products", path: "/products", submenu: ["API", "Intermediary"] },
