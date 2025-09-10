@@ -1,0 +1,135 @@
+/* Trusted By Section Styles */
+.trusted-by-section {
+  padding: 2rem 0 4rem 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.trusted-by-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.trusted-by-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.trusted-by-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .trusted-by-title {
+    font-size: 2.5rem;
+  }
+}
+
+.trusted-by-subtitle {
+  color: #a1a1aa;
+  font-size: 1.125rem;
+}
+
+/* Scrolling Logo Styles */
+.logo-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.logo-scroll-track {
+  display: flex;
+  animation: scroll 120s linear infinite;
+  width: fit-content;
+}
+
+.logo-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-item {
+  flex-shrink: 0;
+  width: 160px;
+  height: 80px;
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding:5px;
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  border-radius:10px;
+ 
+}
+
+.logo-item:hover .logo-image {
+  opacity: 1;
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-item {
+    width: 140px;
+    height: 60px;
+    margin: 0 1rem;
+  }
+  
+  .logo-scroll-track {
+    animation-duration: 40s;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-item {
+    width: 120px;
+    height: 50px;
+    margin: 0 0.5rem;
+  }
+  
+  .logo-scroll-track {
+    animation-duration: 120s;
+  }
+}

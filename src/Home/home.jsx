@@ -5,6 +5,7 @@ import EcosystemSection from "../Components/Ecosystem/eco";
 import image4 from './image1.png'
 import GrowTogether from "../Components/GrowTogeather/grow";
 import {BulbOutlined,RiseOutlined,HeartOutlined} from '@ant-design/icons';
+import TrustedBy from "../Components/TrustedBy/TrustedBy";
 
 
 
@@ -34,6 +35,7 @@ export default function Home() {
         </div>
         
       </div>
+      
       {/* Second Section*/}
       <div className="second-section">
         <h1 style={{fontSize:'40px'}} align="center">What We Stand For</h1>
@@ -61,6 +63,10 @@ export default function Home() {
 
         </div>
         
+      </div>
+      {/* First Section */}
+      <div>
+        <TrustedBy />
       </div>
       {/* Third Section */}
       <div className="third-section">
