@@ -14,6 +14,8 @@ import CSR from "./Responsiblity/CSR/CSR";
 import Sustainability from "./Responsiblity/Sustainability/sus";
 import EHS from "./Responsiblity/EHS/EHS";
 import Ecosystem from "./Responsiblity/UpliftingEco/uplifting";
+import ProductsPage from "./Products/ProductS/Products";
+import Manufacturing from "../src/Manifacturing/manifacturing";
 function App() {
   return (
     <div className="App">
@@ -31,6 +33,8 @@ function App() {
           <Route path="/responsibility/sustainability" element={<Sustainability />} />
           <Route path="/responsibility/ehs" element={<EHS />} />
           <Route path="/responsibility/uplifting-ecosystem" element={<Ecosystem />} />
+          <Route path="/manufacturing" element={<Manufacturing />} />
+          <Route path="/products" element={<ProductsPage />} />
           <Route path="/worldwide" element={<Worldwide />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

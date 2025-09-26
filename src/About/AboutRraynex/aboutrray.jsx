@@ -1,5 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "./aboutrray.css";
+import GMP from './GMP.png'; 
+import WHO_GMP from './who-gmp.png';
+import EUGMP from './eu-gmp.jpeg';
+import ISO9001 from './iso-9001.png';
+import ISO14001 from './iso-14001.jpg';
+import ISO25001 from './iso-25001.png';
+import Halal from './halal.jpg';
+import Kosher from './koshir.png';
 
 export default function AboutUs() {
   const observerRef = useRef(null);
@@ -81,56 +89,59 @@ export default function AboutUs() {
       </section>
 
       {/* VALUES / PILLARS */}
-      <section className="about-pills">
-        <h2 className="section-heading animate-on-scroll">What We Stand For</h2>
+      {/* Place inside your component where the section should render.
+   Replace badge paths with your actual image URLs or import them at top:
+   import gmpBadge from './assets/certs/gmp.png';
+   OR use public path: '/assets/certs/gmp.png'
+*/
+      }
+<section className="about-pills" aria-labelledby="certs-heading">
+  <h2 id="certs-heading" className="section-heading">Regulatory Certifications</h2>
+  <div className="section-sub">
+    100% auditable facility with full document support — DMF (open & closed parts), VQM, TSE/BSE/MSDS, stability data and robust quality systems.
+  </div>
 
-        <div className="pill-grid animate-on-scroll">
-          <div className="pill" style={{ animationDelay: '0.1s' }}>
-            <span className="dot" />
-            <div>
-              <h4 className="pill-title">Innovation</h4>
-              <p className="pill-text">
-                We invest in research and technology to keep pace with evolving global
-                healthcare needs and deliver better outcomes.
-              </p>
-            </div>
-          </div>
+  <div className="cert-top">
+    {/* Left: copy + bulleted list */}
+    <div className="cert-copy" role="region" aria-label="Certifications list">
+      <ul aria-live="polite">
+        <li>GMP</li>
+        <li>WHO GMP — Audited; approvals expected</li>
+        <li>EUGMP — Targeted 2026</li>
+        <li>ISO 9001</li>
+        <li>ISO 14001</li>
+        <li>ISO 25001</li>
+        <li>Halal &amp; Kosher certified</li>
+      </ul>
 
-          <div className="pill" style={{ animationDelay: '0.2s' }}>
-            <span className="dot" />
-            <div>
-              <h4 className="pill-title">Quality</h4>
-              <p className="pill-text">
-                Every process is built around quality—meeting international standards of
-                safety and efficacy from development to distribution.
-              </p>
-            </div>
-          </div>
+      <p>
+        100% auditable facility with all document support like DMF (open and closed parts), VQM support,
+        TSE/BSE/MSDS support, and stability data available upon request.
+      </p>
+    </div>
 
-          <div className="pill" style={{ animationDelay: '0.3s' }}>
-            <span className="dot" />
-            <div>
-              <h4 className="pill-title">Partnerships</h4>
-              <p className="pill-text">
-                We collaborate with manufacturers to consistently produce high-quality
-                products that meet technical and regulatory qualifications and create
-                lasting value for our partners.
-              </p>
-            </div>
-          </div>
+    {/* Right: badges (images) */}
+    <div className="cert-badges" role="img" aria-roledescription="certification badges" aria-label="Certifications">
+      <div style={{ fontWeight:700, color: 'var(--navy, #0b304f)' }}>Our Certifications</div>
 
-          <div className="pill" style={{ animationDelay: '0.4s' }}>
-            <span className="dot" />
-            <div>
-              <h4 className="pill-title">Global Reach</h4>
-              <p className="pill-text">
-                A growing footprint across markets enables reliable access and efficient
-                distribution with localized support.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="badge-grid" aria-hidden>
+        {/* Replace the src values with your real badge image paths or imported variables */}
+        <img src={GMP} alt="GMP badge" />
+        <img src={WHO_GMP} alt="WHO GMP badge" />
+        <img src={EUGMP} alt="EUGMP badge" />
+        <img src={ISO9001} alt="ISO 9001 badge" />
+        <img src={ISO14001} alt="ISO 14001 badge" />
+        <img src={ISO25001} alt="ISO 25001 badge" />
+        <img src={Halal} alt="Halal certification badge" />
+        <img src={Kosher} alt="Kosher certification badge" />
+      </div>
+    </div>
+  </div>
+
+  {/* Pill grid with values/pillars */}
+  
+</section>
+
 
       {/* TIMELINE / MILESTONES */}
       <section className="about-timeline">

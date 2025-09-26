@@ -10,7 +10,7 @@ const menuItems = [
   { name: "About", path: "/about", submenu: ["Vision & Values", "Milestone and Recognitions", "Innovation","Quality"] },
   { name: "Responsibility", path: "/responsibility", submenu: ["CSR", "Sustainability", "EHS","Uplifting Ecosystem"] },
   { name: "Products", path: "/products", submenu: ["API", "Intermediary"] },
-  { name: "Manufacturing", path: "/manufacturing", submenu: [] }, // empty submenu
+  { name: "Manufacturing Facilities", path: "/manufacturing", submenu: [] }, // empty submenu
   { name: "Worldwide", path: "/worldwide", submenu: [] }, // empty submenu
   { name: "Contact Us", path: "/contact", submenu: [] },
 ];
