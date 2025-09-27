@@ -16,18 +16,7 @@ import EHS from "./Responsiblity/EHS/EHS";
 import Ecosystem from "./Responsiblity/UpliftingEco/uplifting";
 import ProductsPage from "./Products/ProductS/Products";
 import Manufacturing from "../src/Manifacturing/manifacturing";
-import React, { useEffect } from "react";
-import ReactGA from "react-ga4";
-const GA_MEASUREMENT_ID = "G-31QNSFMEHC"; 
 function App() {
-  useEffect(() => {
-    // Initialize GA
-    ReactGA.initialize(GA_MEASUREMENT_ID);
-
-    // Track first page load
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-  }, []);
-
   return (
     <div className="App">
       <Header />
