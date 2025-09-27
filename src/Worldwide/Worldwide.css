@@ -25,8 +25,8 @@ body{
 
 /* page wrapper */
 .worldwide-wrap{
-  max-width: var(--container);
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0 ;
  
 }
 
@@ -46,7 +46,7 @@ body{
 .hero-sub{ margin:0 auto; color: rgba(255,255,255,0.92); max-width:900px; font-size:14px; }
 
 /* big framed panel (LIGHT FRAME) */
-.panel-wrap{ width:100%; max-width:var(--container); margin: -50px auto 0; padding: 0 150px; }
+.panel-wrap{ width:100%; max-width:var(--container); margin: -50px auto 0; padding: 0 10px; }
 
 /* this is the wide light-gray frame — matches your mock */
 .frame {
@@ -122,6 +122,7 @@ body{
   justify-content:center;
   gap:8px;
   min-height:110px;
+  margin-bottom: 20px;
 }
 .card .num{ font-weight:800; color:var(--navy); font-size:20px; }
 .card .lbl{ color:var(--muted); font-size:13px; }
