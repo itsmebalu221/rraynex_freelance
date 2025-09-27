@@ -6,12 +6,67 @@ import image4 from './image1.png'
 import GrowTogether from "../Components/GrowTogeather/grow";
 import {BulbOutlined,RiseOutlined,HeartOutlined} from '@ant-design/icons';
 import TrustedBy from "../Components/TrustedBy/TrustedBy";
+import { Helmet } from "react-helmet-async";
 
 
 
 export default function Home() {
   return (
     <>
+    <Helmet>
+  {/* Primary meta */}
+  <title>Delivering Quality Healthcare — Rraynex Pharmaceuticals</title>
+  <meta
+    name="description"
+    content="Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries. Research & development, compliant manufacturing and global partnerships."
+  />
+  <link rel="canonical" href="https://myapp.com/" />
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Delivering Quality Healthcare — Rraynex Pharmaceuticals" />
+  <meta
+    property="og:description"
+    content="Rraynex Pharmaceuticals — research, manufacturing, and global health partnerships across regulated and emerging markets."
+  />
+  <meta property="og:url" content="https://myapp.com/" />
+  <meta property="og:image" content="https://myapp.com/og-image.jpg" />
+  <meta property="og:image:alt" content="Rraynex logo and team" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@yourhandle" />
+  <meta name="twitter:title" content="Delivering Quality Healthcare — Rraynex Pharmaceuticals" />
+  <meta name="twitter:description" content="Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries." />
+  <meta name="twitter:image" content="https://myapp.com/twitter-image.jpg" />
+
+  {/* JSON-LD structured data (Organization) */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Rraynex Pharmaceuticals Private Limited",
+      url: "https://myapp.com/",
+      logo: "https://myapp.com/path-to-logo.png",
+      sameAs: [
+        "https://www.facebook.com/yourpage",
+        "https://www.linkedin.com/company/yourpage",
+        "https://twitter.com/yourhandle"
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-XXXXXXXXXX",
+          contactType: "customer service",
+          areaServed: "IN"
+        }
+      ]
+    })}
+  </script>
+</Helmet>
+
       {/* Header component will go here */}
       <div className="home-container">
         <div style={{justifyContent:'center',alignItems:'center',display:'flex',flexDirection:'column'}}>
