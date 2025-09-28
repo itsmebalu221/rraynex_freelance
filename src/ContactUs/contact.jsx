@@ -27,9 +27,16 @@ const Contact = () => {
             <h4>Discover your potential with us</h4>
             <p>
               Join our team today!{" "}
-              <a href="#" className="ct-link">
+              <button
+                type="button"
+                className="ct-link"
+                onClick={() => {
+                  // TODO: Add navigation or modal logic here
+                }}
+                style={{ background: "none", border: "none", padding: 0, color: "inherit", textDecoration: "underline", cursor: "pointer" }}
+              >
                 Click Here
-              </a>
+              </button>
             </p>
           </div>
 
