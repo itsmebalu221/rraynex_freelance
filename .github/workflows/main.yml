@@ -1,69 +1,80 @@
-name: Build, Prerender & Deploy to Vercel (Stable)
+name: Build, Prerender & Deploy to Vercel (Verbose)
 
 on:
   push:
     branches:
-      - main  # change if needed
+      - main  # change if necessary
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 30
+    env:
+      CI: "true"
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js (18)
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'npm'
+          cache: npm
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install system Chromium & libs (for puppeteer)
+      - name: Show Node and NPM versions
         run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser chromium libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 \
-            libdrm2 libxkbcommon0 libxrandr2 libxss1 libasound2 libgbm1 libpangocairo-1.0-0 libxcomposite1 \
-            libxdamage1 libxcb1 libx11-xcb1
-          which chromium-browser || which chromium || true
-          chromium-browser --version || chromium --version || true
+          node -v
+          npm -v
+          npm ci --version
 
-      - name: Build (react-scripts build)
-        env:
-          NODE_ENV: production
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
+      - name: Install dependencies (verbose)
+        run: |
+          set -x
+          npm ci
+
+      - name: Print environment (sensitive vars redacted)
+        run: |
+          echo "VERCEL_TOKEN present? $( [[ -n "${{ secrets.VERCEL_TOKEN }}" ]] && echo yes || echo no )"
+          echo "VERCEL_ORG_ID present? $( [[ -n "${{ secrets.VERCEL_ORG_ID }}" ]] && echo yes || echo no )"
+          echo "VERCEL_PROJECT_ID present? $( [[ -n "${{ secrets.VERCEL_PROJECT_ID }}" ]] && echo yes || echo no )"
+          echo "Listing repo root:"
+          ls -la
+
+      - name: Build (react-scripts build; react-snap runs in postbuild)
         run: |
           set -x
           npm run build
-
-      - name: Run react-snap (explicit, with wait and timeout)
         env:
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
+          NODE_ENV: production
+          # add any required REACT_APP_* values here, e.g.
+          # REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+
+      - name: Check build folder contents
         run: |
           set -x
-          npx react-snap --source build --puppeteerTimeout=60000 --waitFor="#root" --crawl=false --include "/, /about, /about/vision-and-values, /about/milestone-and-recognitions, /about/innovation, /about/quality, /responsibility, /responsibility/csr, /responsibility/sustainability, /responsibility/ehs, /responsibility/uplifting-ecosystem, /products, /products/api, /products/intermediary, /manufacturing, /worldwide"
-
-      - name: Sanity: show build contents
-        run: |
-          test -d build || (echo "build missing" && exit 1)
+          echo "Build exists?"; test -d build && echo "yes" || (echo "build folder missing" && exit 1)
           ls -la build | sed -n '1,200p'
+          echo "Show beginning of index.html"
           head -n 60 build/index.html || true
 
       - name: Install Vercel CLI
-        run: npm install -g vercel@28
+        run: |
+          set -x
+          npm install -g vercel@28
 
-      - name: Deploy prebuilt static folder to Vercel
+      - name: Deploy prebuilt static folder to Vercel (production)
         env:
-          VERCEL_TOKEN: "80OXw7M5zDK8E53j0sf88Mih"
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          # Optional:
+          # VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          # VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         run: |
           set -x
           if [ -z "$VERCEL_TOKEN" ]; then
             echo "VERCEL_TOKEN missing. Aborting."
             exit 1
           fi
-          # deploy the prebuilt build folder (avoid Vercel building on their side)
-          npx vercel@latest --prod --prebuilt ./build --token "$VERCEL_TOKEN"
+          # dry-run first for safety (uncomment if debugging)
+          # vercel --prebuilt --token $VERCEL_TOKEN --confirm ./build
+          vercel --prod ./build --confirm --token $VERCEL_TOKEN
