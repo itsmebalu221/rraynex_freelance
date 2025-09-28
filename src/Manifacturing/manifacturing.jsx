@@ -197,10 +197,10 @@ export default function Manufacturing() {
     []
   );
 
-  function openFacility(f) {
-    setSelectedFacility(f);
-    document.body.style.overflow = "hidden";
-  }
+  // function openFacility(f) {
+  //   setSelectedFacility(f);
+  //   document.body.style.overflow = "hidden";
+  // }
   function closeFacility() {
     setSelectedFacility(null);
     document.body.style.overflow = "";
