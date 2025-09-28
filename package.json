@@ -40,6 +40,7 @@
   "reactSnap": {
   "inlineCss": true,
   "minifyHtml": true,
+  "crawl": false,
   "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
   "include": [
     "/",
