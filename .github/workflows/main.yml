@@ -65,7 +65,7 @@ jobs:
 
       - name: Deploy prebuilt static folder to Vercel (production)
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_TOKEN: '80OXw7M5zDK8E53j0sf88Mih'
           # Optional:
           # VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           # VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
