@@ -42,6 +42,8 @@
   "minifyHtml": true,
   "crawl": false,
   "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+  "puppeteerTimeout": 60000,
+  "waitFor": "#root",
   "include": [
     "/",
     "/about",
@@ -54,9 +56,14 @@
     "/responsibility/sustainability",
     "/responsibility/ehs",
     "/responsibility/uplifting-ecosystem",
+    "/products",
+    "/products/api",
+    "/products/intermediary",
+    "/manufacturing",
     "/worldwide"
   ]
-},
+}
+,
   "eslintConfig": {
     "extends": [
       "react-app",
