@@ -57,8 +57,7 @@
     "/products/api",
     "/products/intermediary",
     "/manufacturing",
-    "/worldwide",
-    "/contact"
+    "/worldwide"
   ]
 },
   "eslintConfig": {
