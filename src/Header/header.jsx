@@ -3,7 +3,13 @@ import { NavLink, Link } from "react-router-dom";
 import "./header.css";
 import logo from "./logo.jpg";
 
-const slug = (s) => s.toLowerCase().replace(/\s+/g, "-");
+const slug = (s) =>
+  s
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
 
 const menuItems = [
   { name: "Home", path: "/", submenu: [] },

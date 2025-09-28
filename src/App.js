@@ -16,6 +16,7 @@ import EHS from "./Responsiblity/EHS/EHS";
 import Ecosystem from "./Responsiblity/UpliftingEco/uplifting";
 import ProductsPage from "./Products/ProductS/Products";
 import Manufacturing from "../src/Manifacturing/manifacturing";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/about/vision-&-values" element={<VisionValues />} />
+          <Route path="/about/vision-and-values" element={<VisionValues />} />
           <Route path="/about/milestone-and-recognitions" element={<MilestonesRecognitions />} />
           <Route path="/about/innovation" element={<Innovation />} />
           <Route path="/about/quality" element={<Quality />} />
@@ -36,8 +37,10 @@ function App() {
           <Route path="/responsibility/uplifting-ecosystem" element={<Ecosystem />} />
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:category" element={<ProductsPage />} />
           <Route path="/worldwide" element={<Worldwide />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

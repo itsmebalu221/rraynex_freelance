@@ -178,3 +178,14 @@
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
 }
+
+.map-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9ff, #eef2ff);
+  color: #031d51;
+  font-weight: 600;
+}

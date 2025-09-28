@@ -302,7 +302,16 @@ export default function Manufacturing() {
             return (
               <div key={eq.id} className={`equipment-row ${reversed ? "reversed" : ""}`} role="group" aria-labelledby={`${eq.id}-title`}>
                 <div className="equipment-media" aria-hidden>
-                  <img src={eq.img} alt={eq.title + " image"} loading="lazy" onError={(e) => { e.currentTarget.src = "/assets/facilities/placeholder.jpg"; }} />
+                  <img
+                    src={eq.img}
+                    alt={eq.title + " image"}
+                    loading="lazy"
+                    width="360"
+                    height="240"
+                    onError={(e) => {
+                      e.currentTarget.src = "/assets/facilities/placeholder.jpg";
+                    }}
+                  />
                 </div>
 
                 <div className="equipment-content">

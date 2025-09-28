@@ -75,6 +75,8 @@ const TrustedBy= () => {
                   alt={company.name}
                   className="logo-image"
                   loading="lazy"
+                  width="200"
+                  height="100"
                 />
               </div>
             ))}
@@ -86,6 +88,8 @@ const TrustedBy= () => {
                   alt={company.name}
                   className="logo-image"
                   loading="lazy"
+                  width="200"
+                  height="100"
                 />
               </div>
             ))}

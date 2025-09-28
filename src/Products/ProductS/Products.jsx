@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import "./products.css";
 import bg from "./bg.jpg";
 
@@ -81,6 +82,19 @@ const PRODUCTS = [
 ];
 
 const currency = (n) => `₹ ${n.toLocaleString("en-IN")}`;
+
+const ROUTE_FILTERS = {
+  api: {
+    label: "APIs",
+    matches: (product) => product.type === "API",
+    defaultType: "API",
+  },
+  intermediary: {
+    label: "Intermediaries",
+    matches: (product) => product.type !== "API",
+    defaultType: "All",
+  },
+};
 
 /* ----------------- SEO helpers ----------------- */
 
@@ -382,6 +396,11 @@ function ProductCard({ p }) {
 /* ---------- Main ProductsPage ---------- */
 
 export default function ProductsPage() {
+  const navigate = useNavigate();
+  const { category: categorySlugRaw } = useParams();
+  const categorySlug = categorySlugRaw ? categorySlugRaw.toLowerCase() : null;
+  const routeFilter = categorySlug ? ROUTE_FILTERS[categorySlug] : null;
+
   const [q, setQ] = useState("");
   const [type, setType] = useState("All");
   const [category, setCategory] = useState("All");
@@ -396,6 +415,18 @@ export default function ProductsPage() {
     () => ["All", ...Array.from(new Set(PRODUCTS.map((p) => p.type)))],
     []
   );
+
+  useEffect(() => {
+    if (categorySlug && !routeFilter) {
+      navigate("/products", { replace: true });
+      return;
+    }
+
+    if (routeFilter) {
+      setType(routeFilter.defaultType);
+      setCategory("All");
+    }
+  }, [categorySlug, routeFilter, navigate]);
 
   useEffect(() => {
     function onHash() {
@@ -415,6 +446,7 @@ export default function ProductsPage() {
   const list = useMemo(() => {
     const ql = q.trim().toLowerCase();
     let out = PRODUCTS.filter((p) => {
+      if (routeFilter && !routeFilter.matches(p)) return false;
       if (type !== "All" && p.type !== type) return false;
       if (category !== "All" && p.category !== category) return false;
       if (!ql) return true;
@@ -427,7 +459,7 @@ export default function ProductsPage() {
     if (sort === "price-asc") out.sort((a, b) => a.price - b.price);
     if (sort === "price-desc") out.sort((a, b) => b.price - a.price);
     return out;
-  }, [q, type, category, sort]);
+  }, [q, type, category, sort, routeFilter]);
 
   const selectedProduct = selectedSlug
     ? PRODUCTS.find((p) => p.slug === selectedSlug)
@@ -437,7 +469,9 @@ export default function ProductsPage() {
     <div>
       <section className="products-hero">
         <div className="products-hero-content">
-          <h1 className="products-hero-title">Our Product Portfolio</h1>
+          <h1 className="products-hero-title">
+            {routeFilter ? `Our ${routeFilter.label}` : "Our Product Portfolio"}
+          </h1>
           <p className="products-hero-lead">
             Delivering trusted pharmaceutical solutions — Intermediates, APIs,
             Pellets, and Granules — ensuring quality every step of the way.
@@ -452,7 +486,7 @@ export default function ProductsPage() {
       <main id="products" className="rr-wrap">
         <header className="rr-hero">
           <div>
-            <h1>Products</h1>
+            <h1>{routeFilter ? routeFilter.label : "Products"}</h1>
             <p className="muted">Pellets • Granules • APIs • Intermediates</p>
           </div>
 
