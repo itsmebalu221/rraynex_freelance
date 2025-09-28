@@ -37,6 +37,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "reactSnap": {
+  "inlineCss": true,
+  "minifyHtml": true,
+  "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+},
   "eslintConfig": {
     "extends": [
       "react-app",
