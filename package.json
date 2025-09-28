@@ -40,7 +40,26 @@
   "reactSnap": {
   "inlineCss": true,
   "minifyHtml": true,
-  "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+  "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+  "include": [
+    "/",
+    "/about",
+    "/about/vision-and-values",
+    "/about/milestone-and-recognitions",
+    "/about/innovation",
+    "/about/quality",
+    "/responsibility",
+    "/responsibility/csr",
+    "/responsibility/sustainability",
+    "/responsibility/ehs",
+    "/responsibility/uplifting-ecosystem",
+    "/products",
+    "/products/api",
+    "/products/intermediary",
+    "/manufacturing",
+    "/worldwide",
+    "/contact"
+  ]
 },
   "eslintConfig": {
     "extends": [
