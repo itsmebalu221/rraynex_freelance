@@ -28,8 +28,7 @@ export default function CSR() {
             Corporate Social Responsibility
           </h1>
           <p className={`about-lead fade-in-delay ${isVisible ? 'visible' : ''}`}>
-            At Rraynex, we believe that corporate social responsibility (CSR) is an essential part of our mission to make a positive impact on society. We are committed to conducting our business with integrity and in a socially responsible manner that benefits our stakeholders, communities, and the environment.
-          </p>
+At Rraynex, we view corporate social responsibility as central to our mission. We are committed to acting with integrity and creating positive impact for our stakeholders, communities, and the environment.          </p>
           <div className="about-cta">
             <button className={`btn btn-primary slide-up ${isVisible ? 'visible' : ''}`}>Learn More</button>
             <button className={`btn btn-outline slide-up-delay ${isVisible ? 'visible' : ''}`}>Our Impact</button>

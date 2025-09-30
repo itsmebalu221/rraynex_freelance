@@ -1,8 +1,10 @@
 import React, { useMemo, useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import "./products.css";
 import bg from "./bg.jpg";
+import Hero from '../../Components/Hero/Hero';
 
+/* ----------------- Data ----------------- */
 const PRODUCTS = [
   {
     id: "pellet-aspirin",
@@ -266,8 +268,6 @@ function ProductDetail({ product, onBack }) {
               loading="lazy"
             />
           </figure>
-
-         
         </div>
 
         {/* RIGHT: title & short meta */}
@@ -364,12 +364,12 @@ function ProductDetail({ product, onBack }) {
 
 function ProductCard({ p }) {
   return (
-    <article className="rr-product-card">
-      <a className="rr-thumb-link" href={`#${p.slug}`}>
+    <article className="rr-product-card" key={p.id}>
+      <Link className="rr-thumb-link" to={`/products/view/${p.slug}`}>
         <div className="rr-product-media">
           <img src={bg} alt={p.name} onError={(e) => (e.currentTarget.src = bg)} />
         </div>
-      </a>
+      </Link>
 
       <div className="rr-product-body">
         <h3 className="rr-product-title">{p.name}</h3>
@@ -385,12 +385,32 @@ function ProductCard({ p }) {
         </div>
 
         <div className="rr-actions">
-          <a className="btn btn-primary" href={`#${p.slug}`}>View</a>
+          <Link className="btn btn-primary" to={`/products/view/${p.slug}`}>View</Link>
           <a className="btn btn-outline" href={`mailto:communications@rraynex.com?subject=Quote Request: ${encodeURIComponent(p.name)}`}>Request Quote</a>
         </div>
       </div>
     </article>
   );
+}
+
+/* ---------- ProductDetailPage (route target) ---------- */
+
+export function ProductDetailPage() {
+  const { slug } = useParams();
+  const navigate = useNavigate();
+
+  const product = PRODUCTS.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    if (!product) {
+      // If product not found, send user back to listing.
+      navigate("/products", { replace: true });
+    }
+  }, [product, navigate]);
+
+  if (!product) return null;
+
+  return <ProductDetail product={product} onBack={() => navigate(-1)} />;
 }
 
 /* ---------- Main ProductsPage ---------- */
@@ -405,7 +425,6 @@ export default function ProductsPage() {
   const [type, setType] = useState("All");
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState("relevance");
-  const [selectedSlug, setSelectedSlug] = useState(null);
 
   const categories = useMemo(
     () => ["All", ...Array.from(new Set(PRODUCTS.map((p) => p.category)))],
@@ -428,21 +447,6 @@ export default function ProductsPage() {
     }
   }, [categorySlug, routeFilter, navigate]);
 
-  useEffect(() => {
-    function onHash() {
-      const hash = window.location.hash.replace("#", "");
-      if (!hash) setSelectedSlug(null);
-      else {
-        const match = PRODUCTS.find((p) => p.slug === hash);
-        setSelectedSlug(match ? match.slug : null);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    }
-    onHash();
-    window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
-  }, []);
-
   const list = useMemo(() => {
     const ql = q.trim().toLowerCase();
     let out = PRODUCTS.filter((p) => {
@@ -461,27 +465,16 @@ export default function ProductsPage() {
     return out;
   }, [q, type, category, sort, routeFilter]);
 
-  const selectedProduct = selectedSlug
-    ? PRODUCTS.find((p) => p.slug === selectedSlug)
-    : null;
-
   return (
     <div>
-      <section className="products-hero">
-        <div className="products-hero-content">
-          <h1 className="products-hero-title">
-            {routeFilter ? `Our ${routeFilter.label}` : "Our Product Portfolio"}
-          </h1>
-          <p className="products-hero-lead">
-            Delivering trusted pharmaceutical solutions — Intermediates, APIs,
-            Pellets, and Granules — ensuring quality every step of the way.
-          </p>
-          <div className="products-hero-cta">
-            <a className="btn-primary" href="#products">Explore Products</a>
-            <a className="btn-outline" href="/assets/Rraynex_Corp_Profile.pdf" target="_blank" rel="noreferrer">Download Brochure</a>
-          </div>
-        </div>
-      </section>
+      <Hero 
+        title={routeFilter ? `Our ${routeFilter.label}` : "Our Product Portfolio"}
+        subtitle="Delivering trusted pharmaceutical solutions — Intermediates, APIs, Pellets, and Granules — ensuring quality every step of the way."
+        plink="#products"
+        ptitle="Explore Products"
+        slink="/assets/Rraynex_Corp_Profile.pdf"
+        stitle="Download Brochure"
+      />
 
       <main id="products" className="rr-wrap">
         <header className="rr-hero">
@@ -515,13 +508,9 @@ export default function ProductsPage() {
           <div className="count">Showing {list.length} results</div>
         </section>
 
-        {selectedProduct ? (
-          <ProductDetail product={selectedProduct} onBack={() => (window.location.hash = "")} />
-        ) : (
-          <section className="rr-grid">
-            {list.map((p) => (<ProductCard key={p.id} p={p} />))}
-          </section>
-        )}
+        <section className="rr-grid" aria-live="polite">
+          {list.map((p) => (<ProductCard key={p.id} p={p} />))}
+        </section>
 
         <footer className="rr-footer">
           <small>

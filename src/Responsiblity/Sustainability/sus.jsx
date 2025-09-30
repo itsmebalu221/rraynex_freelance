@@ -1,9 +1,24 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef ,useState} from "react";
 import { Leaf, Globe, Lightbulb, Settings, ArrowRight } from "lucide-react";
 import "./Sustainability.css";
 
 export default function Sustainability() {
   const observerRef = useRef(null);
+   const [isVisible, setIsVisible] = useState(false);
+  const [statsVisible, setStatsVisible] = useState(false);
+  const [pillsVisible, setPillsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    const timer1 = setTimeout(() => setStatsVisible(true), 500);
+    const timer2 = setTimeout(() => setPillsVisible(true), 1000);
+    
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -32,17 +47,16 @@ export default function Sustainability() {
   return (
     <main className="sustainability">
       {/* HERO */}
-      <section className="sustainability-hero">
-        <div className="hero-inner">
-          <div className="hero-icon">
-            <Leaf className="w-16 h-16 text-green-400" />
+      <section className="about-hero csr-hero">
+        <div className="about-hero__inner">
+          <h1 className={`about-title fade-in ${isVisible ? 'visible' : ''}`}>
+            Sustainability
+          </h1>
+          <p className={`about-lead fade-in-delay ${isVisible ? 'visible' : ''}`}>At Rraynex, we recognize the importance of sustainability in driving long-term success and creating a positive impact on society and the environment. We are committed to promoting sustainable practices across our operations and value chain.</p>
+          <div className="about-cta">
+            <button className={`btn btn-primary slide-up ${isVisible ? 'visible' : ''}`}>Learn More</button>
+            <button className={`btn btn-outline slide-up-delay ${isVisible ? 'visible' : ''}`}>Our Impact</button>
           </div>
-          <h1 className="hero-title">Sustainability</h1>
-          <p className="hero-lead">
-            At Rraynex, we recognize the importance of sustainability in driving long-term success 
-            and creating a positive impact on society and the environment. We are committed to 
-            promoting sustainable practices across our operations and value chain.
-          </p>
         </div>
       </section>
 

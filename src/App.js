@@ -14,7 +14,7 @@ import CSR from "./Responsiblity/CSR/CSR";
 import Sustainability from "./Responsiblity/Sustainability/sus";
 import EHS from "./Responsiblity/EHS/EHS";
 import Ecosystem from "./Responsiblity/UpliftingEco/uplifting";
-import ProductsPage from "./Products/ProductS/Products";
+import ProductsPage ,{ProductDetailPage} from "./Products/ProductS/Products";
 import Manufacturing from "../src/Manifacturing/manifacturing";
 import NotFound from "./NotFound";
 
@@ -38,6 +38,7 @@ function App() {
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:category" element={<ProductsPage />} />
+            <Route path="/products/view/:slug" element={<ProductDetailPage />} />
           <Route path="/worldwide" element={<Worldwide />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

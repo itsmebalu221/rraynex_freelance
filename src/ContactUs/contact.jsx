@@ -15,23 +15,21 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      {/* Banner */}
-      <div className="ct-banner">
-        <div className="ct-banner__overlay">
-          <h1 className="ct-title">Contact Us</h1>
-          <p className="ct-subtitle">
-            Your feedback is essential to us, so please do not hesitate to
-            contact us if you have any comments or suggestions.
-          </p>
+      {/* HERO */}
+      <section className="products-hero">
+        <div className="products-hero-content">
+          <h1 className="products-hero-title">Contact Us</h1>
+          <p className="products-hero-lead">Your feedback is essential to us, so please do not hesitate to contact us if you have any comments or suggestions.</p>
+         
         </div>
-      </div>
+      </section>
 
       {/* Content */}
       <div className="ct-container">
-        <h2 className="section-heading">Get in Touch</h2>
+        {/*<h2 className="section-heading">Get in Touch</h2>*/}
 
         {/* Intro cards */}
-        <div className="ct-grid">
+        {/* <div className="ct-grid">
           <div className="ct-card">
             <FaUsers className="ct-icon" />
             <h4>Discover your potential with us</h4>
@@ -71,7 +69,7 @@ const Contact = () => {
             <h4>Product Quality Complaint Form</h4>
             <p>Report any complaints regarding the quality of our medicines.</p>
           </div>
-        </div>
+        </div> */}
 
         {/* Offices */}
         <h2 className="section-heading">Our Offices</h2>

@@ -8,6 +8,7 @@ import ISO14001 from './iso-14001.jpg';
 import ISO25001 from './iso-25001.png';
 import Halal from './halal.jpg';
 import Kosher from './koshir.png';
+import Hero from "../../Components/Hero/Hero";
 
 export default function AboutUs() {
   const observerRef = useRef(null);
@@ -37,20 +38,14 @@ export default function AboutUs() {
   return (
     <main className="about">
       {/* HERO */}
-      <section className="about-hero">
-        <div className="about-hero__inner">
-          <h1 className="about-title">About Us</h1>
-          <p className="about-lead">
-            We are a healthcare company focused on delivering innovative and accessible
-            solutions with quality at the core—partnering globally to build a reliable,
-            future-ready ecosystem.
-          </p>
-          <div className="about-cta">
-            <button className="btn btn-primary">Know More</button>
-            <button className="btn btn-outline">Contact Us</button>
-          </div>
-        </div>
-      </section>
+      <Hero 
+              title="About Us"
+              subtitle="We are a healthcare company focused on delivering innovative and accessible solutions with quality at the core. Partnering globally to build a reliable, future-ready ecosystem."
+              plink="#products"
+              ptitle="Explore Products"
+              slink="/assets/Rraynex_Corp_Profile.pdf"
+              stitle="Download Brochure"
+            />
 
       {/* STATS */}
       <section className="about-stats animate-on-scroll">

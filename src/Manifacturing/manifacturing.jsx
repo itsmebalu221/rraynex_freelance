@@ -4,6 +4,7 @@ import GMP from "../Assets/GMP.png";
 import ISO9001 from "../Assets/iso-9001.png";
 import ISO14001 from "../Assets/iso-14001.jpg";
 import WHO_GMP from "../Assets/who-gmp.png";
+import Hero from "../Components/Hero/Hero";
 
 /* --- Data --- */
 
@@ -209,18 +210,14 @@ export default function Manufacturing() {
   return (
     <div className="mfg-page" role="main">
       {/* HERO */}
-      <header className="hero" role="banner" aria-label="Manufacturing hero">
-        <div className="hero-inner">
-          <h1 className="hero-title">Manufacturing Facilities</h1>
-          <p className="hero-sub">
-            WHO-GMP certified manufacturing units for pellets, granules, APIs and packaging — supported by in-house quality, stability and regulatory teams.
-          </p>
-          <div className="hero-ctas" role="group" aria-label="Hero actions">
-            <a className="btn btn-primary" href="#facility-details">Facility Details</a>
-            <a className="btn btn-outline" href="/assets/Rraynex_Corp_Profile.pdf" target="_blank" rel="noreferrer">Download Brochure</a>
-          </div>
-        </div>
-      </header>
+       <Hero 
+               title="Manufacturing Facilities"
+               subtitle="WHO-GMP certified manufacturing units for pellets, granules, APIs and packaging — supported by in-house quality, stability and regulatory teams."
+               plink="#products"
+               ptitle="Explore Products"
+               slink="/assets/Rraynex_Corp_Profile.pdf"
+               stitle="Download Brochure"
+             />
 
       <div className="container">
         {/* Overview */}
