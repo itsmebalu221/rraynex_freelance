@@ -40,32 +40,6 @@
   "eject": "react-scripts eject"
 },
 
-  "reactSnap": {
-    "inlineCss": true,
-    "minifyHtml": true,
-    "crawl": false,
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-dev-shm-usage"
-    ],
-    "puppeteerTimeout": 60000,
-    "waitFor": "#root",
-    "include": [
-      "/",
-      "/about",
-      "/about/vision-and-values",
-      "/about/milestone-and-recognitions",
-      "/about/innovation",
-      "/about/quality",
-      "/responsibility",
-      "/responsibility/csr",
-      "/responsibility/sustainability",
-      "/responsibility/ehs",
-      "/responsibility/uplifting-ecosystem",
-      "/worldwide"
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
