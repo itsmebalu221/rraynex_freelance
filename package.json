@@ -63,8 +63,7 @@
       "/responsibility/sustainability",
       "/responsibility/ehs",
       "/responsibility/uplifting-ecosystem",
-      "/worldwide",
-      "/products/view/product-paracetamol"
+      "/worldwide"
     ]
   },
   "eslintConfig": {
