@@ -1,19 +1,20 @@
 import React from "react";
 import "./Responsiblity.css";
 import { FaLeaf, FaHandsHelping, FaShieldAlt, FaGlobe } from "react-icons/fa";
+import Hero from "../Components/Hero/Hero";
 
 const Responsibility = () => {
   return (
     <div className="responsibility">
       {/* HERO */}
-      <section className="about-hero">
-        <div className="about-hero__inner">
-          <h1 className="about-title">Responsibility</h1>
-          <p className="about-lead">
-            Rraynex where we share our commitment to creating a better world. Our responsibility to society and the environment is at the core of everything we do. We believe that by operating responsibly, we can make a positive impact on people’s lives and protect our planet for future generations.
-          </p>
-        </div>
-      </section>
+      <Hero 
+      title="Our Responsibility"
+      subtitle="Committed to making a positive impact through CSR, Sustainability, EHS, and Uplifting the Ecosystem."
+      ptitle="Learn More"
+      stitle="Our Impact"
+      plink="/responsibility/csr"
+      slink="/responsibility/uplifting-ecosystem"
+      />
 
       {/* Cards Section */}
       <div className="resp-container">

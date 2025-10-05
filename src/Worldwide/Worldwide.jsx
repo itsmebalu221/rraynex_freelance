@@ -1,32 +1,94 @@
 import React, { useMemo, useState, useEffect } from "react";
 import "./Worldwide.css";
 
-/* Simple region data */
+/* Region data (populated with your provided copy) */
 const REGIONS = {
   ASIA: {
     title: "Asia",
-    text: "Established presence across South & Southeast Asia offering finished dosage forms, regulatory support and reliable supply chains.",
-    countries: ["India", "Bangladesh", "Nepal", "Philippines", "Indonesia", "Australia"]
+    text:
+      `Looking for a pharmaceutical company with a strong presence in the Asian market? Look no further than our company! With a diverse portfolio of finished dosage forms and several products under registration, we are committed to providing high-quality healthcare products to patients across the region.
+
+Our primary markets include India, Bangladesh, Nepal, Bhutan, Sri Lanka, the Philippines, Myanmar, Vietnam, Cambodia, Hong Kong, Australia, Indonesia, Pakistan, and Afghanistan. With our deeply penetrated presence in these markets, we are uniquely positioned to meet the needs of patients and healthcare providers alike.
+
+We are also actively seeking new partnerships and collaborations. If you are interested in working with a reliable and experienced pharmaceutical company in the Asian market, we invite you to reach out to us today.`,
+    countries: [
+      "India",
+      "Nepal",
+      "Sri Lanka",
+      "Indonesia"
+    ]
   },
+
   AFRICA: {
     title: "Africa",
-    text: "Focused engagement across Africa through local partnerships, product registrations and distribution networks.",
-    countries: ["Nigeria","South Africa","Kenya","Ghana","Morocco","Egypt"]
+    text:
+      `Looking for a pharmaceutical company with a strong presence in the Africa region? Look no further than our company! With a diverse portfolio of finished dosage forms and several products under registration, we are committed to providing high-quality healthcare products to patients across the region.
+
+We work all over Africa. With our deeply penetrated presence in these markets, we are uniquely positioned to meet the needs of patients and healthcare providers alike.
+
+We are also actively seeking new partnerships and collaborations. If you are interested in working with a reliable and experienced pharmaceutical company in the Middle East and North African market, we invite you to reach out to us today.`,
+    countries: [
+      "Nigeria",
+      "South Africa",
+      "Kenya",
+      "Ghana",
+      "Egypt",
+    ]
   },
+
   LATAM: {
     title: "Latin America",
-    text: "Regional teams support commercial entry, regulatory filings and logistics across Central & South America.",
-    countries: ["Brazil","Mexico","Argentina","Colombia","Peru","Chile"]
+    text:
+      `At Rraynex, we are proud to have a deeply penetrated presence in the Latin American, central and South American market, providing a wide range of healthcare solutions to the region. With our extensive experience in the industry, we have established ourselves as a reliable partner to healthcare providers, offering high-quality semi-finished dosages, finished dosage forms, feeds, veterinary products, and more.
+
+Our commitment to providing the best healthcare solutions has enabled us to secure several product registrations, allowing us to offer an extensive range of products to our clients. Our primary markets include Brazil, Mexico, Argentina, Colombia, Peru, Ecuador, Chile, Venezuela, Guatemala, Caribbean islands, and more.
+
+At RRAYNEX, we believe in maintaining the highest standards of quality, safety, and efficacy in our products. To achieve this, we work closely with regulatory bodies in each country to ensure compliance with local regulations and guidelines.`,
+    countries: [
+      "Brazil",
+      "Mexico",
+      "Argentina",
+      "Colombia",
+      "Peru",
+      "Ecuador"
+    ]
   },
+
   CIS: {
     title: "CIS & E. Europe",
-    text: "Strategic presence and regulatory expertise across CIS and Eastern Europe.",
-    countries: ["Russia","Kazakhstan","Uzbekistan","Azerbaijan","Belarus","Armenia"]
+    text:
+      `Looking for a pharmaceutical company with a strong presence in the CIS region? Look no further than our company! With a diverse portfolio of finished dosage forms and several products under registration, we are committed to providing high-quality healthcare products to patients across the region.
+
+Our primary markets include Russia, Kazakhstan, Uzbekistan, Azerbaijan, Belarus and more. With our deeply penetrated presence in these markets, we are uniquely positioned to meet the needs of patients and healthcare providers alike.
+
+We are also actively seeking new partnerships and collaborations. If you are interested in working with a reliable and experienced pharmaceutical company in the Middle East and North African market, we invite you to reach out to us today.`,
+    countries: [
+      "Russia",
+      "Kazakhstan",
+      "Uzbekistan",
+      "Azerbaijan",
+      "Belarus",
+      "Armenia"
+    ]
   },
+
   MENA: {
     title: "MENA",
-    text: "Operating across MENA with established channels for regulatory compliance and market access.",
-    countries: ["Saudi Arabia","UAE","Jordan","Iraq","Algeria","Egypt"]
+    text:
+      `Looking for a pharmaceutical company with a strong presence in the MENA region? Look no further than our company! With a diverse portfolio of finished dosage forms and several products under registration, we are committed to providing high-quality healthcare products to patients across the region.
+
+Our primary markets include Saudi Arabia, UAE, Iran, Iraq, Jordan, Algeria, and Egypt, among others. With our deeply penetrated presence in these markets, we are uniquely positioned to meet the needs of patients and healthcare providers alike.
+
+We are also actively seeking new partnerships and collaborations. If you are interested in working with a reliable and experienced pharmaceutical company in the Middle East and North African market, we invite you to reach out to us today.`,
+    countries: [
+      "Saudi Arabia",
+      "UAE",
+      "Iran",
+      "Iraq",
+      "Jordan",
+      "Algeria",
+      "Egypt"
+    ]
   }
 };
 
@@ -38,7 +100,11 @@ export default function WorldWide() {
     if (typeof document !== "undefined") {
       document.title = `Worldwide Presence | ${REGIONS[selected].title} — Rraynex`;
       let meta = document.querySelector('meta[name="description"]');
-      if (!meta) { meta = document.createElement("meta"); meta.setAttribute("name","description"); document.head.appendChild(meta); }
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute("name", "description");
+        document.head.appendChild(meta);
+      }
       meta.setAttribute("content", REGIONS[selected].text);
     }
   }, [selected]);
@@ -54,7 +120,6 @@ export default function WorldWide() {
           <p className="products-hero-lead">
             We offer high-quality pellets, granules, APIs, and intermediates, backed by WHO-GMP compliance and global trust.
           </p>
-         
         </div>
       </section>
 
@@ -64,7 +129,7 @@ export default function WorldWide() {
           <aside className="side" aria-label="Regions">
             <h4>Regions</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {keys.map(k => {
+              {keys.map((k) => {
                 const r = REGIONS[k];
                 const active = k === selected;
                 return (
@@ -115,11 +180,15 @@ export default function WorldWide() {
               </div>
             </div>
 
-            <div className="placeholder">Map / Region details placeholder</div>
+            <div className="placeholder" style={{ whiteSpace: "pre-wrap", marginTop: 16 }}>
+              {region.text}
+            </div>
 
-            <div className="chips" aria-hidden>
-              {region.countries.map(c => (
-                <span key={c} style={{ padding:"6px 10px", background:"#fff", borderRadius:999, border:"1px solid rgba(11, 48, 79, 0.47)", color:"#173860", fontSize:13, fontWeight:600 }}>{c}</span>
+            <div className="chips" aria-hidden style={{ marginTop: 16 }}>
+              {region.countries.map((c) => (
+                <span key={c} style={{ padding:"6px 10px", background:"#fff", borderRadius:999, border:"1px solid rgba(11, 48, 79, 0.47)", color:"#173860", fontSize:13, fontWeight:600, marginRight:8, display:"inline-block", marginBottom:8 }}>
+                  {c}
+                </span>
               ))}
             </div>
           </main>

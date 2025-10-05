@@ -65,7 +65,10 @@ body{
   margin-bottom:22px;
 }
 .map-card {
-  background:var(--card);
+  background-image: url('./placeholder.png');
+  background-position: top;
+  background-size: cover;
+  background-attachment:local;
   border-radius:12px;
   padding: 14px;
   border:1px solid rgba(11,48,79,0.03);
