@@ -70,7 +70,7 @@ export default function Home() {
       {/* Header component will go here */}
       <div className="home-container">
         <div style={{justifyContent:'center',alignItems:'center',display:'flex',flexDirection:'column'}}>
-            <h1 className="home-title" style={{fontSize:'70px',color:'black'}} align="center">Delivering Quality Healthcare <br></br>Across <span style={{ color: '#d26c1fff',textShadow:'2px 2px 4px rgba(255, 255, 255, 0.5)' }}>58+ Countries</span></h1>
+            <h1 className="home-title" style={{color:'black'}} align="center">Delivering Quality Healthcare <br></br>Across <span style={{ color: '#d26c1fff',textShadow:'2px 2px 4px rgba(255, 255, 255, 0.5)' }}>58+ Countries</span></h1>
             <p className="home-subtitle" style={{fontSize:'20px' ,color:'black'}} align="center">Every <span style={{ color: '#ba6829ff' }}>Dose</span> Counts. Every <span style={{ color: '#1b1283ff' }}>Day</span> Matters.</p>
             <div className="button-container">
             <button type="button">Learn More</button>

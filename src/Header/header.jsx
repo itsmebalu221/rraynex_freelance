@@ -101,7 +101,7 @@ export default function Header() {
                   <div className={`mobile-sub ${openIdx === i ? "open" : ""}`}>
                     <NavLink
                       to={item.path}
-                      className="mobile-link"
+                      className="mobile-parent"
                       onClick={closeMobile}
                     >
                       {item.name} Home
@@ -121,7 +121,7 @@ export default function Header() {
               ) : (
                 <NavLink
                   to={item.path}
-                  className="mobile-link"
+                  className="mobile-parent"
                   onClick={closeMobile}
                 >
                   {item.name}
