@@ -44,7 +44,7 @@ const TrustedBy= () => {
             Trusted by Leading Companies
           </h2>
           <p className="trusted-by-subtitle">
-            Join companies worldwide who trust our solutions.
+            Proudly partnered with world-class companies that count on us to power their growth and innovation.
           </p>
         </div>
         

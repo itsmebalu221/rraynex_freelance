@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { Building2, Heart, TrendingUp, Users } from 'lucide-react';
+import { Building2,Tablets, Heart,FlaskConical, Grip,TrendingUp, Users, Package ,ShoppingCart} from 'lucide-react';
 import './eco.css';
 
 const CleanGlossyEcosystem = () => {
   const [activeTab, setActiveTab] = useState('Ecosystem');
   
   const tabs = [
-    { id: 'Ecosystem', label: 'Ecosystem', icon: <Building2 size={18} /> },
-    { id: 'Healthcare', label: 'Healthcare', icon: <Heart size={18} /> },
-    { id: 'M&A', label: 'M&A', icon: <TrendingUp size={18} /> },
-    { id: 'SME Upliftment', label: 'SME Upliftment', icon: <Users size={18} /> }
+    { id: 'Ecosystem', label: 'Pellets', icon: <Tablets /> },
+    { id: 'Healthcare', label: 'Granules', icon: <Grip /> },
+    { id: 'M&A', label: 'APIs & Intermediaries', icon: <FlaskConical /> },
+    { id: 'M&A1', label: 'Finished Dosage Forms', icon: <Package /> },
+    { id: 'SME Upliftment', label: 'Rraynex LUXE', icon: <ShoppingCart /> }
   ];
   
   const content = {

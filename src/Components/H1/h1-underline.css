@@ -1,0 +1,40 @@
+.h1-underline {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  color: #0b1220;
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  width: fit-content;
+ 
+}
+
+/* The underline pseudo-element */
+.h1-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: var(--h1-underline-thickness, 3px);
+  background: var(--h1-underline-color, #1b1283);
+  border-radius: 999px;
+
+  /* --- Key properties for this animation --- */
+  transform: scaleX(0); /* Start fully shrunk */
+  transform-origin: center; /* Animate from the center */
+  animation-name: center-out-reveal;
+  animation-duration: var(--h1-underline-duration, 1.5s);
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; /* Keep the line visible after animating */
+  animation-iteration-count: infinite;
+}
+
+/* The keyframes for the reveal animation */
+@keyframes center-out-reveal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

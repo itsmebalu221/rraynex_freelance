@@ -16,7 +16,7 @@ export default function InfoCard({
       hoverable
       className="info-card"
       style={{
-        width: 300,
+        width: 350,
         borderRadius: 30,
         textAlign: "center",
         boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
@@ -38,12 +38,12 @@ export default function InfoCard({
       </Title>
 
       {/* Description */}
-      <Paragraph style={{ fontSize: "14px", color: "#444", marginBottom: "20px", fontFamily: "Lexend, sans-serif" }}>
+      <Paragraph style={{ fontSize: "14px", color: "#444", marginBottom: "20px", fontFamily: "Lexend, sans-serif",textAlign:'justify'  }}>
         {description}
       </Paragraph>
 
       {/* Button */}
-      <Button
+       <Button
         type="primary"
         size="large"
         block
@@ -55,7 +55,7 @@ export default function InfoCard({
         }}
       >
         {buttonText}
-      </Button>
+      </Button> 
     </Card>
   );
 }

@@ -112,6 +112,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 80vh;
+  text-align: center;
 }
 
 .second-section::before {
