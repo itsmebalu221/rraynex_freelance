@@ -12,24 +12,51 @@ const CleanGlossyEcosystem = () => {
     { id: 'M&A1', label: 'Finished Dosage Forms', icon: <Package /> },
     { id: 'SME Upliftment', label: 'Rraynex LUXE', icon: <ShoppingCart /> }
   ];
+
+  
   
   const content = {
     'Ecosystem': {
-      title: 'Building a Sustainable Healthcare Ecosystem',
-      description: 'We are a pharmaceutical company committed to delivering high-quality, affordable, and relevant medicines to communities across the globe. Our operations are centered on supporting pharmaceutical providers to serve communities with the highest quality products. To achieve this, we have established partnerships in each region that our foundations meet international standards of safety and efficacy. This customer-first approach helps us build strong relationships that extend beyond transactions and grow into partnerships built on trust. At the same time, we continuously invest in research and technology to improve our product portfolio and keep pace with the evolving demands of global healthcare.'
+      title: 'Pellets',
+      description:
+        'Our pelletization platform delivers uniform drug-release profiles and scale-ready processes. We engineer controlled-release pellets to meet regulatory expectations and commercial throughput — minimizing variation, maximizing yield.',
+      ctaLabel: 'Explore Pellets',
+      ctaLink: '/products/pellets'
     },
     'Healthcare': {
-      title: 'Advancing Global Healthcare Standards',
-      description: 'Our healthcare initiatives focus on improving access to quality medicines worldwide. Through strategic partnerships and innovative distribution networks, we ensure that essential medications reach underserved communities while maintaining the highest standards of safety and efficacy.'
+      title: 'Granules',
+      description:
+        'Granulation expertise for wet and dry processes that enable better flow, tableting consistency, and dose accuracy. We optimize particle size distribution and binder systems to support downstream manufacturing efficiency.',
+      ctaLabel: 'View Granules',
+      ctaLink: '/products/granules'
     },
     'M&A': {
-      title: 'Strategic Mergers & Acquisitions',
-      description: 'Our M&A strategy is designed to expand our global footprint and enhance our pharmaceutical capabilities. We actively seek partnerships that align with our mission of delivering quality healthcare solutions to emerging markets.'
+      title: 'APIs & Intermediaries',
+      description:
+        'Strategic sourcing and development of APIs and intermediates to de-risk supply chains. We collaborate with partners to secure high-quality inputs, reduce COGS, and accelerate time-to-market for critical molecules.',
+      ctaLabel: 'APIs & Intermediates',
+      ctaLink: '/products/apis-intermediaries'
+    },
+    'M&A1': {
+      title: 'Finished Dosage Forms',
+      description:
+        'From tablets and capsules to sachets and jellies — we provide full-service finished dosage capabilities including formulation, scale-up, and regulatory-ready documentation to fast-track product launches.',
+      ctaLabel: 'Finished Dosage Forms',
+      ctaLink: '/products/finished-dosage-forms'
     },
     'SME Upliftment': {
-      title: 'Supporting Small & Medium Enterprises',
-      description: 'We believe in empowering local pharmaceutical manufacturers through knowledge transfer, technology sharing, and capacity building programs that help SMEs meet international quality standards.'
+      title: 'Rraynex LUXE',
+      description:
+        'Rraynex LUXE is our SME enablement program: technology transfer, QC training, and market-readiness support to elevate small manufacturers to export-capable partners.',
+      ctaLabel: 'Rraynex LUXE Program',
+      ctaLink: '/rraynex-luxe'
     }
+  };
+
+  const handleCTAClick = (link) => {
+    if (!link) return;
+    // direct, deterministic redirect — no router assumptions
+    window.location.href = link;
   };
 
   return (
@@ -61,6 +88,16 @@ const CleanGlossyEcosystem = () => {
             <div className="card-content">
               <h3 className="clean-content-title">{content[activeTab].title}</h3>
               <p className="clean-content-desc">{content[activeTab].description}</p>
+              
+              <div className="card-cta">
+                <button
+                  className="cta-button"
+                  onClick={() => handleCTAClick(content[activeTab].ctaLink)}
+                  aria-label={content[activeTab].ctaLabel}
+                >
+                  {content[activeTab].ctaLabel}
+                </button>
+              </div>
             </div>
           </div>
         </div>

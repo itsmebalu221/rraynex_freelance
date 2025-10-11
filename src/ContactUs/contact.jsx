@@ -1,163 +1,138 @@
 import React, { useEffect, useState } from "react";
+import { FaBuilding, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import "./Contact.css";
-import { FaBuilding, FaUsers, FaEnvelope, FaGlobe } from "react-icons/fa";
+import Hero from "../Components/Hero/Hero";
 
-const Contact = () => {
+const HQ_CITIES = [
+  { id: 1, city: "Ankleshwar", note: "Manufacturing & Packaging Hub" },
+  { id: 2, city: "Vadodara", note: "Formulation & APIs" },
+  { id: 3, city: "Baddi", note: "Regulated Manufacturing Zone" },
+  { id: 4, city: "Hyderabad", note: "Biotech & API Cluster" },
+  { id: 5, city: "Chennai", note: "Southern Operations" },
+  { id: 6, city: "Kolkata", note: "Eastern Commercial Hub" },
+];
+
+const MAIL_CONTACTS = [
+  { title: "Media & Communications", email: "communications@rraynex.com" },
+  { title: "Business Development", email: "info@rraynex.com" },
+  { title: "Global Inquiries", email: "global@rraynex.com" },
+];
+
+export default function Contact() {
   const [showMap, setShowMap] = useState(false);
 
   useEffect(() => {
     const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
-    const isHeadless = ua.includes("HeadlessChrome");
-    if (!isHeadless) {
-      setShowMap(true);
-    }
+    const isHeadless = ua.includes("HeadlessChrome") || ua.includes("PhantomJS");
+    if (!isHeadless) setShowMap(true);
   }, []);
 
   return (
-    <div className="contact">
-      {/* HERO */}
-      <section className="products-hero">
-        <div className="products-hero-content">
-          <h1 className="products-hero-title">Contact Us</h1>
-          <p className="products-hero-lead">Your feedback is essential to us, so please do not hesitate to contact us if you have any comments or suggestions.</p>
-         
-        </div>
-      </section>
+    <main className="contact">
+      {/* Hero Section */}
+      <Hero
+                      title="Pioneering Quality, Powering Global Trust"
+                      subtitle="Precision in every process — delivering scientifically assured, globally compliant healthcare solutions."
+                      bgImage="https://www.pexels.com/photo/person-holding-white-plastic-straw-8450516/"
+                      ptitle="Explore Our Products"
+                      plink="/products"
+                      stitle="Download Brochure"
+                      slink="/assets/Rraynex_Brochure.pdf"
+                    />
 
-      {/* Content */}
       <div className="ct-container">
-        {/*<h2 className="section-heading">Get in Touch</h2>*/}
+        {/* Top Section — Form + Corporate Office */}
+        <div className="ct-top">
+          <form className="ct-form">
+            <h2 className="section-heading">Get in Touch</h2>
 
-        {/* Intro cards */}
-        {/* <div className="ct-grid">
-          <div className="ct-card">
-            <FaUsers className="ct-icon" />
-            <h4>Discover your potential with us</h4>
-            <p>
-              Join our team today!{" "}
-              <button
-                type="button"
-                className="ct-link"
-                onClick={() => {
-                  // TODO: Add navigation or modal logic here
-                }}
-                style={{
-                  background: "none",
-                  border: "none",
-                  padding: 0,
-                  color: "inherit",
-                  textDecoration: "underline",
-                  cursor: "pointer",
-                }}
-              >
-                Click Here
-              </button>
-            </p>
-          </div>
+            <label>
+              Full Name
+              <input type="text" placeholder="Enter your name" required />
+            </label>
 
-          <div className="ct-card">
-            <FaEnvelope className="ct-icon" />
-            <h4>Adverse Event Reporting</h4>
-            <p>
-              Report any adverse events or undesirable experiences (side
-              effects) associated with the use of our medicines.
-            </p>
-          </div>
+            <label>
+              Company
+              <input type="text" placeholder="Enter your company name" />
+            </label>
 
-          <div className="ct-card">
-            <FaEnvelope className="ct-icon" />
-            <h4>Product Quality Complaint Form</h4>
-            <p>Report any complaints regarding the quality of our medicines.</p>
-          </div>
-        </div> */}
+            <label>
+              Email
+              <input type="email" placeholder="Enter your business email" required />
+            </label>
 
-        {/* Offices */}
-        <h2 className="section-heading">Our Offices</h2>
-        <div className="ct-grid">
-          <div className="ct-card">
-            <FaBuilding className="ct-icon" />
-            <h4>Registered Office</h4>
-            <p>
-              Westgate, 100 Feet Road, 4, SG Hwy Service Rd, Makarba,
-              Ahmedabad, Gujarat 380015
-            </p>
-            <p>📞 +91 8697970460</p>
-            <p>✉️ communications@rraynex.com</p>
-          </div>
+            <label>
+              Message
+              <textarea placeholder="Your message..." rows="5" required></textarea>
+            </label>
 
-          <div className="ct-card">
-            <FaBuilding className="ct-icon" />
-            <h4>Corporate Office</h4>
-            <p>
-              Leela Business Park, Andheri (East) Mumbai, Maharashtra:
-              400059
-            </p>
-            <p>📞 +91 9748400667</p>
-            <p>✉️ communications@rraynex.com</p>
+            <button type="submit" className="btn-primary">Send Message</button>
+          </form>
+
+          <div className="ct-office">
+            <h2 className="section-heading">Corporate Office</h2>
+            <div className="office-info">
+              <FaBuilding className="ct-icon" />
+              <div>
+                <p className="office-name">Rraynex Pharmaceuticals Pvt. Ltd.</p>
+                <p>
+                  Leela Business Park, Andheri (East), Mumbai,<br />
+                  Maharashtra 400059
+                </p>
+                <p><strong>Phone:</strong> +91 97484 00667</p>
+                <p><strong>Email:</strong> communications@rraynex.com</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Investors */}
-        <h2 className="section-heading">Investors</h2>
-        <div className="ct-grid">
-          <div className="ct-card">
-            <FaUsers className="ct-icon" />
-            <h4>Individual Investor</h4>
-            <p>Ms. Raina Dilip Desai</p>
-            <p>✉️ raina@rraynex.com</p>
-          </div>
-
-          <div className="ct-card">
-            <FaUsers className="ct-icon" />
-            <h4>Institutional Investor</h4>
-            <p>Mr. Nishit Gupta</p>
-            <p>✉️ nishit@rraynex.com</p>
-          </div>
+        {/* Headquarters Section */}
+        <h2 className="section-heading center">Headquarters & Regional Offices</h2>
+        <div className="hq-row">
+          {HQ_CITIES.map((hq) => (
+            <div key={hq.id} className="hq-box">
+              <FaMapMarkerAlt className="hq-icon" />
+              <div>
+                <h4>{hq.city}</h4>
+                <p>{hq.note}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Other Contacts */}
-        <h2 className="section-heading">Other Contacts</h2>
-        <div className="ct-grid">
-          <div className="ct-card">
-            <FaEnvelope className="ct-icon" />
-            <h4>Media Contacts</h4>
-            <p>communications@rraynex.com</p>
-          </div>
-          <div className="ct-card">
-            <FaEnvelope className="ct-icon" />
-            <h4>Business Development</h4>
-            <p>info@rraynex.com</p>
-          </div>
-          <div className="ct-card">
-            <FaGlobe className="ct-icon" />
-            <h4>Worldwide Info</h4>
-            <p>info@rraynex.com</p>
-          </div>
+        {/* Mail Contacts */}
+        <h2 className="section-heading center">Key Contacts</h2>
+        <div className="mail-row">
+          {MAIL_CONTACTS.map((mail, i) => (
+            <div key={i} className="mail-card">
+              <FaEnvelope className="mail-icon" />
+              <div>
+                <h4>{mail.title}</h4>
+                <p>{mail.email}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Map */}
-        <h2 className="section-heading">Find Us</h2>
+        <h2 className="section-heading center">Locate Us</h2>
         <div className="map-container">
           {showMap ? (
             <iframe
-              title="Rraynex Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7508.163945970745!2d72.75121871023883!3d19.794121481487025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71f005d81a1f7%3A0x3472d693bdd3a913!2sRraynex%20pharmaceutical%20Pvt.%20Ltd!5e0!3m2!1sen!2sus!4v1756640830152!5m2!1sen!2sus"
+              title="Rraynex Corporate Office"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7508.163945970745!2d72.75121871023883!3d19.794121481487025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71f005d81a1f7%3A0x3472d693bdd3a913!2sRraynex%20pharmaceutical%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1756640830152!5m2!1sen!2sin"
               width="100%"
-              height="400"
-              style={{ border: "0" }}
+              height="480"
+              style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           ) : (
-            <div className="map-placeholder">
-              Interactive map loads on the live site.
-            </div>
+            <div className="map-placeholder">Interactive map loads on live site</div>
           )}
         </div>
       </div>
-    </div>
+    </main>
   );
-};
-
-export default Contact;
+}

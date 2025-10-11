@@ -1,191 +1,196 @@
-/* contact.css */
+:root {
+  --navy: #0b304f;
+  --accent: #ff7a00;
+  --muted: #6b7280;
+  --bg: #fcf9eb;
+}
+
+/* Base */
 .contact {
   font-family: "Segoe UI", sans-serif;
-  color: #000;
-  background-color: #fff8f0;
-}
-
-/* Banner */
-.ct-banner {
-  background: url("/src/Home/bg1.jpg") center/cover no-repeat;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.ct-banner__overlay {
-  background: rgba(3, 29, 81, 0.65);
-  padding: 40px;
+  background: var(--bg);
+  color: #0f1724;
   text-align: center;
-  color: #fff;
-  border-radius: 12px;
-  max-width: 800px;
-}
-
-.ct-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #ff7a00;
-}
-
-.ct-subtitle {
-  font-size: 1.1rem;
-  line-height: 1.6;
 }
 
 /* Container */
 .ct-container {
-  max-width: 80%;
+  width: 90%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 40px 0;
 }
 
-/* Section heading */
+/* Headings */
 .section-heading {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.center {
   text-align: center;
-  color: #031d51;
-  margin: 50px 0 30px;
-  position: relative;
 }
 
-.section-heading::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #ff7a00;
-  margin: 12px auto 0;
-  border-radius: 3px;
-}
-
-/* Intro text */
-.ct-intro {
-  text-align: center;
-  font-size: 1.05rem;
-  color: #333;
-  max-width: 900px;
-  margin: 0 auto 50px;
-  line-height: 1.7;
-}
-
-/* Grid */
-.ct-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Form + Office row */
+.ct-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
-/* Cards */
-.ct-card {
-  background: linear-gradient(135deg, #ffffff, #f8f9ff);
-  padding: 35px 25px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+/* Form */
+.ct-form {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  text-align: left;
 }
-
-.ct-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(3, 29, 81, 0.25);
-}
-
-.ct-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 122, 0, 0.15),
-    rgba(3, 29, 81, 0.1)
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 16px;
-  z-index: 0;
-}
-
-.ct-card:hover::after {
-  opacity: 1;
-}
-
-/* Icons */
-.ct-icon {
-  font-size: 2.5rem;
-  color: #ff7a00;
-  margin-bottom: 15px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Card Text */
-.ct-card h4 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: #031d51;
-  position: relative;
-  z-index: 1;
-}
-
-.ct-card h4::after {
-  content: "";
+.ct-form label {
   display: block;
-  width: 0;
-  height: 3px;
-  background: #ff7a00;
-  margin: 6px auto 0;
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-.ct-card:hover h4::after {
-  width: 40px;
-}
-
-.ct-card p {
   font-size: 0.95rem;
-  color: #000;
-  line-height: 1.6;
-  position: relative;
-  z-index: 1;
-}
-
-.ct-card a {
-  color: #ff7a00;
   font-weight: 600;
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.ct-form input,
+.ct-form textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+.ct-form input:focus,
+.ct-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 5px rgba(255, 122, 0, 0.4);
 }
 
-.ct-card a:hover {
-  text-decoration: underline;
+/* Corporate Office */
+.ct-office {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+.office-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.office-name {
+  font-weight: 700;
+  color: var(--navy);
+}
+.ct-icon {
+  color: var(--accent);
+  font-size: 1.8rem;
+}
+
+/* HQ Row */
+.hq-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.hq-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 160px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.hq-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.hq-icon {
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+.hq-box h4 {
+  color: var(--navy);
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+/* Mail row */
+.mail-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.mail-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.mail-card:hover {
+  transform: translateY(-4px);
+}
+.mail-icon {
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+.mail-card h4 {
+  color: var(--navy);
+  margin-bottom: 6px;
+  font-size: 1.05rem;
 }
 
 /* Map */
 .map-container {
-  margin: 60px 0 40px;
+  margin: 0 auto;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.map-placeholder {
+  padding: 50px;
+  background: linear-gradient(135deg, #f8f9ff, #eef2ff);
+  color: var(--navy);
+  font-weight: 600;
 }
 
-.map-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 240px;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f8f9ff, #eef2ff);
-  color: #031d51;
-  font-weight: 600;
+/* Responsive */
+@media (max-width: 768px) {
+  .ct-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-heading {
+    text-align: center;
+  }
+  .ct-form,
+  .ct-office {
+    width: 100%;
+  }
 }

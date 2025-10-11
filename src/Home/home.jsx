@@ -98,9 +98,7 @@ export default function Home() {
       
       {/* Second Section*/}
       <div className="second-section">
-        <H1Underline color="#f57018" thickness="6px" duration="4s" hold={2}>
-  Delivering Quality Healthcare
-</H1Underline>
+        <h1>Delivering Quality Healthcare</h1>
         <div className="card-container">
             <InfoCard className="info-card"
             icon={<BulbOutlined style={{ fontSize: "50px" }} />}

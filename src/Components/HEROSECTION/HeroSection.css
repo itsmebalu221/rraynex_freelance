@@ -1,0 +1,134 @@
+/* HeroSection.css */
+
+.hero {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: #111;
+  font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Background */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=1920");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  padding: 80px 24px;
+  margin: 0 auto;
+}
+
+/* Title */
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero-title .highlight {
+  color: #ff6600;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #4b5563;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 12px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.btn-primary {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e65c00;
+}
+
+.btn-outline {
+  background-color: #fff;
+  color: #111;
+  border: 2px solid #111;
+}
+
+.btn-outline:hover {
+  background-color: #f5f5f5;
+}
+
+/* Dots indicator */
+.hero-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 60px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
