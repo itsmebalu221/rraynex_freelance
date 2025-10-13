@@ -1,0 +1,210 @@
+/* Fullscreen Cinematic Overlay */
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 0.8s ease forwards;
+  transition: opacity 0.9s ease;
+}
+
+.welcome-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Background Image — pharma lab or science theme */
+.overlay-bg {
+  position: absolute;
+  inset: 0;
+  background: url("https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1920")
+    center/cover no-repeat;
+  filter: brightness(0.4) blur(2px);
+  transform: scale(1.1);
+  z-index: 0;
+  animation: zoomIn 6s ease-in-out infinite alternate;
+}
+
+/* Gradient Overlay */
+.overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 122, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.85) 70%
+  );
+  z-index: 1;
+}
+
+/* Content */
+.overlay-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 2rem;
+  animation: slideUp 1.4s ease forwards;
+}
+
+.logo-wrap {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 150px;
+  margin-bottom: 0px;
+}
+.logo-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 122, 0, 0.35), transparent 70%);
+  border-radius: 50%;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+.logo-icon {
+  width: 90px;
+  height: 90px;
+  color: #ff7a00;
+}
+
+.logo-img {
+  
+  object-fit: contain;
+}
+
+.overlay-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+  margin-top: 0px;
+}
+
+.overlay-sub {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffb978;
+  margin-bottom: 10px;
+}
+
+.overlay-desc {
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+  color: #e4e4e4;
+}
+
+.overlay-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #ff7a00, #ff944d);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 122, 0, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ff7a00;
+  color: #ff7a00;
+  padding: 12px 24px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background: #ff7a00;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.skip-btn {
+  margin-top: 25px;
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.skip-btn:hover {
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .overlay-title {
+    font-size: 2rem;
+  }
+  .overlay-sub {
+    font-size: 1.2rem;
+  }
+  .overlay-desc {
+    font-size: 0.9rem;
+  }
+}

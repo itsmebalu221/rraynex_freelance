@@ -330,3 +330,20 @@ body {
   position: relative;
   z-index: 3;
 }
+
+/* Home overlay integration and hero animation */
+.hero-carousel-wrapper {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-fade-out {
+  opacity: 0;
+  transform: translateY(15px);
+}
