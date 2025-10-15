@@ -1,16 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, Button, Typography } from "antd";
 import { BulbOutlined } from "@ant-design/icons"; // lightbulb icon
-import './card.css';
+import "./card.css";
 
 const { Title, Paragraph } = Typography;
 
-export default function InfoCard({ 
-  title = "Innovation", 
-  description, 
+export default function InfoCard({
+  title = "Innovation",
+  description,
   icon = <BulbOutlined style={{ fontSize: "50px" }} />,
-  buttonText = "Know More" 
+  buttonText = "Know More",
+  buttonLink = "/about/vision-and-values",
 }) {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate(buttonLink);
+  }
+
   return (
     <Card
       hoverable
@@ -43,7 +51,7 @@ export default function InfoCard({
       </Paragraph>
 
       {/* Button */}
-       <Button
+      <Button
         type="primary"
         size="large"
         block
@@ -51,11 +59,13 @@ export default function InfoCard({
           backgroundColor: "#d26c1fff",
           border: "none",
           borderRadius: "35px",
-          fontFamily: "Lexend, sans-serif"
+          fontFamily: "Lexend, sans-serif",
         }}
+        onClick={handleClick}
+        aria-label={`${title} details`}
       >
         {buttonText}
-      </Button> 
+      </Button>
     </Card>
   );
 }

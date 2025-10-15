@@ -18,6 +18,7 @@ import ProductsPage ,{ProductDetailPage} from "./Products/ProductS/Products";
 import ProductCategories from "./Products/Categories/CategoryPage";
 import Manufacturing from "../src/Manifacturing/manifacturing";
 import NotFound from "./NotFound";
+import Luxe from "./Luxe/Luxe";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/products/categories" element={<ProductCategories />} />
           <Route path="/products/categories/:category" element={<ProductsPage />} />
             <Route path="/products/view/:slug" element={<ProductDetailPage />} />
+          <Route path="/products/categories/rraynex-luxe" element={<Luxe />} />
           <Route path="/worldwide" element={<Worldwide />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

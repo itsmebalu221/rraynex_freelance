@@ -50,16 +50,16 @@ export default function Footer() {
               <li className="contact-item">
                 <MapPin className="contact-icon" />
                 <span>
-                  Corporate Office<br />Mumbai, Maharashtra, India
+                  J 94 Tarapur M. I. D. C.,<br /> Boisar - 401506, Maharashtra, India
                 </span>
               </li>
               <li className="contact-item">
                 <Phone className="contact-icon" />
-                <a href="tel:+91XXXXXXXXXX" className="footer-link">+91-XXXX-XXXXXX</a>
+                <a href="tel:+918697970460" className="footer-link">+91-86979-70460</a>
               </li>
               <li className="contact-item">
                 <Mail className="contact-icon" />
-                <a href="mailto:info@rraynexpharma.com" className="footer-link">info@rraynexpharma.com</a>
+                <a href="mailto:communications@rraynex.com" className="footer-link">communications@rraynex.com</a>
               </li>
             </ul>
           </div>

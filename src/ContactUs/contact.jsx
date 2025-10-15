@@ -3,19 +3,47 @@ import { FaBuilding, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import "./Contact.css";
 import Hero from "../Components/Hero/Hero";
 
-const HQ_CITIES = [
-  { id: 1, city: "Ankleshwar", note: "Manufacturing & Packaging Hub" },
-  { id: 2, city: "Vadodara", note: "Formulation & APIs" },
-  { id: 3, city: "Baddi", note: "Regulated Manufacturing Zone" },
-  { id: 4, city: "Hyderabad", note: "Biotech & API Cluster" },
-  { id: 5, city: "Chennai", note: "Southern Operations" },
-  { id: 6, city: "Kolkata", note: "Eastern Commercial Hub" },
+const REGIONAL_OFFICES = [
+  {
+    id: 1,
+    city: "Ankleshwar",
+    note: "Intermediary manufacturing hub serving regulated and semi-regulated markets",
+  },
+  {
+    id: 2,
+    city: "Mumbai (Tarapur)",
+    note: "Corporate HQ, pellets & granules primary production campus",
+  },
+];
+
+const BRANCH_OFFICES = [
+  {
+    id: 3,
+    city: "Saykha (Bharuch, Gujarat)",
+    note: "Saykha Industrial Estate, GIDC, Vagra, Bharuch 392140",
+  },
+  {
+    id: 4,
+    city: "Kolkata",
+    note: "#3 Govinda Auddy Road, Kolkata 700027",
+  },
+  {
+    id: 5,
+    city: "Ahmedabad",
+    note: "13th Floor, Gala Empire, Opp. T. V. Tower, Thaltej, Ahmedabad 380054",
+  },
+  {
+    id: 6,
+    city: "New Delhi",
+    note: "F-61, First Floor, Manish Global Mall, Sector-22, Dwarka, New Delhi 110077",
+  },
 ];
 
 const MAIL_CONTACTS = [
-  { title: "Media & Communications", email: "communications@rraynex.com" },
-  { title: "Business Development", email: "info@rraynex.com" },
-  { title: "Global Inquiries", email: "global@rraynex.com" },
+  { title: "Media & Communications", email: "raina@rraynex.com" },
+  { title: "Business Inquiry", email: "communications@rraynex.com" },
+  { title: "Global Inquiries", email: "offers@rraynex.com" },
+  { title: "Investor Relations", email: "nishit@rraynex.com" },
 ];
 
 export default function Contact() {
@@ -43,7 +71,7 @@ export default function Contact() {
       <div className="ct-container">
         {/* Top Section — Form + Corporate Office */}
         <div className="ct-top">
-          <form className="ct-form">
+          <form className="ct-form" mailto="communications@rraynex.com">
             <h2 className="section-heading">Get in Touch</h2>
 
             <label>
@@ -76,20 +104,33 @@ export default function Contact() {
               <div>
                 <p className="office-name">Rraynex Pharmaceuticals Pvt. Ltd.</p>
                 <p>
-                  Leela Business Park, Andheri (East), Mumbai,<br />
-                  Maharashtra 400059
+                  J 94 Tarapur M. I. D. C., Boisar - 401506, Maharashtra, India
                 </p>
-                <p><strong>Phone:</strong> +91 97484 00667</p>
+                <p><strong>Phone:</strong> +91 86979 70460</p>
                 <p><strong>Email:</strong> communications@rraynex.com</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Headquarters Section */}
-        <h2 className="section-heading center">Headquarters & Regional Offices</h2>
+        {/* Regional Offices */}
+        <h2 className="section-heading center">Regional Headquarters</h2>
         <div className="hq-row">
-          {HQ_CITIES.map((hq) => (
+          {REGIONAL_OFFICES.map((hq) => (
+            <div key={hq.id} className="hq-box">
+              <FaMapMarkerAlt className="hq-icon" />
+              <div>
+                <h4>{hq.city}</h4>
+                <p>{hq.note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Branch Offices */}
+        <h2 className="section-heading center">Branch Offices</h2>
+        <div className="hq-row">
+          {BRANCH_OFFICES.map((hq) => (
             <div key={hq.id} className="hq-box">
               <FaMapMarkerAlt className="hq-icon" />
               <div>

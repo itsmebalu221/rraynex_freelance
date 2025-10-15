@@ -1,6 +1,12 @@
 .info-card {
+  position: relative;
   transition: all 0.3s ease;
   box-shadow: 0 8px 20px rgb(0, 0, 0);
+}
+
+.info-card .ant-card-body {
+  position: relative;
+  z-index: 1;
 }
 
 .info-card:hover {
@@ -21,6 +27,7 @@
   transition: opacity 0.3s ease;
   border-radius: 16px;
   z-index: 0;
+  pointer-events: none;
 }
 
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Building2, ShoppingBag } from "lucide-react";
 import "./overlay.css";
 import logot from '../Header/logot.png'
@@ -6,16 +6,7 @@ export default function WelcomeOverlay({ onClose }) {
   const [visible, setVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
-  useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisitedRraynex");
-    if (hasVisited) {
-      setVisible(false);
-      onClose?.();
-    }
-  }, [onClose]);
-
   const handleClose = () => {
-    localStorage.setItem("hasVisitedRraynex", "true");
     setFadeOut(true);
     setTimeout(() => {
       setVisible(false);
@@ -57,7 +48,6 @@ export default function WelcomeOverlay({ onClose }) {
           </button>
           <button
             onClick={() => {
-              localStorage.setItem("hasVisitedRraynex", "true");
               window.location.href = "/rraynex-luxe";
             }}
             className="btn-outline"

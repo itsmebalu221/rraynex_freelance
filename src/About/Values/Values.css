@@ -269,6 +269,46 @@
   .vv-cert-badge { width: 140px; padding: 12px; }
 }
 
+@media (max-width: 768px) {
+  .vv-image-split,
+  .vv-image-split.reversed {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    direction: ltr;
+    text-align: left;
+  }
+
+  .vv-image-split img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .vv-image-split.reversed img {
+    order: -1;
+  }
+
+  .vv-image-split .vv-image-split-content,
+  .vv-image-split.reversed .vv-image-split-content {
+    padding: 0;
+  }
+
+  .vv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .vv-cert-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vv-cert-badge {
+    width: 100%;
+  }
+}
+
 /* Prefers reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .vv-card, .vision-card, .vv-image-split img, .vv-image-split-content, .vv-cert-badge { transition: none !important; }

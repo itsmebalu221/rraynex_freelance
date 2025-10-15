@@ -154,7 +154,7 @@ export default function Manufacturing() {
       {/* HERO */}
       <Hero
         title="Manufacturing Excellence"
-        subtitle="Precision, process integrity, and global compliance — the pillars of our production ecosystem."
+        subtitle="Precision, process integrity, and global compliance, the pillars of our production ecosystem."
         plink="/products"
         ptitle="Explore Products"
         slink="/assets/Rraynex_Brochure.pdf"

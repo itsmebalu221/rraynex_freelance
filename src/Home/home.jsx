@@ -20,14 +20,6 @@ export default function Home() {
     setTimeout(() => setHeroVisible(true), 300);
   };
 
-  // skip overlay if user has visited
-  useEffect(() => {
-    if (localStorage.getItem("hasVisitedRraynex")) {
-      setOverlayClosed(true);
-      setHeroVisible(true);
-    }
-  }, []);
-
   return (
     <>
       <Helmet>
@@ -115,6 +107,7 @@ export default function Home() {
             title="Innovation"
             description="Manufacturing pharmaceutical pellets, granules, APIs, and intermediaries with cutting-edge technology. We blend local expertise with global standards, ensuring world-class quality at every production stage. #LocalToGlobal"
             buttonText="Know More"
+            buttonLink="/about/innovation"
           />
 
           <InfoCard
@@ -123,6 +116,7 @@ export default function Home() {
             icon={<HeartOutlined style={{ fontSize: "50px" }} />}
             description="Quality is our unwavering commitment from inception to delivery. Every raw material, every manufacturing process, and every finished product undergoes rigorous quality assurance, ensuring that we deliver nothing but excellence to our global partners."
             buttonText="Know More"
+            buttonLink="/about/vision-and-values"
           />
 
           <InfoCard
@@ -131,6 +125,7 @@ export default function Home() {
             icon={<RiseOutlined style={{ fontSize: "50px" }} />}
             description="Beyond pharmaceuticals, Rraynex is diversifying into complementary sectors including engineering solutions and real estate development. We are strategically positioning ourselves to enter the energy sector, creating a robust, multi-dimensional enterprise."
             buttonText="Know More"
+            buttonLink="/responsibility/uplifting-ecosystem"
           />
         </div>
       </div>
