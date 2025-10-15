@@ -15,6 +15,7 @@ import Sustainability from "./Responsiblity/Sustainability/sus";
 import EHS from "./Responsiblity/EHS/EHS";
 import Ecosystem from "./Responsiblity/UpliftingEco/uplifting";
 import ProductsPage ,{ProductDetailPage} from "./Products/ProductS/Products";
+import ProductCategories from "./Products/Categories/CategoryPage";
 import Manufacturing from "../src/Manifacturing/manifacturing";
 import NotFound from "./NotFound";
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/responsibility/uplifting-ecosystem" element={<Ecosystem />} />
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/categories" element={<ProductCategories />} />
           <Route path="/products/:category" element={<ProductsPage />} />
             <Route path="/products/view/:slug" element={<ProductDetailPage />} />
           <Route path="/worldwide" element={<Worldwide />} />

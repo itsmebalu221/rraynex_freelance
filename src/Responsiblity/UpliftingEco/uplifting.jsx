@@ -1,194 +1,150 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Globe, Lightbulb, Cog, ArrowRight, Heart } from "lucide-react";
+import React, { useEffect } from "react";
 import "./ecosys.css";
 
+const VALUE_CHAIN = [
+  {
+    id: "pellets",
+    title: "Pellets That Anchor Release Blueprints",
+    summary:
+      "We start by co-developing multiparticulate systems with partner sites. Uniform bead sizes and validated coating cycles give smaller manufacturers a predictable base for complex therapies.",
+    impact:
+      "Partners can plug into international supply programs faster because dissolution data and stability protocols travel with every batch.",
+    ctaLabel: "Pellet Portfolio",
+    ctaLink: "/products/pellets",
+  },
+  {
+    id: "granules",
+    title: "Granules That Anticipate Demand",
+    summary:
+      "Moisture-managed granules engineered for direct compression protect tablet press capacity. We share blend recipes and in-process controls that work in real-world humidity and heat.",
+    impact:
+      "By removing the uncertainty around flow, our partners convert more SKUs on the same line and cut rejection rates for seasonal runs.",
+    ctaLabel: "Granule Range",
+    ctaLink: "/products/granules",
+  },
+  {
+    id: "api",
+    title: "APIs & Intermediaries Safeguarding Core Chemistry",
+    summary:
+      "WHO-GMP synthesis blocks, impurity profiling, and dossier-ready documentation keep pipelines compliant. Smaller formulators gain access to chemistries that normally demand heavy capital investment.",
+    impact:
+      "Joint tech-transfer labs deliver repeatable impurity profiles so regulatory filings move quickly across LATAM, CIS, and ROW markets.",
+    ctaLabel: "API Capabilities",
+    ctaLink: "/products/api",
+  },
+  {
+    id: "fdf",
+    title: "Finished Dose Forms Completing the Value Loop",
+    summary:
+      "We support tablets, capsules, sachets, and novel formats with scale-up playbooks and validation templates. Contract sites move from toll manufacturing to brand-owning partners.",
+    impact:
+      "Rraynex teams stay on the floor through PPQ, ensuring quality metrics are met and market launch dates hold steady.",
+    ctaLabel: "Talk FDF with Us",
+    ctaLink: "/contact",
+  },
+];
+
+const SUPPORT_THEMES = [
+  {
+    title: "Shared Process Intelligence",
+    copy:
+      "From coating parameters to compression force windows, we codify the lessons learned across our network and make them available to every partner site.",
+  },
+  {
+    title: "Access to Markets",
+    copy:
+      "Commercial, regulatory, and pharmacovigilance teams help file dossiers, structure supply agreements, and unlock new geographies for qualified partners.",
+  },
+  {
+    title: "Sustainable Investments",
+    copy:
+      "We reinvest in utilities, containment, and digital batch records at partner facilities so upgrades benefit the entire ecosystem, not just a single product.",
+  },
+];
+
 export default function Ecosystem() {
-  const observerRef = useRef(null);
-   const [isVisible, setIsVisible] = useState(false);
-  const [statsVisible, setStatsVisible] = useState(false);
-  const [pillsVisible, setPillsVisible] = useState(false);
-
   useEffect(() => {
-    setIsVisible(true);
-    
-    const timer1 = setTimeout(() => setStatsVisible(true), 500);
-    const timer2 = setTimeout(() => setPillsVisible(true), 1000);
-    
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-    };
-  }, []);
-
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    animatedElements.forEach((el) => observerRef.current?.observe(el));
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
+    if (typeof document !== "undefined") {
+      document.title = "Uplifting Ecosystem | Rraynex";
+    }
   }, []);
 
   return (
     <main className="ecosystem">
-      {/* HERO */}
-      <section className="about-hero csr-hero">
-        <div className="about-hero__inner">
-          <h1 className={`about-title fade-in ${isVisible ? 'visible' : ''}`}>
-            Uplifting the Ecosystem
-          </h1>
-          <p className={`about-lead fade-in-delay ${isVisible ? 'visible' : ''}`}>At Rraynex, we recognize the vital role played by smaller contract manufacturers in the pharmaceutical industry. We are committed to empowering and uplifting the ecosystem of smaller manufacturers through our network, resources, and expertise.</p>
-          <div className="about-cta">
-            <button className={`btn btn-primary slide-up ${isVisible ? 'visible' : ''}`}>Learn More</button>
-            <button className={`btn btn-outline slide-up-delay ${isVisible ? 'visible' : ''}`}>Our Impact</button>
+      <section className="ecosystem-hero">
+        <div className="hero-inner">
+          <h1 className="hero-title">Uplifting the Ecosystem</h1>
+          <p className="hero-lead">
+            Pellets, granules, APIs, and finished dose formulations are more than product lines—they are stepping stones that help
+            smaller manufacturers move up the value chain. Rraynex pairs its platform expertise with on-ground mentoring so the entire
+            ecosystem rises together.
+          </p>
+          <div className="hero-actions">
+            <a className="btn btn-primary" href="/products/categories">
+              Explore Capabilities
+            </a>
+            <a className="btn btn-outline" href="mailto:communications@rraynex.com">
+              Partner With Rraynex
+            </a>
           </div>
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="ecosystem-intro animate-on-scroll">
+      <section className="ecosystem-intro">
         <div className="intro-card">
-          <h2>Empowering Growth Together</h2>
+          <h2>How We Create Momentum</h2>
           <p>
-            Our initiatives focus on creating meaningful partnerships that drive sustainable growth and innovation 
-            across the pharmaceutical manufacturing landscape.
+            Every stage in the Rraynex value chain strengthens a different part of the ecosystem—from reliable intermediates to
+            consumer-ready finished products. We embed quality systems, supply assurance, and commercial know-how so partners can focus
+            on scaling responsibly.
           </p>
         </div>
       </section>
 
-      {/* INITIATIVE AREAS */}
-      <section className="ecosystem-areas">
-        <h2 className="section-heading animate-on-scroll">Our Initiative Areas</h2>
-        
-        <div className="ecosystem-grid animate-on-scroll">
-          <div className="ecosystem-card" style={{ animationDelay: '0.1s' }}>
-            <div className="ecosystem-image">
-              <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Access to Markets" />
-              <div className="image-overlay">
-                <Globe className="w-8 h-8 text-white" />
+      <section className="value-chain">
+        <h2 className="section-heading">From Pellets to Finished Dose Forms</h2>
+        <div className="value-grid">
+          {VALUE_CHAIN.map((stage) => (
+            <article key={stage.id} className="value-card">
+              <header>
+                <span className="value-step">{stage.title}</span>
+              </header>
+              <p className="value-summary">{stage.summary}</p>
+              <p className="value-impact">{stage.impact}</p>
+              <div className="value-cta">
+                <a className="btn btn-outline" href={stage.ctaLink}>
+                  {stage.ctaLabel}
+                </a>
               </div>
-            </div>
-            <div className="ecosystem-content">
-              <h3 className="ecosystem-title">Access to Markets</h3>
-              <p className="ecosystem-text">
-                We work closely with smaller contract manufacturers to help them access new markets across the globe. 
-                We provide them with the necessary resources and support to help them navigate complex regulatory 
-                environments and expand their reach.
-              </p>
-              <div className="ecosystem-arrow">
-                <ArrowRight className="w-5 h-5" />
-              </div>
-            </div>
-          </div>
-
-          <div className="ecosystem-card" style={{ animationDelay: '0.2s' }}>
-            <div className="ecosystem-image">
-              <img src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Product Development" />
-              <div className="image-overlay">
-                <Lightbulb className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            <div className="ecosystem-content">
-              <h3 className="ecosystem-title">Product Development</h3>
-              <p className="ecosystem-text">
-                We understand the importance of product development in driving growth for smaller contract manufacturers. 
-                Our team of experts work closely with them to identify product opportunities, conduct market research, 
-                and develop innovative products that meet the needs of their customers.
-              </p>
-              <div className="ecosystem-arrow">
-                <ArrowRight className="w-5 h-5" />
-              </div>
-            </div>
-          </div>
-
-          <div className="ecosystem-card" style={{ animationDelay: '0.3s' }}>
-            <div className="ecosystem-image">
-              <img src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Manufacturing Support" />
-              <div className="image-overlay">
-                <Cog className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            <div className="ecosystem-content">
-              <h3 className="ecosystem-title">Manufacturing Support</h3>
-              <p className="ecosystem-text">
-                We provide our smaller contract manufacturers with access to our network of resources and suppliers 
-                to help them optimize their manufacturing processes. We also provide them with training and support 
-                to ensure that they meet the highest quality and compliance standards.
-              </p>
-              <div className="ecosystem-arrow">
-                <ArrowRight className="w-5 h-5" />
-              </div>
-            </div>
-          </div>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* IMPACT METRICS */}
-      <section className="impact-metrics animate-on-scroll">
-        <h2 className="section-heading">Partnership Impact</h2>
-        <div className="metrics-grid animate-on-scroll">
-          <div className="metric" style={{ animationDelay: '0.1s' }}>
-            <div className="metric-value">50+</div>
-            <div className="metric-label">Partner Manufacturers</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.2s' }}>
-            <div className="metric-value">25</div>
-            <div className="metric-label">Global Markets</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.3s' }}>
-            <div className="metric-value">200+</div>
-            <div className="metric-label">Products Launched</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.4s' }}>
-            <div className="metric-value">85%</div>
-            <div className="metric-label">Revenue Growth</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.5s' }}>
-            <div className="metric-value">1000+</div>
-            <div className="metric-label">Training Hours</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.6s' }}>
-            <div className="metric-value">95%</div>
-            <div className="metric-label">Partner Satisfaction</div>
-          </div>
-        </div>
+      <section className="support-grid">
+        {SUPPORT_THEMES.map((theme) => (
+          <article key={theme.title} className="support-card">
+            <h3>{theme.title}</h3>
+            <p>{theme.copy}</p>
+          </article>
+        ))}
       </section>
 
-      {/* COMMITMENT SECTION */}
-      <section className="ecosystem-commitment animate-on-scroll">
-        <div className="commitment-card">
-          <div className="commitment-icon">
-            <Heart className="w-12 h-12 text-orange-500" />
-          </div>
-          <h2>Building a Sustainable Future Together</h2>
+      <section className="journey-banner">
+        <div className="journey-content">
+          <h2>How We Elevate the Ecosystem Together</h2>
           <p>
-            We believe that by uplifting the ecosystem of smaller contract manufacturers, we can create a more 
-            vibrant and sustainable pharmaceutical industry. We are committed to working with them as partners, 
-            sharing our knowledge and expertise, and providing them with the support they need to succeed.
+            By walking alongside manufacturers at every maturity level—whether they are layering pellets today or validating their
+            first finished dose form tomorrow—we keep capability, compliance, and commerce connected. The result is a resilient supply
+            web that protects patient access and rewards every participant.
           </p>
-          <p>
-            While we are still in the process of developing and implementing our initiatives, we are committed 
-            to making a positive impact on the ecosystem of smaller contract manufacturers and will continue to 
-            update our stakeholders on our progress. We recognize that uplifting the ecosystem of smaller 
-            manufacturers is an ongoing journey, and we are committed to continuously improving our initiatives 
-            to create a more sustainable and equitable pharmaceutical industry.
-          </p>
-          <div className="commitment-cta">
-            <button className="btn btn-primary">Partner With Us</button>
-            <button className="btn btn-outline">Learn More</button>
+          <div className="journey-actions">
+            <a className="btn btn-primary" href="/contact">
+              Start a Collaboration
+            </a>
+            <a className="btn btn-outline" href="/products">
+              View Product Catalogue
+            </a>
           </div>
         </div>
       </section>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <linearGradient id="interGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f9b8e" />
+      <stop offset="100%" stop-color="#2dc997" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="32" fill="#e9fbf7" />
+  <g transform="translate(52 46)" stroke="url(#interGradient)" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M40 120 L120 40 L200 80 L260 20" />
+    <path d="M40 120 L120 180 L220 160 L300 200" />
+    <path d="M120 40 L160 140 L220 80 L300 200" />
+  </g>
+  <g fill="#0f9b8e" opacity="0.18">
+    <circle cx="320" cy="60" r="24" />
+    <circle cx="90" cy="210" r="18" />
+  </g>
+</svg>

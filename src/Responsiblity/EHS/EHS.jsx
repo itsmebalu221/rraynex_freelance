@@ -1,194 +1,189 @@
-import React, { useEffect, useRef,useState } from "react";
-import { Shield, Leaf, Users, FileCheck, ArrowRight } from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import {
+  HeartPulse,
+  ShieldAlert,
+  ShieldCheck,
+  Phone,
+  Mail,
+  MessageCircle
+} from "lucide-react";
+import Hero from "../../Components/Hero/Hero";
 import "./ehs.css";
+
+const EHS_PILLARS = [
+  {
+    id: "safety",
+    kicker: "Safe Operations",
+    title: "Employee Health & Safety",
+    description:
+      "We design every workspace and process with safety in mind, ensuring our teams return home in the same shape they arrived.",
+    image:
+      "https://images.pexels.com/photos/5439116/pexels-photo-5439116.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1024&fit=crop",
+    highlights: [
+      "Daily toolbox talks and hazard briefings",
+      "Mandatory PPE audits across all shifts",
+      "Certified first-aiders in every production block"
+    ],
+    icon: HeartPulse
+  },
+  {
+    id: "posh",
+    kicker: "Dignity At Work",
+    title: "POSH & Anti Sexual Harassment",
+    description:
+      "Zero tolerance for harassment backed by transparent reporting, swift investigations, and restorative support for every employee.",
+    image:
+      "https://images.pexels.com/photos/3810792/pexels-photo-3810792.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1024&fit=crop",
+    highlights: [
+      "Quarterly POSH awareness and refresher sessions",
+      "Internal and external committee with gender balance",
+      "Confidential reporting with 48-hour first response"
+    ],
+    icon: ShieldAlert
+  }
+];
+
+const EHS_METRICS = [
+  { value: "0", label: "Lost-time injuries recorded in FY24" },
+  { value: "98%", label: "Safety training completion across teams" },
+  { value: "12", label: "Emergency drills conducted this year" },
+  { value: "48 hrs", label: "Average closure time for POSH cases" }
+];
+
+const SUPPORT_RESOURCES = [
+  { title: "24/7 Safety Hotline", detail: "+91 0000 000 000", icon: Phone },
+  { title: "Confidential POSH Desk", detail: "posh@rraynex.com", icon: Mail },
+  { title: "Anonymous Reporting", detail: "Share a concern", icon: MessageCircle }
+];
 
 export default function EHS() {
   const observerRef = useRef(null);
-   const [isVisible, setIsVisible] = useState(false);
-    const [statsVisible, setStatsVisible] = useState(false);
-    const [pillsVisible, setPillsVisible] = useState(false);
-  
-    useEffect(() => {
-      setIsVisible(true);
-      
-      const timer1 = setTimeout(() => setStatsVisible(true), 500);
-      const timer2 = setTimeout(() => setPillsVisible(true), 1000);
-      
-      return () => {
-        clearTimeout(timer1);
-        clearTimeout(timer2);
-      };
-    }, []);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
+            entry.target.classList.add("is-visible");
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.2 }
     );
 
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    animatedElements.forEach((el) => observerRef.current?.observe(el));
+    const targets = document.querySelectorAll(".reveal-on-scroll");
+    targets.forEach((node) => observerRef.current?.observe(node));
 
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
+    return () => observerRef.current?.disconnect();
   }, []);
 
   return (
-    <main className="ehs">
-      {/* HERO */}
-      <section className="about-hero csr-hero">
-        <div className="about-hero__inner">
-          <h1 className={`about-title fade-in ${isVisible ? 'visible' : ''}`}>
-            Environment Health and Safety
-          </h1>
-          <p className={`about-lead fade-in-delay ${isVisible ? 'visible' : ''}`}>
-At Rraynex, we are committed to promoting a safe and healthy work environment for our employees and protecting the environment in which we operate. We believe that by prioritizing environmental, health, and safety (EHS) practices.</p>
-          <div className="about-cta">
-            <button className={`btn btn-primary slide-up ${isVisible ? 'visible' : ''}`}>Learn More</button>
-            <button className={`btn btn-outline slide-up-delay ${isVisible ? 'visible' : ''}`}>Our Impact</button>
-          </div>
-        </div>
-      </section>
+    <main className="ehs-page">
+      <Hero
+        title="Environment, Health & Safety"
+        subtitle="Protecting every colleague and championing a respectful POSH-compliant workplace—these are the foundations of our EHS promise."
+        bgImage="https://images.pexels.com/photos/305566/pexels-photo-305566.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        ptitle="Safety Charter"
+        plink="#safety-charter"
+        stitle="POSH Handbook"
+        slink="#posh-handbook"
+      />
 
-      {/* INTRO */}
-      <section className="ehs-intro animate-on-scroll">
-        <div className="intro-card">
-          <h2>Our EHS Commitment</h2>
+      <section className="ehs-section ehs-section--intro">
+        <div className="ehs-section__inner reveal-on-scroll">
+          <h2>How we care</h2>
           <p>
-            Our EHS initiatives focus on creating meaningful change across three critical areas that define 
-            our operational excellence and responsibility to our stakeholders.
+            The wellbeing of our teams is safeguarded through continuous risk assessments, skill-building, and accessible
+            support mechanisms. Every supervisor is trained to identify hazards, escalate concerns, and respond with
+            empathy so safety never waits for a meeting.
           </p>
         </div>
       </section>
 
-      {/* EHS FOCUS AREAS */}
-      <section className="ehs-areas">
-        <h2 className="section-heading animate-on-scroll">Our EHS Focus Areas</h2>
-        
-        <div className="ehs-grid animate-on-scroll">
-          <div className="ehs-card" style={{ animationDelay: '0.1s' }}>
-            <div className="ehs-image">
-              <img src="https://images.pexels.com/photos/3735747/pexels-photo-3735747.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Environmental Stewardship" />
-              <div className="image-overlay">
-                <Leaf className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            <div className="ehs-content">
-              <h3 className="ehs-title">Environmental Stewardship</h3>
-              <p className="ehs-text">
-                We recognize the importance of protecting the environment and reducing our environmental impact. 
-                We have implemented a range of initiatives to reduce our greenhouse gas emissions, water usage, 
-                and waste generation, including the use of renewable energy, water recycling, and waste reduction programs.
-              </p>
-              <div className="ehs-arrow">
-                <ArrowRight className="w-5 h-5" />
-              </div>
-            </div>
-          </div>
-
-          <div className="ehs-card" style={{ animationDelay: '0.2s' }}>
-            <div className="ehs-image">
-              <img src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Employee Health and Safety" />
-              <div className="image-overlay">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            <div className="ehs-content">
-              <h3 className="ehs-title">Employee Health and Safety</h3>
-              <p className="ehs-text">
-                We are committed to providing our employees with a safe and healthy work environment. 
-                We have implemented a range of initiatives to promote employee health and safety, including 
-                safety training programs, ergonomic assessments, and regular safety audits.
-              </p>
-              <div className="ehs-arrow">
-                <ArrowRight className="w-5 h-5" />
-              </div>
-            </div>
-          </div>
-
-          <div className="ehs-card" style={{ animationDelay: '0.3s' }}>
-            <div className="ehs-image">
-              <img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Regulatory Compliance" />
-              <div className="image-overlay">
-                <FileCheck className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            <div className="ehs-content">
-              <h3 className="ehs-title">Regulatory Compliance</h3>
-              <p className="ehs-text">
-                We adhere to all applicable regulations and laws related to environmental, health, and safety. 
-                We maintain an ongoing dialogue with regulators to stay abreast of changes to regulations and 
-                ensure that our operations remain in compliance.
-              </p>
-              <div className="ehs-arrow">
-                <ArrowRight className="w-5 h-5" />
-              </div>
-            </div>
-          </div>
+      <section className="ehs-section">
+        <div className="ehs-section__header reveal-on-scroll">
+          <h2>Two pillars of trust</h2>
+          <p>
+            Focused ownership keeps our EHS efforts sharp. These pillars define how we prevent incidents, respond when
+            alerted, and reassure every colleague that support is a call away.
+          </p>
+        </div>
+        <div className="ehs-pillars">
+          {EHS_PILLARS.map((pillar) => {
+            const Icon = pillar.icon;
+            return (
+              <article className="ehs-pillar reveal-on-scroll" key={pillar.id}>
+                <div className="ehs-pillar__image">
+                  <img src={pillar.image} alt={pillar.title} />
+                </div>
+                <div className="ehs-pillar__body">
+                  <span className="ehs-pillar__badge">{pillar.kicker}</span>
+                  <div className="ehs-pillar__title-group">
+                    <Icon className="ehs-pillar__icon" />
+                    <h3>{pillar.title}</h3>
+                  </div>
+                  <p>{pillar.description}</p>
+                  <ul className="ehs-pillar__list">
+                    {pillar.highlights.map((item) => (
+                      <li key={item}>
+                        <ShieldCheck className="ehs-pillar__check" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
-      {/* IMPACT METRICS */}
-      <section className="impact-metrics animate-on-scroll">
-        <h2 className="section-heading">Our EHS Impact</h2>
-        <div className="metrics-grid animate-on-scroll">
-          <div className="metric" style={{ animationDelay: '0.1s' }}>
-            <div className="metric-value">Zero</div>
-            <div className="metric-label">Major Incidents</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.2s' }}>
-            <div className="metric-value">100%</div>
-            <div className="metric-label">Compliance Rate</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.3s' }}>
-            <div className="metric-value">25%</div>
-            <div className="metric-label">Waste Reduction</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.4s' }}>
-            <div className="metric-value">30%</div>
-            <div className="metric-label">Energy Efficiency</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.5s' }}>
-            <div className="metric-value">500+</div>
-            <div className="metric-label">Safety Training Hours</div>
-          </div>
-          <div className="metric" style={{ animationDelay: '0.6s' }}>
-            <div className="metric-value">15+</div>
-            <div className="metric-label">EHS Certifications</div>
-          </div>
+      <section className="ehs-section">
+        <div className="ehs-section__header reveal-on-scroll">
+          <h2>Proof in our numbers</h2>
+          <p>Transparent metrics keep our leadership accountable and highlight where we direct future investments.</p>
+        </div>
+        <div className="ehs-metrics">
+          {EHS_METRICS.map((metric) => (
+            <div className="ehs-metric reveal-on-scroll" key={metric.label}>
+              <span className="ehs-metric__value">{metric.value}</span>
+              <span className="ehs-metric__label">{metric.label}</span>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* COMMITMENT SECTION */}
-      <section className="ehs-commitment animate-on-scroll">
-        <div className="commitment-card">
-          <div className="commitment-icon">
-            <Shield className="w-12 h-12 text-green-500" />
-          </div>
-          <h2>Our Ongoing EHS Journey</h2>
+      <section className="ehs-section ehs-section--support">
+        <div className="ehs-section__header reveal-on-scroll">
+          <h2>Support when it matters</h2>
           <p>
-            We recognize that EHS is an ongoing journey, and we are committed to continuously improving 
-            our initiatives to create a positive impact on the environment and our employees. We believe 
-            that by prioritizing EHS practices, we can create a sustainable future for our business and our stakeholders.
+            Employees can reach trained responders any time. Every channel is monitored, logged, and closed with
+            documented action plans.
           </p>
+        </div>
+        <div className="ehs-support">
+          {SUPPORT_RESOURCES.map((resource) => {
+            const Icon = resource.icon;
+            return (
+              <div className="ehs-support__item reveal-on-scroll" key={resource.title}>
+                <Icon className="ehs-support__icon" />
+                <div>
+                  <h3>{resource.title}</h3>
+                  <p>{resource.detail}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="ehs-section ehs-section--closing">
+        <div className="ehs-section__inner reveal-on-scroll">
+          <h2>Always improving</h2>
           <p>
-            While we are still in the process of developing and implementing our EHS initiatives, we are 
-            committed to making a positive impact on the environment and our employees and will continue 
-            to update our stakeholders on our progress.
+            Audits, incident reviews, and employee feedback loops help us refine policies every quarter. Share your ideas
+            with the EHS council and partner in building a safer, more respectful Rraynex.
           </p>
-          <div className="commitment-cta">
-            <button className="btn btn-primary">View EHS Report</button>
-            <button className="btn btn-outline">Safety Guidelines</button>
-          </div>
         </div>
       </section>
     </main>

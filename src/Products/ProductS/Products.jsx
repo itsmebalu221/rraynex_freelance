@@ -2,7 +2,7 @@ import React, { useMemo, useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import "./products.css";
 import bg from "./bg.jpg";
-import Hero from '../../Components/Hero/Hero';
+import Hero from "../../Components/Hero/Hero";
 
 /* ----------------- Data ----------------- */
 const PRODUCTS = [
@@ -11,6 +11,7 @@ const PRODUCTS = [
     slug: "product-aspirin",
     name: "Aspirin",
     type: "Pellets",
+  family: "pellets",
     category: "Anti-inflammatory",
     strengths: ["50%", "60%", "75%"],
     description:
@@ -19,19 +20,18 @@ const PRODUCTS = [
     unit: "kg",
     tags: ["pellet", "aspirin"],
     image: "/assets/products/aspirin.jpg",
-    price: 3500,
   },
   {
     id: "pellet-clopidogrel",
     slug: "product-clopidogrel",
     name: "Clopidogrel",
     type: "Pellets",
+  family: "pellets",
     category: "Anti-Platelet",
     strengths: ["40%", "45.45%", "50%", "60%"],
     description:
       "Clopidogrel pellets manufactured under WHO-GMP compliant processes.",
     sku: "RRY-PEL-CLOP",
-    price: 3500,
     unit: "kg",
     tags: ["pellet", "clopidogrel"],
     image: "/assets/products/clopidogrel.jpg",
@@ -41,12 +41,12 @@ const PRODUCTS = [
     slug: "product-omeprazole",
     name: "Omeprazole EC",
     type: "Pellets",
+  family: "pellets",
     category: "Anti-Ulcerant (Ppls)",
     strengths: ["7.5%", "8.5%", "10%", "15%", "22.5%"],
     description:
       "Enteric-coated omeprazole pellets for MUPS and capsules. Consistent release profile and stability.",
     sku: "RRY-PEL-OME",
-    price: 4200,
     unit: "kg",
     tags: ["pellet", "omeprazole", "ec"],
     image: "/assets/products/omeprazole.jpg",
@@ -56,12 +56,12 @@ const PRODUCTS = [
     slug: "product-paracetamol",
     name: "Paracetamol DC",
     type: "Granules",
+  family: "granules",
     category: "Analgesic",
     strengths: [],
     description:
       "Direct compression paracetamol granules engineered for consistent tablet weight.",
     sku: "RRY-GRA-PARA",
-    price: 800,
     unit: "kg",
     tags: ["granule", "paracetamol"],
     image: "/assets/products/paracetamol.jpg",
@@ -71,43 +71,69 @@ const PRODUCTS = [
     slug: "product-api-omeprazole",
     name: "Omeprazole (API)",
     type: "API",
+  family: "api",
     category: "Anti-Ulcerant",
     strengths: [],
     description:
       "Omeprazole API manufactured in WHO-GMP certified facility. DMF & stability data available.",
     sku: "RRY-API-OME",
-    price: 25000,
     unit: "kg",
     tags: ["api", "omeprazole"],
     image: "/assets/products/api-omeprazole.jpg",
   },
 ];
 
-const currency = (n) => `₹ ${n.toLocaleString("en-IN")}`;
+const PRODUCT_NARRATIVES = {
+  "product-aspirin": [
+    "Our aspirin pellet program combines tightly controlled particle distribution with low residual solvent levels, making it a dependable backbone for both tablet and capsule formats.",
+    "Each lot is processed through validated coating cycles that deliver precise weight gain, ensuring predictable dissolution even at high-speed compression.",
+    "Customers leverage the format to shorten tech-transfer timelines while maintaining pharmacopoeial compliance across global dossiers."
+  ],
+  "product-clopidogrel": [
+    "Clopidogrel pellets from Rraynex are produced in segregated suites with inline sieve classification to maintain uniform bulk density.",
+    "A stabilised layering process protects the sensitive API, giving formulators confidence during moisture-stress studies.",
+    "The platform is already referenced in multiple ROW submissions, with documentation packages ready for accelerated partner onboarding."
+  ],
+  "product-omeprazole": [
+    "Our Omeprazole enteric-coated pellets are engineered for MUPS and capsule applications where low acid uptake is critical.",
+    "We employ multi-layer barrier techniques that safeguard the core during compression, maintaining the target release profile across strengths.",
+    "Regulatory support extends from comparative dissolution to full stability data sets, helping partners unlock fast-track registrations."
+  ],
+  "product-paracetamol": [
+    "Paracetamol DC granules offer consistent flow and compressibility, allowing robust tablet production without additional wet granulation steps.",
+    "Moisture is managed through controlled drying to keep loss-on-drying within specification, even in humid operating environments.",
+    "Flexible pack sizes and rapid batch release make the grade an efficient choice for both seasonal spikes and continuous supply chains."
+  ],
+  "product-api-omeprazole": [
+    "Omeprazole API from our Sykha site is synthesised in GLR and SSR trains designed to support multiton campaigns with reproducible impurity profiles.",
+    "Stringent in-process controls, including online pH and particle-size monitoring, ensure every batch aligns with pharmacopeial standards.",
+    "The dossier includes open and closed DMF sections, method validations, and stability data tailored to agency expectations across CIS, LATAM, and ROW markets."
+  ]
+};
 
 const ROUTE_FILTERS = {
   api: {
     label: "APIs",
     tagline: "Our APIs are engineered with precision and purity, ensuring consistent therapeutic performance and global regulatory compliance.",
-    matches: (product) => product.type === "API",
+    matches: (product) => product.family === "api",
     defaultType: "API",
   },
   intermediary: {
     label: "Intermediaries",
     tagline:"Our advanced intermediates strengthen the pharmaceutical supply chain with superior consistency, scalability, and quality assurance.",
-    matches: (product) => product.type !== "API",
+    matches: (product) => product.family === "intermediary",
     defaultType: "All",
   },
   pellets: {
     label: "Pellets",
     tagline: "We manufacture a diverse range of sustained and delayed release pellets designed for consistent quality and precision performance.",
-    matches: (product) => product.type === "Pellets",
+    matches: (product) => product.family === "pellets",
     defaultType: "Pellets",
   },
   granules: {
     label: "Granules",
     tagline:"Our DC granules deliver exceptional flow, compressibility, and uniformity, ensuring efficiency in downstream tableting processes.",
-    matches: (product) => product.type === "Granules",
+    matches: (product) => product.family === "granules",
     defaultType: "Granules",
   },
 };
@@ -178,13 +204,6 @@ function ProductDetail({ product, onBack }) {
       description: product.description,
       sku: product.sku,
       brand: { "@type": "Brand", name: "Rraynex" },
-      offers: {
-        "@type": "Offer",
-        url,
-        priceCurrency: "INR",
-        price: String(product.price),
-        availability: "https://schema.org/InStock",
-      },
     };
     injectJsonLd("product-jsonld", productSchema);
 
@@ -227,21 +246,13 @@ function ProductDetail({ product, onBack }) {
 
   if (!product) return null;
 
-  const longDescription = [
-    `${product.name} (${product.type} — ${product.category}) by Rraynex is manufactured under WHO-GMP quality systems. Our ${product.type.toLowerCase()} are produced with controlled particle size and optimized moisture profiling to ensure consistent tableting and capsule filling.`,
-    product.strengths?.length
-      ? `Available strengths / compositions: ${product.strengths.join(", ")}.`
-      : `Available in various compositions and custom strengths to meet formulation requirements.`,
-    `Typical applications: formulation for immediate or modified release, MUPS, capsule filling, direct compression (for granules), and multi-particulate dosage forms.`,
-    `Quality & regulatory: Certifications include WHO-GMP, ISO 9001, ISO 14001. DMF and stability data available on request for applicable products.`,
-    `Packaging & supply: supplied in sealed bags/drums with batch traceability. For sample requests, COA, or technical discussions contact our sales team.`,
-  ].join("\n\n");
+  const longDescription = (PRODUCT_NARRATIVES[product.slug] || []).join("\n\n") || product.description;
 
   const specs = [
     { label: "SKU", value: product.sku },
     { label: "Type", value: product.type },
     { label: "Category", value: product.category },
-    { label: "Price", value: currency(product.price) + ` / ${product.unit}` },
+    { label: "Pack size", value: product.unit },
     { label: "Available strengths", value: product.strengths?.length ? product.strengths.join(", ") : "Custom / On request" },
     { label: "Certifications", value: "WHO-GMP, ISO 9001, ISO 14001" },
   ];
@@ -270,7 +281,7 @@ function ProductDetail({ product, onBack }) {
       <button className="back-link" onClick={onBack}>← Back to products</button>
 
       <div className="rr-detail-grid">
-        {/* LEFT: image + price card */}
+        {/* LEFT: image + contact card */}
         <div>
           <figure className="rr-detail-media" itemProp="image" aria-hidden>
             <img
@@ -295,25 +306,23 @@ function ProductDetail({ product, onBack }) {
               {product.strengths.map((s) => <span key={s} className="chip">{s}</span>)}
             </div>
           )}
-           <div className="rr-price-card" role="region" aria-label="Price and purchase">
-            <div>
-              <div className="price" aria-hidden>{currency(product.price)}</div>
-              <div className="unit">/ {product.unit}</div>
-            </div>
+            <div className="rr-contact-card" role="region" aria-label="Request product information">
+              <div>
+                <div className="rr-cert small" style={{ marginBottom: 8 }}>Certifications: WHO-GMP</div>
+                <p className="rr-contact-note">
+                  Share your formulation needs and regulatory scope, and our commercial team will respond within one business day.
+                </p>
+              </div>
 
-            <div>
-              <div className="rr-cert small" style={{ marginBottom: 8 }}>Certifications: WHO-GMP</div>
               <div className="rr-cta-buttons">
                 <a
                   className="btn-primary"
-                  href={`mailto:communications@rraynex.com?subject=${encodeURIComponent("Quote Request: " + product.name)}&body=${encodeURIComponent("Please share quotation, lead time and sample details for SKU: " + product.sku)}`}
+                  href={`mailto:communications@rraynex.com?subject=${encodeURIComponent("Product Enquiry: " + product.name)}&body=${encodeURIComponent("Please share technical dossier access and commercial details for SKU: " + product.sku)}`}
                 >
-                  Request Quote
+                  Request Details
                 </a>
-                {/* <a className="btn-outline" href="/assets/Rraynex_Corp_Profile.pdf" target="_blank" rel="noreferrer"></a> */}
               </div>
             </div>
-          </div>
         </div>
       </div>
 
@@ -378,31 +387,41 @@ function ProductDetail({ product, onBack }) {
 
 function ProductCard({ p }) {
   return (
-    <article className="rr-product-card" key={p.id}>
-      <Link className="rr-thumb-link" to={`/products/view/${p.slug}`}>
-        <div className="rr-product-media">
-          <img src={bg} alt={p.name} onError={(e) => (e.currentTarget.src = bg)} />
-        </div>
-      </Link>
+    <article className="product-card" key={p.id}>
+      <header className="product-card__meta">
+        <span className="product-card__badge product-card__badge--type">{p.type}</span>
+        <span className="product-card__badge product-card__badge--category">{p.category}</span>
+      </header>
 
-      <div className="rr-product-body">
-        <h3 className="rr-product-title">{p.name}</h3>
-        <div className="rr-product-cat">{p.type} • {p.category}</div>
+      <div className="product-card__body">
+        <h3>{p.name}</h3>
+        <p>{p.description}</p>
 
         {p.strengths?.length > 0 && (
-          <div className="rr-product-strengths"><strong>Strengths:</strong> {p.strengths.join(" | ")}</div>
+          <div className="product-card__strengths" aria-label="Available strengths">
+            {p.strengths.map((s) => (
+              <span key={s} className="chip">{s}</span>
+            ))}
+          </div>
         )}
 
-        <div className="rr-product-meta">
-          {/* <div className="rr-price">{currency(p.price)} <span className="rr-unit">/ {p.unit}</span></div> */}
-          <div className="rr-sku">SKU: {p.sku}</div>
-        </div>
-
-        <div className="rr-actions">
-          <Link className="btn btn-primary" to={`/products/view/${p.slug}`}>View</Link>
-          <a className="btn btn-outline" href={`mailto:communications@rraynex.com?subject=Quote Request: ${encodeURIComponent(p.name)}`}>Request Quote</a>
-        </div>
+        <dl className="product-card__specs">
+          <div>
+            <dt>SKU</dt>
+            <dd>{p.sku}</dd>
+          </div>
+          <div>
+            <dt>Pack size</dt>
+            <dd>{p.unit}</dd>
+          </div>
+        </dl>
       </div>
+
+      <footer className="product-card__footer">
+        <Link className="btn btn-primary" to={`/products/view/${p.slug}`}>
+          Know More
+        </Link>
+      </footer>
     </article>
   );
 }
@@ -436,18 +455,6 @@ export default function ProductsPage() {
   const routeFilter = categorySlug ? ROUTE_FILTERS[categorySlug] : null;
 
   const [q, setQ] = useState("");
-  const [type, setType] = useState("All");
-  const [category, setCategory] = useState("All");
-  const [sort, setSort] = useState("relevance");
-
-  const categories = useMemo(
-    () => ["All", ...Array.from(new Set(PRODUCTS.map((p) => p.category)))],
-    []
-  );
-  const types = useMemo(
-    () => ["All", ...Array.from(new Set(PRODUCTS.map((p) => p.type)))],
-    []
-  );
 
   useEffect(() => {
     if (categorySlug && !routeFilter) {
@@ -455,18 +462,12 @@ export default function ProductsPage() {
       return;
     }
 
-    if (routeFilter) {
-      setType(routeFilter.defaultType);
-      setCategory("All");
-    }
   }, [categorySlug, routeFilter, navigate]);
 
   const list = useMemo(() => {
     const ql = q.trim().toLowerCase();
     let out = PRODUCTS.filter((p) => {
       if (routeFilter && !routeFilter.matches(p)) return false;
-      if (type !== "All" && p.type !== type) return false;
-      if (category !== "All" && p.category !== category) return false;
       if (!ql) return true;
       return (
         p.name.toLowerCase().includes(ql) ||
@@ -474,61 +475,93 @@ export default function ProductsPage() {
         (p.tags || []).some((t) => t.includes(ql))
       );
     });
-    if (sort === "price-asc") out.sort((a, b) => a.price - b.price);
-    if (sort === "price-desc") out.sort((a, b) => b.price - a.price);
     return out;
-  }, [q, type, category, sort, routeFilter]);
+  }, [q, routeFilter]);
+
+  const resultsLabel = `Showing ${list.length} ${list.length === 1 ? "product" : "products"}`;
 
   return (
-    <div>
-      <Hero 
+    <div className="products-page">
+      <Hero
         title={routeFilter ? `Our ${routeFilter.label}` : "Our Product Portfolio"}
-        subtitle={routeFilter ? `${routeFilter.tagline}` :"From advanced pellets to APIs, Rraynex delivers quality formulations engineered for global healthcare standards."}
+        subtitle={
+          routeFilter
+            ? `${routeFilter.tagline}`
+            : "From advanced pellets to APIs, Rraynex delivers quality formulations engineered for global healthcare standards."
+        }
         plink="#products"
         ptitle="Explore Products"
         slink="/assets/Rraynex_Corp_Profile.pdf"
         stitle="Download Brochure"
       />
 
-      <main id="products" className="rr-wrap">
-        <header className="rr-hero">
+      <main id="products" className="products-shell">
+        <header className="products-heading">
           <div>
-            <h1>{routeFilter ? routeFilter.label : "Products"}</h1>
-            <p className="muted">Pellets • Granules • APIs • Intermediates</p>
+            <span className="products-eyebrow">Product catalogue</span>
+            <h1>{routeFilter ? routeFilter.label : "All Products"}</h1>
+            <p className="products-summary">Pellets • Granules • APIs • Intermediates</p>
           </div>
-
-          <div className="rr-hero-actions">
-            <a className="btn btn-primary" href="mailto:communications@rraynex.com">Contact Sales</a>
+          <div className="products-heading__actions">
+            <Link className="btn btn-outline" to="/products/categories">
+              Explore Categories
+            </Link>
+            <a className="btn btn-primary" href="mailto:communications@rraynex.com">
+              Contact Sales
+            </a>
           </div>
         </header>
 
-        <section className="rr-controls">
-          <input aria-label="Search products" placeholder="Search product name, SKU or tag" value={q} onChange={(e) => setQ(e.target.value)} />
-
-          <select value={category} onChange={(e) => setCategory(e.target.value)}>
-            {categories.map((c) => (<option key={c} value={c}>{c}</option>))}
-          </select>
-
-          <select value={type} onChange={(e) => setType(e.target.value)}>
-            {types.map((t) => (<option key={t} value={t}>{t}</option>))}
-          </select>
-
-          <select value={sort} onChange={(e) => setSort(e.target.value)}>
-            <option value="relevance">Relevance</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
-          </select>
-
-          <div className="count">Showing {list.length} results</div>
+        <section className="products-panel" aria-label="Product search">
+          <div className="products-panel__grid">
+            <div className="products-field products-field--search">
+              <label htmlFor="product-search">Search the catalogue</label>
+              <input
+                id="product-search"
+                aria-label="Search products"
+                placeholder="Search molecule, SKU or tag"
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="products-panel__meta">
+            <span className="products-count" aria-live="polite">
+              {resultsLabel}
+            </span>
+          </div>
         </section>
 
-        <section className="rr-grid" aria-live="polite">
-          {list.map((p) => (<ProductCard key={p.id} p={p} />))}
+        <section className="products-grid" aria-live="polite">
+          {list.map((p) => (
+            <ProductCard key={p.id} p={p} />
+          ))}
         </section>
 
-        <footer className="rr-footer">
+        <section className="products-support" aria-label="Need assistance?">
+          <div className="products-support__card">
+            <div>
+              <h2>Need formulation support?</h2>
+              <p>
+                Our technical specialists can help you with DMF access, stability data, custom strengths and
+                regulatory documentation.
+              </p>
+            </div>
+            <div className="products-support__actions">
+              <a className="btn btn-primary" href="mailto:communications@rraynex.com">
+                Email the Team
+              </a>
+              <a className="btn btn-outline" href="tel:+910000000000">
+                Call +91 0000 000 000
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <footer className="products-footer">
           <small>
-            Certifications: WHO-GMP, ISO 9001, ISO 14001. For DMF, VQM, TSE/BSE/MSDS and stability data please contact sales.
+            Certifications: WHO-GMP, ISO 9001, ISO 14001. For DMF, VQM, TSE/BSE/MSDS and stability data please contact
+            sales.
           </small>
         </footer>
       </main>
