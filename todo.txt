@@ -1,0 +1,3 @@
+1. Audit hero sections across key pages and pick content-specific images
+2. Update hero background URLs/props in components to use new images
+3. Verify styling/contrast after changes and document verification steps

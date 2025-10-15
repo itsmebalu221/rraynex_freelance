@@ -2,7 +2,6 @@ import React from "react";
 import "./Responsiblity.css";
 import { FaLeaf, FaHandsHelping, FaShieldAlt, FaGlobe } from "react-icons/fa";
 import Hero from "../Components/Hero/Hero";
-import HeroImg from "./Res1.jpeg";
 import { Link } from "react-router-dom";
 
 const Responsibility = () => {
@@ -87,7 +86,7 @@ const Responsibility = () => {
         stitle="Ecosystem Impact"
         plink="/responsibility/csr"
         slink="/responsibility/uplifting-ecosystem"
-        bgImage={HeroImg}
+        bgImage="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1920"
       />
 
       {/* Cards Section */}

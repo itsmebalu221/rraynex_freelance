@@ -265,7 +265,7 @@ export default function QualityPage() {
       <Hero
         title="Pioneering Quality, Powering Global Trust"
         subtitle="Precision in every process — delivering scientifically assured, globally compliant healthcare solutions."
-        bgImage="https://www.pexels.com/photo/person-holding-white-plastic-straw-8450516/"
+  bgImage="https://images.pexels.com/photos/3735762/pexels-photo-3735762.jpeg?auto=compress&cs=tinysrgb&w=1920"
         ptitle="Explore Our Products"
         plink="/products"
         stitle="Download Brochure"

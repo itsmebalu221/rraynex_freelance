@@ -15,6 +15,7 @@ export default function Hero({
   className = "",
   contentClassName = "",
   style = {},
+  tone = "light",
 }) {
   const sectionStyle = {
     backgroundSize: "cover",
@@ -23,6 +24,11 @@ export default function Hero({
     position: "relative",
     ...style,
   };
+
+  if (tone === "dark") {
+    sectionStyle["--hero-title-color"] = "#031d51";
+    sectionStyle["--hero-lead-color"] = "#1f2933";
+  }
 
   if (bgImage) {
     sectionStyle.backgroundImage = `url(${bgImage})`;
@@ -36,7 +42,7 @@ export default function Hero({
   const contentClasses = ["products-hero-content", contentClassName].filter(Boolean).join(" ");
 
   return (
-    <section className={sectionClassName} style={sectionStyle}>
+  <section className={sectionClassName} style={sectionStyle}>
       {overlay && (
         <div
           style={{

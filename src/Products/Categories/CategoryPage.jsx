@@ -66,6 +66,7 @@ function ProductCategories() {
       <Hero
         title="Product Categories"
         subtitle="Explore how our pellet, granule, API and intermediate platforms accelerate your formulation roadmap."
+        bgImage="https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&cs=tinysrgb&w=1920"
         plink="#categories"
         ptitle="Explore Categories"
         slink="/products"

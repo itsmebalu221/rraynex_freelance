@@ -59,14 +59,14 @@ export default function Contact() {
     <main className="contact">
       {/* Hero Section */}
       <Hero
-                      title="Pioneering Quality, Powering Global Trust"
-                      subtitle="Precision in every process — delivering scientifically assured, globally compliant healthcare solutions."
-                      bgImage="https://www.pexels.com/photo/person-holding-white-plastic-straw-8450516/"
-                      ptitle="Explore Our Products"
-                      plink="/products"
-                      stitle="Download Brochure"
-                      slink="/assets/Rraynex_Brochure.pdf"
-                    />
+        title="Let's Connect"
+        subtitle="Reach our teams for partnerships, investor queries, or global distribution support."
+        bgImage="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        ptitle="Explore Our Products"
+        plink="/products"
+        stitle="Download Brochure"
+        slink="/assets/Rraynex_Brochure.pdf"
+      />
 
       <div className="ct-container">
         {/* Top Section — Form + Corporate Office */}

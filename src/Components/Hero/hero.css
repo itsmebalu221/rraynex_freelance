@@ -18,13 +18,13 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   margin-bottom: 12px;
-  color: #fff;
+  color: var(--hero-title-color, #fff);
 }
 
 .products-hero-lead {
   font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.6;
-  color: #f0f0f0;
+  color: var(--hero-lead-color, #f0f0f0);
   margin-bottom: 24px;
 }
 

@@ -82,7 +82,7 @@ export default function EHS() {
       <Hero
         title="Environment, Health & Safety"
         subtitle="Protecting every colleague and championing a respectful POSH-compliant workplace—these are the foundations of our EHS promise."
-        bgImage="https://images.pexels.com/photos/305566/pexels-photo-305566.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        bgImage="https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=1920"
         ptitle="Safety Charter"
         plink="#safety-charter"
         stitle="POSH Handbook"

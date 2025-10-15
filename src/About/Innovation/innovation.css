@@ -5,7 +5,7 @@
 
 /* Banner */
 .inno-banner {
-  background: url("/src/Home/bg1.jpg")
+  background: url("https://images.pexels.com/photos/3735769/pexels-photo-3735769.jpeg?auto=compress&cs=tinysrgb&w=1920")
     center/cover no-repeat;
   height: 320px;
   display: flex;

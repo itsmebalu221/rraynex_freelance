@@ -10,7 +10,7 @@ body {
 .home-container {
   position: relative;
   padding: 20px;
-  background-image: url('./bg1.jpg');
+  background-image: url('https://images.pexels.com/photos/3735761/pexels-photo-3735761.jpeg?auto=compress&cs=tinysrgb&w=1920');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -107,7 +107,7 @@ body {
 .second-section {
   position: relative;
   padding: 40px 20px;
-  background-image: url('./bg2.jpg');
+  background-image: url('https://images.pexels.com/photos/3182834/pexels-photo-3182834.jpeg?auto=compress&cs=tinysrgb&w=1920');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -163,6 +163,7 @@ body {
   position: relative;
   padding: 5px 20px;
   background-color: #fff;
+  background-image: url('https://images.pexels.com/photos/6089682/pexels-photo-6089682.jpeg?auto=compress&cs=tinysrgb&w=1920');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

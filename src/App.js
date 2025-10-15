@@ -7,6 +7,7 @@ import VisionValues from "./About/Values/Values";
 import MilestonesRecognitions from "./About/Milestones/MilestonesRecognitions";
 import Innovation from "./About/Innovation/Innovation";
 import Quality from "./About/Quality/Quality";
+import Board from "./About/Board/Board";
 import Responsibility from "./Responsiblity/Responsiblity";
 import Worldwide from "./Worldwide/Worldwide";
 import Contact from "./ContactUs/contact";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/about/milestone-and-recognitions" element={<MilestonesRecognitions />} />
           <Route path="/about/innovation" element={<Innovation />} />
           <Route path="/about/quality" element={<Quality />} />
+          <Route path="/about/board-of-directors" element={<Board />} />
           <Route path="/responsibility" element={<Responsibility />} />
           <Route path="/responsibility/csr" element={<CSR />} />
           <Route path="/responsibility/sustainability" element={<Sustainability />} />

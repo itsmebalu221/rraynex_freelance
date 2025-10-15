@@ -140,7 +140,9 @@ export default function AboutUs() {
         ptitle="Explore Products"
         slink="/assets/Rraynex_Corp_Profile.pdf"
         stitle="Download Brochure"
-        bgImage="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1920"
+    bgImage="https://images.pexels.com/photos/3912977/pexels-photo-3912977.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        overlayGradient="linear-gradient(to bottom right, rgba(255,255,255,0.75), rgba(255,255,255,0.55))"
+        tone="dark"
       />
 
       {/* Quick stats */}

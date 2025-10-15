@@ -1025,6 +1025,7 @@ export default function ProductsPage() {
             ? `${routeFilter.tagline}`
             : "From advanced pellets to APIs, Rraynex delivers quality formulations engineered for global healthcare standards."
         }
+        bgImage="https://images.pexels.com/photos/3735764/pexels-photo-3735764.jpeg?auto=compress&cs=tinysrgb&w=1920"
         plink="#products"
         ptitle="Explore Products"
         slink="/assets/Rraynex_Corp_Profile.pdf"

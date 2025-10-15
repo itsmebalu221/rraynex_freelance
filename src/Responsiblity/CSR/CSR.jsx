@@ -1,5 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./CSR.css";
+import one from "../../Assets/CSR/1.jpeg"
+import two from "../../Assets/CSR/2.jpeg"
+import three from "../../Assets/CSR/3.jpeg"
+import four from "../../Assets/CSR/4.jpeg" 
+import five from "../../Assets/CSR/5.jpeg"
+import six from "../../Assets/CSR/6.jpeg" 
+import seven from "../../Assets/CSR/7.jpeg"
+import eight from "../../Assets/CSR/8.jpeg"
+import nine from "../../Assets/CSR/9.jpeg"
+import ten from "../../Assets/CSR/10.jpeg"
+import eleven from "../../Assets/CSR/11.jpeg"
+import twelve from "../../Assets/CSR/12.jpeg"
+import thirteen from "../../Assets/CSR/13.jpeg"
 
 const CSR_PROGRAMS = [
   {
@@ -15,65 +28,94 @@ const CSR_PROGRAMS = [
       "A hot lunch service ensured every child enjoyed wholesome food, with our cafeteria crew plating festival favourites and healthy desserts.",
       "Interactive stations—from art corners to friendly sports matches—kept everyone engaged and allowed our teams to connect personally with every student.",
     ],
-    image:
-      "https://images.pexels.com/photos/13257149/pexels-photo-13257149.jpeg?auto=compress&cs=tinysrgb&w=1200&h=880&fit=crop",
+    image:five,
     galleryTitle: "Celebration Highlights",
     galleryCopy:
       "Replace these placeholders with moments from your Durgashtami event—rituals, shared meals, and the smiling faces that made the day special.",
     gallery: [
-      {
-        id: "durgashtami-1",
-        img:
-          "https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      },
-      {
-        id: "durgashtami-2",
-        img:
-          "https://images.pexels.com/photos/1640769/pexels-photo-1640769.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      },
+      
       {
         id: "durgashtami-3",
-        img:
-          "https://images.pexels.com/photos/2184593/pexels-photo-2184593.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+        img:three,
+      },
+      {
+        id: "durgashtami-4",
+        img:four,
+      },
+      {
+        id: "durgashtami-5",
+        img:five,
+      },
+      {
+        id: "durgashtami-6",
+        img:six,
+      },
+      {
+        id: "durgashtami-7",
+        img:seven,
+      },
+      {
+        id: "durgashtami-8",
+        img:eight,
+      },
+      {
+        id: "durgashtami-9",
+        img:nine,
+      },
+      {
+        id: "durgashtami-10",
+        img:ten,
+      },
+      {
+        id: "durgashtami-11",
+        img:eleven,
+      },
+      {
+        id: "durgashtami-12",
+        img:twelve,
+      },
+      {
+        id: "durgashtami-13",
+        img:thirteen,
       },
     ],
   },
-  {
-    id: "science-museum-visit",
-    kicker: "Experiential Learning",
-    title: "Scientific Museum Immersion",
-    summary:
-      "Our scientists and outreach team curated a hands-on day at a leading scientific museum, pairing discovery zones with mentorship conversations for aspiring learners.",
-    body:
-      "This upcoming case study will document how Rraynex experts guide students through interactive exhibits, lab demonstrations, and career storytelling. Use this space to narrate the learning journey once your next visit is complete.",
-    points: [
-      "Outline key exhibits explored and the takeaways you want visitors to remember.",
-      "Describe how your scientists contextualise complex concepts for young minds.",
-      "Capture quotes or reflections from participants to bring the experience alive.",
-    ],
-    image:
-      "https://images.pexels.com/photos/256369/pexels-photo-256369.jpeg?auto=compress&cs=tinysrgb&w=1200&h=880&fit=crop",
-    galleryTitle: "Museum Moments",
-    galleryCopy:
-      "When ready, showcase snapshots from the museum floor—interactive galleries, lab demos, and your teams guiding curious minds.",
-    gallery: [
-      {
-        id: "museum-1",
-        img:
-          "https://images.pexels.com/photos/853123/pexels-photo-853123.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      },
-      {
-        id: "museum-2",
-        img:
-          "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      },
-      {
-        id: "museum-3",
-        img:
-          "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-      },
-    ],
-  },
+  // {
+  //   id: "science-museum-visit",
+  //   kicker: "Experiential Learning",
+  //   title: "Scientific Museum Immersion",
+  //   summary:
+  //     "Our scientists and outreach team curated a hands-on day at a leading scientific museum, pairing discovery zones with mentorship conversations for aspiring learners.",
+  //   body:
+  //     "This upcoming case study will document how Rraynex experts guide students through interactive exhibits, lab demonstrations, and career storytelling. Use this space to narrate the learning journey once your next visit is complete.",
+  //   points: [
+  //     "Outline key exhibits explored and the takeaways you want visitors to remember.",
+  //     "Describe how your scientists contextualise complex concepts for young minds.",
+  //     "Capture quotes or reflections from participants to bring the experience alive.",
+  //   ],
+  //   image:
+  //     "https://images.pexels.com/photos/256369/pexels-photo-256369.jpeg?auto=compress&cs=tinysrgb&w=1200&h=880&fit=crop",
+  //   galleryTitle: "Museum Moments",
+  //   galleryCopy:
+  //     "When ready, showcase snapshots from the museum floor—interactive galleries, lab demos, and your teams guiding curious minds.",
+  //   gallery: [
+  //     {
+  //       id: "museum-1",
+  //       img:
+  //         "https://images.pexels.com/photos/853123/pexels-photo-853123.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+  //     },
+  //     {
+  //       id: "museum-2",
+  //       img:
+  //         "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+  //     },
+  //     {
+  //       id: "museum-3",
+  //       img:
+  //         "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+  //     },
+  //   ],
+  // },
 ];
 
 export default function CSR() {
