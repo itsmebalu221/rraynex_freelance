@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './eco.css';
 import pellets from "../../Home/pellets.png";
 import granules from "./granules.png";
+import apis from "./apis.jpeg";
 
 
 const PLATFORM_CARDS = [
@@ -31,7 +32,7 @@ const PLATFORM_CARDS = [
       'WHO-GMP synthesis blocks with integrated impurity profiling and scalability from kilo labs to commercial reactors. Documentation packages are ready for global submissions.',
     ctaLabel: 'See API Portfolio',
     ctaLink: '/products/api',
-    image: 'https://placehold.co/640x420?text=APIs+%26+Intermediaries'
+    image: apis
   },
   {
     id: 'fdf',
