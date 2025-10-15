@@ -39,7 +39,7 @@ function App() {
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/categories" element={<ProductCategories />} />
-          <Route path="/products/:category" element={<ProductsPage />} />
+          <Route path="/products/categories/:category" element={<ProductsPage />} />
             <Route path="/products/view/:slug" element={<ProductDetailPage />} />
           <Route path="/worldwide" element={<Worldwide />} />
           <Route path="/contact" element={<Contact />} />

@@ -43,15 +43,18 @@ img { display: block; max-width: 100%; height: auto; }
 
 .btn-outline {
   display: inline-block;
-  background: transparent;
-  color: #000;
-  border: 2px solid #f9954a;
+  background: rgba(249, 149, 74, 0.12);
+  color: #031d51;
+  border: 2px solid rgba(249, 149, 74, 0.35);
   padding: 12px 24px;
   border-radius: 28px;
   font-weight: 500;
   transition: all 0.3s ease;
 }
-.btn-outline:hover { background: rgba(249,149,74,0.1); }
+.btn-outline:hover {
+  background: rgba(249, 149, 74, 0.22);
+  border-color: rgba(249, 149, 74, 0.45);
+}
 
 /* Layout shell */
 .products-page {
@@ -74,6 +77,37 @@ img { display: block; max-width: 100%; height: auto; }
   align-items: center;
   gap: 32px;
   box-shadow: 0 28px 70px rgba(3,29,81,0.12);
+}
+
+.products-menu {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.products-menu__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  background: rgba(3,29,81,0.06);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.products-menu__link:hover {
+  background: rgba(3,29,81,0.12);
+}
+
+.products-menu__link--active {
+  background: #fff;
+  color: var(--navy);
+  border-color: rgba(230,126,34,0.45);
+  box-shadow: 0 14px 36px rgba(3,29,81,0.14);
 }
 
 .products-eyebrow {

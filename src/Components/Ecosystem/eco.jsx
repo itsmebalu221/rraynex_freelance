@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './eco.css';
+import pellets from "../../Home/pellets.png";
+import granules from "./granules.png";
+
 
 const PLATFORM_CARDS = [
   {
@@ -10,7 +13,7 @@ const PLATFORM_CARDS = [
       'Multiparticulate platforms engineered for controlled and delayed release. Uniform layering, tight size curves and reproducible dissolution help partners compress timelines with confidence.',
     ctaLabel: 'Explore Pellets',
     ctaLink: '/products/pellets',
-    image: 'https://placehold.co/640x420?text=Pellets'
+    image: pellets
   },
   {
     id: 'granules',
@@ -19,7 +22,7 @@ const PLATFORM_CARDS = [
       'Direct compression and wet granulation grades tuned for flow, blend uniformity and tablet integrity. Each batch is humidity-managed so high-speed lines stay predictable.',
     ctaLabel: 'View Granules',
     ctaLink: '/products/granules',
-    image: 'https://placehold.co/640x420?text=Granules'
+    image: granules
   },
   {
     id: 'api',
@@ -29,6 +32,15 @@ const PLATFORM_CARDS = [
     ctaLabel: 'See API Portfolio',
     ctaLink: '/products/api',
     image: 'https://placehold.co/640x420?text=APIs+%26+Intermediaries'
+  },
+  {
+    id: 'fdf',
+    title: 'Finished Dose Formulations',
+    description:
+      'End-to-end support from formulation design through validation and launch. We help partners commercialise tablets, capsules, sachets, and novel delivery formats with confidence.',
+    ctaLabel: 'Partner on FDF Launches',
+    ctaLink: '/products/fdf',
+    image: 'https://placehold.co/640x420?text=Finished+Dose+Forms'
   },
   {
     id: 'shopping',

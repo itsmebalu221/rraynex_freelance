@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, NavLink, useParams, useNavigate } from "react-router-dom";
 import "./products.css";
 import bg from "./bg.jpg";
 import Hero from "../../Components/Hero/Hero";
@@ -81,6 +81,21 @@ const PRODUCTS = [
     tags: ["api", "omeprazole"],
     image: "/assets/products/api-omeprazole.jpg",
   },
+  {
+    id: "fdf-probiotic",
+    slug: "product-fdf-probiotic",
+    name: "Probiotic Sachet Blend",
+    type: "Finished Dose Formulation",
+    family: "fdf",
+    category: "Nutraceutical",
+    strengths: [],
+    description:
+      "Turnkey probiotic sachets supplied with validated packaging formats and stability data for rapid market entry.",
+    sku: "RRY-FDF-PROBIO",
+    unit: "box",
+    tags: ["fdf", "sachet"],
+    image: "/assets/products/placeholder.jpg",
+  },
 ];
 
 const PRODUCT_NARRATIVES = {
@@ -108,6 +123,11 @@ const PRODUCT_NARRATIVES = {
     "Omeprazole API from our Sykha site is synthesised in GLR and SSR trains designed to support multiton campaigns with reproducible impurity profiles.",
     "Stringent in-process controls, including online pH and particle-size monitoring, ensure every batch aligns with pharmacopeial standards.",
     "The dossier includes open and closed DMF sections, method validations, and stability data tailored to agency expectations across CIS, LATAM, and ROW markets."
+  ],
+  "product-fdf-probiotic": [
+    "Our probiotic sachet platform couples high-viability strains with moisture-protective laminates that sustain stability through extended shipping windows.",
+    "Each presentation is supported by flavour and sweetener options that meet consumer acceptability benchmarks without compromising colony-forming unit counts.",
+    "Launch partners receive validation templates and artwork-ready packaging dielines so commercial timelines stay on track even for multi-country rollouts."
   ]
 };
 
@@ -136,7 +156,21 @@ const ROUTE_FILTERS = {
     matches: (product) => product.family === "granules",
     defaultType: "Granules",
   },
+  fdf: {
+    label: "Finished Dose Forms",
+    tagline: "Finished dose formulations backed by validation support and market-ready packaging options.",
+    matches: (product) => product.family === "fdf",
+    defaultType: "Finished Dose Formulation",
+  },
 };
+
+const PRODUCT_MENU = [
+  { to: "/products", label: "All" },
+  { to: "/products/pellets", label: "Pellets" },
+  { to: "/products/granules", label: "Granules" },
+  { to: "/products/api", label: "APIs" },
+  { to: "/products/fdf", label: "Finished Dose Forms" },
+];
 
 /* ----------------- SEO helpers ----------------- */
 
@@ -511,6 +545,24 @@ export default function ProductsPage() {
             </a>
           </div>
         </header>
+
+        <nav className="products-menu" aria-label="Product families">
+          {PRODUCT_MENU.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/products"}
+              className={({ isActive }) =>
+                [
+                  "products-menu__link",
+                  isActive ? "products-menu__link--active" : "",
+                ].join(" ").trim()
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
 
         <section className="products-panel" aria-label="Product search">
           <div className="products-panel__grid">

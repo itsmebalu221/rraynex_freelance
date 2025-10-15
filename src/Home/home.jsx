@@ -37,7 +37,7 @@ export default function Home() {
           name="description"
           content="Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries. Research & development, compliant manufacturing and global partnerships."
         />
-        <link rel="canonical" href="https://myapp.com/" />
+        <link rel="canonical" href="https://rraynex.com/" />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph */}

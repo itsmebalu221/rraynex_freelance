@@ -8,6 +8,7 @@ import visionImg from "../../Home/bg1.jpg";
 import imgMission from "../../Home/bg1.jpg";
 import imgPromise from "../../Home/bg1.jpg";
 import Hero from "../../Components/Hero/Hero";
+import HeroBg from "../../Home/bg9.jpeg";
 /* Badge images (replace with your assets) */
 import GMP from "../../Assets/GMP.png";
 import WHO_GMP from "../../Assets/who-gmp.png";
@@ -194,7 +195,7 @@ export default function VisionValues() {
 <Hero
   title="Vision that Inspires, Values that Endure"
   subtitle="Redefining pharmaceutical excellence through purpose, partnership, and continuous innovation."
-  bgImage="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1920"
+  bgImage={HeroBg}
   ptitle="Explore Our Products"
   plink="/products"
   stitle="Download Brochure"

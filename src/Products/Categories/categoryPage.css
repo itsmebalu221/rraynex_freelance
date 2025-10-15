@@ -130,9 +130,9 @@
 }
 
 .btn-outline {
-  background: transparent;
+  background: #fff6ed;
   color: #031d51;
-  border: 2px solid #f9954a;
+  border: 2px solid rgba(249, 149, 74, 0.35);
   padding: 12px 24px;
   border-radius: 28px;
   font-weight: 600;
@@ -140,7 +140,8 @@
 }
 
 .btn-outline:hover {
-  background: rgba(249,149,74,0.1);
+  background: rgb(254, 254, 254);
+  color: #031d51;
 }
 
 .category-support {
@@ -179,8 +180,9 @@
 }
 
 .category-support .btn-outline {
-  color: #fff;
+  color: #031d51;
   border-color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.92);
 }
 
 @media (max-width: 980px) {

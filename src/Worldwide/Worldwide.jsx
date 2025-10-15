@@ -1,93 +1,144 @@
 import React, { useMemo, useState, useEffect } from "react";
+import Hero from "../Components/Hero/Hero";
 import "./Worldwide.css";
 
 /* Region data (populated with your provided copy) */
 const REGIONS = {
   ASIA: {
     title: "Asia",
-    text:
-      `Looking for a pharmaceutical company with a strong presence in the Asian market? Look no further than our company! With a diverse portfolio of finished dosage forms and several products under registration, we are committed to providing high-quality healthcare products to patients across the region.
-
-Our primary markets include India, Bangladesh, Nepal, Bhutan, Sri Lanka, the Philippines, Myanmar, Vietnam, Cambodia, Hong Kong, Australia, Indonesia, Pakistan, and Afghanistan. With our deeply penetrated presence in these markets, we are uniquely positioned to meet the needs of patients and healthcare providers alike.
-
-We are also actively seeking new partnerships and collaborations. If you are interested in working with a reliable and experienced pharmaceutical company in the Asian market, we invite you to reach out to us today.`,
+    narrative: [
+      "Rraynex partners with formulators across South and Southeast Asia to deliver pellet, granule, API, and FDF programs that meet WHO-GMP, CDSCO, and ASEAN pharmacopoeial requirements.",
+      "Technical transfer squads based in India, Bangladesh, Sri Lanka, and Australia guide dossier preparation, stability studies, and scale-up so launches in emerging ASEAN markets stay on track."
+    ],
     countries: [
       "India",
+      "Bangladesh",
       "Nepal",
+      "Bhutan",
       "Sri Lanka",
-      "Indonesia"
+      "Philippines",
+      "Myanmar",
+      "Vietnam",
+      "Cambodia",
+      "Hong Kong",
+      "Australia",
+      "Indonesia",
+      "Pakistan",
+      "Afghanistan"
+    ],
+    highlights: [
+      { title: "Regulatory reach", copy: "CTD dossiers aligned with CDSCO, TGA, and ASEAN regulators." },
+      { title: "On-ground support", copy: "Process engineers deploy to partner plants for coating and compression validation." },
+      { title: "Channel focus", copy: "Established networks in hospital tenders and specialty retail across South Asia." }
     ]
   },
 
   AFRICA: {
     title: "Africa",
-    text:
-      `Looking for a pharmaceutical company with a strong presence in the Africa region? Look no further than our company! With a diverse portfolio of finished dosage forms and several products under registration, we are committed to providing high-quality healthcare products to patients across the region.
-
-We work all over Africa. With our deeply penetrated presence in these markets, we are uniquely positioned to meet the needs of patients and healthcare providers alike.
-
-We are also actively seeking new partnerships and collaborations. If you are interested in working with a reliable and experienced pharmaceutical company in the Middle East and North African market, we invite you to reach out to us today.`,
+    narrative: [
+      "Our Africa portfolio supplies anglophone and francophone markets with pellets, DC granules, and APIs validated for humid-climate distribution and tender compliance.",
+      "We collaborate with ministries of health and local distributors to localise labelling, pharmacovigilance reporting, and cold-chain packaging where required."
+    ],
     countries: [
       "Nigeria",
       "South Africa",
       "Kenya",
       "Ghana",
       "Egypt",
+      "Ethiopia",
+      "Tanzania",
+      "Uganda",
+      "Morocco",
+      "Ivory Coast",
+      "Botswana",
+      "Namibia"
+    ],
+    highlights: [
+      { title: "Regulatory support", copy: "Dossier localisation for NAFDAC, SAHPRA, PPB, and GHS-compliant markets." },
+      { title: "Therapy focus", copy: "Strong cardiovascular, anti-infective, and nutritional SKU mix for public tenders." },
+      { title: "Partner enablement", copy: "In-market training on GMP documentation and stability monitoring." }
     ]
   },
 
   LATAM: {
     title: "Latin America",
-    text:
-      `At Rraynex, we are proud to have a deeply penetrated presence in the Latin American, central and South American market, providing a wide range of healthcare solutions to the region. With our extensive experience in the industry, we have established ourselves as a reliable partner to healthcare providers, offering high-quality semi-finished dosages, finished dosage forms, feeds, veterinary products, and more.
-
-Our commitment to providing the best healthcare solutions has enabled us to secure several product registrations, allowing us to offer an extensive range of products to our clients. Our primary markets include Brazil, Mexico, Argentina, Colombia, Peru, Ecuador, Chile, Venezuela, Guatemala, Caribbean islands, and more.
-
-At RRAYNEX, we believe in maintaining the highest standards of quality, safety, and efficacy in our products. To achieve this, we work closely with regulatory bodies in each country to ensure compliance with local regulations and guidelines.`,
+    narrative: [
+      "Rraynex supports Latin American partners with semi-finished pellets, APIs, and turnkey FDF solutions tailored to ANVISA, INVIMA, DIGEMID, and COFEPRIS standards.",
+      "Regulatory and commercial teams help distributors navigate language localisation, cold-chain logistics, and launch planning from the Caribbean to the Southern Cone."
+    ],
     countries: [
       "Brazil",
       "Mexico",
       "Argentina",
       "Colombia",
       "Peru",
-      "Ecuador"
+      "Ecuador",
+      "Chile",
+      "Venezuela",
+      "Guatemala",
+      "Panama",
+      "Costa Rica",
+      "Dominican Republic",
+      "Caribbean Islands"
+    ],
+    highlights: [
+      { title: "Registrations", copy: "100+ filings across Brazil, Mexico, Argentina, and the Andean region." },
+      { title: "Formats", copy: "Pellets for modified release, DC granules, nutraceutical sachets, and veterinary actives." },
+      { title: "Commercial models", copy: "Private-label, licensing, and co-marketing programs for regional scale-up." }
     ]
   },
 
   CIS: {
     title: "CIS & E. Europe",
-    text:
-      `Looking for a pharmaceutical company with a strong presence in the CIS region? Look no further than our company! With a diverse portfolio of finished dosage forms and several products under registration, we are committed to providing high-quality healthcare products to patients across the region.
-
-Our primary markets include Russia, Kazakhstan, Uzbekistan, Azerbaijan, Belarus and more. With our deeply penetrated presence in these markets, we are uniquely positioned to meet the needs of patients and healthcare providers alike.
-
-We are also actively seeking new partnerships and collaborations. If you are interested in working with a reliable and experienced pharmaceutical company in the Middle East and North African market, we invite you to reach out to us today.`,
+    narrative: [
+      "Our CIS and Eastern Europe coverage includes dedicated synthesis blocks for complex APIs and sustained-release pellets with Russian and EAEU filings.",
+      "We coordinate registration dossiers, pharmacopeial testing, and language-specific labelling to keep partners compliant through evolving regulatory frameworks."
+    ],
     countries: [
       "Russia",
       "Kazakhstan",
       "Uzbekistan",
       "Azerbaijan",
       "Belarus",
-      "Armenia"
+      "Armenia",
+      "Georgia",
+      "Kyrgyzstan",
+      "Moldova",
+      "Ukraine"
+    ],
+    highlights: [
+      { title: "Quality systems", copy: "ICH Q7 compliant manufacturing with serialisation-ready packaging." },
+      { title: "Market coverage", copy: "Active networks in Russia, Kazakhstan, Uzbekistan, Azerbaijan, Belarus, and Armenia." },
+      { title: "Support hubs", copy: "Technical liaisons in Almaty and Moscow for rapid issue resolution." }
     ]
   },
 
   MENA: {
     title: "MENA",
-    text:
-      `Looking for a pharmaceutical company with a strong presence in the MENA region? Look no further than our company! With a diverse portfolio of finished dosage forms and several products under registration, we are committed to providing high-quality healthcare products to patients across the region.
-
-Our primary markets include Saudi Arabia, UAE, Iran, Iraq, Jordan, Algeria, and Egypt, among others. With our deeply penetrated presence in these markets, we are uniquely positioned to meet the needs of patients and healthcare providers alike.
-
-We are also actively seeking new partnerships and collaborations. If you are interested in working with a reliable and experienced pharmaceutical company in the Middle East and North African market, we invite you to reach out to us today.`,
+    narrative: [
+      "We serve MENA markets with WHO-GMP certified pellets, APIs, and finished dose programs adapted for GCC, Levant, and North African regulatory pathways.",
+      "From CTD dossier preparation to bioequivalence study coordination, our teams help partners accelerate hospital tenders and retail launches across the region."
+    ],
     countries: [
       "Saudi Arabia",
-      "UAE",
-      "Iran",
-      "Iraq",
+      "United Arab Emirates",
+      "Qatar",
+      "Kuwait",
+      "Bahrain",
+      "Oman",
       "Jordan",
+      "Iraq",
+      "Iran",
       "Algeria",
-      "Egypt"
+      "Egypt",
+      "Morocco",
+      "Tunisia",
+      "Lebanon"
+    ],
+    highlights: [
+      { title: "Regulatory depth", copy: "Experience with SFDA, DHA, MOHAP, and CAPA procedures." },
+      { title: "Therapeutic mix", copy: "Strong offerings in gastro, cardio-metabolic, women’s health, and nutraceutical segments." },
+      { title: "Logistics", copy: "Temperature-controlled supply chain through Dubai and Jeddah hubs." }
     ]
   }
 };
@@ -98,14 +149,16 @@ export default function WorldWide() {
 
   useEffect(() => {
     if (typeof document !== "undefined") {
-      document.title = `Worldwide Presence | ${REGIONS[selected].title} — Rraynex`;
+      const activeRegion = REGIONS[selected];
+      const description = (activeRegion.metaDescription || activeRegion.narrative.join(" ")).trim();
+      document.title = `Worldwide Presence | ${activeRegion.title} — Rraynex`;
       let meta = document.querySelector('meta[name="description"]');
       if (!meta) {
         meta = document.createElement("meta");
         meta.setAttribute("name", "description");
         document.head.appendChild(meta);
       }
-      meta.setAttribute("content", REGIONS[selected].text);
+      meta.setAttribute("content", description);
     }
   }, [selected]);
 
@@ -113,15 +166,19 @@ export default function WorldWide() {
 
   return (
     <div className="worldwide-wrap">
-      {/* HERO */}
-      <section className="products-hero">
-        <div className="products-hero-content">
-          <h1 className="products-hero-title">Our Global Presence</h1>
-          <p className="products-hero-lead">
-            We offer high-quality pellets, granules, APIs, and intermediates, backed by WHO-GMP compliance and global trust.
-          </p>
-        </div>
-      </section>
+      <Hero
+        title="Our Global Presence"
+        subtitle="We offer high-quality pellets, granules, APIs, and intermediates, backed by WHO-GMP compliance and global trust."
+        background="#173860"
+        overlay={false}
+        plink="#products"
+        ptitle="Explore Products"
+        slink="/assets/Rraynex_Corp_Profile.pdf"
+        stitle="Download Brochure"
+        bgImage="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      
+      />
+
 
       {/* Framed panel with left card + right main area */}
       <div className="panel-wrap" id="panel">
@@ -151,12 +208,15 @@ export default function WorldWide() {
                     }}
                     aria-pressed={active}
                   >
-                    <div style={{ width:36, height:36, borderRadius:8, background:"#fff", border:"1px solid rgba(11,48,79,0.04)", display:"flex", alignItems:"center", justifyContent:"center", fontWeight:800 }}>
-                      {k[0]}
+            <div style={{ width:36, height:36, borderRadius:8, background:"#fff", border:"1px solid rgba(11,48,79,0.04)", display:"flex", alignItems:"center", justifyContent:"center", fontWeight:800 }}>
+              {k[0]}
                     </div>
                     <div>
                       <div style={{ fontSize:14 }}>{r.title}</div>
-                      <div style={{ fontSize:12, color:"#6b7280" }}>{r.countries.slice(0,3).join(", ")}{r.countries.length>3 ? "…" : ""}</div>
+                      <div style={{ fontSize:12, color:"#6b7280" }}>
+                        {r.countries.length} markets • {r.countries.slice(0,3).join(", ")}
+                        {r.countries.length>3 ? "…" : ""}
+                      </div>
                     </div>
                   </button>
                 );
@@ -180,9 +240,22 @@ export default function WorldWide() {
               </div>
             </div>
 
-            <div className="placeholder" style={{ whiteSpace: "pre-wrap", marginTop: 16 }}>
-              {region.text}
-            </div>
+            <section className="region-text">
+              {region.narrative.map((paragraph, idx) => (
+                <p key={idx}>{paragraph}</p>
+              ))}
+            </section>
+
+            {region.highlights?.length > 0 && (
+              <ul className="region-highlights">
+                {region.highlights.map((item, idx) => (
+                  <li key={item.title + idx}>
+                    <strong>{item.title}</strong>
+                    <span>{item.copy}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
 
             <div className="chips" aria-hidden style={{ marginTop: 16 }}>
               {region.countries.map((c) => (

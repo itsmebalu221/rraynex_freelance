@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./aboutrray.css";
 import GMP from "./GMP.png";
 import WHO_GMP from "./who-gmp.png";
@@ -17,7 +17,6 @@ import Hero from "../../Components/Hero/Hero";
 */
 
 export default function AboutUs() {
-  const observerRef = useRef(null);
   const [badgeModal, setBadgeModal] = useState(null); // { img, label, blurb, pdf? }
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
@@ -76,23 +75,38 @@ export default function AboutUs() {
   ];
 
   useEffect(() => {
-    // IntersectionObserver to reveal elements
-    observerRef.current = new IntersectionObserver(
+    if (typeof window === "undefined" || typeof document === "undefined") return;
+
+    const targets = Array.from(document.querySelectorAll(".animate-on-scroll"));
+    if (!targets.length) return;
+
+    const revealAll = () => targets.forEach((t) => t.classList.add("animate-in"));
+
+    if (!("IntersectionObserver" in window)) {
+      revealAll();
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate-in");
-            observerRef.current.unobserve(entry.target);
+            observer.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.12, rootMargin: "0px 0px -10% 0px" }
     );
 
-    const targets = document.querySelectorAll(".animate-on-scroll");
-    targets.forEach((t) => observerRef.current.observe(t));
+    targets.forEach((target) => observer.observe(target));
 
-    return () => observerRef.current?.disconnect();
+    const failSafe = window.setTimeout(revealAll, 2000);
+
+    return () => {
+      window.clearTimeout(failSafe);
+      observer.disconnect();
+    };
   }, []);
 
   // simple image fallback

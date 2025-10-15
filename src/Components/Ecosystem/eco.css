@@ -53,6 +53,7 @@
   border-radius: 18px;
   overflow: hidden;
   position: relative;
+  height: 300px;
 }
 
 .eco-card__media::after {

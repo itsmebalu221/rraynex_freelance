@@ -12,7 +12,7 @@
   --frame-gray: #e6e6e6;
   --shadow: 0 12px 30px rgba(11,48,79,0.06);
 }
-
+ 
 /* base */
 *{box-sizing:border-box}
 html,body,#root{height:100%}
@@ -30,23 +30,36 @@ body{
  
 }
 
-/* HERO — solid gradient like your screenshot */
-.hero {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  min-height:200px;
-  background: linear-gradient(90deg, #173860 0%, #2b4a68 25%, rgba(42,70,95,0.6) 45%, rgba(255,122,0,0.12) 75%, #ff7a00 100%);
-  color: #fff;
+/* HERO */
+.worldwide-hero.products-hero {
+  height: auto;
+  min-height: 240px;
+  padding: 64px 16px;
   margin-bottom: 30px;
- 
+  background: #173860;
+  color: #fff;
 }
-.hero-title{ font-size: clamp(26px, 4vw, 44px); margin:0 0 8px; font-weight:800; }
-.hero-sub{ margin:0 auto; color: rgba(255,255,255,0.92); max-width:900px; font-size:14px; }
+
+.worldwide-hero.products-hero .products-hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.worldwide-hero.products-hero .products-hero-title {
+  font-size: clamp(26px, 4vw, 42px);
+  margin-bottom: 10px;
+}
+
+.worldwide-hero.products-hero .products-hero-lead {
+  max-width: 640px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.65;
+}
 
 /* big framed panel (LIGHT FRAME) */
-.panel-wrap{ width:100%; max-width:var(--container); margin: -50px auto 0; padding: 0 10px; }
+.panel-wrap{ width:100%; max-width:var(--container); margin: 20px auto; padding: 0 10px; }
 
 /* this is the wide light-gray frame — matches your mock */
 .frame {
@@ -98,6 +111,53 @@ body{
   justify-content:center;
   color:var(--muted);
   font-size:14px;
+}
+
+.region-text {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbfbfb 0%, #f1f3f6 100%);
+  border: 1px solid rgba(11,48,79,0.08);
+  color: #1f2a3d;
+  line-height: 1.65;
+}
+
+.region-text p {
+  margin: 0;
+}
+
+.region-text p + p {
+  margin-top: 12px;
+}
+
+.region-highlights {
+  margin: 8px 0 0;
+  padding: 16px;
+  background: rgba(23,56,96,0.05);
+  border-radius: 10px;
+  display: grid;
+  gap: 12px;
+  border: 1px solid rgba(11,48,79,0.06);
+}
+
+.region-highlights li {
+  list-style: none;
+}
+
+.region-highlights strong {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #173860;
+  margin-bottom: 2px;
+}
+
+.region-highlights span {
+  font-size: 13px;
+  color: #45546a;
+  line-height: 1.5;
 }
 
 /* countries chips row */

@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./hero.css";
+import bg4 from "../../Home/bg6.jpeg";
+import bg5 from "../../Home/bg8.jpeg";
+import bg6 from "../../Home/bg9.jpeg";
 
 const carouselImages = [
-  "https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  bg4,
   "https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  
   "https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=1920",
   "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=1920",
+
 ];
 
 export default function HeroCarousel() {

@@ -124,9 +124,9 @@
 }
 
 .btn-outline {
-  background: transparent;
-  border: 2px solid #ff7a00;
-  color: #ff7a00;
+  background: rgba(255, 122, 0, 0.14);
+  border: 2px solid rgba(255, 122, 0, 0.4);
+  color: #1a2a5a;
   padding: 12px 24px;
   font-weight: 700;
   border-radius: 50px;
@@ -134,8 +134,8 @@
   transition: all 0.3s ease;
 }
 .btn-outline:hover {
-  background: #ff7a00;
-  color: #fff;
+  background: rgba(255, 122, 0, 0.28);
+  color: #1a2a5a;
   transform: scale(1.05);
 }
 
