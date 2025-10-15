@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "./aboutrray.css";
-import GMP from "./GMP.png";
-import WHO_GMP from "./who-gmp.png";
-import EUGMP from "./eu-gmp.jpeg";
-import ISO9001 from "./iso-9001.png";
-import ISO14001 from "./iso-14001.jpg";
-import ISO25001 from "./iso-25001.png";
-import Halal from "./halal.jpg";
-import Kosher from "./koshir.png";
 import Hero from "../../Components/Hero/Hero";
+
+import one from "../Milestones/1.jpg";
+import two from "../Milestones/2.jpg";
+import three from "../Milestones/3.jpg";
+import four from "../Milestones/4.jpg";
+import five from "../Milestones/5.jpg";
+import six from "../Milestones/6.jpg";
+import seven from "../Milestones/7.jpg";
+import eight from "../Milestones/8.jpg";
+import nine from "../Milestones/9.jpg";
+import ten from "../Milestones/10.jpg";
+import eleven from "../Milestones/11.jpg";
+import twelve from "../Milestones/12.jpg";
+import thirteen from "../Milestones/13.jpg";
+import fourteen from "../Milestones/14.jpg";
 
 /*
   Note:
@@ -17,27 +24,10 @@ import Hero from "../../Components/Hero/Hero";
 */
 
 export default function AboutUs() {
-  const [badgeModal, setBadgeModal] = useState(null); // { img, label, blurb, pdf? }
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const GALLERY = [
-    "/assets/facilities/fac1.jpg",
-    "/assets/facilities/fac2.jpg",
-    "/assets/facilities/fac3.jpg",
-    "/assets/facilities/pack-line.jpg",
-    "/assets/facilities/qc-lab.jpg",
-    "/assets/facilities/stability.jpg",
-  ];
-
-  const CERTS = [
-    { id: "who-gmp", img: WHO_GMP, label: "WHO-GMP", blurb: "WHO Good Manufacturing Practices certification — confirms adherence to international pharmaceutical manufacturing standards and regulatory expectations." },
-    { id: "gmp", img: GMP, label: "GMP", blurb: "Domestic GMP certification — demonstrates documented, auditable manufacturing and quality systems." },
-    { id: "eu-gmp", img: EUGMP, label: "EU-GMP (targeted)", blurb: "European GMP — target program to enable supply to regulated EU markets with additional control and documentation." },
-    { id: "iso9001", img: ISO9001, label: "ISO 9001", blurb: "ISO 9001 — Quality Management System emphasizing process consistency and continual improvement." },
-    { id: "iso14001", img: ISO14001, label: "ISO 14001", blurb: "ISO 14001 — Environmental Management System to reduce environmental footprint and manage compliance." },
-    { id: "iso45001", img: ISO25001, label: "ISO 45001", blurb: "ISO 45001 — Occupational health & safety standard ensuring safe workplaces." },
-    { id: "halal", img: Halal, label: "Halal", blurb: "Halal certification — export-ready compliance for markets requiring religious dietary standards." },
-    { id: "kosher", img: Kosher, label: "Kosher", blurb: "Kosher certification — catering to kosher market requirements where applicable." },
+    one, two, three, four, five, six
   ];
 
   // Milestones: expanded professional content
@@ -115,16 +105,6 @@ export default function AboutUs() {
     e.currentTarget.src = "/assets/placeholder.jpg";
   }
 
-  // open badge modal
-  function openBadge(b) {
-    setBadgeModal(b);
-    document.body.style.overflow = "hidden";
-  }
-  function closeBadge() {
-    setBadgeModal(null);
-    document.body.style.overflow = "";
-  }
-
   // lightbox handlers
   function openLightbox(i) {
     setLightboxIndex(i);
@@ -139,7 +119,6 @@ export default function AboutUs() {
   useEffect(() => {
     function onKey(e) {
       if (e.key === "Escape") {
-        closeBadge();
         closeLightbox();
       }
       if (lightboxIndex !== null) {
@@ -213,97 +192,6 @@ export default function AboutUs() {
         </article>
       </section>
 
-      {/* Certifications & pillars */}
-      <section className="about-pills animate-on-scroll" aria-labelledby="certs-heading">
-        <h2 id="certs-heading" className="section-heading">Regulatory Certifications</h2>
-        <div className="section-sub">
-          100% auditable facility with full document support — DMF (where applicable), stability programs,
-          supplier qualification and comprehensive QA/QC practices.
-        </div>
-
-        <div className="cert-top">
-          <div className="cert-copy" role="region" aria-label="Certifications summary">
-            <ul aria-live="polite">
-              <li>Completed vertical integration across Intermediates → API → Pellets (2023)</li>
-              <li>Commissioned GMP pellet manufacturing and packaging lines (2024)</li>
-              <li>WHO-GMP certification and validated capacity (125 MT/month pellets; 30 MT/month granules, 2025)</li>
-              <li>ISO 9001, ISO 14001 and ISO 45001 certifications (recognized globally)</li>
-              <li>Product portfolio: 127+ registered products with stability data and dossier support</li>
-            </ul>
-
-            <p>
-              Every certification reinforces system maturity — from environmental management to occupational safety.
-              We maintain auditable batch records, validated analytical methods and a CAPA-based improvement cycle that
-              improves assay precision, dissolution reproducibility and long-term stability of marketed products.
-            </p>
-          </div>
-
-          <div className="cert-badges" role="img" aria-roledescription="certification badges" aria-label="Certifications">
-            <div style={{ fontWeight: 700, color: "var(--navy, #0b304f)" }}>Our Certifications</div>
-            <div className="badge-grid" aria-hidden>
-              {CERTS.map((c) => (
-                <button
-                  key={c.id}
-                  className="cert-badge animate-on-scroll"
-                  onClick={() => openBadge(c)}
-                  style={{ background: "transparent", border: "none", cursor: "pointer" }}
-                  title={`${c.label} — click for details`}
-                >
-                  <img src={c.img} alt={c.label} onError={imgFallback} />
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Pillars grid */}
-        <div className="pill-grid" style={{ marginTop: 18 }}>
-          <div className="pill">
-            <span className="dot" />
-            <div>
-              <h4 className="pill-title">Quality by design</h4>
-              <p className="pill-text">
-                We embed quality into development and manufacturing — mapping critical parameters, controlling inputs,
-                and validating outputs to minimise variability and ensure predictable product performance.
-              </p>
-            </div>
-          </div>
-
-          <div className="pill">
-            <span className="dot" />
-            <div>
-              <h4 className="pill-title">Regulatory readiness</h4>
-              <p className="pill-text">
-                DMF-ready dossiers, stability data packages and documented change control enable faster registration
-                and reduce review cycles for customers targeting global markets.
-              </p>
-            </div>
-          </div>
-
-          <div className="pill">
-            <span className="dot" />
-            <div>
-              <h4 className="pill-title">Partnership approach</h4>
-              <p className="pill-text">
-                We collaborate closely with customers, offering technical trials, regulatory support and tailored packaging
-                solutions to meet market-specific requirements.
-              </p>
-            </div>
-          </div>
-
-          <div className="pill">
-            <span className="dot" />
-            <div>
-              <h4 className="pill-title">Sustainability & safety</h4>
-              <p className="pill-text">
-                Environmental management and occupational safety are integral — from solvent recovery to energy efficiency
-                and worker health programs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Milestones timeline */}
       <section className="about-timeline animate-on-scroll" aria-labelledby="milestones-heading">
         <h2 id="milestones-heading" className="section-heading">Milestones & Growth</h2>
@@ -345,7 +233,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* CTA band */}
+      {/* CTA band
       <section className="about-cta-band animate-on-scroll" aria-hidden="false">
         <div className="cta-card">
           <h3>Let's build a healthier future together</h3>
@@ -357,33 +245,7 @@ export default function AboutUs() {
             <a className="btn btn-outline" href="/assets/Rraynex_Corp_Profile.pdf" target="_blank" rel="noreferrer">Download Profile</a>
           </div>
         </div>
-      </section>
-
-      {/* Badge modal */}
-      {badgeModal && (
-        <div className="ql-modal-backdrop" role="dialog" aria-modal="true" onClick={closeBadge}>
-          <div className="ql-modal" onClick={(e) => e.stopPropagation()}>
-            <header className="ql-modal-head">
-              <h3>{badgeModal.label}</h3>
-              <button className="ql-modal-close" onClick={closeBadge} aria-label="Close">✕</button>
-            </header>
-
-            <div className="ql-modal-body">
-              <img src={badgeModal.img} alt={badgeModal.label} onError={imgFallback} />
-              <div className="ql-modal-text">
-                <p style={{ textAlign: "justify" }}>{badgeModal.blurb}</p>
-                <p style={{ marginTop: 12, color: "#444" }}>
-                  For certificate access, please contact quality@rraynex.com and reference the certification.
-                </p>
-              </div>
-            </div>
-
-            <footer className="ql-modal-foot">
-              <button className="btn btn-outline" onClick={closeBadge}>Close</button>
-            </footer>
-          </div>
-        </div>
-      )}
+      </section> */}
 
       {/* Lightbox */}
       {lightboxIndex !== null && (

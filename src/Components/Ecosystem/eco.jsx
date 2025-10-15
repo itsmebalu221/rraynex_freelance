@@ -4,6 +4,8 @@ import './eco.css';
 import pellets from "../../Home/pellets.png";
 import granules from "./granules.png";
 import apis from "./apis.jpeg";
+import fdf from "./fdf.jpeg";
+import online from "./online.jpeg";
 
 
 const PLATFORM_CARDS = [
@@ -41,7 +43,7 @@ const PLATFORM_CARDS = [
       'End-to-end support from formulation design through validation and launch. We help partners commercialise tablets, capsules, sachets, and novel delivery formats with confidence.',
     ctaLabel: 'Partner on FDF Launches',
     ctaLink: '/products/fdf',
-    image: 'https://placehold.co/640x420?text=Finished+Dose+Forms'
+    image: fdf
   },
   {
     id: 'shopping',
@@ -50,7 +52,7 @@ const PLATFORM_CARDS = [
       'Browse curated wellness essentials, OTC launches and pilot batches direct from Rraynex. Our online storefront makes it easier for partners to evaluate consumer-ready innovations.',
     ctaLabel: 'Visit Store',
     ctaLink: '/products',
-    image: 'https://placehold.co/640x420?text=Rraynex+Online+Shopping'
+    image: online
   }
 ];
 
