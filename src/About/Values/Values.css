@@ -412,8 +412,6 @@
   border-top: 1px solid rgba(3,29,81,0.04);
 }
 .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:8px; font-weight:700; text-decoration:none; cursor:pointer; }
-.btn-primary { background:var(--accent); color:white; border: none; }
-.btn-outline { background:transparent; color:var(--navy); border: 1px solid rgba(3,29,81,0.08); }
 
 /* ---------------- accessibility helpers ---------------- */
 .vv-cert-badge { cursor: pointer; }

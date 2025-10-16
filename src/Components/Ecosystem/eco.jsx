@@ -37,21 +37,12 @@ const PLATFORM_CARDS = [
     image: apis
   },
   {
-    id: 'fdf',
-    title: 'Finished Dose Formulations',
-    description:
-      'End-to-end support from formulation design through validation and launch. We help partners commercialise tablets, capsules, sachets, and novel delivery formats with confidence.',
-    ctaLabel: 'Partner on FDF Launches',
-    ctaLink: '/products/fdf',
-    image: fdf
-  },
-  {
     id: 'shopping',
     title: 'Rraynex Online Shopping',
     description:
       'Browse curated wellness essentials, OTC launches and pilot batches direct from Rraynex. Our online storefront makes it easier for partners to evaluate consumer-ready innovations.',
     ctaLabel: 'Visit Store',
-    ctaLink: '/products',
+    ctaLink: '/products/categories/rraynex-luxe',
     image: online
   }
 ];

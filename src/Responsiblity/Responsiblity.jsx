@@ -1,8 +1,9 @@
 import React from "react";
 import "./Responsiblity.css";
-import { FaLeaf, FaHandsHelping, FaShieldAlt, FaGlobe } from "react-icons/fa";
+import { FaHandsHelping, FaShieldAlt, FaGlobe } from "react-icons/fa";
 import Hero from "../Components/Hero/Hero";
 import { Link } from "react-router-dom";
+import ehs from "./ehss.jpg"
 
 const Responsibility = () => {
   const pillars = [
@@ -11,64 +12,46 @@ const Responsibility = () => {
       eyebrow: "People First",
       title: "Community Impact & CSR",
       summary:
-        "Education, primary healthcare, and livelihood programs are co-created with local communities so every intervention is owned and sustained locally.",
+        "Community-owned programs unlock education, primary care, and livelihood pathways that are designed, budgeted, and governed alongside local leaders.",
       bullets: [
-        "STEM scholarships for 300+ students and vocational upskilling for caregivers",
-        "Mobile health camps, maternal wellness drives, and preventive screenings",
-        "Women-led self-help groups supported with micro-enterprise starter kits",
+        "Learning labs in 22 schools co-facilitating STEM, coding, and digital literacy",
+        "Mobile primary care with tele-consults, prenatal screenings, and pharmacy support",
+        "Income resilience fund backing 160 women-led enterprises with seed capital and mentoring",
       ],
-      impact: "Impact: 48 villages engaged with 18,000+ direct beneficiaries each year.",
+      impact: "Impact: 22 villages co-managing programs with 21,000+ residents accessing new services annually.",
       link: "/responsibility/csr",
       image:
         "https://images.unsplash.com/photo-1603574670812-d24560880210?auto=format&fit=crop&w=1200&q=80",
       Icon: FaHandsHelping,
     },
     {
-      id: "sustainability",
-      eyebrow: "Resource Positive",
-      title: "Sustainability & Circularity",
-      summary:
-        "Carbon, water, and waste dashboards guide every investment—from solvent recovery to renewable energy sourcing—so operations stay climate resilient.",
-      bullets: [
-        "42% of site power now drawn from solar and wind purchase agreements",
-        "Closed-loop solvent recovery delivering 68% reuse efficiency",
-        "Water-positive roadmap with rainwater harvesting and zero liquid discharge",
-      ],
-      impact: "Impact: 1,200 tons of CO₂e avoided annually with 100% hazardous waste traceability.",
-      link: "/responsibility/sustainability",
-      image:
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-      Icon: FaLeaf,
-    },
-    {
       id: "ehs",
       eyebrow: "Zero Harm Culture",
       title: "Environment, Health & Safety",
       summary:
-        "ISO 45001-aligned safety systems, digital permit-to-work, and behavior-based training ensure people and processes stay protected round the clock.",
+        "Safety-first frameworks combine digital oversight, scenario drills, and whole-person wellness so every shift ends with teams going home safe.",
       bullets: [
-        "24/7 environmental monitoring with real-time compliance alerts",
-        "Annual 360° safety drills coordinated with local emergency responders",
-        "Occupational health clinic with ergonomic and mental well-being programs",
+        "Digital permit-to-work app with live risk scoring across 11 production lines",
+        "Quarterly multi-agency emergency simulations spanning fire, chem, and flood events",
+        "On-site clinic integrating ergonomic coaching, mental health support, and return-to-work plans",
       ],
-      impact: "Impact: Zero lost-time incidents in 24 months and 97% audit compliance.",
+      impact: "Impact: 24 consecutive months without a lost-time injury and 98% closure of audit actions within 30 days.",
       link: "/responsibility/ehs",
-      image:
-        "https://images.unsplash.com/photo-1516826438747-fc1adf3d65b9?auto=format&fit=crop&w=1200&q=80",
+      image:ehs,
       Icon: FaShieldAlt,
     },
     {
       id: "ecosystem",
       eyebrow: "Shared Success",
-      title: "Ecosystem Partnerships",
+      title: "Uplifting Ecosystem Partners",
       summary:
-        "We embed quality systems, tech-transfer playbooks, and market access know-how so smaller manufacturers accelerate responsibly.",
+        "Supplier uplift labs codify quality systems, data tools, and go-to-market pathways so MSMEs scale responsibly alongside us.",
       bullets: [
-        "Joint GMP audits and validation support for partner facilities",
-        "Shared R&D toolkits covering formulation, stability, and regulatory dossiers",
-        "Commercial mentoring that links partners to tenders across 58+ countries",
+        "Joint GMP maturity programs with gap closure roadmaps for partner plants",
+        "Shared digital QMS workspace covering change controls, deviations, and CAPA analytics",
+        "Export-readiness coaching that pairs co-branded bids with regulatory dossier support",
       ],
-      impact: "Impact: 12 MSME partners graduated to regulated supply with 5 new market entries.",
+      impact: "Impact: 15 MSME partners unlocked regulated-market approvals and secured 6 new country launches in FY25.",
       link: "/responsibility/uplifting-ecosystem",
       image:
         "https://images.unsplash.com/photo-1582719478250-fd1ef29e8f87?auto=format&fit=crop&w=1200&q=80",

@@ -86,7 +86,7 @@ const BADGES = [
 ];
 
 const GALLERY = [
-  one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen,
+  one, three, four, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen,
 ];
 
 const SYSTEMS = [
@@ -156,7 +156,7 @@ const COMMITMENTS = [
   {
     id: "qm",
     title: "Quality Management",
-    img: three,
+    img: four,
     icon: <FaMicroscope />,
     paragraphs: [
       "Our QMS aligns with ICH and WHO principles — controlled documentation, electronic change control and CAPA cycles that deliver regulator-ready outcomes.",

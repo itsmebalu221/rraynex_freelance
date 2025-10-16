@@ -14,6 +14,10 @@ import WHO_GMP from "../../Assets/who-gmp.png";
 import ISO9001 from "../../Assets/iso-9001.png";
 import ISO14001 from "../../Assets/iso-14001.jpg";
 import ISO45001 from "../../Assets/iso-25001.png";
+import header from "./header.jpg"
+import vision from "./vision.jpg";
+import mission from "./mission.jpg";
+import promise from "./promise.jpg";
 
 /* icons */
 import {
@@ -194,7 +198,7 @@ export default function VisionValues() {
 <Hero
   title="Vision that Inspires, Values that Endure"
   subtitle="Redefining pharmaceutical excellence through purpose, partnership, and continuous innovation."
-  bgImage="https://images.pexels.com/photos/4031416/pexels-photo-4031416.jpeg?auto=compress&cs=tinysrgb&w=1920"
+  bgImage={header}
   ptitle="Explore Our Products"
   plink="/products"
   stitle="Download Brochure"
@@ -270,7 +274,7 @@ export default function VisionValues() {
 
           <figure className="vision-card__media">
             <img
-              src={visionImg}
+              src={vision}
               alt="Integrated R&D and manufacturing at Rraynex"
               loading="lazy"
               onError={imgFallback}
@@ -281,7 +285,7 @@ export default function VisionValues() {
 
         {/* Mission split */}
         <section className="vv-image-split" aria-labelledby="vv-mission-heading">
-          <img src={imgMission} alt="Innovation lab" loading="lazy" onError={imgFallback} />
+          <img src={mission} alt="Innovation lab" loading="lazy" onError={imgFallback} />
           <div className="vv-image-split-content">
             <h2 id="vv-mission-heading">Our Mission</h2>
 
@@ -375,7 +379,7 @@ export default function VisionValues() {
             </p>
           </div>
 
-          <img src={imgPromise} alt="Team collaboration and quality" loading="lazy" onError={imgFallback} />
+          <img src={promise} alt="Team collaboration and quality" loading="lazy" onError={imgFallback} />
         </section>
 
         {/* Certifications */}

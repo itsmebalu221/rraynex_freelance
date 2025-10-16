@@ -43,20 +43,12 @@ const CSR_PROGRAMS = [
         img:four,
       },
       {
-        id: "durgashtami-5",
-        img:five,
-      },
-      {
         id: "durgashtami-6",
         img:six,
       },
       {
         id: "durgashtami-7",
         img:seven,
-      },
-      {
-        id: "durgashtami-8",
-        img:eight,
       },
       {
         id: "durgashtami-9",

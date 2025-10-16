@@ -17,6 +17,8 @@ import twelve from "../Milestones/12.jpg";
 import thirteen from "../Milestones/13.jpg";
 import fourteen from "../Milestones/14.jpg";
 
+import header from "./header.jpg";
+
 /*
   Note:
   - Ensure these image imports exist in the same folder or update paths.
@@ -140,8 +142,8 @@ export default function AboutUs() {
         ptitle="Explore Products"
         slink="/assets/Rraynex_Corp_Profile.pdf"
         stitle="Download Brochure"
-    bgImage="https://images.pexels.com/photos/3912977/pexels-photo-3912977.jpeg?auto=compress&cs=tinysrgb&w=1920"
-        overlayGradient="linear-gradient(to bottom right, rgba(255,255,255,0.75), rgba(255,255,255,0.55))"
+    bgImage={header}
+        overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(255,255,255,0.55))"
         tone="dark"
       />
 

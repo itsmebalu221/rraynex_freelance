@@ -11,6 +11,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import PharmaGranulesHero from "../../Components/HEROSECTION/HeroSection";
 import Hero from "../../Components/Hero/Hero";
+import header from "./header.jpg";
 // --- Images ---
 import one from "./1.jpg";
 import two from "./2.jpg";
@@ -136,7 +137,7 @@ export default function MilestonesTimeline() {
         <Hero
           title="Milestones & Recognitions"
           subtitle="A decade of growth, certifications, and partnerships that anchor our global credibility."
-          bgImage="https://images.pexels.com/photos/3735773/pexels-photo-3735773.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          bgImage={header}
           ptitle="Explore Our Products"
           plink="/products"
           stitle="Download Brochure"
