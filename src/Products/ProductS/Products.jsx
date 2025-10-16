@@ -1256,9 +1256,7 @@ export default function ProductsPage() {
               <a className="btn btn-primary" href="mailto:communications@rraynex.com">
                 Email the Team
               </a>
-              <a className="btn btn-outline" href="tel:+910000000000">
-                Call +91 0000 000 000
-              </a>
+              
             </div>
           </div>
         </section>
