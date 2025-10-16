@@ -5,6 +5,8 @@ import "./categoryPage.css";
 import pellets from "../../Home/pellets.png";
 import granules from "../../Components/Ecosystem/granules.png";
 import Apis from "../../Components/Ecosystem/apis.jpeg";
+import header from "./header.jpg";
+import inter from "./inter.png";
 
 
 const CATEGORY_CARDS = [
@@ -49,7 +51,7 @@ const CATEGORY_CARDS = [
     title: "Intermediaries",
     blurb:
       "Advanced intermediates that stabilise your upstream supply chain, offering reliable hand-offs between stages and reducing the cost of scale-up chemistry.",
-  image: "https://placehold.co/520x320?text=Intermediaries",
+  image: inter,
     highlights: [
       "Route-optimised chemistry shortens your development cycles",
       "Scale-up support from kilo lab to commercial reactors",
@@ -70,7 +72,7 @@ function ProductCategories() {
       <Hero
         title="Product Categories"
         subtitle="Explore how our pellet, granule, API and intermediate platforms accelerate your formulation roadmap."
-        bgImage="https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        bgImage={header}
         plink="#categories"
         ptitle="Explore Categories"
         slink="/products"

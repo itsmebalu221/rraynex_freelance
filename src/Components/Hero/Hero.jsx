@@ -1,5 +1,6 @@
 import React from "react";
 import "./hero.css"; // optional if you already have one
+import brochurePdf from "../../Assets/Rraynex_Brochure.pdf";
 
 export default function Hero({
   title,
@@ -16,7 +17,12 @@ export default function Hero({
   contentClassName = "",
   style = {},
   tone = "light",
+  downloadLabel = "Download Brochure",
 }) {
+  const hasPrimary = Boolean(ptitle && plink);
+  const hasSecondary = Boolean(stitle && slink);
+  const showDefaultDownload = !hasPrimary && !hasSecondary;
+  const shouldRenderCta = hasPrimary || hasSecondary || showDefaultDownload;
   const sectionStyle = {
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -59,16 +65,21 @@ export default function Hero({
         <h1 className="products-hero-title">{title}</h1>
         <p className="products-hero-lead">{subtitle}</p>
 
-        {(ptitle || stitle) && (
+        {shouldRenderCta && (
           <div className="products-hero-cta">
-            {ptitle && (
+            {hasPrimary && (
               <a className="btn-primary" href={plink}>
                 {ptitle}
               </a>
             )}
-            {stitle && (
+            {hasSecondary && (
               <a className="btn-outline" href={slink} target="_blank" rel="noreferrer">
                 {stitle}
+              </a>
+            )}
+            {showDefaultDownload && (
+              <a className="btn-primary" href={brochurePdf} download>
+                {downloadLabel}
               </a>
             )}
           </div>

@@ -15,7 +15,7 @@ const PLATFORM_CARDS = [
     description:
       'Multiparticulate platforms engineered for controlled and delayed release. Uniform layering, tight size curves and reproducible dissolution help partners compress timelines with confidence.',
     ctaLabel: 'Explore Pellets',
-    ctaLink: '/products/pellets',
+    ctaLink: '/products/categories/pellets',
     image: pellets
   },
   {
@@ -24,7 +24,7 @@ const PLATFORM_CARDS = [
     description:
       'Direct compression and wet granulation grades tuned for flow, blend uniformity and tablet integrity. Each batch is humidity-managed so high-speed lines stay predictable.',
     ctaLabel: 'View Granules',
-    ctaLink: '/products/granules',
+    ctaLink: '/products/categories/granules',
     image: granules
   },
   {
@@ -33,7 +33,7 @@ const PLATFORM_CARDS = [
     description:
       'WHO-GMP synthesis blocks with integrated impurity profiling and scalability from kilo labs to commercial reactors. Documentation packages are ready for global submissions.',
     ctaLabel: 'See API Portfolio',
-    ctaLink: '/products/api',
+    ctaLink: '/products/categories/api',
     image: apis
   },
   {

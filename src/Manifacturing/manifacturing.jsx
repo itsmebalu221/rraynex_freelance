@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import "./Manufacturing.css";
 import Hero from "../Components/Hero/Hero";
+import header from "../About/Milestones/9.jpg";
 
 // Equipment images
 import FBedCoter from "./1.png";
@@ -155,11 +156,13 @@ export default function Manufacturing() {
       <Hero
         title="Manufacturing Excellence"
         subtitle="Precision, process integrity, and global compliance, the pillars of our production ecosystem."
-        bgImage="https://images.pexels.com/photos/7089612/pexels-photo-7089612.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        bgImage={header}
         plink="/products"
         ptitle="Explore Products"
         slink="/assets/Rraynex_Brochure.pdf"
         stitle="Download Brochure"
+        overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(35, 35, 35, 0.55))"
+        tone="dark"
       />
 
       <div className="container">
