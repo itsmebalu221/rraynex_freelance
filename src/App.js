@@ -20,6 +20,7 @@ import ProductCategories from "./Products/Categories/CategoryPage";
 import Manufacturing from "../src/Manifacturing/manifacturing";
 import NotFound from "./NotFound";
 import Luxe from "./Luxe/Luxe";
+import ScrollToTop from "./ScrollToTop";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <div className="App">
       <Header />
       <main className="content">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
