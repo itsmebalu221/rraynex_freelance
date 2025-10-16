@@ -20,7 +20,6 @@ import ProductCategories from "./Products/Categories/CategoryPage";
 import Manufacturing from "../src/Manifacturing/manifacturing";
 import NotFound from "./NotFound";
 import Luxe from "./Luxe/Luxe";
-import DownloadBrochure from "./DownloadBrochure";
 
 
 function App() {
@@ -49,7 +48,7 @@ function App() {
           <Route path="/products/categories/rraynex-luxe" element={<Luxe />} />
           <Route path="/worldwide" element={<Worldwide />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/download" element={<DownloadBrochure />} />
+          <Route path="/download" element={<a href="/Assets/Rraynex_Brochure.pdf" download>Download Brochure</a>} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
