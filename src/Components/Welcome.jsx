@@ -38,7 +38,7 @@ export default function WelcomeOverlay({ onClose }) {
           Innovation • Value • Growth
         </p>
         <p className="overlay-desc">
-          Advancing pharmaceutical excellence — from formulation to global
+          Advancing pharmaceutical excellence, from formulation to global
           delivery. Empowering healthier lives through science and integrity.
         </p>
 
@@ -48,7 +48,7 @@ export default function WelcomeOverlay({ onClose }) {
           </button>
           <button
             onClick={() => {
-              window.location.href = "/rraynex-luxe";
+              window.location.href = "/products/categories/rraynex-luxe";
             }}
             className="btn-outline"
           >
@@ -56,9 +56,7 @@ export default function WelcomeOverlay({ onClose }) {
           </button>
         </div>
 
-        <button onClick={handleClose} className="skip-btn">
-          Skip
-        </button>
+        
       </div>
     </div>
   );
