@@ -106,7 +106,7 @@ function ProductCategories() {
                   ))}
                 </ul>
                 <div className="category-card__actions">
-                  <Link className="btn btn-primary" to={`/products/${card.id}`}>
+                  <Link className="btn btn-primary" to={`/products/categories/${card.id}`}>
                     View {card.title} Products
                   </Link>
                 </div>
