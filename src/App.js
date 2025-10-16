@@ -49,7 +49,6 @@ function App() {
           <Route path="/worldwide" element={<Worldwide />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/download" element={<a href="/Assets/Rraynex_Brochure.pdf" download>Download Brochure</a>} />
-
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import Hero from "../Components/Hero/Hero";
 import "./Worldwide.css";
+import header from "./header.jpg";
 
 /* Region data (populated with your provided copy) */
 const REGIONS = {
@@ -169,13 +170,15 @@ export default function WorldWide() {
       <Hero
         title="Our Global Presence"
         subtitle="We offer high-quality pellets, granules, APIs, and intermediates, backed by WHO-GMP compliance and global trust."
-        background="#173860"
-        overlay={false}
+        
+        
         plink="#products"
         ptitle="Explore Products"
-        slink="/assets/Rraynex_Corp_Profile.pdf"
+        slink="/download"
         stitle="Download Brochure"
-        bgImage="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        bgImage={header}
+        overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(51, 51, 51, 0.55))"
+        tone="dark"
       
       />
 
@@ -269,9 +272,9 @@ export default function WorldWide() {
 
         {/* four stat cards */}
         <div className="cards-row" role="list" aria-label="Global statistics">
-          <div className="card" role="listitem"><div className="num">50+</div><div className="lbl">Countries</div></div>
-          <div className="card" role="listitem"><div className="num">100+</div><div className="lbl">Product registrations</div></div>
-          <div className="card" role="listitem"><div className="num">15+</div><div className="lbl">Years experience</div></div>
+          <div className="card" role="listitem"><div className="num">58+</div><div className="lbl">Countries</div></div>
+          <div className="card" role="listitem"><div className="num">127+</div><div className="lbl">Product registrations</div></div>
+          <div className="card" role="listitem"><div className="num">125 MT & 30 MT</div><div className="lbl">Pellets and Granules per month</div></div>
           <div className="card" role="listitem"><div className="num">1000+</div><div className="lbl">Healthcare partners</div></div>
         </div>
       </div>

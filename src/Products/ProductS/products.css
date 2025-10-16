@@ -30,31 +30,7 @@ img { display: block; max-width: 100%; height: auto; }
   font-size: 14px;
   text-decoration: none;
 }
-.btn-primary {
-  display: inline-block;
-  background: linear-gradient(135deg, #f9954a, #e67e22);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 28px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
 
-.btn-outline {
-  display: inline-block;
-  background: rgba(249, 149, 74, 0.12);
-  color: #031d51;
-  border: 2px solid rgba(249, 149, 74, 0.35);
-  padding: 12px 24px;
-  border-radius: 28px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-.btn-outline:hover {
-  background: rgba(249, 149, 74, 0.22);
-  border-color: rgba(249, 149, 74, 0.45);
-}
 
 /* Layout shell */
 .products-page {

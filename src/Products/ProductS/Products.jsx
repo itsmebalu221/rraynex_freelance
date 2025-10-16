@@ -3,6 +3,8 @@ import { Link, NavLink, useParams, useNavigate } from "react-router-dom";
 import "./products.css";
 import bg from "./bg.jpg";
 import Hero from "../../Components/Hero/Hero";
+import pellets from "./pellets.jpg";
+import granules from "../../Components/Ecosystem/granules.png";
 
 /* ----------------- Data ----------------- */
 const PRODUCTS = [
@@ -584,30 +586,36 @@ const PRODUCT_NARRATIVES = {
 const ROUTE_FILTERS = {
   "apis-and-intermediary": {
     label: "APIs and Intermediaries",
+    bgImage: pellets,
     tagline: "Our APIs are engineered with precision and purity, ensuring consistent therapeutic performance and global regulatory compliance.",
     matches: (product) => product.family === "api" || product.family === "intermediary",
     defaultType: "API",
   },
   "api": {
     label: "APIs",
+    bgImage: pellets,
     tagline: "Our APIs are engineered with precision and purity, ensuring consistent therapeutic performance and global regulatory compliance.",
     matches: (product) => product.family === "api",
     defaultType: "API",
   },
   intermediary: {
     label: "Intermediaries",
+    bgImage: pellets,
     tagline:"Our advanced intermediates strengthen the pharmaceutical supply chain with superior consistency, scalability, and quality assurance.",
     matches: (product) => product.family === "intermediary",
     defaultType: "All",
   },
   pellets: {
     label: "Pellets",
+    bgImage: pellets,
+
     tagline: "We manufacture a diverse range of sustained and delayed release pellets designed for consistent quality and precision performance.",
     matches: (product) => product.family === "pellets",
     defaultType: "Pellets",
   },
   granules: {
     label: "Granules",
+    bgImage: granules,
     tagline:"Our DC granules deliver exceptional flow, compressibility, and uniformity, ensuring efficiency in downstream tableting processes.",
     matches: (product) => product.family === "granules",
     defaultType: "Granules",
@@ -1025,11 +1033,13 @@ export default function ProductsPage() {
             ? `${routeFilter.tagline}`
             : "From advanced pellets to APIs, Rraynex delivers quality formulations engineered for global healthcare standards."
         }
-        bgImage="https://images.pexels.com/photos/3735764/pexels-photo-3735764.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        bgImage={routeFilter ? routeFilter.bgImage : "https://images.pexels.com/photos/3735764/pexels-photo-3735764.jpeg?auto=compress&cs=tinysrgb&w=1920"}
         plink="#products"
         ptitle="Explore Products"
         slink="/assets/Rraynex_Corp_Profile.pdf"
         stitle="Download Brochure"
+        overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(42, 42, 42, 0.9))"
+
       />
 
       <main id="products" className="products-shell">
