@@ -15,13 +15,13 @@ const Responsibility = () => {
       eyebrow: "People First",
       title: "Community Impact & CSR",
       summary:
-        "Community-owned programs unlock education, primary care, and livelihood pathways that are designed, budgeted, and governed alongside local leaders.",
+        "We will co-design community-owned programs that expand education, primary healthcare, and livelihood opportunities with local leaders at the table from day one.",
       bullets: [
-        "Learning labs in 22 schools co-facilitating STEM, coding, and digital literacy",
-        "Mobile primary care with tele-consults, prenatal screenings, and pharmacy support",
-        "Income resilience fund backing 160 women-led enterprises with seed capital and mentoring",
+        "We will launch learning labs that bring STEM, coding, and digital skills to schools across our villages.",
+        "We will roll out mobile care units offering tele-consults, prenatal screenings, and reliable pharmacy support.",
+        "We will seed livelihood circles that mentor women-led enterprises with funding and market access.",
       ],
-      impact: "Impact: 22 villages co-managing programs with 21,000+ residents accessing new services annually.",
+      impact: "Impact: We will report transparent progress as each program scales, sharing annual targets with partner communities.",
       link: "/responsibility/csr",
       image: csr,
       Icon: FaHandsHelping,
