@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Hero from "../../Components/Hero/Hero";
 import "./categoryPage.css";
+import pellets from "../../Home/pellets.png";
+import granules from "../../Components/Ecosystem/granules.png";
+import Apis from "../../Components/Ecosystem/apis.jpeg";
+
 
 const CATEGORY_CARDS = [
   {
@@ -9,7 +13,7 @@ const CATEGORY_CARDS = [
     title: "Pellets",
     blurb:
       "Multiparticulate systems engineered for controlled and delayed release so you can dial in dissolution curves, manage dose titration, and compress the path from pilot to commercial batches.",
-  image: "https://placehold.co/520x320?text=Pellets",
+  image: pellets,
     highlights: [
       "Precision layering keeps bead sizes uniform for predictable filling",
       "Validated release profiles help you pass regulatory dissolution quickly",
@@ -21,7 +25,7 @@ const CATEGORY_CARDS = [
     title: "Granules",
     blurb:
       "Direct compression and wet granulation grades that smoothen powder flow, protect content uniformity, and shorten setup time on high-speed tableting lines.",
-  image: "https://placehold.co/520x320?text=Granules",
+  image: granules,
     highlights: [
       "Optimised particle distribution for cleaner blending",
       "Moisture-controlled drying keeps stability studies on track",
@@ -33,7 +37,7 @@ const CATEGORY_CARDS = [
     title: "APIs",
     blurb:
       "Regulatory-ready actives synthesised in WHO-GMP suites, combining robust impurity control with documentation packs that simplify DMF filings and partner onboarding.",
-  image: "https://placehold.co/520x320?text=APIs",
+  image: Apis,
     highlights: [
       "Dedicated synthesis and isolation blocks for consistent quality",
       "Robust impurity profiling supports multi-agency submissions",

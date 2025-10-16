@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import "./ecosys.css";
+import Hero from "../../Components/Hero/Hero";
+import header from "../../About/Milestones/3.jpg"
 
 const VALUE_CHAIN = [
   {
@@ -10,7 +12,7 @@ const VALUE_CHAIN = [
     impact:
       "Partners can plug into international supply programs faster because dissolution data and stability protocols travel with every batch.",
     ctaLabel: "Pellet Portfolio",
-    ctaLink: "/products/pellets",
+    ctaLink: "/products/categories/pellets",
   },
   {
     id: "granules",
@@ -20,7 +22,7 @@ const VALUE_CHAIN = [
     impact:
       "By removing the uncertainty around flow, our partners convert more SKUs on the same line and cut rejection rates for seasonal runs.",
     ctaLabel: "Granule Range",
-    ctaLink: "/products/granules",
+    ctaLink: "/products/categories/granules",
   },
   {
     id: "api",
@@ -30,7 +32,7 @@ const VALUE_CHAIN = [
     impact:
       "Joint tech-transfer labs deliver repeatable impurity profiles so regulatory filings move quickly across LATAM, CIS, and ROW markets.",
     ctaLabel: "API Capabilities",
-    ctaLink: "/products/api",
+    ctaLink: "/products/categories/api",
   },
   {
     id: "fdf",
@@ -71,24 +73,21 @@ export default function Ecosystem() {
 
   return (
     <main className="ecosystem">
-      <section className="ecosystem-hero">
-        <div className="hero-inner">
-          <h1 className="hero-title">Uplifting the Ecosystem</h1>
-          <p className="hero-lead">
-            Pellets, granules, APIs, and finished dose formulations are more than product lines—they are stepping stones that help
+      
+
+      <Hero
+              title="Uplifting the Ecosystem"
+              subtitle="Pellets, granules, APIs, and finished dose formulations are more than product lines, they are stepping stones that help
             smaller manufacturers move up the value chain. Rraynex pairs its platform expertise with on-ground mentoring so the entire
-            ecosystem rises together.
-          </p>
-          <div className="hero-actions">
-            <a className="btn btn-primary" href="/products/categories">
-              Explore Capabilities
-            </a>
-            <a className="btn btn-outline" href="mailto:communications@rraynex.com">
-              Partner With Rraynex
-            </a>
-          </div>
-        </div>
-      </section>
+            ecosystem rises together."
+              bgImage={header}
+              ptitle=" Explore Capabilities"
+              plink="/products/categories"
+              stitle="Partner With Rraynex"
+              slink="/contact"
+              overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.88), rgba(42, 42, 42, 0.43))"
+      
+            />
 
       <section className="ecosystem-intro">
         <div className="intro-card">

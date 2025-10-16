@@ -254,7 +254,7 @@ export default function VisionValues() {
             <h2 id="vv-vision-heading">Our Vision</h2>
 
             <p>
-              To be a globally recognised partner in healthcare — delivering trusted, high-quality medicines
+              To be a globally recognised partner in healthcare, delivering trusted, high-quality medicines
               that improve outcomes and expand access. We envision a future where safe and effective therapies
               are available at scale across geographies and care settings.
             </p>
@@ -262,7 +262,7 @@ export default function VisionValues() {
             <p>
               Our integrated manufacturing model and validated quality systems allow us to move from concept to
               commercial supply with reliability. Combining API synthesis, intermediates, and finished-dose
-              manufacturing under unified control reduces variability and speeds qualification — benefitting
+              manufacturing under unified control reduces variability and speeds qualification, benefitting
               patients and partners.
             </p>
 

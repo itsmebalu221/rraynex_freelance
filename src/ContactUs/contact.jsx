@@ -65,7 +65,7 @@ export default function Contact() {
         ptitle="Explore Our Products"
         plink="/products"
         stitle="Download Brochure"
-        slink="/assets/Rraynex_Brochure.pdf"
+        slink="/download"
       />
 
       <div className="ct-container">

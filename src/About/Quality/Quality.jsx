@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa";
 import "./quality.css";
 import Hero from "../../Components/Hero/Hero";
+import header from "./header.jpg";
 
 /* === Replace these imports with your real assets === */
 import WHO_GMP from "../../Assets/who-gmp.png";
@@ -265,7 +266,7 @@ export default function QualityPage() {
       <Hero
         title="Pioneering Quality, Powering Global Trust"
         subtitle="Precision in every process — delivering scientifically assured, globally compliant healthcare solutions."
-  bgImage="https://images.pexels.com/photos/3735762/pexels-photo-3735762.jpeg?auto=compress&cs=tinysrgb&w=1920"
+  bgImage={header}
         ptitle="Explore Our Products"
         plink="/products"
         stitle="Download Brochure"

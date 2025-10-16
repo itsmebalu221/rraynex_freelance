@@ -4,6 +4,9 @@ import { FaHandsHelping, FaShieldAlt, FaGlobe } from "react-icons/fa";
 import Hero from "../Components/Hero/Hero";
 import { Link } from "react-router-dom";
 import ehs from "./ehss.jpg"
+import header from "./header.jpg";
+import csr from "../../src/Assets/CSR/4.jpeg"
+import uplift from "../About/Milestones/5.jpg"
 
 const Responsibility = () => {
   const pillars = [
@@ -20,8 +23,7 @@ const Responsibility = () => {
       ],
       impact: "Impact: 22 villages co-managing programs with 21,000+ residents accessing new services annually.",
       link: "/responsibility/csr",
-      image:
-        "https://images.unsplash.com/photo-1603574670812-d24560880210?auto=format&fit=crop&w=1200&q=80",
+      image: csr,
       Icon: FaHandsHelping,
     },
     {
@@ -53,8 +55,7 @@ const Responsibility = () => {
       ],
       impact: "Impact: 15 MSME partners unlocked regulated-market approvals and secured 6 new country launches in FY25.",
       link: "/responsibility/uplifting-ecosystem",
-      image:
-        "https://images.unsplash.com/photo-1582719478250-fd1ef29e8f87?auto=format&fit=crop&w=1200&q=80",
+      image: uplift,
       Icon: FaGlobe,
     },
   ];
@@ -69,7 +70,7 @@ const Responsibility = () => {
         stitle="Ecosystem Impact"
         plink="/responsibility/csr"
         slink="/responsibility/uplifting-ecosystem"
-        bgImage="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        bgImage={header}
       />
 
       {/* Cards Section */}

@@ -9,7 +9,8 @@ import {
 } from "lucide-react";
 import Hero from "../../Components/Hero/Hero";
 import "./ehs.css";
-
+import header from "./header.jpg";
+import one from "./one.jpg";
 const EHS_PILLARS = [
   {
     id: "safety",
@@ -17,8 +18,7 @@ const EHS_PILLARS = [
     title: "Employee Health & Safety",
     description:
       "We design every workspace and process with safety in mind, ensuring our teams return home in the same shape they arrived.",
-    image:
-      "https://images.pexels.com/photos/5439116/pexels-photo-5439116.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1024&fit=crop",
+    image: one,
     highlights: [
       "Daily toolbox talks and hazard briefings",
       "Mandatory PPE audits across all shifts",
@@ -82,11 +82,13 @@ export default function EHS() {
       <Hero
         title="Environment, Health & Safety"
         subtitle="Protecting every colleague and championing a respectful POSH-compliant workplace—these are the foundations of our EHS promise."
-        bgImage="https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        bgImage={header}
         ptitle="Safety Charter"
         plink="#safety-charter"
         stitle="POSH Handbook"
         slink="#posh-handbook"
+        overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(42, 42, 42, 0.43))"
+
       />
 
       <section className="ehs-section ehs-section--intro">
@@ -153,7 +155,7 @@ export default function EHS() {
         </div>
       </section>
 
-      <section className="ehs-section ehs-section--support">
+      {/* <section className="ehs-section ehs-section--support">
         <div className="ehs-section__header reveal-on-scroll">
           <h2>Support when it matters</h2>
           <p>
@@ -175,7 +177,7 @@ export default function EHS() {
             );
           })}
         </div>
-      </section>
+      </section> */}
 
       <section className="ehs-section ehs-section--closing">
         <div className="ehs-section__inner reveal-on-scroll">

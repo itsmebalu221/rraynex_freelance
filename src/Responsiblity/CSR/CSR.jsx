@@ -13,6 +13,7 @@ import ten from "../../Assets/CSR/10.jpeg"
 import eleven from "../../Assets/CSR/11.jpeg"
 import twelve from "../../Assets/CSR/12.jpeg"
 import thirteen from "../../Assets/CSR/13.jpeg"
+import Hero from "../../Components/Hero/Hero";
 
 const CSR_PROGRAMS = [
   {
@@ -120,20 +121,17 @@ export default function CSR() {
 
   return (
     <main className="csr-page">
-      <section className="about-hero csr-hero">
-        <div className="about-hero__inner">
-          <h1 className={`about-title fade-in ${isHeroVisible ? "visible" : ""}`}>
-            Corporate Social Responsibility
-          </h1>
-          <p className={`about-lead fade-in-delay ${isHeroVisible ? "visible" : ""}`}>
-            At Rraynex, we see CSR as a responsibility to uplift the communities and ecosystems that surround our operations. Celebrations, learning journeys, and healthcare access are woven into everything we do.
-          </p>
-          <div className="about-cta">
-            <button className={`btn btn-primary slide-up ${isHeroVisible ? "visible" : ""}`}>Learn More</button>
-            <button className={`btn btn-outline slide-up-delay ${isHeroVisible ? "visible" : ""}`}>Our Impact</button>
-          </div>
-        </div>
-      </section>
+      <Hero
+              title="Corporate Social Responsibility"
+              subtitle="At Rraynex, we see CSR as a responsibility to uplift the communities and ecosystems that surround our operations. Celebrations, learning journeys, and healthcare access are woven into everything we do."
+              bgImage={eleven}
+              plink="/products"
+              ptitle="Explore Products"
+              slink="/assets/Rraynex_Brochure.pdf"
+              stitle="Download Brochure"
+                      overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(42, 42, 42, 0.9))"
+
+            />
 
       <div className="csr-container">
         <section className="csr-header">
