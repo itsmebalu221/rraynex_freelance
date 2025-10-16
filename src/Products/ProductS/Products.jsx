@@ -1164,7 +1164,7 @@ export default function ProductsPage() {
         bgImage={routeFilter ? routeFilter.bgImage : "https://images.pexels.com/photos/3735764/pexels-photo-3735764.jpeg?auto=compress&cs=tinysrgb&w=1920"}
         plink="/products/categories/pellets"
         ptitle="Explore Products"
-        slink="/assets/Rraynex_Corp_Profile.pdf"
+        slink="/download"
         stitle="Download Brochure"
         overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(42, 42, 42, 0.9))"
 
