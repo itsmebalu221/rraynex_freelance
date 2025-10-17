@@ -1,6 +1,16 @@
 import React from "react";
 import "./hero.css"; // optional if you already have one
-import brochurePdf from "../../Assets/Rraynex_Brochure.pdf";
+
+const DEFAULT_BROCHURE_PATH = "/assets/Rraynex_Corp_Profile.pdf";
+
+const normaliseBrochureLink = (link) => {
+  if (!link) return undefined;
+  if (typeof link === "string") {
+    const lowered = link.toLowerCase();
+    if (lowered.includes("rraynex_brochure")) return DEFAULT_BROCHURE_PATH;
+  }
+  return link;
+};
 
 export default function Hero({
   title,
@@ -20,7 +30,8 @@ export default function Hero({
   downloadLabel = "Download Brochure",
 }) {
   const hasPrimary = Boolean(ptitle && plink);
-  const hasSecondary = Boolean(stitle && slink);
+  const secondaryHref = stitle ? normaliseBrochureLink(slink) : undefined;
+  const hasSecondary = Boolean(stitle && secondaryHref);
   const showDefaultDownload = !hasPrimary && !hasSecondary;
   const shouldRenderCta = hasPrimary || hasSecondary || showDefaultDownload;
   const sectionStyle = {
@@ -73,12 +84,12 @@ export default function Hero({
               </a>
             )}
             {hasSecondary && (
-              <a className="btn-outline" href={slink} target="_blank" rel="noreferrer">
+              <a className="btn-outline" href={secondaryHref} target="_blank" rel="noreferrer">
                 {stitle}
               </a>
             )}
             {showDefaultDownload && (
-              <a className="btn-primary" href={brochurePdf} download>
+              <a className="btn-primary" href={DEFAULT_BROCHURE_PATH} download>
                 {downloadLabel}
               </a>
             )}

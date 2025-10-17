@@ -85,8 +85,8 @@ export default function EHS() {
         bgImage={header}
         ptitle="Safety Charter"
         plink="#safety-charter"
-        stitle="POSH Handbook"
-        slink="#posh-handbook"
+        stitle="Download Brochure"
+        slink="https://www.rraynex.com/assets/Rraynex_Brochure.pdf"
         overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(42, 42, 42, 0.43))"
 
       />

@@ -2,23 +2,37 @@ import React, { useState, useEffect } from "react";
 import "./home.css";
 import InfoCard from "../Components/Card/card";
 import EcosystemSection from "../Components/Ecosystem/eco";
-import image4 from "./image1.png";
 import GrowTogether from "../Components/GrowTogeather/grow";
 import { BulbOutlined, RiseOutlined, HeartOutlined } from "@ant-design/icons";
 import TrustedBy from "../Components/TrustedBy/TrustedBy";
 import { Helmet } from "react-helmet-async";
 import HeroCarousel from "../Components/ImgSlide/herocar";
-import H1Underline from "../Components/H1/H1Underline";
 import WelcomeOverlay from "../Components/Welcome"; // <-- NEW overlay import
 
 export default function Home() {
-  const [overlayClosed, setOverlayClosed] = useState(false);
-  const [heroVisible, setHeroVisible] = useState(false);
+  const getOverlayClosed = () => {
+    if (typeof window === "undefined" || typeof sessionStorage === "undefined") {
+      return false;
+    }
+    return sessionStorage.getItem("welcomeOverlayClosed") === "true";
+  };
+
+  const [overlayClosed, setOverlayClosed] = useState(getOverlayClosed);
+  const [heroVisible, setHeroVisible] = useState(() => (getOverlayClosed() ? true : false));
 
   const handleOverlayClose = () => {
     setOverlayClosed(true);
+    if (typeof window !== "undefined" && typeof sessionStorage !== "undefined") {
+      sessionStorage.setItem("welcomeOverlayClosed", "true");
+    }
     setTimeout(() => setHeroVisible(true), 300);
   };
+
+  useEffect(() => {
+    if (overlayClosed) {
+      setHeroVisible(true);
+    }
+  }, [overlayClosed]);
 
   return (
     <>
@@ -98,7 +112,7 @@ export default function Home() {
       </div>
 
       {/* Second Section */}
-      <div className="second-section">
+      <div className="second-section" id="second-section">
         <h1>Delivering Quality Healthcare</h1>
         <div className="card-container">
           <InfoCard
@@ -107,7 +121,7 @@ export default function Home() {
             title="Innovation"
             description="Manufacturing pharmaceutical pellets, granules, APIs, and intermediaries with cutting-edge technology. We blend local expertise with global standards, ensuring world-class quality at every production stage. #LocalToGlobal"
             buttonText="Know More"
-            buttonLink="/about/innovation"
+            buttonLink="/about/vision-and-values"
           />
 
           <InfoCard

@@ -3,6 +3,9 @@ import React, { useEffect } from "react";
 import "./Manufacturing.css";
 import Hero from "../Components/Hero/Hero";
 import header from "../About/Milestones/9.jpg";
+import top1 from "./top1.png";
+import top2 from "../About/Milestones/5.jpg"
+
 
 // Equipment images
 import FBedCoter from "./1.png";
@@ -159,7 +162,7 @@ export default function Manufacturing() {
         bgImage={header}
         plink="/products"
         ptitle="Explore Products"
-        slink="/assets/Rraynex_Brochure.pdf"
+  slink="https://www.rraynex.com/assets/Rraynex_Brochure.pdf"
         stitle="Download Brochure"
         overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(35, 35, 35, 0.55))"
         tone="dark"
@@ -177,7 +180,7 @@ export default function Manufacturing() {
               parallel with centralized HVAC, purified utilities and automated
               data capture so every batch is documented end-to-end.
             </p>
-            <div className="badges">
+            {/* <div className="badges">
               {BADGES.map((b) => (
                 <div className="badge" key={b.alt}>
                   <img
@@ -188,11 +191,11 @@ export default function Manufacturing() {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
           <figure className="section-media overview-media">
             <img
-              src={getImgSrc(OVERVIEW_MEDIA.src)}
+              src={top2}
               alt={OVERVIEW_MEDIA.alt}
               loading="lazy"
               onError={(e) => (e.currentTarget.src = DEFAULT_EQ_IMG)}
@@ -215,7 +218,7 @@ export default function Manufacturing() {
             </div>
             <figure className="section-media facility-media">
               <img
-                src={getImgSrc(FACILITY_MEDIA.src)}
+                src={top1}
                 alt={FACILITY_MEDIA.alt}
                 loading="lazy"
                 onError={(e) => (e.currentTarget.src = DEFAULT_EQ_IMG)}

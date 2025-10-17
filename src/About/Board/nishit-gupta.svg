@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait illustration of Nishit Gupta</title>
+  <desc id="desc">Abstract illustration with cool gradient background and stylised avatar silhouette</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#82b5ff" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="hairGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f1c2e" />
+      <stop offset="100%" stop-color="#0f0d1a" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bgGradient)" rx="52" />
+  <circle cx="320" cy="236" r="132" fill="#fee1c7" />
+  <path d="M184 580c22-112 92-186 136-186s114 74 136 186z" fill="#fee1c7" />
+  <path d="M208 208c16-86 84-136 132-136s116 50 132 136c12 64-26 128-132 128s-144-64-132-128z" fill="url(#hairGradient)" />
+  <path d="M220 580c18-92 92-136 136-136s118 44 136 136z" fill="#1f3a6f" opacity="0.86" />
+  <rect x="272" y="276" width="112" height="46" rx="20" fill="#f6b995" />
+  <circle cx="292" cy="260" r="10" fill="#1f1c2e" />
+  <circle cx="348" cy="260" r="10" fill="#1f1c2e" />
+  <path d="M300 324c18 18 44 18 62 0" fill="none" stroke="#e58f6a" stroke-width="10" stroke-linecap="round" />
+  <path d="M240 208c28-22 80-32 160-12" fill="none" stroke="#fee1c7" stroke-width="18" stroke-linecap="round" opacity="0.3" />
+  <rect x="268" y="344" width="120" height="18" rx="9" fill="#0f172a" opacity="0.32" />
+</svg>

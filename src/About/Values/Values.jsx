@@ -38,7 +38,7 @@ const CERT_DATA = [
     img: GMP,
     desc:
       "Good Manufacturing Practice (GMP) ensures consistent production and quality control — minimizing contamination and ensuring product safety.",
-    pdf: "/assets/certs/gmp-certificate.pdf",
+    pdf: "/assets/GMP.pdf",
   },
   {
     key: "who-gmp",
@@ -46,7 +46,7 @@ const CERT_DATA = [
     img: WHO_GMP,
     desc:
       "WHO-GMP is the international standard confirming adherence to global pharmaceutical manufacturing practices.",
-    pdf: "/assets/certs/who-gmp-certificate.pdf",
+    pdf: "/assets/GMP.pdf",
   },
   {
     key: "iso9001",
@@ -54,7 +54,7 @@ const CERT_DATA = [
     img: ISO9001,
     desc:
       "ISO 9001 is a quality management standard focused on consistent processes and continuous improvement.",
-    pdf: "/assets/certs/iso9001-certificate.pdf",
+    pdf: "/assets/9001.pdf",
   },
   {
     key: "iso14001",
@@ -62,7 +62,7 @@ const CERT_DATA = [
     img: ISO14001,
     desc:
       "ISO 14001 defines the requirements for an environmental management system to reduce environmental impact.",
-    pdf: "/assets/certs/iso14001-certificate.pdf",
+    pdf: "/assets/14001.pdf",
   },
   {
     key: "iso45001",
@@ -70,7 +70,7 @@ const CERT_DATA = [
     img: ISO45001,
     desc:
       "ISO 45001 is the international standard for occupational health & safety management systems.",
-    pdf: "/assets/certs/iso45001-certificate.pdf",
+    pdf: "/assets/45001.pdf",
   },
 ];
 
@@ -202,7 +202,7 @@ export default function VisionValues() {
   ptitle="Explore Our Products"
   plink="/products"
   stitle="Download Brochure"
-  slink="/assets/Rraynex_Brochure.pdf"
+  slink="https://www.rraynex.com/assets/Rraynex_Brochure.pdf"
 />
 
 

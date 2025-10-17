@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait illustration of Raina Desai</title>
+  <desc id="desc">Abstract illustration with warm gradient background and stylised avatar silhouette</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fca26a" />
+      <stop offset="100%" stop-color="#f05a28" />
+    </linearGradient>
+    <linearGradient id="hairGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2f2c4a" />
+      <stop offset="100%" stop-color="#1b1830" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bgGradient)" rx="52" />
+  <circle cx="320" cy="240" r="132" fill="#ffd9c8" />
+  <path d="M192 568c24-118 92-180 128-180h0c36 0 104 62 128 180z" fill="#ffd9c8" />
+  <path d="M220 220c12-78 72-128 132-128s120 50 132 128c10 68-24 132-132 132s-142-64-132-132z" fill="url(#hairGradient)" />
+  <rect x="256" y="264" width="128" height="52" rx="26" fill="#f8b49d" />
+  <path d="M192 568c12-72 92-116 128-116s116 44 128 116z" fill="#2b2f5c" opacity="0.82" />
+  <circle cx="284" cy="260" r="8" fill="#2b2f5c" />
+  <circle cx="356" cy="260" r="8" fill="#2b2f5c" />
+  <path d="M296 320c16 20 48 20 64 0" fill="none" stroke="#e88463" stroke-width="10" stroke-linecap="round" />
+  <path d="M228 212c14-16 40-28 92-28 52 0 78 12 92 28" fill="none" stroke="#ffd9c8" stroke-width="16" stroke-linecap="round" opacity="0.4" />
+</svg>

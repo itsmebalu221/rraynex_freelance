@@ -140,7 +140,7 @@ export default function AboutUs() {
         subtitle="We are a healthcare company focused on delivering innovative and accessible solutions with quality at the core — partnering globally to build a reliable, future-ready ecosystem."
         plink="#products"
         ptitle="Explore Products"
-        slink="/assets/Rraynex_Corp_Profile.pdf"
+        slink="https://www.rraynex.com/assets/Rraynex_Brochure.pdf"
         stitle="Download Brochure"
     bgImage={header}
         overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(255,255,255,0.55))"

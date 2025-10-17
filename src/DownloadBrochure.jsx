@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import brochurePdf from "./Assets/Rraynex_Brochure.pdf";
+
+const BROCHURE_HREF = "/assets/Rraynex_Corp_Profile.pdf";
 
 const DownloadBrochure = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
     const link = document.createElement("a");
-    link.href = brochurePdf;
-    link.download = "Rraynex_Brochure.pdf";
+    link.href = BROCHURE_HREF;
+    link.download = "Rraynex_Corp_Profile.pdf";
     link.style.display = "none";
     document.body.appendChild(link);
     link.click();

@@ -174,7 +174,7 @@ export default function WorldWide() {
         
         plink="#products"
         ptitle="Explore Products"
-        slink="/download"
+        slink="https://www.rraynex.com/assets/Rraynex_Brochure.pdf"
         stitle="Download Brochure"
         bgImage={header}
         overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(51, 51, 51, 0.55))"

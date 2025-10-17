@@ -44,16 +44,8 @@ const CSR_PROGRAMS = [
         img:four,
       },
       {
-        id: "durgashtami-6",
-        img:six,
-      },
-      {
         id: "durgashtami-7",
         img:seven,
-      },
-      {
-        id: "durgashtami-9",
-        img:nine,
       },
       {
         id: "durgashtami-10",
@@ -127,7 +119,7 @@ export default function CSR() {
               bgImage={eleven}
               plink="/products"
               ptitle="Explore Products"
-              slink="/assets/Rraynex_Brochure.pdf"
+              slink="https://www.rraynex.com/assets/Rraynex_Brochure.pdf"
               stitle="Download Brochure"
                       overlayGradient="linear-gradient(to bottom right, rgba(0, 0, 0, 0.72), rgba(42, 42, 42, 0.9))"
 

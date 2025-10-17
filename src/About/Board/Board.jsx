@@ -1,11 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import "./Board.css";
+import raina from "./raina.png";
+import nishit from "./nishit.png";
 
 const DIRECTORS = [
   {
     name: "Ms. Raina Desai",
     title: "Director",
+    photo: raina,
     summary:
       "Harvard Law School alumna and corporate advisor specialising in governance, strategy, and business management across regulated industries.",
     biography: [
@@ -25,6 +28,7 @@ const DIRECTORS = [
   {
     name: "Mr. Nishit Gupta",
     title: "Director",
+    photo: nishit,
     summary:
       "Engineer and MBA with international credentials from XLRI Jamshedpur, Oklahoma University, and ESC Rennes; drives technology-led growth across diversified enterprises.",
     biography: [
@@ -67,26 +71,46 @@ export default function Board() {
       <section className="board-grid" aria-label="Directors">
         {DIRECTORS.map((director) => (
           <article key={director.name} className="board-card">
-            <header className="board-card__header">
-              <h2>{director.name}</h2>
-              <p className="board-role">{director.title}</p>
-              <p className="board-summary">{director.summary}</p>
-            </header>
+            <figure className="board-card__media">
+              {director.photo ? (
+                <img src={director.photo} alt={`${director.name} portrait`} loading="lazy" />
+              ) : (
+                <span className="board-card__placeholder" aria-hidden="true">
+                  {director.name
+                    .split(" ")
+                    .map((part) => part.charAt(0))
+                    .join("")
+                    .slice(0, 2)}
+                </span>
+              )}
+            </figure>
 
-            <div className="board-body">
-              <h3 className="board-section-title">Leadership Snapshot</h3>
-              <ul className="board-highlights">
-                {director.highlights.map((item, idx) => (
-                  <li key={`${director.name}-highlight-${idx}`}>{item}</li>
-                ))}
-              </ul>
+            <div className="board-card__primary">
+              <header className="board-card__header">
+                <h2>{director.name}</h2>
+                <p className="board-role">{director.title}</p>
+                <p className="board-summary">{director.summary}</p>
+              </header>
 
-              <h3 className="board-section-title">Strategic Focus</h3>
-              <ul className="board-biography">
-                {director.biography.map((item, idx) => (
-                  <li key={`${director.name}-bio-${idx}`}>{item}</li>
-                ))}
-              </ul>
+              <section className="board-card__section board-card__section--highlights">
+                <h3 className="board-section-title">Leadership Snapshot</h3>
+                <ul className="board-highlights">
+                  {director.highlights.map((item, idx) => (
+                    <li key={`${director.name}-highlight-${idx}`}>{item}</li>
+                  ))}
+                </ul>
+              </section>
+            </div>
+
+            <div className="board-card__secondary">
+              <section className="board-card__section">
+                <h3 className="board-section-title">Strategic Focus</h3>
+                <ul className="board-biography">
+                  {director.biography.map((item, idx) => (
+                    <li key={`${director.name}-bio-${idx}`}>{item}</li>
+                  ))}
+                </ul>
+              </section>
             </div>
           </article>
         ))}

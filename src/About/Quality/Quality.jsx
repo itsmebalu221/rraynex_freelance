@@ -270,7 +270,7 @@ export default function QualityPage() {
         ptitle="Explore Our Products"
         plink="/products"
         stitle="Download Brochure"
-        slink="/assets/Rraynex_Brochure.pdf"
+        slink="https://www.rraynex.com/assets/Rraynex_Brochure.pdf"
       />
 
       <section className="ql-container" aria-labelledby="quality-heading">

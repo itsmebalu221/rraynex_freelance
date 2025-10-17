@@ -7,7 +7,7 @@ const REGIONAL_OFFICES = [
   {
     id: 1,
     city: "Ankleshwar",
-    note: "Intermediary manufacturing hub serving regulated and semi-regulated markets",
+    note: "APIs and Intermediary manufacturing hub serving regulated and semi-regulated markets",
   },
   {
     id: 2,
@@ -17,11 +17,6 @@ const REGIONAL_OFFICES = [
 ];
 
 const BRANCH_OFFICES = [
-  {
-    id: 3,
-    city: "Saykha (Bharuch, Gujarat)",
-    note: "Saykha Industrial Estate, GIDC, Vagra, Bharuch 392140",
-  },
   {
     id: 4,
     city: "Kolkata",
@@ -48,6 +43,8 @@ const MAIL_CONTACTS = [
 
 export default function Contact() {
   const [showMap, setShowMap] = useState(false);
+  const topContacts = MAIL_CONTACTS.slice(0, 2);
+  const bottomContacts = MAIL_CONTACTS.slice(2, 4);
 
   useEffect(() => {
     const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
@@ -65,7 +62,7 @@ export default function Contact() {
         ptitle="Explore Our Products"
         plink="/products"
         stitle="Download Brochure"
-        slink="/download"
+        slink="https://www.rraynex.com/assets/Rraynex_Brochure.pdf"
       />
 
       <div className="ct-container">
@@ -114,7 +111,7 @@ export default function Contact() {
         </div>
 
         {/* Regional Offices */}
-        <h2 className="section-heading center">Regional Headquarters</h2>
+        <h2 className="section-heading center">Manufacturing Facilities</h2>
         <div className="hq-row">
           {REGIONAL_OFFICES.map((hq) => (
             <div key={hq.id} className="hq-box">
@@ -143,16 +140,29 @@ export default function Contact() {
 
         {/* Mail Contacts */}
         <h2 className="section-heading center">Key Contacts</h2>
-        <div className="mail-row">
-          {MAIL_CONTACTS.map((mail, i) => (
-            <div key={i} className="mail-card">
-              <FaEnvelope className="mail-icon" />
-              <div>
-                <h4>{mail.title}</h4>
-                <p>{mail.email}</p>
+        <div className="mail-grid">
+          <div className="mail-row">
+            {topContacts.map((mail, i) => (
+              <div key={`${mail.email}-${i}`} className="mail-card">
+                <FaEnvelope className="mail-icon" />
+                <div>
+                  <h4>{mail.title}</h4>
+                  <p>{mail.email}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="mail-row">
+            {bottomContacts.map((mail, i) => (
+              <div key={`${mail.email}-${i}`} className="mail-card">
+                <FaEnvelope className="mail-icon" />
+                <div>
+                  <h4>{mail.title}</h4>
+                  <p>{mail.email}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Map */}

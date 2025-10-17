@@ -63,7 +63,7 @@ export default function HeroCarousel() {
             type="button"
             className="hc-btn hc-btn--primary"
             
-            onClick={() => document.getElementById("second-section")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => ((window.location.href = "/#second-section"), window.scrollTo(0, 0))}
           >
             Learn More
           </button>

@@ -1,0 +1,24 @@
+{
+  "product-aspirin": {
+    "Description": "At Rraynex, we produce Aspirin formulations trusted worldwide for dependable pain relief, fever reduction, and anti-inflammatory action. Each dose is formulated with high-purity acetylsalicylic acid, precisely processed to maintain stability and rapid absorption. Backed by clinical validation and decades of use, our Aspirin continues to be a core therapy for general pain management and cardiovascular health.",
+    "Key Benefits": [
+      "Fast Pain Relief: Quickly alleviates headaches, muscle aches, toothaches, and joint pain.",
+      "Reduces Inflammation: Eases swelling and discomfort in arthritis and minor injuries.",
+      "Lowers Fever: Helps normalize body temperature during febrile conditions.",
+      "Supports Heart Health: Low-dose therapy can reduce the risk of clot formation, heart attack, or stroke (when prescribed).",
+      "Globally Trusted: Manufactured under strict quality systems and backed by consistent, proven efficacy."
+    ],
+    "Usage Note": "Use only as directed. Consult a physician before long-term use or when taking other medications that affect bleeding or stomach lining. Store in a cool, dry environment and keep out of children\u2019s reach."
+  },
+  "product-clopidogrel": {
+    "Description": "We manufacture Clopidogrel pellets that support dependable platelet inhibition for cardiovascular therapy. Each batch is processed under controlled granulation to preserve the prodrug\u2019s integrity, ensuring consistent bioavailability. Designed for combination therapy and standalone formulations, our Clopidogrel supports hospitals, tenders, and brand portfolios requiring high stability and regulatory-ready documentation.",
+    "Key Benefits": [
+      "Reliable Antiplatelet Action: Ensures consistent inhibition of platelet aggregation for heart and stroke prevention.",
+      "High Purity Manufacturing: Pharmacopeial-grade API processed under humidity-controlled systems.",
+      "Regulatory Ready: Dossiers include dissolution data, stability profiles, and nitrosamine assessments.",
+      "Flexible Packaging: Moisture-barrier drums and polymer bags validated for global transport.",
+      "Scale-Up Support: Full technical and documentation assistance for commercial production."
+    ],
+    "Usage Note": "For cardiovascular use under medical supervision only. Not intended for self-medication. Store in moisture-controlled environments away from direct sunlight."
+  }
+}
