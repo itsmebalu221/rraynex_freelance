@@ -30,19 +30,19 @@ const DIRECTORS = [
     title: "Director",
     photo: nishit,
     summary:
-      "Engineer and MBA with international credentials from XLRI Jamshedpur, Oklahoma University, and ESC Rennes; drives technology-led growth across diversified enterprises.",
+      "Promoter-director with 14+ years steering pharmaceuticals, advanced granulation, and smart infrastructure ventures across India and beyond.",
     biography: [
-      "MULTI-DISCIPLINARY EXPERT: Combines engineering rigour with strategic management across manufacturing, mobility, and infrastructure.",
-      "PHARMA LEADERSHIP: Director at Rraynex Pharmaceuticals P. Ltd overseeing global pellets, granules, and MUPS operations.",
-      "SMART INFRASTRUCTURE: Director at Park Smart Solutions P. Ltd, pioneering multi-level robotic parking deployments worth over ₹4,800 crores across India.",
-      "VERTICAL TRANSPORTATION: Director at LT Group of companies, delivering tailored elevator, escalator, and conveyor solutions across international markets." 
+      "PROMOTER-DIRECTOR: Leads Rraynex Pharmaceuticals Pvt Ltd and Rynish Pvt Ltd as managing director with direct oversight of operations and expansion initiatives.",
+      "FOUNDATIONAL ENTREPRENEUR: Incorporated Park Smart Solutions to deliver multi-level parking systems before launching specialised healthcare ventures Rraynex Pharmaceuticals and Rynish.",
+      "STRATEGIC GROWTH ARCHITECT: Drives capacity creation, product development, and market penetration including large-scale government projects across India.",
+      "GLOBAL EDUCATION: Holds an MBA in General Management alongside undergraduate studies completed at ESC Rennes, France, and the University of Oklahoma, USA." 
     ],
     highlights: [
-      "Engineer & MBA with global academic pedigree",
-      "Director, Rraynex Pharmaceuticals P. Ltd",
-      "Director, Park Smart Solutions P. Ltd",
-      "Director, LT Group of companies",
-      "Precision technology & infrastructure specialist"
+      "Managing Director, Rraynex Pharmaceuticals Pvt Ltd & Rynish Pvt Ltd",
+      "Promoter of Park Smart Solutions multi-level parking ventures",
+      "14+ years in pharmaceuticals, pellets, granules, and mobility systems",
+      "MBA in General Management; ESC Rennes & University of Oklahoma alum",
+      "Hands-on builder of innovative capacities and new market entries"
     ]
   }
 ];

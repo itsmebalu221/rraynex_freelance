@@ -21,6 +21,8 @@ import Manufacturing from "../src/Manifacturing/manifacturing";
 import NotFound from "./NotFound";
 import Luxe from "./Luxe/Luxe";
 import ScrollToTop from "./ScrollToTop";
+import Blog from "./Blog/Blog";
+import BlogDetail from "./Blog/BlogDetail";
 
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
           <Route path="/responsibility/ehs" element={<EHS />} />
           <Route path="/responsibility/uplifting-ecosystem" element={<Ecosystem />} />
           <Route path="/manufacturing" element={<Manufacturing />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/categories" element={<ProductCategories />} />
           <Route path="/products/categories/:category" element={<ProductsPage />} />

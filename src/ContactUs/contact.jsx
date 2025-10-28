@@ -41,16 +41,53 @@ const MAIL_CONTACTS = [
   { title: "Investor Relations", email: "nishit@rraynex.com" },
 ];
 
+const PRIMARY_CONTACT_EMAIL = "communications@rraynex.com";
+
 export default function Contact() {
   const [showMap, setShowMap] = useState(false);
   const topContacts = MAIL_CONTACTS.slice(0, 2);
   const bottomContacts = MAIL_CONTACTS.slice(2, 4);
+  const [formNotice, setFormNotice] = useState("");
 
   useEffect(() => {
     const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
     const isHeadless = ua.includes("HeadlessChrome") || ua.includes("PhantomJS");
     if (!isHeadless) setShowMap(true);
   }, []);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const fullName = (data.get("fullName") || "").toString().trim();
+    const company = (data.get("company") || "").toString().trim();
+    const email = (data.get("email") || "").toString().trim();
+    const message = (data.get("message") || "").toString().trim();
+
+    const subject = encodeURIComponent(
+      `Enquiry from ${fullName || "Rraynex visitor"} — Rraynex Pharma}`
+    );
+
+    const bodyLines = [
+      `Name: ${fullName || "N/A"}`,
+      `Company: ${company || "N/A"}`,
+      `Email: ${email || "N/A"}`,
+      "",
+      message || "(Message not provided)",
+    ];
+
+    const body = encodeURIComponent(bodyLines.join("\n"));
+    const mailtoUrl = `mailto:${PRIMARY_CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
+    if (typeof window !== "undefined") {
+      window.location.href = mailtoUrl;
+    }
+
+    setFormNotice(
+      `Your email client should open with a draft message addressed to ${PRIMARY_CONTACT_EMAIL}. If it does not, please email us directly.`
+    );
+    form.reset();
+  };
 
   return (
     <main className="contact">
@@ -68,30 +105,31 @@ export default function Contact() {
       <div className="ct-container">
         {/* Top Section — Form + Corporate Office */}
         <div className="ct-top">
-          <form className="ct-form" mailto="communications@rraynex.com">
+          <form className="ct-form" onSubmit={handleSubmit} noValidate>
             <h2 className="section-heading">Get in Touch</h2>
 
             <label>
               Full Name
-              <input type="text" placeholder="Enter your name" required />
+              <input name="fullName" type="text" placeholder="Enter your name" required />
             </label>
 
             <label>
               Company
-              <input type="text" placeholder="Enter your company name" />
+              <input name="company" type="text" placeholder="Enter your company name" />
             </label>
 
             <label>
               Email
-              <input type="email" placeholder="Enter your business email" required />
+              <input name="email" type="email" placeholder="Enter your business email" required />
             </label>
 
             <label>
               Message
-              <textarea placeholder="Your message..." rows="5" required></textarea>
+              <textarea name="message" placeholder="Your message..." rows="5" required></textarea>
             </label>
 
             <button type="submit" className="btn-primary">Send Message</button>
+            {formNotice && <p className="form-notice">{formNotice}</p>}
           </form>
 
           <div className="ct-office">

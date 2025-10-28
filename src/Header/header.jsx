@@ -16,6 +16,7 @@ const menuItems = [
   { name: "About", path: "/about", submenu: ["Vision & Values", "Milestone and Recognitions","Quality","Board of Directors"] },
   { name: "Responsibility", path: "/responsibility", submenu: ["CSR", "EHS","Uplifting Ecosystem"] },
   { name: "Products", path: "/products/categories", submenu: ["Pellets","Granules","APIs & Intermediary", "Rraynex LUXE"] },
+  { name: "Blog", path: "/blog", submenu: [] },
   { name: "Manufacturing Facilities", path: "/manufacturing", submenu: [] }, // empty submenu
   { name: "Worldwide", path: "/worldwide", submenu: [] }, // empty submenu
   { name: "Contact Us", path: "/contact", submenu: [] },
