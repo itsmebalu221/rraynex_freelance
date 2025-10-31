@@ -8,6 +8,7 @@ import TrustedBy from "../Components/TrustedBy/TrustedBy";
 import { Helmet } from "react-helmet-async";
 import HeroCarousel from "../Components/ImgSlide/herocar";
 import WelcomeOverlay from "../Components/Welcome"; // <-- NEW overlay import
+import homeSeo from "../seo/home.seo.json";
 
 export default function Home() {
   const getOverlayClosed = () => {
@@ -38,12 +39,19 @@ export default function Home() {
     <>
       <Helmet>
         {/* Primary meta */}
-        <title>Delivering Quality Healthcare — Rraynex Pharmaceuticals</title>
+        <title>{homeSeo?.title || "Delivering Quality Healthcare — Rraynex Pharmaceuticals"}</title>
         <meta
           name="description"
-          content="Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries. Research & development, compliant manufacturing and global partnerships."
+          content={
+            homeSeo?.description ||
+            "Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries. Research & development, compliant manufacturing and global partnerships."
+          }
         />
-        <link rel="canonical" href="https://rraynex.com/" />
+        {/* Optional keywords meta (low SEO weight; mainly for internal reference) */}
+        {Array.isArray(homeSeo?.keywords) && homeSeo.keywords.length > 0 && (
+          <meta name="keywords" content={homeSeo.keywords.join(", ")} />
+        )}
+        <link rel="canonical" href={homeSeo?.canonical || "https://rraynex.com/"} />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph */}
@@ -51,43 +59,46 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Delivering Quality Healthcare — Rraynex Pharmaceuticals"
+          content={homeSeo?.og?.title || "Delivering Quality Healthcare — Rraynex Pharmaceuticals"}
         />
         <meta
           property="og:description"
-          content="Rraynex Pharmaceuticals — research, manufacturing, and global health partnerships across regulated and emerging markets."
+          content={
+            homeSeo?.og?.description ||
+            "Rraynex Pharmaceuticals — research, manufacturing, and global health partnerships across regulated and emerging markets."
+          }
         />
-        <meta property="og:url" content="https://myapp.com/" />
-        <meta property="og:image" content="https://myapp.com/og-image.jpg" />
-        <meta property="og:image:alt" content="Rraynex logo and team" />
+        <meta property="og:url" content={homeSeo?.og?.url || homeSeo?.canonical || "https://myapp.com/"} />
+        {homeSeo?.og?.image && <meta property="og:image" content={homeSeo.og.image} />}
+        {homeSeo?.og?.imageAlt && <meta property="og:image:alt" content={homeSeo.og.imageAlt} />}
 
         {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@yourhandle" />
+        <meta name="twitter:card" content={homeSeo?.twitter?.card || "summary_large_image"} />
+        {homeSeo?.twitter?.site && <meta name="twitter:site" content={homeSeo.twitter.site} />}
         <meta
           name="twitter:title"
-          content="Delivering Quality Healthcare — Rraynex Pharmaceuticals"
+          content={homeSeo?.twitter?.title || homeSeo?.title || "Delivering Quality Healthcare — Rraynex Pharmaceuticals"}
         />
         <meta
           name="twitter:description"
-          content="Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries."
+          content={homeSeo?.twitter?.description || homeSeo?.description || "Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries."}
         />
-        <meta name="twitter:image" content="https://myapp.com/twitter-image.jpg" />
+        {homeSeo?.twitter?.image && <meta name="twitter:image" content={homeSeo.twitter.image} />}
 
         {/* JSON-LD structured data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "Rraynex Pharmaceuticals Private Limited",
-            url: "https://myapp.com/",
-            logo: "https://myapp.com/path-to-logo.png",
-            sameAs: [
+            name: homeSeo?.organization?.name || "Rraynex Pharmaceuticals Private Limited",
+            url: homeSeo?.organization?.url || homeSeo?.canonical || "https://myapp.com/",
+            logo: homeSeo?.organization?.logo || "https://myapp.com/path-to-logo.png",
+            sameAs: homeSeo?.organization?.sameAs || [
               "https://www.facebook.com/yourpage",
               "https://www.linkedin.com/company/yourpage",
               "https://twitter.com/yourhandle",
             ],
-            contactPoint: [
+            contactPoint: homeSeo?.organization?.contactPoint || [
               {
                 "@type": "ContactPoint",
                 telephone: "+91-XXXXXXXXXX",
@@ -97,6 +108,18 @@ export default function Home() {
             ],
           })}
         </script>
+        {/* Optional WebSite JSON-LD with keywords */}
+        {Array.isArray(homeSeo?.keywords) && homeSeo.keywords.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: homeSeo?.organization?.name || "Rraynex Pharmaceuticals",
+              url: homeSeo?.canonical || "https://rraynex.com/",
+              keywords: homeSeo.keywords.join(", "),
+            })}
+          </script>
+        )}
       </Helmet>
 
       {/* Overlay */}
@@ -113,7 +136,7 @@ export default function Home() {
 
       {/* Second Section */}
       <div className="second-section" id="second-section">
-        <h1>Delivering Quality Healthcare</h1>
+        <h1>{homeSeo?.h1 || "Delivering Quality Healthcare"}</h1>
         <div className="card-container">
           <InfoCard
             className="info-card"
