@@ -8,7 +8,7 @@ import granules from "../../Components/Ecosystem/granules.png";
 import pricing from "../pricing.json";
 
 /* ----------------- Data ----------------- */
-const PRODUCTS = [
+export const PRODUCTS = [
   {
     id: "pellet-aspirin",
     slug: "product-aspirin",

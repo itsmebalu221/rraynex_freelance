@@ -161,30 +161,22 @@ body {
 /* ---------------- Third Section ---------------- */
 .third-section {
   position: relative;
-  padding: 5px 20px;
-  background-color: #fff;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 85vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 0;
+  background: transparent;
 }
 
 .third-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.25);
-  z-index: 1;
+  display: none;
 }
 
 .third-section > * {
   position: relative;
   z-index: 3;
+}
+
+.selection-container {
+  width: 100%;
+  margin: 0;
 }
 
 /* Fourth Section */

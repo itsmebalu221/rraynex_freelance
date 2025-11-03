@@ -68,11 +68,6 @@ export default function Home() {
       (homeSeo.keywords.find((k) => /pellet/i.test(k)) || homeSeo.keywords[0])) ||
     "pharmaceutical pellets manufacturers in india";
 
-  const secondaryKeywords =
-    Array.isArray(homeSeo?.keywords) && homeSeo.keywords.length > 0
-      ? homeSeo.keywords.filter((k) => k !== primaryKeyword).slice(0, 6)
-      : [];
-
   const metaTitle = homeSeo?.title
     ? homeSeo.title
     : `${primaryKeyword} — Rraynex Pharmaceuticals`;
