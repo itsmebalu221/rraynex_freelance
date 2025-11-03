@@ -5,6 +5,7 @@ import bg from "./bg.jpg";
 import Hero from "../../Components/Hero/Hero";
 import pellets from "./pellets.jpg";
 import granules from "../../Components/Ecosystem/granules.png";
+import pricing from "../pricing.json";
 
 /* ----------------- Data ----------------- */
 const PRODUCTS = [
@@ -1635,7 +1636,45 @@ function ProductDetail({ product, onBack }) {
       ],
       brand: { "@type": "Brand", name: "Rraynex" },
     };
-    injectJsonLd("product-jsonld", productSchema);
+    // Add offers only if price info is available; otherwise skip offers to avoid invalid items
+    try {
+      const pKey = product.slug || product.id;
+      const pInfo = (pricing && pKey && pricing[pKey]) || null;
+      if (pInfo && pInfo.price && pInfo.priceCurrency) {
+        // If a single price provided
+        productSchema.offers = {
+          "@type": "Offer",
+          price: String(pInfo.price),
+          priceCurrency: pInfo.priceCurrency,
+          availability: pInfo.availability || "https://schema.org/InStock",
+          url: `${window.location.origin}${window.location.pathname}#${product.slug}`,
+        };
+      } else if (pInfo && pInfo.lowPrice && pInfo.highPrice && pInfo.priceCurrency) {
+        // If a price range provided
+        productSchema.offers = {
+          "@type": "AggregateOffer",
+          lowPrice: String(pInfo.lowPrice),
+          highPrice: String(pInfo.highPrice),
+          priceCurrency: pInfo.priceCurrency,
+          offerCount: String(pInfo.offerCount || 1),
+          availability: pInfo.availability || "https://schema.org/InStock",
+          url: `${window.location.origin}${window.location.pathname}#${product.slug}`,
+        };
+      }
+    } catch (e) {
+      // no-op: pricing optional
+    }
+
+    // Inject Product JSON-LD only if it is eligible for rich results (has offers/review/aggregateRating)
+    const hasEligibility = Boolean(
+      productSchema.offers || productSchema.aggregateRating || productSchema.review
+    );
+    if (hasEligibility) {
+      injectJsonLd("product-jsonld", productSchema);
+    } else {
+      const prev = document.getElementById("product-jsonld");
+      if (prev) prev.remove();
+    }
 
     // FAQ JSON-LD (matching visible FAQs)
     const faqItems = [

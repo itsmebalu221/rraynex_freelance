@@ -1,0 +1,10 @@
+{
+  "_note": "Optional pricing data for Product JSON-LD. Populate per product slug. If omitted, Product schema won't be injected to avoid invalid rich results.",
+  "product-omeprazole": {
+    "lowPrice": 0,
+    "highPrice": 0,
+    "priceCurrency": "INR",
+    "offerCount": 1,
+    "availability": "https://schema.org/InStock"
+  }
+}
