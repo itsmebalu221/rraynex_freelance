@@ -188,7 +188,7 @@ export default function Home() {
       </div>
 
       {/* Second Section */}
-      <div className="second-section" id="second-section">
+      <section className="second-section" id="second-section">
         {/* H1 placement: put the primary keyword here naturally. Avoid exact-match spam. */}
         {/* Current H1 comes from JSON (homeSeo.h1). If you want the primary keyword in H1, set homeSeo.h1 accordingly.
             Example recommended H1: "Pharmaceutical Pellets & Granules — Trusted manufacturers in India" */}
@@ -196,17 +196,31 @@ export default function Home() {
           {homeSeo?.h1 || "Delivering Quality Healthcare"}
           {/* ✅ Keyword guidance: if you want the H1 to include the primary keyword, update homeSeo.h1 in your JSON. */}
         </h1>
+        
+        {/* Professional subheading with keyword integration */}
+        <p>
+          As a WHO-GMP and ISO 9001:2015 certified pharmaceutical manufacturer in Mumbai, we specialize in 
+          advanced drug delivery systems including enteric-coated pellets, sustained-release formulations, 
+          and pharmaceutical granules, serving healthcare partners across 58+ countries.
+        </p>
+
+        {/* H2 heading for SEO hierarchy */}
+        <div style={{ textAlign: 'center' }}>
+          <h2>
+            Why Choose Rraynex for Pharmaceutical Pellets & Granules Manufacturing
+          </h2>
+        </div>
 
         <div className="card-container">
           <InfoCard
             className="info-card"
             icon={<BulbOutlined style={{ fontSize: "50px" }} />}
-            title="Innovation"
+            title="Innovation in Pharmaceutical Manufacturing"
             description={
               /* Insert secondary keywords naturally in descriptions. Example:
                  "Manufacturing pharmaceutical pellets, granules, APIs, and intermediaries..."
                  The phrase 'pharmaceutical pellets' is already present here; that's a natural keyword usage. */
-              "Manufacturing pharmaceutical pellets, granules, APIs, and intermediaries with cutting-edge technology. We blend local expertise with global standards, ensuring world-class quality at every production stage. #LocalToGlobal"
+              "Advanced pharmaceutical pellets and granules manufacturing with cutting-edge multiparticulate drug delivery technology. We specialize in enteric-coated, sustained-release, and immediate-release formulations, ensuring world-class quality standards for global healthcare partners."
             }
             buttonText="Know More"
             buttonLink="/about/vision-and-values"
@@ -214,42 +228,42 @@ export default function Home() {
 
           <InfoCard
             className="info-card"
-            title="Value"
+            title="WHO-GMP Certified Quality Assurance"
             icon={<HeartOutlined style={{ fontSize: "50px" }} />}
-            description="Quality is our unwavering commitment from inception to delivery. Every raw material, every manufacturing process, and every finished product undergoes rigorous quality assurance, ensuring that we deliver nothing but excellence to our global partners."
+            description="ISO 9001:2015 and WHO-GMP certified manufacturing facility in Pune with stringent quality control at every stage. From raw material sourcing to final pharmaceutical pellets production, our regulatory compliance ensures international pharmaceutical standards for APIs, pellets, and granules."
             buttonText="Know More"
             buttonLink="/about/vision-and-values"
           />
 
           <InfoCard
             className="info-card"
-            title="Growth"
+            title="Global Pharmaceutical Export Excellence"
             icon={<RiseOutlined style={{ fontSize: "50px" }} />}
-            description="Beyond pharmaceuticals, Rraynex is diversifying into complementary sectors including engineering solutions and real estate development. We are strategically positioning ourselves to enter the energy sector, creating a robust, multi-dimensional enterprise."
+            description="Trusted pharmaceutical pellets and granules supplier to 58+ countries worldwide. Beyond pharmaceuticals, Rraynex is expanding into complementary sectors including engineering and real estate, while strategically positioning in the energy sector for sustainable growth."
             buttonText="Know More"
             buttonLink="/responsibility/uplifting-ecosystem"
           />
         </div>
-      </div>
+      </section>
 
       {/* Trusted By */}
-      <div>
+      <section>
         <TrustedBy />
-      </div>
+      </section>
 
       {/* Ecosystem Section */}
-      <div className="third-section">
+      <section className="third-section">
         <div className="selection-container">
           {/* Keyword placement tip: on inner pages (Ecosystem, Products), use H2/H3 to target long-tail keywords.
               Example H2: "Enteric-coated pellets manufacturers in India" — add similar headings in the product pages. */}
           <EcosystemSection />
         </div>
-      </div>
+      </section>
 
       {/* Grow Together Section */}
-      <div className="fifth-section">
+      <section className="fifth-section">
         <GrowTogether />
-      </div>
+      </section>
     </>
   );
 }
