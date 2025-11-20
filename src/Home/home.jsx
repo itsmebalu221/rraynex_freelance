@@ -1,11 +1,3 @@
-// Home.jsx
-// Changelog:
-// - Injected SEO meta tags from ../seo/home.seo.json (title, description, canonical, og, twitter).
-// - Added Organization JSON-LD and optional WebSite JSON-LD (keywords included for internal signalling).
-// - Added Product JSON-LD fallback that picks a sensible primary keyword (first 'pellet' match) — edit as needed.
-// - Added inline comments marking exact keyword placements and guidance.
-// Design preservation: no classnames, markup structure, component props or CSS were modified.
-
 import React, { useState, useEffect } from "react";
 import "./home.css";
 import InfoCard from "../Components/Card/card";
@@ -15,25 +7,27 @@ import { BulbOutlined, RiseOutlined, HeartOutlined } from "@ant-design/icons";
 import TrustedBy from "../Components/TrustedBy/TrustedBy";
 import { Helmet } from "react-helmet-async";
 import HeroCarousel from "../Components/ImgSlide/herocar";
-import WelcomeOverlay from "../Components/Welcome"; // <-- NEW overlay import
+import WelcomeOverlay from "../Components/Welcome"; // overlay component
 import homeSeo from "../seo/home.seo.json";
 
-/**
- * Keyword strategy notes (quick):
- * - Primary keyword used in <title>, H1, and Product JSON-LD.
- * - Secondary/long-tail keywords used across H2/H3 and body copy (add naturally in content).
- * - Avoid bulk-stuffing: keep keywords human-readable and intent-focused.
- *
- * If you want to change the primary keyword: update the selection logic below or
- * set `homeSeo.primary` in your JSON and this component will prefer that.
- */
+// Corrected Home.jsx
+// Key fixes applied:
+// 1. dynamic canonical URL (safeCanonical) so non-home routes don't get hard-coded canonical
+// 2. organization.logo points to an actual image path fallback
+// 3. enhanced Product JSON-LD (offers, image)
+// 4. added og:image width/height meta tags where image exists
+// 5. preload LCP image if present (og.image) to help LCP
+// 6. preserved original markup and component wiring
 
 export default function Home() {
+  // sessionStorage-safe overlay control
   const getOverlayClosed = () => {
-    if (typeof window === "undefined" || typeof sessionStorage === "undefined") {
+    try {
+      if (typeof window === "undefined" || typeof sessionStorage === "undefined") return false;
+      return sessionStorage.getItem("welcomeOverlayClosed") === "true";
+    } catch (e) {
       return false;
     }
-    return sessionStorage.getItem("welcomeOverlayClosed") === "true";
   };
 
   const [overlayClosed, setOverlayClosed] = useState(getOverlayClosed);
@@ -41,71 +35,80 @@ export default function Home() {
 
   const handleOverlayClose = () => {
     setOverlayClosed(true);
-    if (typeof window !== "undefined" && typeof sessionStorage !== "undefined") {
-      sessionStorage.setItem("welcomeOverlayClosed", "true");
+    try {
+      if (typeof window !== "undefined" && typeof sessionStorage !== "undefined") {
+        sessionStorage.setItem("welcomeOverlayClosed", "true");
+      }
+    } catch (e) {
+      // ignore
     }
     setTimeout(() => setHeroVisible(true), 300);
   };
 
   useEffect(() => {
-    if (overlayClosed) {
-      setHeroVisible(true);
-    }
+    if (overlayClosed) setHeroVisible(true);
   }, [overlayClosed]);
 
-  /**
-   * Primary keyword selection logic:
-   * - If you add "primary" in homeSeo JSON (e.g., homeSeo.primary = "pharma pellets manufacturers in india"),
-   *   that will be used.
-   * - Otherwise, pick the first keyword that contains 'pellet' or 'pellets' (practical for Rraynex).
-   * - Fallback to the first keyword in the list.
-   *
-   * Edit this logic if you want a different primary selection rule.
-   */
+  // Primary keyword selection logic (safe and explicit)
   const primaryKeyword =
     (homeSeo && homeSeo.primary) ||
-    (Array.isArray(homeSeo?.keywords) &&
-      (homeSeo.keywords.find((k) => /pellet/i.test(k)) || homeSeo.keywords[0])) ||
+    (Array.isArray(homeSeo?.keywords) && (homeSeo.keywords.find((k) => /pellet/i.test(k)) || homeSeo.keywords[0])) ||
     "pharmaceutical pellets manufacturers in india";
 
-  const metaTitle = homeSeo?.title
-    ? homeSeo.title
-    : `${primaryKeyword} — Rraynex Pharmaceuticals`;
+  const metaTitle = homeSeo?.title ? homeSeo.title : `${primaryKeyword} — Rraynex Pharmaceuticals`;
 
-  const metaDescription = homeSeo?.description
-    ? homeSeo.description
-    : "Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries. Research & development, compliant manufacturing and global partnerships.";
+  const metaDescription =
+    homeSeo?.description ||
+    "Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries. Research & development, compliant manufacturing and global partnerships.";
 
-  const canonical = homeSeo?.canonical || "https://rraynex.com/";
+  // safeCanonical: prefer explicit canonical in JSON, else derive from runtime if available, else fallback to site root
+  const safeCanonical =
+    homeSeo?.canonical ||
+    (typeof window !== "undefined" ? window.location.origin + window.location.pathname : "https://rraynex.com/");
+
+  // organization logo fallback should point to a real image
+  const orgLogo =
+    homeSeo?.organization?.logo && homeSeo.organization.logo !== "https://rraynex.com/"
+      ? homeSeo.organization.logo
+      : `${safeCanonical.replace(/\/$/, "")}/images/rraynex-logo.png`;
+
+  // OG / Twitter image handling
+  const ogImage = homeSeo?.og?.image || homeSeo?.twitter?.image || null;
+  const ogImageAlt = homeSeo?.og?.imageAlt || "Rraynex Pharmaceuticals - Enteric Coated & Sustained Release Pellets Manufacturers India";
+
+  // Product JSON-LD values
+  const productName = /pellet/i.test(primaryKeyword) ? "Pharmaceutical Pellets & Granules" : primaryKeyword;
+  const productImage = ogImage || `${safeCanonical.replace(/\/$/, "")}/images/product-hero.jpg`;
 
   return (
     <>
       <Helmet>
         {/* Primary meta */}
-        {/* Place primary keyword near the start of <title> for best impact */}
         <title>{metaTitle}</title>
-
-        {/* Meta description: include primary keyword + 1-2 secondaries naturally (do not stuff). */}
         <meta name="description" content={metaDescription} />
 
-        {/* The 'keywords' meta tag is optional and low-weight; kept for internal/reference use.
-            If you'd rather not expose this tag, remove the block below. */}
+        {/* Optional keywords: keep for internal use but not relied upon for ranking */}
         {Array.isArray(homeSeo?.keywords) && homeSeo.keywords.length > 0 && (
           <meta name="keywords" content={homeSeo.keywords.join(", ")} />
         )}
 
-        {/* Canonical (critical to avoid duplicate content issues) */}
-        <link rel="canonical" href={canonical} />
+        {/* Dynamic canonical */}
+        <link rel="canonical" href={safeCanonical} />
         <meta name="robots" content="index, follow" />
 
-        {/* Open Graph (social previews) */}
+        {/* Preload LCP image (if set) to improve LCP */}
+        {ogImage && <link rel="preload" as="image" href={ogImage} />}
+
+        {/* Open Graph */}
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={homeSeo?.og?.title || metaTitle} />
         <meta property="og:description" content={homeSeo?.og?.description || metaDescription} />
-        <meta property="og:url" content={homeSeo?.og?.url || canonical} />
-        {homeSeo?.og?.image && <meta property="og:image" content={homeSeo.og.image} />}
-        {homeSeo?.og?.imageAlt && <meta property="og:image:alt" content={homeSeo.og.imageAlt} />}
+        <meta property="og:url" content={homeSeo?.og?.url || safeCanonical} />
+        {ogImage && <meta property="og:image" content={ogImage} />}
+        {ogImage && <meta property="og:image:alt" content={ogImageAlt} />}
+        {ogImage && <meta property="og:image:width" content="1200" />}
+        {ogImage && <meta property="og:image:height" content="630" />}
 
         {/* Twitter Card */}
         <meta name="twitter:card" content={homeSeo?.twitter?.card || "summary_large_image"} />
@@ -114,14 +117,14 @@ export default function Home() {
         <meta name="twitter:description" content={homeSeo?.twitter?.description || metaDescription} />
         {homeSeo?.twitter?.image && <meta name="twitter:image" content={homeSeo.twitter.image} />}
 
-        {/* JSON-LD: Organization */}
+        {/* Organization JSON-LD */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: homeSeo?.organization?.name || "Rraynex Pharmaceuticals Private Limited",
-            url: homeSeo?.organization?.url || canonical,
-            logo: homeSeo?.organization?.logo || `${canonical}images/logo.png`,
+            url: homeSeo?.organization?.url || safeCanonical,
+            logo: orgLogo,
             sameAs: homeSeo?.organization?.sameAs || [],
             contactPoint:
               homeSeo?.organization?.contactPoint && homeSeo.organization.contactPoint.length
@@ -142,73 +145,61 @@ export default function Home() {
           })}
         </script>
 
-        {/* Optional WebSite JSON-LD — includes the 'keywords' field as an internal signal (not required). */}
+        {/* WebSite JSON-LD (optional) */}
         {Array.isArray(homeSeo?.keywords) && homeSeo.keywords.length > 0 && (
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: homeSeo?.organization?.name || "Rraynex Pharmaceuticals",
-              url: canonical,
-              // keywords field here is for structured data completeness; search engines prioritize content & schema context.
+              url: safeCanonical,
               keywords: homeSeo.keywords.join(", "),
             })}
           </script>
         )}
 
-        {/* Product JSON-LD fallback for 'pellets & granules' — edit name/description if you'd prefer a different primary keyword */}
+        {/* Enhanced Product JSON-LD */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            name: primaryKeyword.includes("pellet") || primaryKeyword.includes("pellets")
-              ? "Pharmaceutical Pellets & Granules"
-              : primaryKeyword,
+            name: productName,
             description: metaDescription,
-            brand: {
-              "@type": "Brand",
-              name: homeSeo?.organization?.name || "Rraynex Pharmaceuticals",
+            brand: { "@type": "Brand", name: homeSeo?.organization?.name || "Rraynex Pharmaceuticals" },
+            url: safeCanonical,
+            image: productImage,
+            sku: "RRTX-HOME-001",
+            offers: {
+              "@type": "Offer",
+              url: safeCanonical,
+              priceCurrency: "INR",
+              availability: "https://schema.org/InStock",
             },
-            url: canonical,
-            // Add offers/reviews if product-level commerce data becomes relevant
           })}
         </script>
       </Helmet>
 
-      {/* Overlay */}
+      {/* Overlay (renders only on client) */}
       {!overlayClosed && <WelcomeOverlay onClose={handleOverlayClose} />}
 
       {/* Hero / Carousel */}
-      <div
-        className={`hero-carousel-wrapper ${
-          heroVisible ? "hero-fade-in" : "hero-fade-out"
-        }`}
-      >
+      <div className={`hero-carousel-wrapper ${heroVisible ? "hero-fade-in" : "hero-fade-out"}`}>
         <HeroCarousel />
       </div>
 
       {/* Second Section */}
       <section className="second-section" id="second-section">
-        {/* H1 placement: put the primary keyword here naturally. Avoid exact-match spam. */}
-        {/* Current H1 comes from JSON (homeSeo.h1). If you want the primary keyword in H1, set homeSeo.h1 accordingly.
-            Example recommended H1: "Pharmaceutical Pellets & Granules — Trusted manufacturers in India" */}
-        <h1>
-          {homeSeo?.h1 || "Delivering Quality Healthcare"}
-          {/* ✅ Keyword guidance: if you want the H1 to include the primary keyword, update homeSeo.h1 in your JSON. */}
-        </h1>
-        
-        {/* Professional subheading with keyword integration */}
+        {/* H1: ensure this exists in DOM for crawlers even if overlay visible */}
+        <h1>{homeSeo?.h1 || "Delivering Quality Healthcare"}</h1>
+
         <p>
-          As a WHO-GMP and ISO 9001:2015 certified pharmaceutical manufacturer in Mumbai, we specialize in 
-          advanced drug delivery systems including enteric-coated pellets, sustained-release formulations, 
-          and pharmaceutical granules, serving healthcare partners across 58+ countries.
+          As a WHO-GMP and ISO 9001:2015 certified pharmaceutical manufacturer in Mumbai, we specialize in
+          advanced drug delivery systems including enteric-coated pellets, sustained-release formulations, and
+          pharmaceutical granules, serving healthcare partners across 58+ countries.
         </p>
 
-        {/* H2 heading for SEO hierarchy */}
-        <div style={{ textAlign: 'center' }}>
-          <h2>
-            Why Choose Rraynex for Pharmaceutical Pellets & Granules Manufacturing
-          </h2>
+        <div style={{ textAlign: "center" }}>
+          <h2>Why Choose Rraynex for Pharmaceutical Pellets & Granules Manufacturing</h2>
         </div>
 
         <div className="card-container">
@@ -217,9 +208,6 @@ export default function Home() {
             icon={<BulbOutlined style={{ fontSize: "50px" }} />}
             title="Innovation in Pharmaceutical Manufacturing"
             description={
-              /* Insert secondary keywords naturally in descriptions. Example:
-                 "Manufacturing pharmaceutical pellets, granules, APIs, and intermediaries..."
-                 The phrase 'pharmaceutical pellets' is already present here; that's a natural keyword usage. */
               "Advanced pharmaceutical pellets and granules manufacturing with cutting-edge multiparticulate drug delivery technology. We specialize in enteric-coated, sustained-release, and immediate-release formulations, ensuring world-class quality standards for global healthcare partners."
             }
             buttonText="Know More"
@@ -254,8 +242,6 @@ export default function Home() {
       {/* Ecosystem Section */}
       <section className="third-section">
         <div className="selection-container">
-          {/* Keyword placement tip: on inner pages (Ecosystem, Products), use H2/H3 to target long-tail keywords.
-              Example H2: "Enteric-coated pellets manufacturers in India" — add similar headings in the product pages. */}
           <EcosystemSection />
         </div>
       </section>

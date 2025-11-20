@@ -1331,55 +1331,282 @@ export const PRODUCTS = [
 
 const PRODUCT_NARRATIVES = {
   "product-aspirin": [
-    `Aspirin is a time-tested, over-the-counter medication formulated to relieve pain, reduce fever, and combat inflammation. Containing acetylsalicylic acid, it works by inhibiting substances in the body responsible for pain, swelling, and blood clot formation. Widely recommended by healthcare professionals, Aspirin is also used in low doses to support cardiovascular health and help reduce the risk of heart attack or stroke.
-
-Key Benefits:
-
-Effective Pain Relief: Provides fast, reliable relief from headaches, muscle pain, toothaches, menstrual cramps, and minor arthritis discomfort.
-
-Anti-Inflammatory Action: Reduces inflammation and swelling associated with various conditions.
-
-Fever Reduction: Helps lower body temperature during fever episodes.
-
-Heart Health Support: Low-dose Aspirin may help prevent blood clots, lowering the risk of heart attack and stroke (as directed by a doctor).
-
-Proven and Trusted: Backed by decades of clinical use and trusted by millions worldwide for its safety and effectiveness.
-
-Usage Note:
-Use only as directed. Consult a healthcare provider before using Aspirin for long-term cardiovascular protection or if you have any pre-existing medical conditions.`
-  ],
+  "Aspirin Pellets – Premium-Grade Acetylsalicylic Acid for Pharmaceutical Excellence. Our Aspirin pellets are formulated with precision-engineered acetylsalicylic acid (ASA), designed to deliver consistent, high-quality performance in both therapeutic and industrial applications. These pellets ensure controlled release, uniform particle size, and enhanced stability—ideal for formulators, researchers, and end-users seeking reliability and efficacy.",
+  
+  "Overview: Aspirin (acetylsalicylic acid) is a globally trusted compound known for its analgesic, anti-inflammatory, and antipyretic properties. Our pelletised form is manufactured using advanced extrusion–spheronization technology, ensuring superior flow characteristics, reproducibility, and compatibility with various coating and formulation processes.",
+  
+  "Key Features & Benefits:",
+  "• Precision Manufacturing: Uniform pellet size and density for consistent drug release and formulation control.",
+  "• Enhanced Flowability: Smooth surface and optimized bulk density make it ideal for capsule filling and tableting operations.",
+  "• High Purity & Stability: Manufactured under strict GMP conditions with minimal residual solvents and controlled moisture levels.",
+  "• Flexible Formulation Use: Suitable for enteric-coated, sustained-release, or immediate-release dosage forms.",
+  "• Therapeutic Reliability: ASA pellets deliver trusted relief from pain, fever, and inflammation, while low-dose formulations support cardiovascular protection under medical supervision.",
+  
+  "Educational Insight: Aspirin works by inhibiting cyclooxygenase (COX) enzymes responsible for pain and inflammation, reducing prostaglandin and thromboxane production. Its low-dose variant is used to support heart health by preventing platelet aggregation and clot formation—always under doctor guidance.",
+  
+  "Technical Specifications:",
+  "• API: Acetylsalicylic Acid (ASA)",
+  "• Assay: 98.0–102.0%",
+  "• Pellet Size Range: 600–1180 μm (customizable)",
+  "• Loss on Drying: ≤1.0%",
+  "• Packaging: 25 kg HDPE drum with double-layer LDPE liner",
+  "• Storage: Store in a cool, dry place below 25°C, protected from moisture and direct sunlight.",
+  
+  "Applications:",
+  "• Pharmaceutical manufacturers for pain relief, fever, and anti-inflammatory tablets or capsules.",
+  "• Contract formulators developing sustained or enteric-coated products.",
+  "• Research institutions for controlled drug delivery studies.",
+  
+  "SEO Keywords:",
+  "aspirin pellets, acetylsalicylic acid pellets, ASA pellets manufacturer, aspirin raw material, pharmaceutical pellets supplier, aspirin granules, enteric-coated aspirin pellets, sustained-release aspirin, aspirin bulk exporter, analgesic anti-inflammatory pellets",
+  
+  "Usage Note: For educational and industrial purposes. Consumers should use aspirin-based medications only as directed by healthcare professionals. Manufacturers are advised to validate formulations through standard pharmacopoeial protocols before commercialization."
+],
   "product-clopidogrel": [
     `Clopidogrel pellets from Rraynex support secondary prevention programs that rely on dependable ADP receptor blockade. We start with pharmacopeial-grade clopidogrel bisulfate and convert it through closed granulation trains that protect chirality and particle integrity. Layering operations are tuned to maintain uniform weight gain across multi-kilogram batches, so fixed-dose combinations carry the same exposure profile as single-ingredient capsules. Inline humidity and temperature mapping ensures the prodrug remains stable during processing, while low residual-solvent coatings preserve the delicate conversion pathway that activates clopidogrel in vivo. Pellets are sized within a narrow span to safeguard blend uniformity during downstream filling and to minimize dust generation.`,
     `Documentation packages provide comparative dissolution against originator references under multiple pH conditions, alongside nitrosamine risk evaluations and per-lot stability data. Customers can choose moisture-barrier drums or tamper-evident polymer bags that survive intercontinental shipping without caking. Our technical services team supports scale-up, offering guidance on capsule fill weight adjustments, gastro-resistant layering, or customized lubricant blends to reach target disintegration times. For markets demanding stringent pharmacovigilance we maintain change-control logs and audit trails ready for inclusion in CTD, ACTD, or eCTD submissions. The result is a cooperative supply partnership that keeps dual antiplatelet therapy lines responsive to hospital and tender demand.`
   ],
-  "product-clopidogrel-aspirin": [
-  `Clopidogrel + Aspirin pellets unify two established cardioprotective actives within one multi-unit platform. Rraynex sequences deposition steps so that aspirin cores receive protective sealing before clopidogrel layering begins, limiting cross-reactivity and enabling uniform dissolution of both agents. Particle size distribution is calibrated to keep density similar across the dual population, preserving homogeneity during capsule filling and sachet dosing. In-process analytics monitor individual assays, residual solvents, and moisture to ensure each component stays within pharmacopeial limits, while accelerated stability stress tests confirm compatibility through 40 degrees Celsius and 75 percent relative humidity exposure.`,
-    `To simplify regulatory filings, our technical dossier maps critical process parameters for each active, provides simultaneous dissolution curves, and includes supportive excipient compatibility studies. Customers receive guidance on optimizing final blends, whether pursuing gastro-resistant capsules, sprinkle sachets, or modified-release once-daily tablets. Packaging teams can request segregated drum compartments or co-filled barrier bags, both validated for global shipping lanes. Lifecycle support covers nitrosamine risk assessments, analytical method transfers, and rapid change-control communication so product managers can respond quickly to hospital formularies. The combined platform helps manufacturers deliver dual antiplatelet therapy with streamlined operations and audit-ready rigor.`
-  ],
+  "product-clopidogrel": [
+  "Clopidogrel Pellets – Precision-Engineered for Reliable Antiplatelet Performance. Rraynex’s clopidogrel pellets are formulated using high-purity clopidogrel bisulfate, delivering stable, reproducible ADP receptor inhibition essential for dual antiplatelet therapy (DAPT) and cardiovascular care formulations. Manufactured through controlled granulation and layering systems, these pellets offer unmatched consistency, stability, and process reproducibility.",
+  
+  "Overview: Clopidogrel is a trusted antiplatelet prodrug that helps prevent blood clots in patients with heart disease, stroke risk, or peripheral arterial conditions. Our pelletised form enhances manufacturability and bioavailability consistency—supporting both monotherapy capsules and fixed-dose combination tablets used in cardiology and post-angioplasty regimens.",
+  
+  "Key Features & Benefits:",
+  "• Uniform Pellet Morphology: Ensures consistent dissolution and reproducible drug release across capsule and tablet formats.",
+  "• Stability Controlled Processing: Inline temperature and humidity mapping maintain clopidogrel integrity throughout granulation and coating.",
+  "• High Flowability: Narrow particle size distribution reduces segregation and improves capsule fill uniformity.",
+  "• Regulatory-Ready Documentation: Comparative dissolution profiles, nitrosamine risk assessments, and multi-pH dissolution data available.",
+  "• Compatibility: Ideal for co-formulation with aspirin, atorvastatin, or other cardioprotective APIs.",
+  "• Technical Support: Full assistance for gastro-resistant layering, lubricant optimization, and fill-weight adjustments during scale-up.",
+  
+  "Technical Specifications:",
+  "• API: Clopidogrel Bisulfate",
+  "• Assay: 98.0–102.0%",
+  "• Pellet Size Range: 500–1000 μm (customizable)",
+  "• Loss on Drying: ≤1.5%",
+  "• Coating: Enteric or moisture-barrier optional",
+  "• Packaging: 25 kg moisture-barrier HDPE drums with tamper-evident liners",
+  "• Storage: Store below 25°C, protected from light and humidity.",
+  
+  "Applications:",
+  "• Pharmaceutical manufacturers producing antiplatelet capsules or fixed-dose combinations.",
+  "• Contract formulators requiring consistent pellet-based DAPT products.",
+  "• Hospitals and B2B distributors sourcing bulk raw material for cardiovascular drug lines.",
+  
+  "Educational Insight: Clopidogrel acts by irreversibly blocking P2Y12 ADP receptors on platelets, reducing their ability to clump together and form clots. It is often prescribed after stent placement or heart attacks to reduce recurrent cardiovascular events. Pelletised clopidogrel ensures consistent absorption and reduced formulation variability, enhancing therapeutic reliability.",
+  
+  "SEO Keywords:",
+  "clopidogrel pellets, antiplatelet pellets, clopidogrel bisulfate pellets, DAPT raw material, cardiovascular drug pellets, dual antiplatelet therapy supply, sustained-release clopidogrel, pharma pellets manufacturer, enteric coated clopidogrel, clopidogrel API pellets exporter",
+  
+  "Usage Note: For pharmaceutical manufacturing and educational purposes only. Patients should use clopidogrel-containing medicines strictly under medical supervision. Manufacturers should validate formulations in compliance with regional pharmacopeial and regulatory standards."
+]
+,
   "product-duloxetine": [
-    `Duloxetine pellets are engineered to support serotonin-norepinephrine reuptake inhibitor therapies that rely on dependable enteric protection. Starting with pharmacopeial-grade duloxetine hydrochloride, we leverage solvent layering and precision spheronisation to create pellets with uniform density and low friability. Enteric coatings are tuned to delay release until higher intestinal pH levels, safeguarding against gastric degradation while promoting predictable absorption. Process analytical technology tracks moisture, assay, and coating thickness in real time, giving formulators confidence that each batch will meet dissolution targets for depression, neuropathic pain, and anxiety indications.`,
-    `Commercial partners receive comprehensive data packs that include comparative dissolution, impurity profiles, and accelerated stability across multiple climates. We can fine-tune pellet diameter to suit capsule fills or compression-based multiparticulate tablets, and packaging choices range from 25 kilogram drum liners to smaller nitrogen-flushed bags for clinical launches. Technical liaisons support method transfers, solvent residue validations, and compatibility studies with excipients such as HPMC, methacrylic acid copolymers, or microcrystalline cellulose. With responsive quality systems and transparent change-control governance, Rraynex keeps duloxetine supply chains predictable for both emerging and regulated markets.`
-  ],
+  "Duloxetine Pellets – Precision-Crafted for Reliable SNRI Performance. Rraynex’s duloxetine pellets are formulated to deliver consistent serotonin-norepinephrine reuptake inhibition (SNRI) through advanced enteric protection and precision-engineered layering. Designed for stability, uniformity, and optimal bioavailability, these pellets ensure predictable release profiles in the intestinal tract—empowering manufacturers to build high-performance antidepressant and neuropathic pain formulations.",
+  
+  "Overview: Duloxetine hydrochloride is a dual-action antidepressant that modulates both serotonin and norepinephrine pathways to treat major depressive disorder, generalized anxiety disorder, and neuropathic pain. Our pelletised form enhances stability, reduces gastric degradation, and delivers reliable absorption—ideal for controlled-release capsule and tablet applications.",
+  
+  "Key Features & Benefits:",
+  "• Controlled Release Design: Enteric coatings delay release until intestinal pH levels, ensuring gastric protection and steady absorption.",
+  "• Uniform Pellet Density: Precision spheronisation and solvent layering guarantee consistent pellet morphology and low friability.",
+  "• Real-Time Process Analytics: Continuous monitoring of moisture, assay, and coating thickness ensures batch-to-batch reproducibility.",
+  "• High Purity & Low Impurities: Pharmacopeial-grade duloxetine hydrochloride processed under stringent GMP and PAT frameworks.",
+  "• Versatile Applications: Compatible with capsule filling, multiparticulate tablets, or film-coated dosage forms.",
+  "• Data-Driven Validation: Comparative dissolution, impurity profiles, and accelerated stability data across climatic zones included.",
+  
+  "Technical Specifications:",
+  "• API: Duloxetine Hydrochloride",
+  "• Assay: 98.0–102.0%",
+  "• Pellet Size Range: 500–1000 μm (customizable)",
+  "• Enteric Polymer: Methacrylic Acid Copolymers or HPMC-based systems",
+  "• Loss on Drying: ≤1.5%",
+  "• Packaging: 25 kg HDPE drum with inner liner or nitrogen-flushed bags for clinical batches",
+  "• Storage: Store below 25°C, protected from moisture and direct sunlight.",
+  
+  "Applications:",
+  "• Pharmaceutical manufacturers producing antidepressant or neuropathic pain formulations.",
+  "• Contract development and manufacturing organizations (CDMOs) seeking SNRI pellet solutions.",
+  "• R&D teams developing controlled-release or enteric-coated psychiatric formulations.",
+  
+  "Educational Insight: Duloxetine works by inhibiting the reuptake of serotonin and norepinephrine, enhancing neurotransmitter balance in the brain. Its enteric-protected pellet form prevents early degradation in gastric acid, allowing targeted release in the small intestine for improved therapeutic consistency and reduced side effects.",
+  
+  "SEO Keywords:",
+  "duloxetine pellets, duloxetine hydrochloride pellets, SNRI pellets, antidepressant pellets, neuropathic pain pellets, enteric coated duloxetine, controlled release duloxetine, duloxetine API pellets, pharmaceutical pellets manufacturer, antidepressant raw material supplier",
+  
+  "Usage Note: For pharmaceutical manufacturing and educational reference only. End-use medications containing duloxetine should be used strictly under medical supervision. Manufacturers are advised to validate formulation performance according to pharmacopeial standards before commercialization."
+],
   "product-dexlansoprazole": [
-    `Dexlansoprazole DDR pellets deliver sequential release pulses designed to extend proton pump inhibition through the entire dosing interval. Our dual-layer process deposits two discrete enteric coatings with controlled dissolution thresholds, creating the signature dual delayed-release pharmacokinetic curve. Each pellet is monitored for size distribution, density, and surface integrity to ensure consistent behavior during capsule filling or sachet presentations. Rigorous in-process controls verify assay targets, residual solvents, and moisture, while stability programs simulate both temperate and tropical climates to confirm the layered architecture resists degradation.`,
-  `Customers gain access to detailed process descriptions, dissolution profiles at multiple pH stages, and migration data that demonstrate the independence of each release layer. We support method transfers for HPLC assay and related substances, provide nitrosamine risk assessments, and offer assistance with bioequivalence study planning. Packaging is customizable - moisture-barrier drums, foil-lined bags, or nitrogen-purged containers - each qualified for long-haul logistics. Dedicated technical teams stay engaged through validation, scale-up, and post-market lifecycle management, ensuring Dexlansoprazole DDR products reach patients with the consistency regulators expect.`
-  ],
+  "Dexlansoprazole DDR Pellets – Dual Delayed-Release Technology for Sustained Acid Control. Rraynex’s dexlansoprazole dual delayed-release (DDR) pellets are engineered to deliver sequential release pulses, ensuring extended proton pump inhibition (PPI) across the entire 24-hour dosing interval. Manufactured with precision-controlled dual enteric coating layers, these pellets achieve predictable pharmacokinetics and enhanced therapeutic consistency for gastroesophageal reflux disease (GERD) and related acid disorders.",
+  
+  "Overview: Dexlansoprazole, the R-enantiomer of lansoprazole, is a next-generation proton pump inhibitor that suppresses gastric acid secretion more effectively by providing two distinct release phases. Our pelletized DDR system uses advanced layering techniques to deliver a delayed release at two pH thresholds, ensuring prolonged acid suppression and improved patient adherence through once-daily dosing.",
+  
+  "Key Features & Benefits:",
+  "• Dual-Phase Release: Two enteric coatings with unique dissolution thresholds enable sequential drug delivery for sustained efficacy.",
+  "• Consistent Pellet Engineering: Optimized size distribution and surface finish for smooth capsule filling and uniform dispersion.",
+  "• Stability and Purity: Manufactured under controlled conditions with real-time monitoring of assay, solvent residues, and moisture content.",
+  "• Regulatory Compliance: Nitrosamine risk evaluation, comparative dissolution data, and multi-pH release profiles provided per batch.",
+  "• Climate-Validated Durability: Stability studies simulate both temperate and tropical zones to ensure coating integrity during storage and transport.",
+  "• Application Versatility: Suitable for hard gelatin capsules, sachets, or multiparticulate tablets requiring pH-triggered release.",
+  
+  "Technical Specifications:",
+  "• API: Dexlansoprazole (R-enantiomer of Lansoprazole)",
+  "• Assay: 98.0–102.0%",
+  "• Pellet Size Range: 500–1000 μm (customizable)",
+  "• Release Mechanism: Dual Delayed-Release (DDR) enteric coatings at pH 5.5 and pH 7.0",
+  "• Loss on Drying: ≤1.5%",
+  "• Packaging: Moisture-barrier drums, foil-lined pouches, or nitrogen-purged containers for long-haul stability",
+  "• Storage: Store below 25°C, protected from moisture and light.",
+  
+  "Applications:",
+  "• Pharmaceutical manufacturers formulating gastro-resistant or dual delayed-release products.",
+  "• CDMOs and R&D teams developing differentiated PPI formulations for GERD management.",
+  "• Exporters and B2B suppliers focused on high-stability enteric-coated APIs and pellets.",
+  
+  "Educational Insight: Dexlansoprazole belongs to the proton pump inhibitor (PPI) class, reducing acid production in the stomach by blocking the H+/K+ ATPase enzyme system. The dual delayed-release (DDR) technology allows two separate pulses of drug release—one in the proximal small intestine and another in the distal region—extending acid suppression duration and improving symptom control for patients with reflux and erosive esophagitis.",
+  
+  "SEO Keywords:",
+  "dexlansoprazole pellets, DDR pellets, dual delayed-release pellets, dexlansoprazole PPI, gastro resistant pellets, acid reflux pellets, GERD treatment pellets, enteric coated dexlansoprazole, pharmaceutical pellets manufacturer, dexlansoprazole API supplier, PPI raw material exporter",
+  
+  "Usage Note: For pharmaceutical manufacturing and educational use only. Dexlansoprazole-containing medications should be formulated and administered under medical supervision. Manufacturers are responsible for validating formulations per pharmacopeial and regulatory guidelines before commercial release."
+],
   "product-esomeprazole-ec": [
-    `Esomeprazole EC pellets are produced with a focus on acid resistance and rapid transition into commercial dosage forms. We begin with pharmacopeial esomeprazole magnesium trihydrate, apply a sealing coat to protect the core, and then lay down enteric polymers that dissolve precisely at small intestinal pH. Tight control over pellet sizing and moisture keeps flow properties stable, giving formulators freedom to select capsules, sachets, or multiparticulate tablets. Extensive in-process analytics track assay uniformity, loss on drying, and coating thickness so gastro-resistant performance remains consistent across strength variants.`,
-  `Our dossier package includes comparative dissolution at pH 6.8 and 7.4, photostability results, impurity trends, and packaging validation reports. Technical experts assist with method transfer, stability study design, and fine-tuning of capsule lubrication to achieve target disintegration. With flexible packaging - from 25 kilogram drums to small development lots - we support both pilot and commercial scale. Change-control pathways keep customers informed about excipient upgrades or equipment qualifications, ensuring submissions to regulated markets proceed without delays. Esomeprazole EC pellets from Rraynex help brands deliver dependable proton pump inhibitor therapy backed by transparent quality governance.`
-  ],
+  "Esomeprazole EC Pellets – Engineered for Controlled Acid Suppression and Formulation Flexibility. Rraynex’s esomeprazole enteric-coated (EC) pellets are developed with precision layering and stability optimization, ensuring consistent performance in acid-resistant formulations. Designed for fast scalability, these pellets help manufacturers deliver dependable proton pump inhibitor (PPI) therapies with reproducible pharmacokinetics and long-term stability.",
+  
+  "Overview: Esomeprazole magnesium trihydrate, the S-enantiomer of omeprazole, is a highly effective proton pump inhibitor that reduces gastric acid secretion by selectively blocking the H+/K+ ATPase enzyme system. Our EC pellets are formulated with a specialized sealing coat to protect the core API, followed by enteric polymers that dissolve at intestinal pH—guaranteeing precise drug release beyond the stomach and consistent bioavailability across dosage strengths.",
+  
+  "Key Features & Benefits:",
+  "• Superior Enteric Protection: Dual-layer coating safeguards the API from acidic environments, enabling targeted release in the intestine.",
+  "• Precise Pellet Engineering: Controlled particle size and optimized sphericity ensure smooth flow, low dust, and uniform capsule fill weights.",
+  "• Consistent Assay Performance: In-process controls monitor assay uniformity, moisture content, and coating thickness for every batch.",
+  "• Ready for Scale-Up: Optimized for capsules, sachets, or multiparticulate tablets with stable flow and compressibility.",
+  "• Regulatory Data Support: Comparative dissolution studies, impurity profiling, and packaging validation included in documentation.",
+  "• Market Compliance: Manufactured under cGMP, ISO, and ICH guidelines, with full nitrosamine risk assessments and photostability data.",
+  
+  "Technical Specifications:",
+  "• API: Esomeprazole Magnesium Trihydrate",
+  "• Assay: 98.0–102.0%",
+  "• Pellet Size Range: 500–1180 μm (customizable)",
+  "• Enteric Coating Polymer: Methacrylic acid copolymers (Eudragit L/S series) or equivalent systems",
+  "• Loss on Drying: ≤1.5%",
+  "• Packaging: 25 kg HDPE drums, foil-lined or nitrogen-flushed options available",
+  "• Storage: Store below 25°C, away from light and moisture.",
+  
+  "Applications:",
+  "• Pharmaceutical manufacturers producing enteric-coated PPIs for GERD, peptic ulcer, and acid reflux therapy.",
+  "• CDMOs developing generic and branded PPI formulations with consistent dissolution profiles.",
+  "• R&D teams requiring reliable pellet intermediates for sustained-release and combination therapy products.",
+  
+  "Educational Insight: Esomeprazole belongs to the class of proton pump inhibitors that reduce gastric acid secretion by targeting the final step in acid production. Its enteric-coated pellet form prevents degradation in the stomach, enabling efficient release in the small intestine for rapid symptom control and improved patient comfort. Rraynex’s EC technology enhances stability, dissolution precision, and regulatory readiness across formulations.",
+  
+  "SEO Keywords:",
+  "esomeprazole pellets, esomeprazole EC pellets, enteric coated esomeprazole, PPI pellets, acid reflux pellets, GERD treatment raw material, esomeprazole magnesium trihydrate pellets, pharmaceutical pellets supplier, gastro resistant pellets, esomeprazole manufacturer, enteric pellets exporter",
+  
+  "Usage Note: For pharmaceutical manufacturing and educational purposes only. Esomeprazole-containing products should be developed and used under qualified medical supervision. Manufacturers are responsible for ensuring compliance with applicable pharmacopeial and regulatory standards prior to commercial release."
+],
   "product-esomeprazole-magnesium": [
-    `Esomeprazole Magnesium Trihydrate pellets combine high acid resistance with the solubility profile required for chronic GERD management. Raw materials are sourced against IP, BP, USP, and EP specifications and converted in enclosed systems that protect against humidity spikes. The magnesium salt delivers improved stability, so we employ layered coatings that maintain low degradation products even under harsh stability testing. Pellets are spheronised to a narrow distribution, reducing segregation during capsule filling and improving mouthfeel for sprinkle-on-food presentations. Each batch receives exhaustive in-process checks on assay, related substances, and mechanical robustness.`,
-    `Clients receive a comprehensive technical file detailing solvent usage, residual limits, and dissolution against multiple media including simulated gastric fluid. Optional sub-coatings, color identifiers, or taste-masking layers can be introduced without compromising release profiles, with full change-control documentation supplied. Packaging programs cover moisture-proof drums, aluminum-lined bags, and customized small packs for development studies. Lifecycle services include method transfer support, process validation assistance, and rapid responses to regulatory authority queries. Choosing Rraynex for Esomeprazole Magnesium pellets ensures a stable, audit-ready supply built around collaborative technical engagement.`
-  ],
+  "Esomeprazole Magnesium Pellets – High-Stability Proton Pump Inhibitor for Advanced GERD Therapy. Rraynex’s esomeprazole magnesium trihydrate pellets are engineered for superior acid resistance, exceptional stability, and consistent release performance. Designed for scalable manufacturing, these pellets meet the stringent requirements of regulated markets, supporting formulations that deliver long-lasting gastric acid suppression and improved patient outcomes.",
+  
+  "Overview: Esomeprazole magnesium trihydrate, the magnesium salt of the S-enantiomer of omeprazole, is a widely trusted proton pump inhibitor (PPI) used in managing gastroesophageal reflux disease (GERD), peptic ulcer, and acid-related disorders. Our advanced pelletization process ensures protection from humidity and oxidation while maintaining uniform particle morphology, flowability, and reproducibility across production scales. The result is a formulation-ready intermediate optimized for both immediate- and delayed-release delivery systems.",
+  
+  "Key Features & Benefits:",
+  "• Exceptional Stability: Magnesium salt form offers improved resistance to degradation and oxidation, enhancing product shelf life.",
+  "• Acid-Resistant Performance: Multi-layer enteric coatings prevent premature release in the stomach, ensuring targeted intestinal absorption.",
+  "• Controlled Particle Uniformity: Narrow particle-size distribution enhances capsule filling consistency and ensures uniform dissolution.",
+  "• Enhanced Manufacturing Efficiency: Excellent flow properties minimize segregation during blending and filling operations.",
+  "• Regulatory-Ready Documentation: Full data packages include dissolution profiles, impurity trends, photostability results, and nitrosamine risk assessments.",
+  "• Customization Options: Sub-coatings, color coding, or taste-masking layers available without altering dissolution behavior.",
+  
+  "Technical Specifications:",
+  "• API: Esomeprazole Magnesium Trihydrate",
+  "• Assay: 98.0–102.0%",
+  "• Pellet Size Range: 500–1180 μm (customizable)",
+  "• Coating Type: Enteric or sub-coated systems using methacrylic acid copolymers (Eudragit L/S series)",
+  "• Loss on Drying: ≤1.5%",
+  "• Packaging: 25 kg moisture-barrier HDPE drums, aluminum-lined bags, or small nitrogen-purged development packs",
+  "• Storage: Store below 25°C, protected from light, humidity, and heat sources.",
+  
+  "Applications:",
+  "• Pharmaceutical manufacturers producing PPI-based gastro-resistant capsules, tablets, or sprinkle formulations.",
+  "• CDMOs developing GERD and ulcer medications for global markets.",
+  "• R&D teams designing modified-release systems with enhanced stability under high humidity conditions.",
+  
+  "Educational Insight: Esomeprazole magnesium acts by selectively inhibiting the proton pumps in the gastric lining that secrete acid. Its magnesium salt form improves solubility and chemical stability, making it a preferred choice for long-term GERD management. Pelletized dosage intermediates ensure uniform release, better patient tolerance, and reliable pharmacokinetics for both branded and generic formulations.",
+  
+  "SEO Keywords:",
+  "esomeprazole magnesium pellets, esomeprazole magnesium trihydrate, PPI pellets, gastro resistant pellets, enteric coated esomeprazole, GERD therapy raw material, acid reflux pellets, pharmaceutical pellets manufacturer, esomeprazole API supplier, magnesium PPI pellets exporter, proton pump inhibitor pellets",
+  
+  "Usage Note: For pharmaceutical manufacturing and educational use only. Esomeprazole-containing medications should be produced and administered under qualified medical supervision. Manufacturers must validate all formulations as per pharmacopeial and regulatory standards prior to commercialization."
+],
   "product-esomeprazole-levosulpiride": [
-    `Esomeprazole + Levosulpiride pellets provide simultaneous acid suppression and prokinetic support for complex upper GI indications. Our manufacturing sequence isolates each active during layering, employing barrier coats to prevent interaction and to keep assays within tight acceptance criteria. Pellets are engineered for matched density so the dual population remains homogeneous during blending, filling, or sachet dosing. Dissolution testing verifies coordinated release, with esomeprazole protected through enteric coatings while levosulpiride is presented for earlier gastric availability. Robust stability programs demonstrate that both actives meet impurity thresholds through long-term and accelerated studies.`,
-  `Rraynex supplies full documentation including dual-API dissolution curves, excipient compatibility data, and validated analytical methods for simultaneous quantification. Customers can request tailored packaging - segregated drum compartments or unified barrier bags - each qualified for global shipping. Our formulation support team advises on capsule size selection, flavor masking for sprinkle formats, and lubricant choices that maintain content uniformity. Change-control governance keeps partners informed about process enhancements, while regulatory specialists prepare CTD-ready modules for agency submission. The combined platform gives commercial teams a reliable route to differentiated GERD and dyspepsia therapies.`
-  ],
+  "Esomeprazole + Levosulpiride Pellets – Dual-Action Gastrointestinal Therapy with Coordinated Release Control. Rraynex’s combination pellets deliver synchronized acid suppression and prokinetic activity through a precisely engineered dual-layer system. Manufactured under controlled environmental conditions, each API is isolated and layered independently to prevent interaction while maintaining uniform pellet density and consistent dissolution behavior across batches.",
+  
+  "Overview: This dual-API system combines Esomeprazole, a potent proton pump inhibitor (PPI) that suppresses gastric acid secretion, with Levosulpiride, a selective D2 receptor antagonist that enhances gastrointestinal motility. The result is an advanced formulation platform for comprehensive management of GERD, dyspepsia, and other upper gastrointestinal disorders requiring both acid control and prokinetic support.",
+  
+  "Key Features & Benefits:",
+  "• Dual-Layer Design: Esomeprazole is protected by an enteric coat for intestinal release, while Levosulpiride is exposed for early gastric availability.",
+  "• Chemical Isolation: Dedicated barrier layers prevent cross-degradation and maintain assay compliance within tight regulatory limits.",
+  "• Density-Matched Pellets: Controlled spheronization ensures both APIs distribute evenly in capsule fills, sachets, or multiparticulate systems.",
+  "• Coordinated Dissolution: Verified through dual-media dissolution studies to ensure simultaneous therapeutic onset and sustained duration.",
+  "• High Stability Profile: Robust long-term and accelerated stability data confirm impurity control under ICH climatic conditions.",
+  "• Regulatory Support: Comprehensive CTD documentation, validated analytical methods, and excipient compatibility data provided.",
+  
+  "Technical Specifications:",
+  "• APIs: Esomeprazole Magnesium Trihydrate and Levosulpiride",
+  "• Assay: 98.0–102.0% for both APIs",
+  "• Pellet Size Range: 500–1100 μm (customizable)",
+  "• Release Profile: Esomeprazole – enteric delayed release; Levosulpiride – immediate gastric release",
+  "• Coating Polymers: Methacrylic acid copolymers (Eudragit L/S series) and HPMC barrier systems",
+  "• Loss on Drying: ≤1.5%",
+  "• Packaging: Segregated or unified barrier bags, moisture-proof HDPE drums, or nitrogen-flushed containers",
+  "• Storage: Store below 25°C, protected from light and humidity.",
+  
+  "Applications:",
+  "• Pharmaceutical manufacturers producing combination PPI–prokinetic formulations for GERD and dyspepsia management.",
+  "• CDMOs developing dual-release multiparticulate systems with controlled pharmacokinetic behavior.",
+  "• R&D and regulatory teams preparing CTD/ACTD dossiers for global market submissions.",
+  
+  "Educational Insight: Esomeprazole suppresses acid secretion by irreversibly blocking gastric proton pumps, providing long-lasting relief from reflux symptoms. Levosulpiride acts as a prokinetic by enhancing gastric emptying and reducing nausea through dopaminergic receptor modulation. Together, they offer a synergistic treatment for reflux disorders involving both hyperacidity and delayed gastric motility. Pelletization ensures precise delivery of each API with reduced variability and improved bioavailability.",
+  
+  "SEO Keywords:",
+  "esomeprazole levosulpiride pellets, dual release pellets, combination PPI pellets, GERD treatment pellets, dyspepsia therapy raw material, prokinetic acid suppressant pellets, enteric coated esomeprazole pellets, levosulpiride granules, pharmaceutical pellets manufacturer, dual API pellets exporter, gastro resistant pellets supplier",
+  
+  "Usage Note: For pharmaceutical manufacturing and educational reference only. Esomeprazole + Levosulpiride formulations should be developed, validated, and marketed under appropriate medical and regulatory supervision. Manufacturers are responsible for ensuring compliance with all pharmacopeial and regional quality standards."
+],
   "product-esomeprazole-domperidone": [
-    `Esomeprazole + Domperidone pellets are built for patients needing both proton pump inhibition and relief from reflux-associated nausea. We orchestrate layering to shield esomeprazole with enteric polymers while delivering domperidone in an earlier release fraction, balancing pH-triggered delivery with prokinetic onset. Pellets undergo density harmonization so the dual active blend flows uniformly and resists segregation in high-speed capsule machines. Quality teams monitor residual solvents, assay, and mechanical durability at multiple checkpoints, ensuring each lot withstands shipping and downstream processing.`,
-    `Detailed dossiers cover combined dissolution behavior, impurity management, and compatibility with commonly used excipients such as MCC, mannitol, and HPMC capsules. Packaging specialists offer moisture-safe drums, smaller barrier bags, or nitrogen-flushed containers for long voyages. Technical support spans method transfer, validation protocol drafting, and troubleshooting during scale-up or market expansions. We maintain proactive regulatory communication, updating partners about process improvements and ensuring CTD submissions remain current. With this dual-action pellet platform, manufacturers can launch or expand combination GERD therapies without compromising on quality assurance.`
-  ],
+  "Esomeprazole + Domperidone Pellets – Integrated Dual-Action Solution for GERD and Reflux-Related Nausea. Rraynex’s combination pellets are engineered to deliver coordinated acid suppression and prokinetic relief through a dual-phase release system. Each API is processed independently to maintain chemical stability and controlled release, ensuring reliable therapeutic performance and formulation consistency across all scales of production.",
+  
+  "Overview: This dual-API system merges the acid-suppressing power of Esomeprazole, a leading proton pump inhibitor (PPI), with the prokinetic benefits of Domperidone, a dopamine D2 receptor antagonist that enhances gastric motility and mitigates nausea. The formulation supports patients experiencing reflux, bloating, and delayed gastric emptying, delivering sustained symptom relief through carefully synchronized drug delivery kinetics.",
+  
+  "Key Features & Benefits:",
+  "• Dual-Phase Release: Enteric-coated Esomeprazole provides intestinal release, while Domperidone is released earlier in the gastric environment for rapid prokinetic effect.",
+  "• Process Integrity: Each layer is isolated with precision barrier coatings to prevent cross-interaction and degradation during manufacturing or storage.",
+  "• Density Harmonization: Both APIs are engineered for matched flow behavior, minimizing segregation during high-speed encapsulation and sachet filling.",
+  "• Quality Assurance: Continuous monitoring of assay, residual solvents, friability, and dissolution profiles ensures consistency from pilot to commercial scale.",
+  "• Regulatory Documentation: Dossiers include combined dissolution profiles, impurity management data, excipient compatibility studies, and stability evaluations under ICH zones.",
+  "• Custom Packaging Options: Available in 25 kg moisture-barrier drums, nitrogen-purged containers, or small barrier bags for sampling and clinical-scale applications.",
+  
+  "Technical Specifications:",
+  "• APIs: Esomeprazole Magnesium Trihydrate and Domperidone",
+  "• Assay: 98.0–102.0% for both APIs",
+  "• Pellet Size Range: 500–1100 μm (customizable)",
+  "• Release Profile: Esomeprazole – enteric delayed release; Domperidone – gastric immediate release",
+  "• Coating Polymers: Methacrylic acid copolymers, HPMC, or equivalent gastro-resistant systems",
+  "• Loss on Drying: ≤1.5%",
+  "• Packaging: HDPE moisture-proof drums, aluminum-lined or nitrogen-flushed bags",
+  "• Storage: Store below 25°C, away from light, moisture, and heat.",
+  
+  "Applications:",
+  "• Pharmaceutical manufacturers producing dual-action GERD formulations combining PPI and prokinetic therapy.",
+  "• Contract developers (CDMOs) seeking validated multiparticulate platforms for gastro-resistant dosage forms.",
+  "• Exporters and regulatory teams preparing CTD/ACTD submissions for international market approvals.",
+  
+  "Educational Insight: Esomeprazole reduces gastric acid secretion by inhibiting the H+/K+ ATPase enzyme, providing prolonged relief from acid reflux and heartburn. Domperidone complements this by increasing gastrointestinal motility, reducing bloating, and preventing nausea. Combined in a dual-release pellet form, they provide comprehensive reflux management—protecting the stomach while restoring normal gastric flow. Rraynex’s precision layering ensures controlled dissolution, stability, and regulatory compliance across all batches.",
+  
+  "SEO Keywords:",
+  "esomeprazole domperidone pellets, dual release pellets, GERD combination pellets, acid reflux treatment pellets, prokinetic PPI pellets, enteric coated esomeprazole, domperidone pellets manufacturer, pharmaceutical pellets exporter, gastro resistant pellets supplier, combination PPI raw material, reflux therapy pellets",
+  
+  "Usage Note: For pharmaceutical manufacturing and educational purposes only. Esomeprazole + Domperidone formulations should be developed and administered under professional medical supervision. Manufacturers must ensure compliance with pharmacopeial and regional quality standards prior to market release."
+],
   "product-itraconazole": [
     `Itraconazole pellets deliver antifungal coverage in a multiparticulate format that supports systemic therapy and localized gastrointestinal indications. Rraynex leverages fluid bed coating to distribute itraconazole uniformly across inert cores, followed by polymer layering that enhances dissolution in acidic and neutral environments. Particle size and sphericity are carefully controlled, delivering smooth flow for capsule filling and minimal dust formation in contained suites. Robust in-process controls track potency, residual solvent, and pellet friability to maintain performance during global transport.`,
     `Clients obtain comprehensive technical dossiers featuring dissolution data in simulated gastric and intestinal fluids, stability profiles under climatic zones II through IV, and validated analytical methods for related substances. Packaging can be tailored to clinical, commercial, or contract-manufacturing needs, with options including foil-lined drums, HDPE pails, or small research lots. Technical partnerships encompass method transfer assistance, taste-masking evaluations, and guidance on capsule shell selection for humid geographies. With transparent change-control records and quick-response quality teams, Rraynex keeps itraconazole supply dependable for antifungal portfolios worldwide.`
