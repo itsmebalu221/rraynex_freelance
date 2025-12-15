@@ -18,8 +18,8 @@ export default function Blog() {
   const year = "All";
   const tag = "All";
   const sortOrder = "newest";
-  // simplified view: fixed to grid layout (filters removed)
-  const [view] = useState("grid");
+  // simplified view: fixed to list/stacked layout
+  const [view] = useState("list");
   const [metrics, setMetrics] = useState(() => getAllMetrics());
 
   const normalize = (val) => (val ?? "").toString().trim().toLowerCase();
@@ -92,23 +92,12 @@ export default function Blog() {
     if (filteredPosts.length === 0) {
       return BLOG_POSTS[0];
     }
-    const filteredIds = new Set(filteredPosts.map((p) => p.id));
-    const scored = BLOG_POSTS.map((post) => {
-      const entry = metrics[post.slug] || {};
-      const score =
-        (typeof entry.likes === "number" ? entry.likes : 0) * 2 +
-        (typeof entry.shares === "number" ? entry.shares : 0) * 3 +
-        (Array.isArray(entry.comments) ? entry.comments.length : 0);
-      return { post, score };
-    }).sort((a, b) => b.score - a.score || new Date(b.post.date) - new Date(a.post.date));
-
-    const topMatch = scored.find((s) => filteredIds.has(s.post.id));
-    return topMatch ? topMatch.post : filteredPosts[0];
-  }, [filteredPosts, metrics]);
-  const shouldOmitFeatured = featuredPost && filteredPosts.length > 1;
-  const remainingPosts = shouldOmitFeatured
-    ? filteredPosts.filter((post) => post.id !== featuredPost.id)
-    : filteredPosts;
+    // Show newest post as featured (latest first)
+    const sortedByDate = [...filteredPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+    return sortedByDate[0];
+  }, [filteredPosts]);
+  // Show ALL posts in the grid (don't omit featured)
+  const remainingPosts = [...filteredPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const trendingPosts = useMemo(() => {
     const scored = BLOG_POSTS.map((post) => {

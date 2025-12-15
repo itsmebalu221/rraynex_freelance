@@ -1327,6 +1327,1656 @@ export const PRODUCTS = [
     tags: ["api", "mebendazole"],
     image: "/assets/products/placeholder.jpg",
   },
+  {
+    "id": "pellet-aceclofenac-sr",
+    "slug": "product-aceclofenac-sr",
+    "name": "Aceclofenac SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [
+      "60%"
+    ],
+    "description": "Aceclofenac SR pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "aceclofenac"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-aprepetant",
+    "slug": "product-aprepetant",
+    "name": "Aprepetant",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Neurokinin-1 Antagonist",
+    "strengths": [
+      "125mg",
+      "80mg"
+    ],
+    "description": "Aprepetant pellets for pharmaceutical formulation. High quality neurokinin-1 antagonist suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "aprepetant"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-clopidogrel-ww",
+    "slug": "product-clopidogrel-ww",
+    "name": "Clopidogrel (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antiplatelet",
+    "strengths": [
+      "30%"
+    ],
+    "description": "Clopidogrel (WW) pellets for pharmaceutical formulation. High quality antiplatelet suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "clopidogrel"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-clopidogrel",
+    "slug": "product-clopidogrel",
+    "name": "Clopidogrel",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antiplatelet",
+    "strengths": [
+      "45%"
+    ],
+    "description": "Clopidogrel pellets for pharmaceutical formulation. High quality antiplatelet suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "clopidogrel"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-cyclobenzaprine-hcl",
+    "slug": "product-cyclobenzaprine-hcl",
+    "name": "Cyclobenzaprine HCL",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Skeletal Muscle Relaxant",
+    "strengths": [
+      "22%"
+    ],
+    "description": "Cyclobenzaprine HCL pellets for pharmaceutical formulation. High quality skeletal muscle relaxant suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "cyclobenzaprine"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-dabigatran-etexilate-ir-ww",
+    "slug": "product-dabigatran-etexilate-ir-ww",
+    "name": "Dabigatran Etexilate IR (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Anticoagulant (Direct Thrombin Inhibitor)",
+    "strengths": [
+      "40%",
+      "50.0%"
+    ],
+    "description": "Dabigatran Etexilate IR (WW) pellets for pharmaceutical formulation. High quality anticoagulant (direct thrombin inhibitor) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "dabigatran"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-dexlansoprazole-ddr",
+    "slug": "product-dexlansoprazole-ddr",
+    "name": "Dexlansoprazole DDR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI",
+    "strengths": [
+      "10.0%",
+      "17.0%",
+      "20%",
+      "22.5%"
+    ],
+    "description": "Dexlansoprazole DDR pellets for pharmaceutical formulation. High quality ppi suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "dexlansoprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-diltiazem-hydrochloride-sr-ww",
+    "slug": "product-diltiazem-hydrochloride-sr-ww",
+    "name": "Diltiazem Hydrochloride SR (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Calcium Channel Blocker",
+    "strengths": [
+      "45%"
+    ],
+    "description": "Diltiazem Hydrochloride SR (WW) pellets for pharmaceutical formulation. High quality calcium channel blocker suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "diltiazem"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-duloxetive-ec-ww",
+    "slug": "product-duloxetive-ec-ww",
+    "name": "Duloxetive EC (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "SNRI Antidepressant",
+    "strengths": [
+      "20%"
+    ],
+    "description": "Duloxetive EC (WW) pellets for pharmaceutical formulation. High quality snri antidepressant suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "duloxetive"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-duloxetive-ec-plus-prigabalin",
+    "slug": "product-duloxetive-ec-plus-prigabalin",
+    "name": "Duloxetive EC + Prigabalin",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "SNRI Antidepressant, Anticonvulsant",
+    "strengths": [
+      "20mg + 50mg"
+    ],
+    "description": "Duloxetive EC + Prigabalin pellets for pharmaceutical formulation. High quality snri antidepressant, anticonvulsant suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "duloxetive"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-duloxetive-ec-plus-prigabalin",
+    "slug": "product-duloxetive-ec-plus-prigabalin",
+    "name": "Duloxetive EC + Prigabalin",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "SNRI Antidepressant, Anticonvulsant",
+    "strengths": [
+      "20mg + 75mg"
+    ],
+    "description": "Duloxetive EC + Prigabalin pellets for pharmaceutical formulation. High quality snri antidepressant, anticonvulsant suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "duloxetive"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-dutasteride",
+    "slug": "product-dutasteride",
+    "name": "Dutasteride",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "5-alpha Reductase Inhibitor",
+    "strengths": [],
+    "description": "Dutasteride pellets for pharmaceutical formulation. High quality 5-alpha reductase inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "dutasteride"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-eso-ec-plus-dom-sr",
+    "slug": "product-eso-ec-plus-dom-sr",
+    "name": "Eso EC + Dom SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [
+      "40mg + 30 mg"
+    ],
+    "description": "Eso EC + Dom SR pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "eso"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-esomeprazole-mups",
+    "slug": "product-esomeprazole-mups",
+    "name": "Esomeprazole MUPS",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [
+      "8.50%"
+    ],
+    "description": "Esomeprazole MUPS pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "esomeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-esomeprazole-ec-plus-itopride-sr",
+    "slug": "product-esomeprazole-ec-plus-itopride-sr",
+    "name": "Esomeprazole EC + Itopride SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI, Propulsive",
+    "strengths": [
+      "40mg + 150 mg"
+    ],
+    "description": "Esomeprazole EC + Itopride SR pellets for pharmaceutical formulation. High quality ppi, propulsive suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "esomeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-esomeprazole-ec",
+    "slug": "product-esomeprazole-ec",
+    "name": "Esomeprazole EC",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [
+      "22.50%"
+    ],
+    "description": "Esomeprazole EC pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "esomeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-esomeprazole-magnesium-trihydrate-enetric-coated-mups-proton-pump-inhibitor-",
+    "slug": "product-esomeprazole-magnesium-trihydrate-enetric-coated-mups-proton-pump-inhibitor-",
+    "name": "Esomeprazole Magnesium Trihydrate Enetric Coated MUPS Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [
+      "8.50%"
+    ],
+    "description": "Esomeprazole Magnesium Trihydrate Enetric Coated MUPS Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "esomeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-esomeprazole",
+    "slug": "product-esomeprazole",
+    "name": "Esomeprazole",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [
+      "8.50%"
+    ],
+    "description": "Esomeprazole pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "esomeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-fenofibrate",
+    "slug": "product-fenofibrate",
+    "name": "Fenofibrate",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antilipemic Agent",
+    "strengths": [
+      "66%"
+    ],
+    "description": "Fenofibrate pellets for pharmaceutical formulation. High quality antilipemic agent suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "fenofibrate"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-fente-hcl-6",
+    "slug": "product-fente-hcl-6",
+    "name": "Fente HCL 6",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Therapeutic",
+    "strengths": [],
+    "description": "Fente HCL 6 pellets for pharmaceutical formulation. High quality therapeutic suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "fente"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-indomethacin-hcl-sr",
+    "slug": "product-indomethacin-hcl-sr",
+    "name": "Indomethacin HCL SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [],
+    "description": "Indomethacin HCL SR pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "indomethacin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-itopride",
+    "slug": "product-itopride",
+    "name": "Itopride",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Propulsive",
+    "strengths": [
+      "60%"
+    ],
+    "description": "Itopride pellets for pharmaceutical formulation. High quality propulsive suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "itopride"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-itraconazole-ir-triazole",
+    "slug": "product-itraconazole-ir-triazole",
+    "name": "Itraconazole IR Triazole",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antifungal",
+    "strengths": [
+      "22.00%"
+    ],
+    "description": "Itraconazole IR Triazole pellets for pharmaceutical formulation. High quality antifungal suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "itraconazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-itraconazole-ir-ww-triazole",
+    "slug": "product-itraconazole-ir-ww-triazole",
+    "name": "Itraconazole IR (WW) Triazole",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antifungal",
+    "strengths": [
+      "40.00%"
+    ],
+    "description": "Itraconazole IR (WW) Triazole pellets for pharmaceutical formulation. High quality antifungal suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "itraconazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-lansoprazole-proton-pump-inhibitor-",
+    "slug": "product-lansoprazole-proton-pump-inhibitor-",
+    "name": "Lansoprazole Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI) 15 mg (8.5%)",
+    "strengths": [],
+    "description": "Lansoprazole Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) 15 mg (8.5%) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "lansoprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-levosulpiride-sr",
+    "slug": "product-levosulpiride-sr",
+    "name": "Levosulpiride SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Atypical Antipsychotic",
+    "strengths": [
+      "75 mg"
+    ],
+    "description": "Levosulpiride SR pellets for pharmaceutical formulation. High quality atypical antipsychotic suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "levosulpiride"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-linaclodite-ir",
+    "slug": "product-linaclodite-ir",
+    "name": "Linaclodite IR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Guanylate Cyclase-C Receptor Agonist",
+    "strengths": [
+      "290 mcg"
+    ],
+    "description": "Linaclodite IR pellets for pharmaceutical formulation. High quality guanylate cyclase-c receptor agonist suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "linaclodite"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-mebeverine-hcl-sr",
+    "slug": "product-mebeverine-hcl-sr",
+    "name": "Mebeverine HCL SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antispasmodic 80% ( 200mg) |",
+    "strengths": [
+      "50%"
+    ],
+    "description": "Mebeverine HCL SR pellets for pharmaceutical formulation. High quality antispasmodic 80% ( 200mg) | suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "mebeverine"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-mebeverine-sr-45%",
+    "slug": "product-mebeverine-sr-45%",
+    "name": "Mebeverine SR 45%",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antispasmodic",
+    "strengths": [
+      "45%",
+      "80%"
+    ],
+    "description": "Mebeverine SR 45% pellets for pharmaceutical formulation. High quality antispasmodic suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "mebeverine"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-mefenemic-acid",
+    "slug": "product-mefenemic-acid",
+    "name": "Mefenemic Acid",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [
+      "500mg"
+    ],
+    "description": "Mefenemic Acid pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "mefenemic"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-omeprazole-ec-proton-pump-inhibitor-",
+    "slug": "product-omeprazole-ec-proton-pump-inhibitor-",
+    "name": "Omeprazole EC Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [
+      "10%",
+      "7.5%"
+    ],
+    "description": "Omeprazole EC Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "omeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-omeprazoleec-ww-proton-pump-inhibitor-",
+    "slug": "product-omeprazoleec-ww-proton-pump-inhibitor-",
+    "name": "OmeprazoleEC (WW) Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [
+      "22.50%"
+    ],
+    "description": "OmeprazoleEC (WW) Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "omeprazoleec"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-orlistat",
+    "slug": "product-orlistat",
+    "name": "Orlistat",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Lipase Inhibitor",
+    "strengths": [
+      "50.00%"
+    ],
+    "description": "Orlistat pellets for pharmaceutical formulation. High quality lipase inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "orlistat"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-pantoprazole-ec-plus-domperidone-sr",
+    "slug": "product-pantoprazole-ec-plus-domperidone-sr",
+    "name": "Pantoprazole EC + Domperidone SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [
+      "40mg + 30mg"
+    ],
+    "description": "Pantoprazole EC + Domperidone SR pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "pantoprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rabeprazole-ec-plus-levosulphide-sr",
+    "slug": "product-rabeprazole-ec-plus-levosulphide-sr",
+    "name": "Rabeprazole EC + Levosulphide SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI, Atypical Antipsychotic",
+    "strengths": [
+      "20mg + 75 mg"
+    ],
+    "description": "Rabeprazole EC + Levosulphide SR pellets for pharmaceutical formulation. High quality ppi, atypical antipsychotic suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rabeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rabeprazole-sodium-ec-plus-aclofenac-sr-ppi",
+    "slug": "product-rabeprazole-sodium-ec-plus-aclofenac-sr-ppi",
+    "name": "Rabeprazole Sodium EC + Aclofenac SR PPI",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [
+      "20mg + 150mg"
+    ],
+    "description": "Rabeprazole Sodium EC + Aclofenac SR PPI pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rabeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-tamsulosin-hcl-sr-plus-dutasteride-ir-pellet-alpha-blocker",
+    "slug": "product-tamsulosin-hcl-sr-plus-dutasteride-ir-pellet-alpha-blocker",
+    "name": "Tamsulosin HCL SR + Dutasteride IR pellet Alpha-Blocker",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "5-alpha Reductase Inhibitor",
+    "strengths": [
+      "0.2 mg + 0.4mg"
+    ],
+    "description": "Tamsulosin HCL SR + Dutasteride IR pellet Alpha-Blocker pellets for pharmaceutical formulation. High quality 5-alpha reductase inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "tamsulosin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-tamsulosin-hcl-plus-tadalfil-blended",
+    "slug": "product-tamsulosin-hcl-plus-tadalfil-blended",
+    "name": "Tamsulosin HCL + Tadalfil Blended",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Alpha-Blocker, Phosphodiesterase (PDE) Inhibitor",
+    "strengths": [
+      "0.2% + 5%"
+    ],
+    "description": "Tamsulosin HCL + Tadalfil Blended pellets for pharmaceutical formulation. High quality alpha-blocker, phosphodiesterase (pde) inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "tamsulosin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-tamsulosin-hcl-sr-and-dutasteride-ir-pellets-ww-alpha-blocker",
+    "slug": "product-tamsulosin-hcl-sr-and-dutasteride-ir-pellets-ww-alpha-blocker",
+    "name": "Tamsulosin HCL SR & Dutasteride IR Pellets (WW) Alpha-Blocker",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "5-alpha Reductase Inhibitor",
+    "strengths": [],
+    "description": "Tamsulosin HCL SR & Dutasteride IR Pellets (WW) Alpha-Blocker pellets for pharmaceutical formulation. High quality 5-alpha reductase inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "tamsulosin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-tamsulosin-hcl-sr-ww",
+    "slug": "product-tamsulosin-hcl-sr-ww",
+    "name": "Tamsulosin HCL SR (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Alpha-Blocker",
+    "strengths": [
+      "0.2%",
+      "5.0%"
+    ],
+    "description": "Tamsulosin HCL SR (WW) pellets for pharmaceutical formulation. High quality alpha-blocker suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "tamsulosin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-tamsulosin-hcl-sr",
+    "slug": "product-tamsulosin-hcl-sr",
+    "name": "Tamsulosin HCL SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Alpha-Blocker",
+    "strengths": [
+      "0.16%"
+    ],
+    "description": "Tamsulosin HCL SR pellets for pharmaceutical formulation. High quality alpha-blocker suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "tamsulosin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-venlafaxine-hydrochloride-sr-ww",
+    "slug": "product-venlafaxine-hydrochloride-sr-ww",
+    "name": "Venlafaxine Hydrochloride SR (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "SNRI Antidepressant",
+    "strengths": [
+      "50%"
+    ],
+    "description": "Venlafaxine Hydrochloride SR (WW) pellets for pharmaceutical formulation. High quality snri antidepressant suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "venlafaxine"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-vitamin-vitamin-supplement",
+    "slug": "product-vitamin-vitamin-supplement",
+    "name": "Vitamin Vitamin Supplement",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Therapeutic",
+    "strengths": [],
+    "description": "Vitamin Vitamin Supplement pellets for pharmaceutical formulation. High quality therapeutic suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "vitamin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-diclofenac-potassium-er-33%-ww",
+    "slug": "product-diclofenac-potassium-er-33%-ww",
+    "name": "Diclofenac Potassium ER 33% (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [
+      "33%"
+    ],
+    "description": "Diclofenac Potassium ER 33% (WW) pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "diclofenac"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-chlorpheniramine-mealeate",
+    "slug": "product-chlorpheniramine-mealeate",
+    "name": "Chlorpheniramine Mealeate",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antihistamine",
+    "strengths": [
+      "4.0mg"
+    ],
+    "description": "Chlorpheniramine Mealeate pellets for pharmaceutical formulation. High quality antihistamine suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "chlorpheniramine"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-chlorpheniramine-mealeate-ww",
+    "slug": "product-chlorpheniramine-mealeate-ww",
+    "name": "Chlorpheniramine Mealeate (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antihistamine",
+    "strengths": [
+      "1.54%"
+    ],
+    "description": "Chlorpheniramine Mealeate (WW) pellets for pharmaceutical formulation. High quality antihistamine suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "chlorpheniramine"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-esomeprazole-magnesuim-trihydrate-ec-ww-proton-pump-inhibitor-",
+    "slug": "product-esomeprazole-magnesuim-trihydrate-ec-ww-proton-pump-inhibitor-",
+    "name": "Esomeprazole Magnesuim Trihydrate EC (WW) Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [
+      "22.50%"
+    ],
+    "description": "Esomeprazole Magnesuim Trihydrate EC (WW) Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "esomeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-orlistat-ww",
+    "slug": "product-orlistat-ww",
+    "name": "Orlistat (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Lipase Inhibitor",
+    "strengths": [
+      "50.00%"
+    ],
+    "description": "Orlistat (WW) pellets for pharmaceutical formulation. High quality lipase inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "orlistat"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-tamsuloisn-hcl-sr-and-dutasteride-ir-pellets-ww-alpha-blocker",
+    "slug": "product-tamsuloisn-hcl-sr-and-dutasteride-ir-pellets-ww-alpha-blocker",
+    "name": "Tamsuloisn HCL SR & Dutasteride IR Pellets (WW) Alpha-Blocker",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "5-alpha Reductase Inhibitor",
+    "strengths": [],
+    "description": "Tamsuloisn HCL SR & Dutasteride IR Pellets (WW) Alpha-Blocker pellets for pharmaceutical formulation. High quality 5-alpha reductase inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "tamsuloisn"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-aprepitant-ww",
+    "slug": "product-aprepitant-ww",
+    "name": "Aprepitant (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Neurokinin-1 Antagonist",
+    "strengths": [
+      "43.00%"
+    ],
+    "description": "Aprepitant (WW) pellets for pharmaceutical formulation. High quality neurokinin-1 antagonist suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "aprepitant"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-combination-pregabalin-bp-sr-plus-methylecobalamin-usp-ir-anticonvulsant",
+    "slug": "product-combination-pregabalin-bp-sr-plus-methylecobalamin-usp-ir-anticonvulsant",
+    "name": "Combination Pregabalin BP SR + Methylecobalamin USP IR Anticonvulsant",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Vitamin B12",
+    "strengths": [
+      "75 mg + 1500 mcg"
+    ],
+    "description": "Combination Pregabalin BP SR + Methylecobalamin USP IR Anticonvulsant pellets for pharmaceutical formulation. High quality vitamin b12 suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "combination"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-metorolol-tartrate-extended-relesae-ww-beta-blocker",
+    "slug": "product-metorolol-tartrate-extended-relesae-ww-beta-blocker",
+    "name": "Metorolol Tartrate Extended Relesae (WW) Beta Blocker",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Therapeutic",
+    "strengths": [
+      "9%"
+    ],
+    "description": "Metorolol Tartrate Extended Relesae (WW) Beta Blocker pellets for pharmaceutical formulation. High quality therapeutic suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "metorolol"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-esomeprazole-ec-ww-mups-proton-pump-inhibitor-",
+    "slug": "product-esomeprazole-ec-ww-mups-proton-pump-inhibitor-",
+    "name": "Esomeprazole EC (WW) MUPS Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [
+      "8.50%"
+    ],
+    "description": "Esomeprazole EC (WW) MUPS Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "esomeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-aspirin-plus-clopidogrel",
+    "slug": "product-aspirin-plus-clopidogrel",
+    "name": "Aspirin + Clopidogrel",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID, Antiplatelet",
+    "strengths": [
+      "75.0mg + 75mg"
+    ],
+    "description": "Aspirin + Clopidogrel pellets for pharmaceutical formulation. High quality nsaid, antiplatelet suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "aspirin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-combination-pregabalin-bp-sr-plus-methylecobalamin-usp-ir-anticonvulsant",
+    "slug": "product-combination-pregabalin-bp-sr-plus-methylecobalamin-usp-ir-anticonvulsant",
+    "name": "Combination Pregabalin BP SR + Methylecobalamin USP IR Anticonvulsant",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Vitamin B12",
+    "strengths": [
+      "75 mg + 750 mcg"
+    ],
+    "description": "Combination Pregabalin BP SR + Methylecobalamin USP IR Anticonvulsant pellets for pharmaceutical formulation. High quality vitamin b12 suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "combination"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-aspirin-plus-clopidogrel-ww",
+    "slug": "product-aspirin-plus-clopidogrel-ww",
+    "name": "Aspirin + Clopidogrel (WW)",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID, Antiplatelet",
+    "strengths": [
+      "75.0mg + 75.0mg"
+    ],
+    "description": "Aspirin + Clopidogrel (WW) pellets for pharmaceutical formulation. High quality nsaid, antiplatelet suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "aspirin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-atorva",
+    "slug": "product-atorva",
+    "name": "Atorva",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "statin ww Statin",
+    "strengths": [
+      "10mg + 75mg"
+    ],
+    "description": "Atorva pellets for pharmaceutical formulation. High quality statin ww statin suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "atorva"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-atorva",
+    "slug": "product-atorva",
+    "name": "Atorva",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "statin ww Statin",
+    "strengths": [
+      "20mg + 75mg"
+    ],
+    "description": "Atorva pellets for pharmaceutical formulation. High quality statin ww statin suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "atorva"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-atorvastatin-plus-aspirin-ww-statin",
+    "slug": "product-atorvastatin-plus-aspirin-ww-statin",
+    "name": "Atorvastatin + Aspirin (WW) Statin",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [
+      "10.0mg + 75.0mg"
+    ],
+    "description": "Atorvastatin + Aspirin (WW) Statin pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "atorvastatin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-atorvastatin-plus-clopidogrel-statin",
+    "slug": "product-atorvastatin-plus-clopidogrel-statin",
+    "name": "Atorvastatin + Clopidogrel Statin",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Antiplatelet",
+    "strengths": [
+      "10mg + 75mg"
+    ],
+    "description": "Atorvastatin + Clopidogrel Statin pellets for pharmaceutical formulation. High quality antiplatelet suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "atorvastatin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-atorvastatin-plus-aspirin-ww-statin",
+    "slug": "product-atorvastatin-plus-aspirin-ww-statin",
+    "name": "Atorvastatin + Aspirin (WW) Statin",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [
+      "20.0mg + 75.0mg"
+    ],
+    "description": "Atorvastatin + Aspirin (WW) Statin pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "atorvastatin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-diclofenac-sodium",
+    "slug": "product-diclofenac-sodium",
+    "name": "Diclofenac Sodium",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [],
+    "description": "Diclofenac Sodium pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "diclofenac"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-eso-levo",
+    "slug": "product-eso-levo",
+    "name": "Eso Levo",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [],
+    "description": "Eso Levo pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "eso"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-esomeprazole-enteric-coated-mups-proton-pump-inhibitor-",
+    "slug": "product-esomeprazole-enteric-coated-mups-proton-pump-inhibitor-",
+    "name": "Esomeprazole Enteric Coated MUPS Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [
+      "17%"
+    ],
+    "description": "Esomeprazole Enteric Coated MUPS Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "esomeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-lactic-acid",
+    "slug": "product-lactic-acid",
+    "name": "Lactic Acid",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Alpha Hydroxy Acid",
+    "strengths": [],
+    "description": "Lactic Acid pellets for pharmaceutical formulation. High quality alpha hydroxy acid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "lactic"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-ilaprazole-proton-pump-inhibitor-",
+    "slug": "product-ilaprazole-proton-pump-inhibitor-",
+    "name": "Ilaprazole Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [],
+    "description": "Ilaprazole Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "ilaprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-linaprazan",
+    "slug": "product-linaprazan",
+    "name": "Linaprazan",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Potassium-Competitive Acid Blocker (P-CAB)",
+    "strengths": [],
+    "description": "Linaprazan pellets for pharmaceutical formulation. High quality potassium-competitive acid blocker (p-cab) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "linaprazan"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-naproxen-plus-esomeprazole-mg-tri",
+    "slug": "product-naproxen-plus-esomeprazole-mg-tri",
+    "name": "Naproxen + Esomeprazole mg Tri",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID, PPI",
+    "strengths": [],
+    "description": "Naproxen + Esomeprazole mg Tri pellets for pharmaceutical formulation. High quality nsaid, ppi suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "naproxen"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-omeplusdom",
+    "slug": "product-omeplusdom",
+    "name": "Ome+Dom",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [],
+    "description": "Ome+Dom pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "omeplusdom"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-panto-ito",
+    "slug": "product-panto-ito",
+    "name": "Panto Ito",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [],
+    "description": "Panto Ito pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "panto"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-panto-ec-and-levo-sr",
+    "slug": "product-panto-ec-and-levo-sr",
+    "name": "Panto EC & Levo SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI, Atypical Antipsychotic",
+    "strengths": [
+      "40mg + 75mg"
+    ],
+    "description": "Panto EC & Levo SR pellets for pharmaceutical formulation. High quality ppi, atypical antipsychotic suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "panto"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rabe-ito",
+    "slug": "product-rabe-ito",
+    "name": "Rabe Ito",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [],
+    "description": "Rabe Ito pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rabe"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-omeprazole-proton-pump-inhibitor-",
+    "slug": "product-omeprazole-proton-pump-inhibitor-",
+    "name": "Omeprazole Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [],
+    "description": "Omeprazole Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "omeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-omeprazole-ec-pelites-proton-pump-inhibitor-",
+    "slug": "product-omeprazole-ec-pelites-proton-pump-inhibitor-",
+    "name": "Omeprazole EC Pelites Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI) 7.5% | 8.5",
+    "strengths": [],
+    "description": "Omeprazole EC Pelites Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) 7.5% | 8.5 suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "omeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-omeprazole-mups-proton-pump-inhibitor-",
+    "slug": "product-omeprazole-mups-proton-pump-inhibitor-",
+    "name": "Omeprazole MUPS Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [],
+    "description": "Omeprazole MUPS Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "omeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-pantoprazole-mups-proton-pump-inhibitor-",
+    "slug": "product-pantoprazole-mups-proton-pump-inhibitor-",
+    "name": "Pantoprazole MUPS Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [],
+    "description": "Pantoprazole MUPS Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "pantoprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-pregabalamin-anticonvulsant-analgesic",
+    "slug": "product-pregabalamin-anticonvulsant-analgesic",
+    "name": "Pregabalamin Anticonvulsant, Analgesic",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Therapeutic",
+    "strengths": [],
+    "description": "Pregabalamin Anticonvulsant, Analgesic pellets for pharmaceutical formulation. High quality therapeutic suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "pregabalamin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rabe-aceclo-ppi",
+    "slug": "product-rabe-aceclo-ppi",
+    "name": "Rabe Aceclo PPI",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [],
+    "description": "Rabe Aceclo PPI pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rabe"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rabe-ec-plus-dom-sr",
+    "slug": "product-rabe-ec-plus-dom-sr",
+    "name": "Rabe EC + Dom SR",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Proton Pump Inhibitor",
+    "strengths": [
+      "20mg + 30mg"
+    ],
+    "description": "Rabe EC + Dom SR pellets for pharmaceutical formulation. High quality proton pump inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rabe"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rabeprazole-mups-proton-pump-inhibitor-",
+    "slug": "product-rabeprazole-mups-proton-pump-inhibitor-",
+    "name": "Rabeprazole MUPS Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [],
+    "description": "Rabeprazole MUPS Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rabeprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rosuva",
+    "slug": "product-rosuva",
+    "name": "Rosuva",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "statin ww Statin",
+    "strengths": [
+      "10mg + 75 mg"
+    ],
+    "description": "Rosuva pellets for pharmaceutical formulation. High quality statin ww statin suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rosuva"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rosuva",
+    "slug": "product-rosuva",
+    "name": "Rosuva",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "statin ww Statin",
+    "strengths": [
+      "20mg + 75 mg"
+    ],
+    "description": "Rosuva pellets for pharmaceutical formulation. High quality statin ww statin suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rosuva"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rosuvastatin-plus-aspirin-ww-statin",
+    "slug": "product-rosuvastatin-plus-aspirin-ww-statin",
+    "name": "Rosuvastatin + Aspirin (WW) Statin",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [
+      "10.0mg + 75.0mg"
+    ],
+    "description": "Rosuvastatin + Aspirin (WW) Statin pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rosuvastatin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-rosuvastatin-plus-aspirin-ww-statin",
+    "slug": "product-rosuvastatin-plus-aspirin-ww-statin",
+    "name": "Rosuvastatin + Aspirin (WW) Statin",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "NSAID",
+    "strengths": [
+      "20.0mg + 75.0mg"
+    ],
+    "description": "Rosuvastatin + Aspirin (WW) Statin pellets for pharmaceutical formulation. High quality nsaid suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "rosuvastatin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-silodosin-plus-dutasteride-alpha-blocker",
+    "slug": "product-silodosin-plus-dutasteride-alpha-blocker",
+    "name": "Silodosin + Dutasteride Alpha-Blocker",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "5-alpha Reductase Inhibitor",
+    "strengths": [
+      "8mg + 0.5mg"
+    ],
+    "description": "Silodosin + Dutasteride Alpha-Blocker pellets for pharmaceutical formulation. High quality 5-alpha reductase inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "silodosin"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-trimetazindine-hcl",
+    "slug": "product-trimetazindine-hcl",
+    "name": "Trimetazindine HCL",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Fatty Acid Oxidation Inhibitor",
+    "strengths": [],
+    "description": "Trimetazindine HCL pellets for pharmaceutical formulation. High quality fatty acid oxidation inhibitor suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "trimetazindine"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-vonoprazan",
+    "slug": "product-vonoprazan",
+    "name": "Vonoprazan",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "Potassium-Competitive Acid Blocker (P-CAB)",
+    "strengths": [],
+    "description": "Vonoprazan pellets for pharmaceutical formulation. High quality potassium-competitive acid blocker (p-cab) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "vonoprazan"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-dexlansoprazole-ddr-200%-mups-proton-pump-inhibitor-",
+    "slug": "product-dexlansoprazole-ddr-200%-mups-proton-pump-inhibitor-",
+    "name": "Dexlansoprazole DDR 20.0% MUPS Proton Pump Inhibitor (",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "PPI)",
+    "strengths": [
+      "20.00%"
+    ],
+    "description": "Dexlansoprazole DDR 20.0% MUPS Proton Pump Inhibitor ( pellets for pharmaceutical formulation. High quality ppi) suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "dexlansoprazole"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  },
+  {
+    "id": "pellet-combination-of-dutasteride-plus-silodosin",
+    "slug": "product-combination-of-dutasteride-plus-silodosin",
+    "name": "Combination Of Dutasteride + Silodosin",
+    "type": "Pellets",
+    "family": "pellets",
+    "category": "5-alpha Reductase Inhibitor, Alpha-Blocker",
+    "strengths": [
+      "0.5mg + 8mg"
+    ],
+    "description": "Combination Of Dutasteride + Silodosin pellets for pharmaceutical formulation. High quality 5-alpha reductase inhibitor, alpha-blocker suitable for various dosage forms.",
+    "grade": "IP / BP / USP / EP",
+    "unit": "25/50 kg",
+    "tags": [
+      "pellet",
+      "combination"
+    ],
+    "image": "/assets/products/placeholder.jpg"
+  }
+
 ];
 
 const PRODUCT_NARRATIVES = {

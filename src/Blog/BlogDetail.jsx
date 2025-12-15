@@ -267,7 +267,18 @@ export default function BlogDetail() {
         <Link to="/blog">← Back to Blogs</Link>
       </nav>
 
+      {/* Banner Image */}
+      {featuredImageFor(post) && (
+        <div className="blog-article__banner">
+          <img src={featuredImageFor(post)} alt={post.title} />
+        </div>
+      )}
+
   <article className="blog-article__container" ref={articleRef}>
+        {/* Two Column Layout */}
+        <div className="blog-article__layout">
+          {/* Left Column - Main Content */}
+          <div className="blog-article__main">
         <header className="blog-article__header">
           <p className="blog-article__category">{post.category}</p>
           <h1 id="blog-article-heading">{post.title}</h1>
@@ -294,19 +305,27 @@ export default function BlogDetail() {
           </div>
         </header>
 
-        {post.gallery && post.gallery.length > 0 && (
-          <section className="blog-article__gallery" aria-label="Image highlights">
-            {post.gallery.map((item, index) => (
-              <img key={item} src={item} alt={`${post.title} visual ${index + 1}`} loading="lazy" decoding="async" sizes="(min-width: 992px) 33vw, 50vw" />
-            ))}
-          </section>
-        )}
-
         <section className="blog-article__body">
           {post.content.map((block, index) => {
+            // Skip inline images - we only want text content
+            if (typeof block === "object" && block.type === "image") {
+              return null;
+            }
+
             if (typeof block !== "string") {
               return <p key={index}>{String(block)}</p>;
             }
+
+            // Helper function to parse inline formatting like **bold**
+            const parseInlineFormatting = (text) => {
+              const parts = text.split(/(\*\*[^*]+\*\*)/g);
+              return parts.map((part, i) => {
+                if (/^\*\*[^*]+\*\*$/.test(part)) {
+                  return <strong key={i}>{part.slice(2, -2)}</strong>;
+                }
+                return part;
+              });
+            };
 
             // Split by lines to support headings embedded with newlines
             const lines = block.split(/\n+/).map((l) => l.trim()).filter(Boolean);
@@ -316,13 +335,13 @@ export default function BlogDetail() {
               <React.Fragment key={index}>
                 {lines.map((line, li) => {
                   if (/^###\s+/.test(line)) {
-                    return <h3 key={li}>{line.replace(/^###\s+/, "")}</h3>;
+                    return <h3 key={li}>{parseInlineFormatting(line.replace(/^###\s+/, ""))}</h3>;
                   }
                   if (/^##\s+/.test(line)) {
-                    return <h2 key={li}>{line.replace(/^##\s+/, "")}</h2>;
+                    return <h2 key={li}>{parseInlineFormatting(line.replace(/^##\s+/, ""))}</h2>;
                   }
                   if (/^#\s+/.test(line)) {
-                    return <h1 key={li}>{line.replace(/^#\s+/, "")}</h1>;
+                    return <h1 key={li}>{parseInlineFormatting(line.replace(/^#\s+/, ""))}</h1>;
                   }
                   // simple bullet list detection
                   if (/^[*-]\s+/.test(line)) {
@@ -331,13 +350,13 @@ export default function BlogDetail() {
                     return (
                       <ul key={li}>
                         {items.map((it, k) => (
-                          <li key={k}>{it.replace(/^[*-]\s+/, "")}</li>
+                          <li key={k}>{parseInlineFormatting(it.replace(/^[*-]\s+/, ""))}</li>
                         ))}
                       </ul>
                     );
                   }
 
-                  return <p key={li}>{line}</p>;
+                  return <p key={li}>{parseInlineFormatting(line)}</p>;
                 })}
               </React.Fragment>
             );
@@ -449,29 +468,36 @@ export default function BlogDetail() {
             <p className="blog-comments__empty">Be the first to add a comment.</p>
           )}
         </section>
-
-        <section className="blog-related" aria-label="Related insights">
-          <h2>Related insights</h2>
-          <div className="blog-related__grid">
-            {related.map((item) => (
-              <Link key={item.id} to={`/blog/${item.slug}`} className="blog-related__card">
-                <div className="blog-related__media">
-                  <img src={featuredImageFor(item)} alt={item.title} loading="lazy" decoding="async" sizes="(min-width: 992px) 220px, 50vw" />
-                </div>
-                <div className="blog-related__body">
-                  <div className="blog-card__meta">
-                    <span className="blog-card__category">{item.category}</span>
-                    <time dateTime={item.date}>
-                      {new Date(item.date).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })}
-                    </time>
-                    <span>{item.readTime} min read</span>
-                  </div>
-                  <h3>{item.title}</h3>
-                </div>
-              </Link>
-            ))}
           </div>
-        </section>
+          {/* End Left Column */}
+
+          {/* Right Column - Sidebar with Related Posts */}
+          <aside className="blog-article__sidebar">
+            <section className="blog-related" aria-label="Related insights">
+              <h2>Related Posts</h2>
+              <div className="blog-related__grid">
+                {related.map((item) => (
+                  <Link key={item.id} to={`/blog/${item.slug}`} className="blog-related__card">
+                    <div className="blog-related__media">
+                      <img src={featuredImageFor(item)} alt={item.title} loading="lazy" decoding="async" sizes="(min-width: 992px) 220px, 50vw" />
+                    </div>
+                    <div className="blog-related__body">
+                      <div className="blog-card__meta">
+                        <span className="blog-card__category">{item.category}</span>
+                        <time dateTime={item.date}>
+                          {new Date(item.date).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })}
+                        </time>
+                        <span>{item.readTime} min read</span>
+                      </div>
+                      <h3>{item.title}</h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </aside>
+        </div>
+        {/* End Two Column Layout */}
 
         <footer className="blog-article__footer">
           <ul className="blog-article__tags" aria-label="Article tags">
