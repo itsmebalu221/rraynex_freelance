@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FaBuilding, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import "./Contact.css";
 import Hero from "../Components/Hero/Hero";
+import SEO from "../seo/SEO";
+import { getPageSEO } from "../seo/seoConfig";
 
 const REGIONAL_OFFICES = [
   {
@@ -44,6 +46,7 @@ const MAIL_CONTACTS = [
 const PRIMARY_CONTACT_EMAIL = "communications@rraynex.com";
 
 export default function Contact() {
+  const seo = getPageSEO('contact');
   const [showMap, setShowMap] = useState(false);
   const topContacts = MAIL_CONTACTS.slice(0, 2);
   const bottomContacts = MAIL_CONTACTS.slice(2, 4);
@@ -91,6 +94,13 @@ export default function Contact() {
 
   return (
     <main className="contact">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="contact"
+      />
       {/* Hero Section */}
       <Hero
         title="Let's Connect"

@@ -8,6 +8,8 @@ import {
   MessageCircle
 } from "lucide-react";
 import Hero from "../../Components/Hero/Hero";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 import "./ehs.css";
 import header from "./header.jpg";
 import one from "./one.jpg";
@@ -57,6 +59,7 @@ const SUPPORT_RESOURCES = [
 ];
 
 export default function EHS() {
+  const seo = getPageSEO('ehs');
   const observerRef = useRef(null);
 
   useEffect(() => {
@@ -79,6 +82,13 @@ export default function EHS() {
 
   return (
     <main className="ehs-page">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="ehs"
+      />
       <Hero
         title="Environment, Health & Safety"
         subtitle="Protecting every colleague and championing a respectful POSH-compliant workplace—these are the foundations of our EHS promise."

@@ -1,8 +1,11 @@
 import React, { useEffect, useRef ,useState} from "react";
 import { Leaf, Globe, Lightbulb, Settings, ArrowRight } from "lucide-react";
 import "./Sustainability.css";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 
 export default function Sustainability() {
+  const seo = getPageSEO('sustainability');
   const observerRef = useRef(null);
    const [isVisible, setIsVisible] = useState(false);
   const [statsVisible, setStatsVisible] = useState(false);
@@ -46,6 +49,13 @@ export default function Sustainability() {
 
   return (
     <main className="sustainability">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="sustainability"
+      />
       {/* HERO */}
       <section className="about-hero csr-hero">
         <div className="about-hero__inner">

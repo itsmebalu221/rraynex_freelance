@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./CSR.css";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 import one from "../../Assets/CSR/1.jpeg"
 import two from "../../Assets/CSR/2.jpeg"
 import three from "../../Assets/CSR/3.jpeg"
@@ -104,15 +106,23 @@ const CSR_PROGRAMS = [
 ];
 
 export default function CSR() {
+  const seo = getPageSEO('csr');
   const [isHeroVisible, setHeroVisible] = useState(false);
 
   useEffect(() => {
-    document.title = "Corporate Social Responsibility | Rraynex";
+    document.title = seo.title;
     setHeroVisible(true);
-  }, []);
+  }, [seo.title]);
 
   return (
     <main className="csr-page">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="csr"
+      />
       <Hero
               title="Corporate Social Responsibility"
               subtitle="At Rraynex, we see CSR as a responsibility to uplift the communities and ecosystems that surround our operations. Celebrations, learning journeys, and healthcare access are woven into everything we do."

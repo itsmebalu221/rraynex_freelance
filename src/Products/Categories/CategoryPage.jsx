@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Hero from "../../Components/Hero/Hero";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 import "./categoryPage.css";
 import pellets from "../../Home/pellets.png";
 import granules from "../../Components/Ecosystem/granules.png";
@@ -61,14 +63,23 @@ const CATEGORY_CARDS = [
 ];
 
 function ProductCategories() {
+  const seo = getPageSEO('productCategories');
+  
   useEffect(() => {
     if (typeof document !== "undefined") {
-      document.title = "Product Categories | Rraynex";
+      document.title = seo.title;
     }
-  }, []);
+  }, [seo.title]);
 
   return (
     <div className="category-page">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="productCategories"
+      />
       <Hero
         title="Product Categories"
         subtitle="Explore how our pellet, granule, API and intermediate platforms accelerate your formulation roadmap."

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./ecosys.css";
 import Hero from "../../Components/Hero/Hero";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 import header from "../../About/Milestones/3.jpg"
 
 const VALUE_CHAIN = [
@@ -65,15 +67,23 @@ const SUPPORT_THEMES = [
 ];
 
 export default function Ecosystem() {
+  const seo = getPageSEO('ecosystem');
+  
   useEffect(() => {
     if (typeof document !== "undefined") {
-      document.title = "Uplifting Ecosystem | Rraynex";
+      document.title = seo.title;
     }
-  }, []);
+  }, [seo.title]);
 
   return (
     <main className="ecosystem">
-      
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="ecosystem"
+      />
 
       <Hero
               title="Uplifting the Ecosystem"

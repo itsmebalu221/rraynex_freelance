@@ -2,6 +2,8 @@
 import React, { useEffect } from "react";
 import "./Manufacturing.css";
 import Hero from "../Components/Hero/Hero";
+import SEO from "../seo/SEO";
+import { getPageSEO } from "../seo/seoConfig";
 import header from "../About/Milestones/9.jpg";
 import top1 from "./top1.png";
 import top2 from "../About/Milestones/5.jpg"
@@ -141,9 +143,11 @@ const EQUIPMENT = [
 
 /* --- Component --- */
 export default function Manufacturing() {
+  const seo = getPageSEO('manufacturing');
+  
   useEffect(() => {
-    document.title = "Manufacturing Facilities | Rraynex Pharmaceuticals";
-  }, []);
+    document.title = seo.title;
+  }, [seo.title]);
 
   const getImgSrc = (img) => {
     if (!img) return DEFAULT_EQ_IMG;
@@ -155,6 +159,13 @@ export default function Manufacturing() {
 
   return (
     <main className="mfg-page">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="manufacturing"
+      />
       {/* HERO */}
       <Hero
         title="Manufacturing Excellence"

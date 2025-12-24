@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./aboutrray.css";
 import Hero from "../../Components/Hero/Hero";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 
 import one from "../Milestones/1.jpg";
 import two from "../Milestones/2.jpg";
@@ -26,6 +28,7 @@ import header from "./header.jpg";
 */
 
 export default function AboutUs() {
+  const seo = getPageSEO('aboutUs');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const GALLERY = [
@@ -134,6 +137,13 @@ export default function AboutUs() {
 
   return (
     <main className="about" aria-labelledby="about-heading">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="aboutUs"
+      />
       {/* HERO */}
       <Hero
         title="About Us"

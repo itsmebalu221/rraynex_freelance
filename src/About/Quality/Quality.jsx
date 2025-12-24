@@ -16,6 +16,8 @@ import {
 } from "react-icons/fa";
 import "./quality.css";
 import Hero from "../../Components/Hero/Hero";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 import header from "./header.jpg";
 
 /* === Replace these imports with your real assets === */
@@ -189,6 +191,7 @@ const COMMITMENTS = [
 /* ==================== Component ==================== */
 
 export default function QualityPage() {
+  const seo = getPageSEO('quality');
   const rootRef = useRef(null);
   const [certModal, setCertModal] = useState(null);
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -262,7 +265,13 @@ export default function QualityPage() {
 
   return (
     <main className="quality" ref={rootRef}>
-      
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="quality"
+      />
       <Hero
         title="Pioneering Quality, Powering Global Trust"
         subtitle="Precision in every process — delivering scientifically assured, globally compliant healthcare solutions."

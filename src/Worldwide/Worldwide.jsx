@@ -1,5 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import Hero from "../Components/Hero/Hero";
+import SEO from "../seo/SEO";
+import { getPageSEO } from "../seo/seoConfig";
 import "./Worldwide.css";
 import header from "./header.jpg";
 
@@ -145,6 +147,7 @@ const REGIONS = {
 };
 
 export default function WorldWide() {
+  const seo = getPageSEO('worldwide');
   const keys = useMemo(() => Object.keys(REGIONS), []);
   const [selected, setSelected] = useState(keys[0]);
 
@@ -167,6 +170,13 @@ export default function WorldWide() {
 
   return (
     <div className="worldwide-wrap">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="worldwide"
+      />
       <Hero
         title="Our Global Presence"
         subtitle="We offer high-quality pellets, granules, APIs, and intermediates, backed by WHO-GMP compliance and global trust."

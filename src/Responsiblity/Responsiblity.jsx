@@ -3,12 +3,15 @@ import "./Responsiblity.css";
 import { FaHandsHelping, FaShieldAlt, FaGlobe } from "react-icons/fa";
 import Hero from "../Components/Hero/Hero";
 import { Link } from "react-router-dom";
+import SEO from "../seo/SEO";
+import { getPageSEO } from "../seo/seoConfig";
 import ehs from "./ehss.jpg"
 import header from "./header.jpg";
 import csr from "../../src/Assets/CSR/4.jpeg"
 import uplift from "../About/Milestones/5.jpg"
 
 const Responsibility = () => {
+  const seo = getPageSEO('responsibility');
   const pillars = [
     {
       id: "csr",
@@ -62,6 +65,13 @@ const Responsibility = () => {
 
   return (
     <div className="responsibility">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="responsibility"
+      />
       {/* HERO */}
       <Hero
         title="Our Responsibility"

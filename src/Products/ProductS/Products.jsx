@@ -3,6 +3,8 @@ import { Link, NavLink, useParams, useNavigate } from "react-router-dom";
 import "./products.css";
 import bg from "./bg.jpg";
 import Hero from "../../Components/Hero/Hero";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 import pellets from "./pellets.jpg";
 import granules from "../../Components/Ecosystem/granules.png";
 import pricing from "../pricing.json";
@@ -3799,6 +3801,7 @@ export function ProductDetailPage() {
 /* ---------- Main ProductsPage ---------- */
 
 export default function ProductsPage() {
+  const seo = getPageSEO('products');
   const navigate = useNavigate();
   const { category: categorySlugRaw } = useParams();
   const categorySlug = categorySlugRaw ? categorySlugRaw.toLowerCase() : null;
@@ -3848,6 +3851,13 @@ export default function ProductsPage() {
 
   return (
     <div className="products-page">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="products"
+      />
       <Hero
         title={routeFilter ? `Our ${routeFilter.label}` : "Our Product Portfolio"}
         subtitle={

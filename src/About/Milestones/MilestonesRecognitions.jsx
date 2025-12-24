@@ -11,6 +11,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import PharmaGranulesHero from "../../Components/HEROSECTION/HeroSection";
 import Hero from "../../Components/Hero/Hero";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 import header from "./header.jpg";
 // --- Images ---
 import one from "./1.jpg";
@@ -95,6 +97,7 @@ const timelineData = [
 
 /* ----------------------------- MAIN COMPONENT ----------------------------- */
 export default function MilestonesTimeline() {
+  const seo = getPageSEO('milestones');
   const [indices, setIndices] = useState(() => timelineData.map(() => 0));
   const navigate = useNavigate();
 
@@ -133,6 +136,13 @@ export default function MilestonesTimeline() {
 
   return (
     <>
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="milestones"
+      />
       <section className="mt-section" aria-labelledby="mt-heading">
         <Hero
           title="Milestones & Recognitions"

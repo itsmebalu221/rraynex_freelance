@@ -1,11 +1,22 @@
 import React from "react";
 import "./innovation.css";
 import { FaTablets, FaCapsules, FaSyringe, FaBalanceScale } from "react-icons/fa";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 import diagram from "./innovation-diagram.jpg"; // replace with your image path
 
 export default function Innovation() {
+  const seo = getPageSEO('innovation');
+  
   return (
     <section className="innovation">
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="innovation"
+      />
       {/* Banner */}
       <div className="inno-banner">
         <div className="inno-overlay">

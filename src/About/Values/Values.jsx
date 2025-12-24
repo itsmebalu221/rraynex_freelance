@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Values.css";
 import { FaIndustry, FaBoxes, FaClipboardList } from "react-icons/fa";
 import PharmaGranulesHero from "../../Components/HEROSECTION/HeroSection";
+import SEO from "../../seo/SEO";
+import { getPageSEO } from "../../seo/seoConfig";
 /* Replace these with actual local imports or public URLs */
 import bgVision from "../../Home/bg1.jpg";
 import visionImg from "../../Home/bg1.jpg";
@@ -78,6 +80,7 @@ const CERT_DATA = [
 const uid = (s) => `vv-${s.replace(/\s+/g, "-").toLowerCase()}`;
 
 export default function VisionValues() {
+  const seo = getPageSEO('visionValues');
   const rootRef = useRef(null);
   const [modal, setModal] = useState({ open: false, cert: null });
   const [counters, setCounters] = useState({ pellets: 0, granules: 0, products: 0 });
@@ -190,6 +193,13 @@ export default function VisionValues() {
 
   return (
     <section className="vision-values" aria-labelledby="vision-values-title" ref={rootRef}>
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonical={seo.canonical}
+        pageName="visionValues"
+      />
       {/* <PharmaGranulesHero
   title="Vision that Inspires, Values that Endure"
   subtitle="Redefining pharmaceutical excellence through purpose, partnership, and continuous innovation."
