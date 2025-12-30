@@ -2,6 +2,47 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { commonOGData, generateStructuredData } from './seoConfig';
 
+// Define pages that SHOULD be indexed by Google
+const INDEXABLE_PAGES = new Set([
+  '/',
+  '/about',
+  '/about/quality',
+  '/contact',
+  '/manufacturing',
+  // Product pages - add your 20 products here
+  '/products/view/product-aspirin',
+  '/products/view/product-clopidogrel',
+  '/products/view/product-clopidogrel-aspirin',
+  '/products/view/product-duloxetine',
+  '/products/view/product-dexlansoprazole',
+  '/products/view/product-esomeprazole-ec',
+  '/products/view/product-omeprazole',
+  '/products/view/product-pantoprazole',
+  '/products/view/product-rabeprazole',
+  '/products/view/product-lansoprazole',
+  '/products/view/product-metoprolol',
+  '/products/view/product-tamsulosin',
+  '/products/view/product-venlafaxine',
+  '/products/view/product-pregabalin',
+  '/products/view/product-gabapentin',
+  '/products/view/product-mesalamine',
+  '/products/view/product-budesonide',
+  '/products/view/product-orlistat',
+  '/products/view/product-aceclofenac',
+  '/products/view/product-diclofenac',
+]);
+
+/**
+ * Check if a path should be indexed
+ * @param {string} path - The current page path
+ * @returns {boolean}
+ */
+const shouldIndex = (path) => {
+  if (!path) return false;
+  const normalizedPath = path.replace(/\/$/, '') || '/';
+  return INDEXABLE_PAGES.has(normalizedPath);
+};
+
 /**
  * SEO Component - Reusable component for managing page meta tags
  * 
@@ -13,6 +54,7 @@ import { commonOGData, generateStructuredData } from './seoConfig';
  * @param {string} props.ogImage - Open Graph image URL (optional)
  * @param {string} props.ogType - Open Graph type (default: 'website')
  * @param {Object} props.structuredData - Custom structured data (optional)
+ * @param {boolean} props.noindex - Force noindex regardless of INDEXABLE_PAGES
  */
 const SEO = ({
   title,
@@ -22,7 +64,8 @@ const SEO = ({
   ogImage,
   ogType = 'website',
   structuredData,
-  pageName
+  pageName,
+  noindex = false
 }) => {
   const fullTitle = title || 'Rraynex Pharmaceuticals';
   const ogImageUrl = ogImage || commonOGData.image;
@@ -33,8 +76,19 @@ const SEO = ({
     canonical
   }) : null);
 
+  // Determine robots directive
+  const currentPath = canonical 
+    ? canonical.replace('https://rraynex.com', '').replace(/\/$/, '') || '/'
+    : '/';
+  const isIndexable = !noindex && shouldIndex(currentPath);
+  const robotsContent = isIndexable ? 'index, follow' : 'noindex, follow';
+
   return (
     <Helmet>
+      {/* Robots Meta Tag */}
+      <meta name="robots" content={robotsContent} />
+      <meta name="googlebot" content={robotsContent} />
+      
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
@@ -71,3 +125,4 @@ const SEO = ({
 };
 
 export default SEO;
+export { INDEXABLE_PAGES, shouldIndex };

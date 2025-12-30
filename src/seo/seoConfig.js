@@ -3,17 +3,17 @@
 
 export const seoConfig = {
   home: {
-    title: "Delivering Quality Healthcare — Rraynex Pharmaceuticals",
-    description: "Rraynex Pharmaceuticals — delivering quality healthcare across 58+ countries. Research & development, compliant manufacturing and global partnerships.",
-    keywords: "pharmaceutical company, pharma pellets manufacturers, pharma granules manufacturers, medicine manufacturing company in india",
+    title: "Pellets Manufacturer India | Enteric Coated & Sustained Release | WHO-GMP | Rraynex",
+    description: "Rraynex - India's premier pellets manufacturer. Enteric coated pellets, sustained release pellets, omeprazole pellets exporter, lansoprazole pellets, micro pellets. WHO-GMP certified CDMO India for pharmaceutical pellets R&D, contract manufacturing, pellets exporter to 58+ countries.",
+    keywords: "pellets manufacturer India, enteric coated pellets manufacturer, sustained release pellets manufacturer, omeprazole pellets exporter, lansoprazole pellets manufacturer, micro pellets manufacturer, pellets exporter India, CDMO India pellets, WHO GMP pellets manufacturer, contract manufacturing pharma India",
     canonical: "https://rraynex.com/"
   },
   
   // About Pages
   aboutUs: {
-    title: "About Rraynex Pharmaceuticals | Leading Pharma Manufacturer",
-    description: "Learn about Rraynex Pharmaceuticals - a trusted pharmaceutical company with expertise in pellets and granules manufacturing, serving 58+ countries worldwide.",
-    keywords: "about rraynex, pharmaceutical company, pharma manufacturer, pellets granules",
+    title: "About Rraynex | Leading Pellets Manufacturer India | CDMO Services",
+    description: "Learn about Rraynex Pharmaceuticals - India's trusted pellets manufacturer specializing in enteric coated pellets, sustained release pellets, DC granules. WHO-GMP certified API manufacturer serving 58+ countries with contract manufacturing pharma India services.",
+    keywords: "pellets manufacturer India, pharmaceutical company, CDMO India pellets, contract manufacturing pharma India, pellets exporter India, WHO GMP pellets manufacturer",
     canonical: "https://rraynex.com/about"
   },
   
@@ -39,9 +39,9 @@ export const seoConfig = {
   },
   
   quality: {
-    title: "Quality Assurance | Rraynex Pharmaceuticals",
-    description: "Rraynex Pharmaceuticals maintains the highest quality standards with WHO-GMP, ISO certifications, and stringent quality control in pharmaceutical manufacturing.",
-    keywords: "pharmaceutical quality, WHO-GMP, ISO certification, quality control, pharma standards",
+    title: "WHO-GMP Certified Pellets Manufacturer | FDA Norms | Quality Assurance | Rraynex",
+    description: "Rraynex maintains WHO GMP pellets manufacturer standards with FDA norms pharma manufacturer India compliance. ISO 9001:2015 certified pharmaceutical pellets R&D pilot scale facility with stringent quality control for enteric coated pellets and sustained release pellets manufacturing.",
+    keywords: "WHO GMP pellets manufacturer, FDA norms pharma manufacturer India, pharmaceutical pellets R&D pilot scale, ISO certification, quality control pharma, enteric coated pellets manufacturer",
     canonical: "https://rraynex.com/about/quality"
   },
   
@@ -90,17 +90,17 @@ export const seoConfig = {
   
   // Manufacturing
   manufacturing: {
-    title: "Manufacturing Excellence | Rraynex Pharmaceuticals",
-    description: "State-of-the-art pharmaceutical manufacturing facilities for pellets, granules, and dosage forms with WHO-GMP, ISO, and international compliance.",
-    keywords: "pharmaceutical manufacturing, pellets manufacturing, granules production, WHO-GMP facility",
+    title: "Pellets Manufacturing Facility India | Pellet Coating Services | Contract Manufacturing | Rraynex",
+    description: "State-of-the-art pellets manufacturer India facility offering pellet coating services India, third party manufacturing tablets India, contract manufacturing pharma India. WHO-GMP certified for enteric coated pellets, sustained release pellets, DC granules manufacturer Gujarat, API manufacturer Hyderabad.",
+    keywords: "pellets manufacturer India, pellet coating services India, third party manufacturing tablets India, contract manufacturing pharma India, DC granules manufacturer Gujarat, API manufacturer Hyderabad, WHO GMP pellets manufacturer, pharmaceutical technology transfer services",
     canonical: "https://rraynex.com/manufacturing"
   },
   
   // Products
   products: {
-    title: "Pharmaceutical Products | Pellets & Granules | Rraynex",
-    description: "Browse Rraynex Pharmaceuticals' comprehensive portfolio of pharmaceutical pellets, granules, and specialized products for regulated and emerging markets.",
-    keywords: "pharmaceutical products, pharma pellets, pharma granules, drug products",
+    title: "Pharmaceutical Pellets Manufacturer India | Omeprazole, Lansoprazole, Tamsulosin SR Pellets | Rraynex",
+    description: "Browse Rraynex's comprehensive portfolio - omeprazole pellets exporter, lansoprazole pellets manufacturer, domperidone SR pellets, tamsulosin SR pellets supplier, pellets for orlistat. WHO-GMP certified micro pellets manufacturer India. DC granules exporter, taste masked granules, pharmaceutical pellets R&D pilot scale.",
+    keywords: "pellets manufacturer India, omeprazole pellets exporter, lansoprazole pellets manufacturer, domperidone SR pellets manufacturer, tamsulosin SR pellets supplier, micro pellets manufacturer, pellets for orlistat manufacturer, DC granules exporter India, taste masked granules manufacturer, pharmaceutical pellets R&D pilot scale, enteric coated pellets manufacturer, sustained release pellets manufacturer, WHO GMP pellets manufacturer, pellet coating services India, CDMO India pellets",
     canonical: "https://rraynex.com/products"
   },
   
@@ -128,17 +128,17 @@ export const seoConfig = {
   
   // Worldwide
   worldwide: {
-    title: "Global Presence | Worldwide Reach | Rraynex Pharmaceuticals",
-    description: "Rraynex Pharmaceuticals serves 58+ countries across Asia, Africa, Europe, and Latin America with pharmaceutical products and partnerships.",
-    keywords: "global pharmaceutical company, worldwide presence, international markets, pharma exports",
+    title: "Pellets Exporter India | Global Pharmaceutical Reach | 58+ Countries | Rraynex",
+    description: "Rraynex - trusted pellets exporter India serving 58+ countries across Asia, Africa, Europe, and Latin America. Omeprazole pellets exporter, pharmaceutical pellets manufacturer with DC granules exporter India capabilities and herbal API exporter India services.",
+    keywords: "pellets exporter India, omeprazole pellets exporter, DC granules exporter India, herbal API exporter India, pharmaceutical exports, global pharma company India",
     canonical: "https://rraynex.com/worldwide"
   },
   
   // Contact
   contact: {
-    title: "Contact Us | Rraynex Pharmaceuticals",
-    description: "Get in touch with Rraynex Pharmaceuticals for business inquiries, partnerships, product information, or career opportunities. We're here to help.",
-    keywords: "contact rraynex, pharmaceutical inquiry, business contact, pharma partnership",
+    title: "Contact Rraynex | Pellets Manufacturer India | CDMO & Contract Manufacturing",
+    description: "Get in touch with Rraynex - India's leading pellets manufacturer for contract manufacturing pharma India, CDMO India pellets services, third party manufacturing tablets India, PCD pharma franchise India, and pharmaceutical technology transfer services.",
+    keywords: "contact pellets manufacturer India, CDMO India pellets, contract manufacturing pharma India, third party manufacturing tablets India, PCD pharma franchise India, pharmaceutical technology transfer services",
     canonical: "https://rraynex.com/contact"
   }
 };

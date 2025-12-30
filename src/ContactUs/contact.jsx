@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { FaBuilding, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import "./Contact.css";
 import Hero from "../Components/Hero/Hero";
 import SEO from "../seo/SEO";
 import { getPageSEO } from "../seo/seoConfig";
+import { canRunBrowserCode, isBrowser } from "../utils/ssrHelpers";
 
 const REGIONAL_OFFICES = [
   {
@@ -48,49 +49,56 @@ const PRIMARY_CONTACT_EMAIL = "communications@rraynex.com";
 export default function Contact() {
   const seo = getPageSEO('contact');
   const [showMap, setShowMap] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
   const topContacts = MAIL_CONTACTS.slice(0, 2);
   const bottomContacts = MAIL_CONTACTS.slice(2, 4);
   const [formNotice, setFormNotice] = useState("");
 
+  // Hydration guard - only enable interactive features after mount
   useEffect(() => {
-    const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
-    const isHeadless = ua.includes("HeadlessChrome") || ua.includes("PhantomJS");
-    if (!isHeadless) setShowMap(true);
+    if (canRunBrowserCode()) {
+      setIsHydrated(true);
+      setShowMap(true);
+    }
   }, []);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = useCallback((event) => {
     event.preventDefault();
+    
+    // Guard: Only process form in browser after hydration
+    if (!isHydrated || !isBrowser()) {
+      return;
+    }
+    
     const form = event.currentTarget;
     const data = new FormData(form);
-    const fullName = (data.get("fullName") || "").toString().trim();
-    const company = (data.get("company") || "").toString().trim();
-    const email = (data.get("email") || "").toString().trim();
-    const message = (data.get("message") || "").toString().trim();
+    const fullName = String(data.get("fullName") || "").trim();
+    const company = String(data.get("company") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const message = String(data.get("message") || "").trim();
 
     const subject = encodeURIComponent(
-      `Enquiry from ${fullName || "Rraynex visitor"} — Rraynex Pharma}`
+      "Enquiry from " + (fullName || "Rraynex visitor") + " — Rraynex Pharma"
     );
 
     const bodyLines = [
-      `Name: ${fullName || "N/A"}`,
-      `Company: ${company || "N/A"}`,
-      `Email: ${email || "N/A"}`,
+      "Name: " + (fullName || "N/A"),
+      "Company: " + (company || "N/A"),
+      "Email: " + (email || "N/A"),
       "",
       message || "(Message not provided)",
     ];
 
     const body = encodeURIComponent(bodyLines.join("\n"));
-    const mailtoUrl = `mailto:${PRIMARY_CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    const mailtoUrl = "mailto:" + PRIMARY_CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
 
-    if (typeof window !== "undefined") {
-      window.location.href = mailtoUrl;
-    }
+    window.location.href = mailtoUrl;
 
     setFormNotice(
-      `Your email client should open with a draft message addressed to ${PRIMARY_CONTACT_EMAIL}. If it does not, please email us directly.`
+      "Your email client should open with a draft message addressed to " + PRIMARY_CONTACT_EMAIL + ". If it does not, please email us directly."
     );
     form.reset();
-  };
+  }, [isHydrated]);
 
   return (
     <main className="contact">

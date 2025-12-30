@@ -3015,10 +3015,6 @@ const PRODUCT_NARRATIVES = {
   "Usage Note: For educational and industrial purposes. Consumers should use aspirin-based medications only as directed by healthcare professionals. Manufacturers are advised to validate formulations through standard pharmacopoeial protocols before commercialization."
 ],
   "product-clopidogrel": [
-    `Clopidogrel pellets from Rraynex support secondary prevention programs that rely on dependable ADP receptor blockade. We start with pharmacopeial-grade clopidogrel bisulfate and convert it through closed granulation trains that protect chirality and particle integrity. Layering operations are tuned to maintain uniform weight gain across multi-kilogram batches, so fixed-dose combinations carry the same exposure profile as single-ingredient capsules. Inline humidity and temperature mapping ensures the prodrug remains stable during processing, while low residual-solvent coatings preserve the delicate conversion pathway that activates clopidogrel in vivo. Pellets are sized within a narrow span to safeguard blend uniformity during downstream filling and to minimize dust generation.`,
-    `Documentation packages provide comparative dissolution against originator references under multiple pH conditions, alongside nitrosamine risk evaluations and per-lot stability data. Customers can choose moisture-barrier drums or tamper-evident polymer bags that survive intercontinental shipping without caking. Our technical services team supports scale-up, offering guidance on capsule fill weight adjustments, gastro-resistant layering, or customized lubricant blends to reach target disintegration times. For markets demanding stringent pharmacovigilance we maintain change-control logs and audit trails ready for inclusion in CTD, ACTD, or eCTD submissions. The result is a cooperative supply partnership that keeps dual antiplatelet therapy lines responsive to hospital and tender demand.`
-  ],
-  "product-clopidogrel": [
   "Clopidogrel Pellets – Precision-Engineered for Reliable Antiplatelet Performance. Rraynex’s clopidogrel pellets are formulated using high-purity clopidogrel bisulfate, delivering stable, reproducible ADP receptor inhibition essential for dual antiplatelet therapy (DAPT) and cardiovascular care formulations. Manufactured through controlled granulation and layering systems, these pellets offer unmatched consistency, stability, and process reproducibility.",
   
   "Overview: Clopidogrel is a trusted antiplatelet prodrug that helps prevent blood clots in patients with heart disease, stroke risk, or peripheral arterial conditions. Our pelletised form enhances manufacturability and bioavailability consistency—supporting both monotherapy capsules and fixed-dose combination tablets used in cardiology and post-angioplasty regimens.",
@@ -3859,11 +3855,11 @@ export default function ProductsPage() {
         pageName="products"
       />
       <Hero
-        title={routeFilter ? `Our ${routeFilter.label}` : "Our Product Portfolio"}
+        title={routeFilter ? `Our ${routeFilter.label}` : "Pharmaceutical Pellets Manufacturer India"}
         subtitle={
           routeFilter
             ? `${routeFilter.tagline}`
-            : "From advanced pellets to APIs, Rraynex delivers quality formulations engineered for global healthcare standards."
+            : "WHO-GMP certified pellets manufacturer India — enteric coated pellets, sustained release pellets, omeprazole pellets exporter, lansoprazole pellets, micro pellets, and DC granules. CDMO India for pharmaceutical pellets R&D and pilot scale manufacturing."
         }
         bgImage={routeFilter ? routeFilter.bgImage : "https://images.pexels.com/photos/3735764/pexels-photo-3735764.jpeg?auto=compress&cs=tinysrgb&w=1920"}
         plink="/products/categories/pellets"
@@ -3877,9 +3873,9 @@ export default function ProductsPage() {
       <main id="products" className="products-shell">
         <header className="products-heading">
           <div>
-            <span className="products-eyebrow">Product catalogue</span>
-            <h1>{routeFilter ? routeFilter.label : "All Products"}</h1>
-            <p className="products-summary">Pellets • Granules • APIs • Intermediates</p>
+            <span className="products-eyebrow">Pellets Manufacturer India — Product Catalogue</span>
+            <h1>{routeFilter ? routeFilter.label : "Pharmaceutical Pellets & Granules"}</h1>
+            <p className="products-summary">Enteric Coated Pellets • Sustained Release Pellets • Micro Pellets • DC Granules • APIs</p>
           </div>
           <div className="products-heading__actions">
             <Link className="btn btn-outline" to="/products/categories">
@@ -3950,10 +3946,12 @@ export default function ProductsPage() {
         <section className="products-support" aria-label="Need assistance?">
           <div className="products-support__card">
             <div>
-              <h2>Need formulation support?</h2>
+              <h2>Pellets Manufacturing & Contract Services</h2>
               <p>
-                Our technical specialists can help you with DMF access, stability data, custom strengths and
-                regulatory documentation.
+                As India's leading pellets manufacturer, we offer pharmaceutical pellets R&D pilot scale development, 
+                pellet coating services India, third party manufacturing tablets India, and contract manufacturing pharma India. 
+                Our CDMO India team provides DMF access, stability data, pharmaceutical technology transfer services, 
+                and custom formulations for omeprazole, lansoprazole, domperidone SR, and tamsulosin SR pellets.
               </p>
             </div>
             <div className="products-support__actions">
@@ -3967,8 +3965,8 @@ export default function ProductsPage() {
 
         <footer className="products-footer">
           <small>
-            Certifications: WHO-GMP, ISO 9001, ISO 14001. For DMF, VQM, TSE/BSE/MSDS and stability data please contact
-            sales.
+            WHO GMP Pellets Manufacturer | FDA Norms Pharma Manufacturer India | Pellets Exporter India | 
+            Certifications: WHO-GMP, ISO 9001, ISO 14001. For DMF, VQM, TSE/BSE/MSDS and stability data please contact sales.
           </small>
         </footer>
       </main>
