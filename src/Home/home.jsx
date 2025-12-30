@@ -190,25 +190,28 @@ export default function Home() {
       {/* Second Section */}
       <section className="second-section" id="second-section">
         {/* H1: ensure this exists in DOM for crawlers even if overlay visible */}
-        <h1>{homeSeo?.h1 || "Delivering Quality Healthcare"}</h1>
+        <h1>{homeSeo?.h1 || "Leading Pellets Manufacturer in India"}</h1>
 
         <p>
-          As a WHO-GMP and ISO 9001:2015 certified pharmaceutical manufacturer in Mumbai, we specialize in
-          advanced drug delivery systems including enteric-coated pellets, sustained-release formulations, and
-          pharmaceutical granules, serving healthcare partners across 58+ countries.
+          As a WHO-GMP certified <strong>pellets manufacturer in India</strong>, Rraynex specializes in 
+          <strong> enteric coated pellets</strong>, <strong>sustained release pellets</strong>, and <strong>micro pellets</strong>. 
+          We are a trusted <strong>omeprazole pellets exporter</strong>, <strong>lansoprazole pellets manufacturer</strong>, 
+          <strong> domperidone SR pellets manufacturer</strong>, and <strong>tamsulosin SR pellets supplier</strong>. 
+          Our <strong>CDMO India</strong> facility offers <strong>pharmaceutical pellets R&D pilot scale</strong> manufacturing, 
+          <strong> pellet coating services India</strong>, and <strong>contract manufacturing pharma India</strong> to healthcare partners across 58+ countries.
         </p>
 
         <div style={{ textAlign: "center" }}>
-          <h2>Why Choose Rraynex for Pharmaceutical Pellets & Granules Manufacturing</h2>
+          <h2>Why Choose Rraynex — India's Premier Pellets Manufacturer & Exporter</h2>
         </div>
 
         <div className="card-container">
           <InfoCard
             className="info-card"
             icon={<BulbOutlined style={{ fontSize: "50px" }} />}
-            title="Innovation in Pharmaceutical Manufacturing"
+            title="Advanced Pellets & CDMO Services"
             description={
-              "Advanced pharmaceutical pellets and granules manufacturing with cutting-edge multiparticulate drug delivery technology. We specialize in enteric-coated, sustained-release, and immediate-release formulations, ensuring world-class quality standards for global healthcare partners."
+              "Specialized pellets manufacturer India offering enteric coated pellets, sustained release pellets, micro pellets, and taste masked granules. Our pharmaceutical pellets R&D pilot scale facility provides pellet coating services, pharmaceutical technology transfer services, and custom formulation development for omeprazole, lansoprazole, domperidone SR, and tamsulosin SR pellets."
             }
             buttonText="Know More"
             buttonLink="/about/vision-and-values"
@@ -216,18 +219,18 @@ export default function Home() {
 
           <InfoCard
             className="info-card"
-            title="WHO-GMP Certified Quality Assurance"
+            title="WHO-GMP & FDA Norms Certified"
             icon={<HeartOutlined style={{ fontSize: "50px" }} />}
-            description="ISO 9001:2015 and WHO-GMP certified manufacturing facility in Pune with stringent quality control at every stage. From raw material sourcing to final pharmaceutical pellets production, our regulatory compliance ensures international pharmaceutical standards for APIs, pellets, and granules."
+            description="ISO 9001:2015 and WHO GMP pellets manufacturer with FDA norms pharma manufacturing. Our DC granules manufacturer Gujarat and API manufacturer Hyderabad facilities ensure stringent quality control. From raw material sourcing to pellets for orlistat, our DC granules exporter India division meets international pharmaceutical standards."
             buttonText="Know More"
             buttonLink="/about/vision-and-values"
           />
 
           <InfoCard
             className="info-card"
-            title="Global Pharmaceutical Export Excellence"
+            title="Global Pellets Exporter & Contract Manufacturing"
             icon={<RiseOutlined style={{ fontSize: "50px" }} />}
-            description="Trusted pharmaceutical pellets and granules supplier to 58+ countries worldwide. Beyond pharmaceuticals, Rraynex is expanding into complementary sectors including engineering and real estate, while strategically positioning in the energy sector for sustainable growth."
+            description="Trusted pellets exporter India serving 58+ countries. We offer third party manufacturing tablets India, contract manufacturing pharma India, finished formulations contract manufacturer services, and PCD pharma franchise India opportunities. Our herbal extract manufacturer India and herbal API exporter India divisions complement our pharmaceutical excipients suppliers India network."
             buttonText="Know More"
             buttonLink="/responsibility/uplifting-ecosystem"
           />

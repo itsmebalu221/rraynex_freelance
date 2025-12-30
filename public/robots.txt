@@ -1,5 +1,43 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Allow: /about
+Allow: /about/quality
+Allow: /contact
+Allow: /manufacturing
+Allow: /products/view/product-aspirin
+Allow: /products/view/product-clopidogrel
+Allow: /products/view/product-clopidogrel-aspirin
+Allow: /products/view/product-duloxetine
+Allow: /products/view/product-dexlansoprazole
+Allow: /products/view/product-esomeprazole-ec
+Allow: /products/view/product-omeprazole
+Allow: /products/view/product-pantoprazole
+Allow: /products/view/product-rabeprazole
+Allow: /products/view/product-lansoprazole
+Allow: /products/view/product-metoprolol
+Allow: /products/view/product-tamsulosin
+Allow: /products/view/product-venlafaxine
+Allow: /products/view/product-pregabalin
+Allow: /products/view/product-gabapentin
+Allow: /products/view/product-mesalamine
+Allow: /products/view/product-budesonide
+Allow: /products/view/product-orlistat
+Allow: /products/view/product-aceclofenac
+Allow: /products/view/product-diclofenac
+
+# Block all other product pages from crawling
+Disallow: /products/view/
+Disallow: /products/categories/
+Disallow: /blog/
+Disallow: /responsibility/
+Disallow: /worldwide
+Disallow: /about/vision-and-values
+Disallow: /about/milestone-and-recognitions
+Disallow: /about/innovation
+Disallow: /about/board-of-directors
+
+# Allow static assets
+Allow: /static/
 
 Sitemap: https://www.rraynex.com/sitemap.xml

@@ -26,7 +26,6 @@
     "react-router-dom": "^7.8.2",
     "react-scripts": "5.0.1",
     "react-simple-maps": "^3.0.0",
-    "react-snap": "^1.23.0",
     "three": "^0.179.1",
     "topojson-client": "^3.1.0",
     "web-vitals": "^2.1.4",
@@ -35,9 +34,58 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snap",
+    "build:no-snap": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+    "source": "build",
+    "destination": "build",
+    "inlineCss": false,
+    "removeStyleTags": false,
+    "minifyHtml": false,
+    "skipThirdPartyRequests": true,
+    "headless": true,
+    "crawl": false,
+    "include": [
+      "/",
+      "/about",
+      "/about/quality",
+      "/contact",
+      "/manufacturing",
+      "/products/view/product-aspirin",
+      "/products/view/product-clopidogrel",
+      "/products/view/product-clopidogrel-aspirin",
+      "/products/view/product-duloxetine",
+      "/products/view/product-dexlansoprazole",
+      "/products/view/product-esomeprazole-ec",
+      "/products/view/product-omeprazole",
+      "/products/view/product-pantoprazole",
+      "/products/view/product-rabeprazole",
+      "/products/view/product-lansoprazole",
+      "/products/view/product-metoprolol",
+      "/products/view/product-tamsulosin",
+      "/products/view/product-venlafaxine",
+      "/products/view/product-pregabalin",
+      "/products/view/product-gabapentin",
+      "/products/view/product-mesalamine",
+      "/products/view/product-budesonide",
+      "/products/view/product-orlistat",
+      "/products/view/product-aceclofenac",
+      "/products/view/product-diclofenac"
+    ],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage"
+    ],
+    "puppeteerExecutablePath": null,
+    "externalServer": false,
+    "viewport": {
+      "width": 1200,
+      "height": 800
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -49,7 +97,8 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "chrome >= 61"
     ],
     "development": [
       "last 1 chrome version",
@@ -63,6 +112,7 @@
     "postcss": "^8.5.6",
     "postcss-loader": "^8.2.0",
     "puppeteer": "^24.22.3",
+    "react-snap": "^1.23.0",
     "tailwindcss": "^4.1.14"
   }
 }
