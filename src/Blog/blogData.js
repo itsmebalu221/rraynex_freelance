@@ -6,6 +6,15 @@ import interImg from "../Products/Categories/inter.png";
 import milestone1 from "../About/Milestones/1.jpg";
 import homeBg from "../Home/bg1.jpg";
 
+// Import blog header images
+import blogHeader1 from "../Assets/Blog-header/1.png";
+import blogHeader2 from "../Assets/Blog-header/2.png";
+import blogHeader3 from "../Assets/Blog-header/3.png";
+import blogHeader4 from "../Assets/Blog-header/4.png";
+import blogHeader5 from "../Assets/Blog-header/5.png";
+import blogHeader6 from "../Assets/Blog-header/6.png";
+import blogHeader7 from "../Assets/Blog-header/7.png";
+
 export const BLOG_POSTS = [
   {
     id: "filling-the-gap-rraynex-pioneered-pellet-granule-manufacturing-india",
@@ -17,7 +26,7 @@ export const BLOG_POSTS = [
     date: "2025-01-15",
     readTime: 5,
     heroQuote: "Why should we import what we are fully capable of creating ourselves?",
-    image: homeBg,
+    image: blogHeader1,
     gallery: [],
     summary: "Unveil the story behind Rraynex. Understand how our director, Mr. Nishit Gupta, identified a vital void in Indian pharma and led to local manufacturing of pellets, granules, and APIs.",
     content: [
@@ -72,7 +81,7 @@ export const BLOG_POSTS = [
     date: "2025-01-20",
     readTime: 6,
     heroQuote: "Innovation, Value, and Growth form the foundation for all of our decisions.",
-    image: homeBg,
+    image: blogHeader2,
     gallery: [],
     summary: "Examine the three main tenets that Rraynex Pharmaceuticals is built upon. Learn how we are enabling healthier lives globally through our dedication to Innovation, Value, and Growth.",
     content: [
@@ -139,7 +148,7 @@ export const BLOG_POSTS = [
     date: "2025-01-25",
     readTime: 7,
     heroQuote: "In pharmaceuticals, what's the most important ingredient? It's not listed on the label. It's trust.",
-    image: homeBg,
+    image: blogHeader3,
     gallery: [],
     summary: "In pharmaceuticals, trust is everything. Discover how Rraynex's commitment to quality and safety goes beyond the formula, embedding excellence into every process.",
     content: [
@@ -230,7 +239,7 @@ export const BLOG_POSTS = [
     date: "2025-01-30",
     readTime: 8,
     heroQuote: "GMP compliance is not just some formality. It is what keeps things running smoothly and makes sure suppliers are trustworthy.",
-    image: homeBg,
+    image: blogHeader4,
     gallery: [],
     summary: "Discover why GMP compliance is crucial for pharmaceutical manufacturing. Learn how it ensures consistency, prevents contamination, and builds trust in the supply chain.",
     content: [
@@ -301,7 +310,7 @@ export const BLOG_POSTS = [
     date: "2025-02-05",
     readTime: 7,
     heroQuote: "Pellets are right in the middle of the shift from simple tablets to sophisticated multi-particulate drug delivery systems.",
-    image: homeBg,
+    image: blogHeader5,
     gallery: [],
     summary: "A comprehensive guide to pharmaceutical pellets for formulators. Learn about different types, manufacturing processes, and how they solve bioavailability and stability challenges.",
     content: [
@@ -360,7 +369,7 @@ export const BLOG_POSTS = [
     date: "2025-02-10",
     readTime: 6,
     heroQuote: "The API is the fundamental building block for the drug's stability, efficacy, and safety.",
-    image: homeBg,
+    image: blogHeader6,
     gallery: [],
     summary: "Discover why APIs are the backbone of every drug formulation. Learn about the critical role of API quality, physical attributes, and how they impact therapeutic success.",
     content: [
@@ -411,7 +420,7 @@ export const BLOG_POSTS = [
     date: "2025-02-15",
     readTime: 6,
     heroQuote: "To a formulator, pellets and granules refer to two different drug delivery systems with distinct physical characteristics and use cases.",
-    image: homeBg,
+    image: blogHeader7,
     gallery: [],
     summary: "Understand the key differences between pellets and granules in pharmaceutical applications. Learn when to use each for optimal formulation results.",
     content: [
