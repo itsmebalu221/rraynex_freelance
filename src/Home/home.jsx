@@ -193,7 +193,7 @@ export default function Home() {
         <h1>{homeSeo?.h1 || "Leading Pellets Manufacturer in India"}</h1>
 
         <p>
-          As a WHO-GMP certified <strong>pellets manufacturer in India</strong>, Rraynex specializes in 
+          As a WHO-GMP certified <strong>pelletss manufacturer in India</strong>, Rraynex specializes in 
           <strong> enteric coated pellets</strong>, <strong>sustained release pellets</strong>, and <strong>micro pellets</strong>. 
           We are a trusted <strong>omeprazole pellets exporter</strong>, <strong>lansoprazole pellets manufacturer</strong>, 
           <strong> domperidone SR pellets manufacturer</strong>, and <strong>tamsulosin SR pellets supplier</strong>. 
