@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Rraynex Pharmaceuticals Private Limited. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Rraynex Pharmaceuticals Private Limited. </p>
           <p className="footer-credits">Website made by <a href="https://aarohan.co" target="_blank" rel="noopener noreferrer" className="footer-credit-link">aarohan.co</a></p>
         </div>
       </div>
