@@ -3009,7 +3009,7 @@ const PRODUCT_NARRATIVES = {
   "• Contract formulators developing sustained or enteric-coated products.",
   "• Research institutions for controlled drug delivery studies.",
   
-  "SEO Keywords:",
+  "Additional Information:",
   "aspirin pellets, acetylsalicylic acid pellets, ASA pellets manufacturer, aspirin raw material, pharmaceutical pellets supplier, aspirin granules, enteric-coated aspirin pellets, sustained-release aspirin, aspirin bulk exporter, analgesic anti-inflammatory pellets",
   
   "Usage Note: For educational and industrial purposes. Consumers should use aspirin-based medications only as directed by healthcare professionals. Manufacturers are advised to validate formulations through standard pharmacopoeial protocols before commercialization."
@@ -3078,7 +3078,7 @@ const PRODUCT_NARRATIVES = {
   
   "Educational Insight: Duloxetine works by inhibiting the reuptake of serotonin and norepinephrine, enhancing neurotransmitter balance in the brain. Its enteric-protected pellet form prevents early degradation in gastric acid, allowing targeted release in the small intestine for improved therapeutic consistency and reduced side effects.",
   
-  "SEO Keywords:",
+  "Additional Information:",
   "duloxetine pellets, duloxetine hydrochloride pellets, SNRI pellets, antidepressant pellets, neuropathic pain pellets, enteric coated duloxetine, controlled release duloxetine, duloxetine API pellets, pharmaceutical pellets manufacturer, antidepressant raw material supplier",
   
   "Usage Note: For pharmaceutical manufacturing and educational reference only. End-use medications containing duloxetine should be used strictly under medical supervision. Manufacturers are advised to validate formulation performance according to pharmacopeial standards before commercialization."
@@ -3112,7 +3112,7 @@ const PRODUCT_NARRATIVES = {
   
   "Educational Insight: Dexlansoprazole belongs to the proton pump inhibitor (PPI) class, reducing acid production in the stomach by blocking the H+/K+ ATPase enzyme system. The dual delayed-release (DDR) technology allows two separate pulses of drug release—one in the proximal small intestine and another in the distal region—extending acid suppression duration and improving symptom control for patients with reflux and erosive esophagitis.",
   
-  "SEO Keywords:",
+  "Additional Information:",
   "dexlansoprazole pellets, DDR pellets, dual delayed-release pellets, dexlansoprazole PPI, gastro resistant pellets, acid reflux pellets, GERD treatment pellets, enteric coated dexlansoprazole, pharmaceutical pellets manufacturer, dexlansoprazole API supplier, PPI raw material exporter",
   
   "Usage Note: For pharmaceutical manufacturing and educational use only. Dexlansoprazole-containing medications should be formulated and administered under medical supervision. Manufacturers are responsible for validating formulations per pharmacopeial and regulatory guidelines before commercial release."
@@ -3288,9 +3288,43 @@ const PRODUCT_NARRATIVES = {
     `Customers receive detailed documentation with dissolution comparisons, interaction studies, and stability data that confirm both actives remain within specification across harsh climates. Packaging formats include barrier drums, nitrogen-flushed bags, and pilot-scale quantities for new market entry. Our technical teams advise on bioequivalence planning, lubricant systems, and excipient compatibility so that higher domperidone strengths integrate smoothly into existing production lines. With rigorous quality oversight and proactive communication, Rraynex supports global access to enhanced reflux management therapies.`
   ],
   "product-orlistat": [
-    `Orlistat pellets deliver lipase inhibition for obesity management programs that require reliable gastrointestinal targeting. Rraynex prepares pellets using solvent layering and controlled drying, ensuring the active remains evenly distributed and within potency limits. Protective coatings minimize oily spotting and help the active survive capsule filling, stick packs, or sachet presentations. Particle size control delivers smooth flow through high-speed equipment while maintaining low dust levels for operator safety.`,
-    `Documentation packages provide dissolution behavior in simulated intestinal fluid, impurity trends, and stability data across temperate and tropical climates. We offer packaging options from moisture-resistant drums to small nitrogen-flushed bags for pilot launches. Technical partners receive support on capsule fill optimization, flavor masking, and excipient compatibility, including blends with cellulose, mannitol, or silicon dioxide. With strong change-control governance and rapid quality responses, Rraynex keeps orlistat supply dependable as brands expand weight-management portfolios.`
-  ],
+
+  "Orlistat Pellets – Premium Pharmaceutical Pellets for Advanced Weight Management Formulations. Rraynex's Orlistat Pellets are precision-engineered using advanced pelletization technology to deliver consistent quality, excellent flow properties, and reliable formulation performance for anti-obesity pharmaceutical products. Manufactured under stringent WHO-GMP compliant processes, these pharmaceutical pellets provide uniform particle size distribution, high stability, and reproducible drug release characteristics, making them an ideal choice for pharmaceutical manufacturers, contract development organizations, and global healthcare companies seeking premium-quality Orlistat pellet solutions.",
+
+  "Overview: Orlistat is a clinically established gastrointestinal lipase inhibitor widely used in weight management therapies to reduce dietary fat absorption. Rraynex Orlistat Pellets are manufactured using optimized extrusion-spheronization and precision layering technologies to ensure excellent manufacturability, superior flowability, and consistent batch-to-batch performance. These pellets are specifically designed for capsule filling and multiparticulate oral dosage forms, supporting pharmaceutical companies in developing effective anti-obesity formulations while maintaining product stability throughout manufacturing, storage, and transportation.",
+
+  "Key Features & Benefits:",
+  "• Precision Pellet Technology: Uniform pellet size distribution ensures consistent drug loading, predictable dissolution profiles, and improved manufacturing efficiency.",
+  "• Excellent Flow Properties: Optimized pellet morphology minimizes segregation and supports high-speed capsule filling and automated pharmaceutical production lines.",
+  "• High Stability & Quality: Manufactured under controlled environmental conditions with strict monitoring of moisture content, assay, and physical characteristics for superior product stability.",
+  "• GMP-Compliant Manufacturing: Produced following internationally accepted pharmaceutical manufacturing practices to maintain reproducible quality and regulatory compliance.",
+  "• Flexible Formulation Development: Suitable for capsule formulations, multiparticulate dosage systems, and customized pharmaceutical development requirements.",
+  "• Scalable Commercial Production: Designed to support laboratory development, pilot-scale manufacturing, and large-volume commercial pharmaceutical production.",
+
+  "Educational Insight: Orlistat acts locally within the gastrointestinal tract by inhibiting gastric and pancreatic lipase enzymes responsible for breaking down dietary fats. By reducing fat absorption, it supports long-term weight management when combined with a balanced diet and regular physical activity. Pelletized Orlistat formulations provide improved processing characteristics, excellent content uniformity, and consistent manufacturing performance compared to conventional powder-based formulations, making them highly suitable for modern pharmaceutical production.",
+
+  "Technical Specifications:",
+  "• API: Orlistat",
+  "• Assay: 98.0–102.0%",
+  "• Pellet Size Range: 600–1180 μm (customizable)",
+  "• Loss on Drying: ≤1.5%",
+  "• Bulk Density: Optimized for high-speed capsule filling",
+  "• Packaging: 25 kg HDPE drum with double-layer LDPE liner and moisture-protective sealing",
+  "• Storage: Store below 25°C in a cool, dry place, protected from excessive moisture, heat, and direct sunlight.",
+
+  "Applications:",
+  "• Pharmaceutical manufacturers producing anti-obesity capsules and oral solid dosage formulations.",
+  "• Contract Development and Manufacturing Organizations (CDMOs) developing pellet-based weight management products.",
+  "• Pharmaceutical exporters supplying regulated and semi-regulated international markets.",
+  "• Research and formulation development laboratories working on advanced multiparticulate drug delivery systems.",
+  "• Companies seeking reliable bulk pharmaceutical pellets for commercial manufacturing.",
+
+  "Pharmaceutical Profile: Rraynex is a trusted Orlistat Pellets manufacturer and supplier providing high-quality pharmaceutical pellets for global pharmaceutical companies. Our Orlistat Pellets are manufactured to support consistent formulation performance, regulatory-focused quality systems, and scalable commercial production. Available in bulk quantities, these anti-obesity pellets are suitable for pharmaceutical manufacturers, formulation developers, contract manufacturers, and exporters seeking dependable supply of premium pharmaceutical pellet technologies.",
+
+  "SEO Content: Pharmaceutical companies searching for Orlistat Pellets, Orlistat Pellet Manufacturer, Orlistat Pellet Supplier, Anti-Obesity Pellets, Weight Management Pellets, Pharmaceutical Pellets Manufacturer, Bulk Orlistat Pellets, Orlistat Pellets Manufacturer in India, GMP Pharmaceutical Pellet Manufacturer, Contract Manufacturing Services, Pharmaceutical Pellet Exporter, Capsule Filling Pellets, Multiparticulate Pellet Systems, Bulk Pharmaceutical Pellet Supplier, or Orlistat Raw Material Solutions can rely on Rraynex for technically advanced manufacturing, stringent quality control, regulatory-focused production, scalable manufacturing capabilities, and dependable global supply solutions.",
+
+  "Usage Note: Intended exclusively for pharmaceutical manufacturing, formulation development, research, and industrial applications. Orlistat-containing pharmaceutical products should be formulated, validated, and administered in accordance with applicable pharmacopeial standards, regulatory requirements, and healthcare professional guidance before commercial distribution."
+],
   "product-pantoprazole": [
     `Pantoprazole pellets from Rraynex underpin a broad portfolio of proton pump inhibitor therapies that call for multiple strengths. Manufacturing starts with pharmacopeial pantoprazole sodium sesquihydrate processed in humidity-controlled suites. Seal coats, drug layering, and enteric polymers are carefully sequenced to protect the acid-labile core while delivering low ash content for downstream compression. Pellets exhibit consistent size distribution, supporting MUPS tablets, capsules, or sachet formulations without segregation. Quality monitoring covers assay, moisture, and dissolution across strengths to maintain predictable gastric resistance.`,
     `We supply detailed technical information encompassing dissolution comparisons, impurity trend analyses, and stability data aligned to ICH zones. Packaging is flexible, with moisture-barrier drums, foil-lined bags, and pilot-scale packs available to match forecast demand. Technical teams assist with method transfers, lubricant selection, and compatibility evaluations with excipients such as MCC, crospovidone, or mannitol. Regulatory specialists maintain ready-to-file CTD modules and transparent change-control logs, allowing customers to launch or scale pantoprazole products efficiently.`
