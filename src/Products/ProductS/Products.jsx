@@ -74,7 +74,7 @@ export const PRODUCTS = [
   {
     id: "pellet-dexlansoprazole",
     slug: "product-dexlansoprazole",
-    name: "Dexlansoprazole DDR",
+    name: "Dexlansoprazole",
     type: "Pellets",
     family: "pellets",
   category: "Anti-Ulcerant (Ppls)",
@@ -84,6 +84,21 @@ export const PRODUCTS = [
     grade: "IP / BP / USP / EP",
     unit: "25/50 kg",
     tags: ["pellet", "dexlansoprazole", "ppl"],
+    image: "/assets/products/placeholder.jpg",
+  },
+  {
+    id: "pellet-dexlansoprazole-mups",
+    slug: "product-dexlansoprazole-mups",
+    name: "Dexlansoprazole MUPS",
+    type: "Pellets",
+    family: "pellets",
+    category: "Anti-Ulcerant (Ppls)",
+    strengths: [],
+    description:
+      "Multiparticulate pellets for flexible delayed-release formulation development in proton pump inhibitor programs.",
+    grade: "IP / BP / USP / EP",
+    unit: "25/50 kg",
+    tags: ["pellet", "dexlansoprazole", "mups"],
     image: "/assets/products/placeholder.jpg",
   },
   {
@@ -162,6 +177,36 @@ export const PRODUCTS = [
     image: "/assets/products/placeholder.jpg",
   },
   {
+    id: "pellet-illaprazole",
+    slug: "product-illaprazole",
+    name: "Illaprazole",
+    type: "Pellets",
+    family: "pellets",
+    category: "Anti-Ulcerant (PPLs)",
+    strengths: ["15%", "20%"],
+    description:
+      "Acid-suppressive pellets designed for proton pump inhibitor formulations requiring stability and controlled release in gastro-resistant systems.",
+    grade: "IP / BP / USP / EP",
+    unit: "25/50 kg",
+    tags: ["pellet", "illaprazole"],
+    image: "/assets/products/placeholder.jpg",
+  },
+  {
+    id: "pellet-itopride",
+    slug: "product-itopride",
+    name: "Itopride",
+    type: "Pellets",
+    family: "pellets",
+    category: "Prokinetic",
+    strengths: ["25 mg", "50 mg"],
+    description:
+      "Prokinetic pellets supporting gastrointestinal motility formulations with consistent particle size and reliable downstream handling.",
+    grade: "IP / BP / USP / EP",
+    unit: "25/50 kg",
+    tags: ["pellet", "itopride", "prokinetic"],
+    image: "/assets/products/placeholder.jpg",
+  },
+  {
     id: "pellet-lansoprazole",
     slug: "product-lansoprazole",
     name: "Lansoprazole",
@@ -224,7 +269,7 @@ export const PRODUCTS = [
   {
     id: "pellet-omeprazole",
     slug: "product-omeprazole",
-    name: "Omeprazole EC",
+    name: "Omeprazole",
     type: "Pellets",
   family: "pellets",
     category: "Anti-Ulcerant (Ppls)",
@@ -297,6 +342,21 @@ export const PRODUCTS = [
     image: "/assets/products/placeholder.jpg",
   },
   {
+    id: "pellet-pantoprazole-itopride",
+    slug: "product-pantoprazole-itopride",
+    name: "Pantoprazole + Itopride",
+    type: "Pellets",
+    family: "pellets",
+    category: "Anti-Ulcerant (PPLs)",
+    strengths: ["20 mg + 50 mg"],
+    description:
+      "Combination pellets uniting proton pump inhibition with prokinetic support for reflux and gastric motility programs.",
+    grade: "IP / BP / USP / EP",
+    unit: "25/50 kg",
+    tags: ["pellet", "pantoprazole", "itopride"],
+    image: "/assets/products/placeholder.jpg",
+  },
+  {
     id: "pellet-pantoprazole-domperidone",
     slug: "product-pantoprazole-domperidone",
     name: "Pantoprazole + Domperidone",
@@ -354,6 +414,21 @@ export const PRODUCTS = [
     grade: "IP / BP / USP / EP",
     unit: "25/50 kg",
     tags: ["pellet", "rabeprazole", "sodium"],
+    image: "/assets/products/placeholder.jpg",
+  },
+  {
+    id: "pellet-rabeprazole-itopride",
+    slug: "product-rabeprazole-itopride",
+    name: "Rabeprazole + Itopride",
+    type: "Pellets",
+    family: "pellets",
+    category: "Anti-Ulcerant (PPLs)",
+    strengths: ["20 mg + 50 mg"],
+    description:
+      "Combination pellets aligning acid suppression with prokinetic support for gastrointestinal symptom management.",
+    grade: "IP / BP / USP / EP",
+    unit: "25/50 kg",
+    tags: ["pellet", "rabeprazole", "itopride"],
     image: "/assets/products/placeholder.jpg",
   },
   {
@@ -417,9 +492,9 @@ export const PRODUCTS = [
     image: "/assets/products/placeholder.jpg",
   },
   {
-    id: "pellet-tamsulosin-dutasteride-02",
-    slug: "product-tamsulosin-dutasteride-02",
-    name: "Tamsulosin + Dutasteride (0.2% + 0.5%)",
+    id: "pellet-tamsulosin-dutasteride",
+    slug: "product-tamsulosin-dutasteride",
+    name: "Tamsulosin + Dutasteride",
     type: "Pellets",
     family: "pellets",
     category: "Anti-Cancer",
@@ -3084,39 +3159,33 @@ const PRODUCT_NARRATIVES = {
   "Usage Note: For pharmaceutical manufacturing and educational reference only. End-use medications containing duloxetine should be used strictly under medical supervision. Manufacturers are advised to validate formulation performance according to pharmacopeial standards before commercialization."
 ],
   "product-dexlansoprazole": [
-  "Dexlansoprazole DDR Pellets – Dual Delayed-Release Technology for Sustained Acid Control. Rraynex’s dexlansoprazole dual delayed-release (DDR) pellets are engineered to deliver sequential release pulses, ensuring extended proton pump inhibition (PPI) across the entire 24-hour dosing interval. Manufactured with precision-controlled dual enteric coating layers, these pellets achieve predictable pharmacokinetics and enhanced therapeutic consistency for gastroesophageal reflux disease (GERD) and related acid disorders.",
-  
-  "Overview: Dexlansoprazole, the R-enantiomer of lansoprazole, is a next-generation proton pump inhibitor that suppresses gastric acid secretion more effectively by providing two distinct release phases. Our pelletized DDR system uses advanced layering techniques to deliver a delayed release at two pH thresholds, ensuring prolonged acid suppression and improved patient adherence through once-daily dosing.",
-  
-  "Key Features & Benefits:",
-  "• Dual-Phase Release: Two enteric coatings with unique dissolution thresholds enable sequential drug delivery for sustained efficacy.",
-  "• Consistent Pellet Engineering: Optimized size distribution and surface finish for smooth capsule filling and uniform dispersion.",
-  "• Stability and Purity: Manufactured under controlled conditions with real-time monitoring of assay, solvent residues, and moisture content.",
-  "• Regulatory Compliance: Nitrosamine risk evaluation, comparative dissolution data, and multi-pH release profiles provided per batch.",
-  "• Climate-Validated Durability: Stability studies simulate both temperate and tropical zones to ensure coating integrity during storage and transport.",
-  "• Application Versatility: Suitable for hard gelatin capsules, sachets, or multiparticulate tablets requiring pH-triggered release.",
-  
-  "Technical Specifications:",
-  "• API: Dexlansoprazole (R-enantiomer of Lansoprazole)",
-  "• Assay: 98.0–102.0%",
-  "• Pellet Size Range: 500–1000 μm (customizable)",
-  "• Release Mechanism: Dual Delayed-Release (DDR) enteric coatings at pH 5.5 and pH 7.0",
-  "• Loss on Drying: ≤1.5%",
-  "• Packaging: Moisture-barrier drums, foil-lined pouches, or nitrogen-purged containers for long-haul stability",
-  "• Storage: Store below 25°C, protected from moisture and light.",
-  
-  "Applications:",
-  "• Pharmaceutical manufacturers formulating gastro-resistant or dual delayed-release products.",
-  "• CDMOs and R&D teams developing differentiated PPI formulations for GERD management.",
-  "• Exporters and B2B suppliers focused on high-stability enteric-coated APIs and pellets.",
-  
-  "Educational Insight: Dexlansoprazole belongs to the proton pump inhibitor (PPI) class, reducing acid production in the stomach by blocking the H+/K+ ATPase enzyme system. The dual delayed-release (DDR) technology allows two separate pulses of drug release—one in the proximal small intestine and another in the distal region—extending acid suppression duration and improving symptom control for patients with reflux and erosive esophagitis.",
-  
-  "Additional Information:",
-  "dexlansoprazole pellets, DDR pellets, dual delayed-release pellets, dexlansoprazole PPI, gastro resistant pellets, acid reflux pellets, GERD treatment pellets, enteric coated dexlansoprazole, pharmaceutical pellets manufacturer, dexlansoprazole API supplier, PPI raw material exporter",
-  
-  "Usage Note: For pharmaceutical manufacturing and educational use only. Dexlansoprazole-containing medications should be formulated and administered under medical supervision. Manufacturers are responsible for validating formulations per pharmacopeial and regulatory guidelines before commercial release."
-],
+    "Dexlansoprazole Pellets – Dual Delayed-Release Multiparticulate Technology for PPI Formulations. Rraynex Dexlansoprazole Pellets are engineered for dual delayed-release pharmaceutical formulations requiring sequential release characteristics. The multiparticulate system uses controlled layering and enteric protection to support reproducible dissolution and extended acid-suppression formulations for pharmaceutical manufacturers.",
+
+    "Overview: Dexlansoprazole is a proton pump inhibitor and the R-enantiomer of lansoprazole. Its DDR formulation is designed around two delayed-release phases. Rraynex applies controlled pelletization and coating processes to produce uniform multiparticulates suitable for capsule filling, sachets, and other dosage-form development programs.",
+
+    "Key Features & Benefits:",
+    "• Dual delayed-release pellet technology.",
+    "• Controlled coating and dissolution characteristics.",
+    "• Uniform pellet size and surface properties.",
+    "• Suitable for capsule and multiparticulate formulations.",
+    "• Technical support for development, scale-up, stability, and regulatory documentation.",
+
+    "SEO Content: Rraynex manufactures Dexlansoprazole DDR Pellets, Dexlansoprazole Pellets, Dual Delayed Release Pellets, DDR Pellets, Proton Pump Inhibitor Pellets, PPI Pellets, Enteric Coated Pellets, Gastro Resistant Pellets, Delayed Release Pellets, MUPS Pellets, Capsule Filling Pellets, Pharmaceutical Pellets, Bulk Pharmaceutical Pellets, Dexlansoprazole Pellet Manufacturer, Dexlansoprazole Pellet Supplier, Dexlansoprazole Manufacturer India, Pharmaceutical Exporter, CDMO and Contract Manufacturing solutions."
+  ],
+  "product-dexlansoprazole-mups": [
+    "Dexlansoprazole MUPS Pellets – Multiparticulate Platform for Flexible PPI Dosage Forms. Rraynex Dexlansoprazole MUPS Pellets are designed for pharmaceutical manufacturers developing multi-unit pellet systems requiring controlled particle characteristics and gastro-resistant protection. The platform supports flexible dosage-form development while maintaining focus on uniformity, coating integrity, dissolution, and downstream processability.",
+
+    "Overview: Dexlansoprazole MUPS formulations use multiple coated units rather than a single monolithic dosage form, allowing flexibility in capsule and other multiparticulate presentations. Rraynex applies controlled pelletization and coating processes to support consistent distribution, moisture management, and release behavior.",
+
+    "Key Features & Benefits:",
+    "• Multi-unit pellet system suitable for PPI formulation development.",
+    "• Controlled particle-size distribution.",
+    "• Gastro-resistant coating platform.",
+    "• Suitable for capsule and multiparticulate dosage forms.",
+    "• Technical support for formulation optimization and scale-up.",
+
+    "SEO Content: Rraynex offers Dexlansoprazole MUPS Pellets, Dexlansoprazole MUPS Manufacturer, Dexlansoprazole MUPS Supplier, Dexlansoprazole Pellets, MUPS Pellets, Multiple Unit Pellet System, PPI Pellets, Proton Pump Inhibitor Pellets, Enteric Coated Pellets, Gastro Resistant Pellets, Delayed Release Pellets, Multiparticulate Pellets, Capsule Filling Pellets, Pharmaceutical Pellets Manufacturer, Bulk Pharmaceutical Pellets, Pharmaceutical Pellet Supplier, GMP Pharmaceutical Manufacturer, CDMO, Pharmaceutical Exporter and Dexlansoprazole Manufacturer India."
+  ],
   "product-esomeprazole-ec": [
   "Esomeprazole EC Pellets – Engineered for Controlled Acid Suppression and Formulation Flexibility. Rraynex’s esomeprazole enteric-coated (EC) pellets are developed with precision layering and stability optimization, ensuring consistent performance in acid-resistant formulations. Designed for fast scalability, these pellets help manufacturers deliver dependable proton pump inhibitor (PPI) therapies with reproducible pharmacokinetics and long-term stability.",
   
@@ -3186,40 +3255,19 @@ const PRODUCT_NARRATIVES = {
   "Usage Note: For pharmaceutical manufacturing and educational use only. Esomeprazole-containing medications should be produced and administered under qualified medical supervision. Manufacturers must validate all formulations as per pharmacopeial and regulatory standards prior to commercialization."
 ],
   "product-esomeprazole-levosulpiride": [
-  "Esomeprazole + Levosulpiride Pellets – Dual-Action Gastrointestinal Therapy with Coordinated Release Control. Rraynex’s combination pellets deliver synchronized acid suppression and prokinetic activity through a precisely engineered dual-layer system. Manufactured under controlled environmental conditions, each API is isolated and layered independently to prevent interaction while maintaining uniform pellet density and consistent dissolution behavior across batches.",
-  
-  "Overview: This dual-API system combines Esomeprazole, a potent proton pump inhibitor (PPI) that suppresses gastric acid secretion, with Levosulpiride, a selective D2 receptor antagonist that enhances gastrointestinal motility. The result is an advanced formulation platform for comprehensive management of GERD, dyspepsia, and other upper gastrointestinal disorders requiring both acid control and prokinetic support.",
-  
-  "Key Features & Benefits:",
-  "• Dual-Layer Design: Esomeprazole is protected by an enteric coat for intestinal release, while Levosulpiride is exposed for early gastric availability.",
-  "• Chemical Isolation: Dedicated barrier layers prevent cross-degradation and maintain assay compliance within tight regulatory limits.",
-  "• Density-Matched Pellets: Controlled spheronization ensures both APIs distribute evenly in capsule fills, sachets, or multiparticulate systems.",
-  "• Coordinated Dissolution: Verified through dual-media dissolution studies to ensure simultaneous therapeutic onset and sustained duration.",
-  "• High Stability Profile: Robust long-term and accelerated stability data confirm impurity control under ICH climatic conditions.",
-  "• Regulatory Support: Comprehensive CTD documentation, validated analytical methods, and excipient compatibility data provided.",
-  
-  "Technical Specifications:",
-  "• APIs: Esomeprazole Magnesium Trihydrate and Levosulpiride",
-  "• Assay: 98.0–102.0% for both APIs",
-  "• Pellet Size Range: 500–1100 μm (customizable)",
-  "• Release Profile: Esomeprazole – enteric delayed release; Levosulpiride – immediate gastric release",
-  "• Coating Polymers: Methacrylic acid copolymers (Eudragit L/S series) and HPMC barrier systems",
-  "• Loss on Drying: ≤1.5%",
-  "• Packaging: Segregated or unified barrier bags, moisture-proof HDPE drums, or nitrogen-flushed containers",
-  "• Storage: Store below 25°C, protected from light and humidity.",
-  
-  "Applications:",
-  "• Pharmaceutical manufacturers producing combination PPI–prokinetic formulations for GERD and dyspepsia management.",
-  "• CDMOs developing dual-release multiparticulate systems with controlled pharmacokinetic behavior.",
-  "• R&D and regulatory teams preparing CTD/ACTD dossiers for global market submissions.",
-  
-  "Educational Insight: Esomeprazole suppresses acid secretion by irreversibly blocking gastric proton pumps, providing long-lasting relief from reflux symptoms. Levosulpiride acts as a prokinetic by enhancing gastric emptying and reducing nausea through dopaminergic receptor modulation. Together, they offer a synergistic treatment for reflux disorders involving both hyperacidity and delayed gastric motility. Pelletization ensures precise delivery of each API with reduced variability and improved bioavailability.",
-  
-  "SEO Keywords:",
-  "esomeprazole levosulpiride pellets, dual release pellets, combination PPI pellets, GERD treatment pellets, dyspepsia therapy raw material, prokinetic acid suppressant pellets, enteric coated esomeprazole pellets, levosulpiride granules, pharmaceutical pellets manufacturer, dual API pellets exporter, gastro resistant pellets supplier",
-  
-  "Usage Note: For pharmaceutical manufacturing and educational reference only. Esomeprazole + Levosulpiride formulations should be developed, validated, and marketed under appropriate medical and regulatory supervision. Manufacturers are responsible for ensuring compliance with all pharmacopeial and regional quality standards."
-],
+    "Esomeprazole + Levosulpiride Pellets – Dual-Action PPI and Prokinetic Pellets for Gastrointestinal Formulations. Rraynex Esomeprazole + Levosulpiride Pellets are engineered as a dual-API multiparticulate system combining acid suppression with prokinetic support. Controlled layering and barrier systems are used to maintain formulation integrity and consistent pellet characteristics across production batches.",
+
+    "Overview: Esomeprazole is a proton pump inhibitor, while Levosulpiride is used as a prokinetic component in gastrointestinal formulations. Rraynex focuses on controlled pellet density, particle-size distribution, API isolation, and formulation-specific dissolution to support capsule, sachet, and other multiparticulate dosage forms.",
+
+    "Key Features & Benefits:",
+    "• Dual-layer formulation approach.",
+    "• Controlled API isolation and barrier protection.",
+    "• Density-matched pellets to minimize segregation.",
+    "• Suitable for capsule and multiparticulate systems.",
+    "• Technical support for dissolution, stability, excipient compatibility, and regulatory documentation.",
+
+    "SEO Content: Rraynex supplies Esomeprazole Levosulpiride Pellets, Esomeprazole + Levosulpiride Pellets, Esome Levo Pellets, Esomeprazole Levosulpiride Manufacturer, Esomeprazole Levosulpiride Supplier, PPI Prokinetic Pellets, Gastrointestinal Combination Pellets, GERD Combination Pellets, Esomeprazole Pellets, Levosulpiride Pellets, Pharmaceutical Pellets Manufacturer, Combination Pellets Manufacturer, Capsule Filling Pellets, Multiparticulate Pellets, Bulk Pharmaceutical Pellets, GMP Pharmaceutical Manufacturer, CDMO, Contract Manufacturing, Pharmaceutical Exporter and Bulk Pellet Supplier."
+  ],
   "product-esomeprazole-domperidone": [
   "Esomeprazole + Domperidone Pellets – Integrated Dual-Action Solution for GERD and Reflux-Related Nausea. Rraynex’s combination pellets are engineered to deliver coordinated acid suppression and prokinetic relief through a dual-phase release system. Each API is processed independently to maintain chemical stability and controlled release, ensuring reliable therapeutic performance and formulation consistency across all scales of production.",
   
@@ -3255,13 +3303,58 @@ const PRODUCT_NARRATIVES = {
   
   "Usage Note: For pharmaceutical manufacturing and educational purposes only. Esomeprazole + Domperidone formulations should be developed and administered under professional medical supervision. Manufacturers must ensure compliance with pharmacopeial and regional quality standards prior to market release."
 ],
+  "product-illaprazole": [
+    "Illaprazole Pellets – Proton Pump Inhibitor Multiparticulates for Acid-Suppression Formulations. Rraynex Illaprazole Pellets are developed for pharmaceutical manufacturers seeking a reliable pelletized platform for acid-suppression programs. Controlled layering and enteric protection are used to preserve the active ingredient while supporting consistent downstream handling.",
+
+    "Overview: Illaprazole is positioned within the proton pump inhibitor family for formulations requiring robust gastric protection and reproducible release. Rraynex focuses on particle-size control, moisture management, and coating integrity to support capsule filling, multiparticulate dosage forms, and scale-up programs.",
+
+    "Key Features & Benefits:",
+    "• Controlled pellet processing for consistent handling.",
+    "• Enteric protection support for delayed release.",
+    "• Suitable for formulation development and commercial supply.",
+    "• Technical support for stability, dissolution, and regulatory documentation."
+  ],
   "product-itraconazole": [
-    `Itraconazole pellets deliver antifungal coverage in a multiparticulate format that supports systemic therapy and localized gastrointestinal indications. Rraynex leverages fluid bed coating to distribute itraconazole uniformly across inert cores, followed by polymer layering that enhances dissolution in acidic and neutral environments. Particle size and sphericity are carefully controlled, delivering smooth flow for capsule filling and minimal dust formation in contained suites. Robust in-process controls track potency, residual solvent, and pellet friability to maintain performance during global transport.`,
-    `Clients obtain comprehensive technical dossiers featuring dissolution data in simulated gastric and intestinal fluids, stability profiles under climatic zones II through IV, and validated analytical methods for related substances. Packaging can be tailored to clinical, commercial, or contract-manufacturing needs, with options including foil-lined drums, HDPE pails, or small research lots. Technical partnerships encompass method transfer assistance, taste-masking evaluations, and guidance on capsule shell selection for humid geographies. With transparent change-control records and quick-response quality teams, Rraynex keeps itraconazole supply dependable for antifungal portfolios worldwide.`
+    "Itraconazole Pellets – Antifungal Multiparticulates for Consistent Pharmaceutical Formulation. Rraynex Itraconazole Pellets are developed for pharmaceutical manufacturers producing oral antifungal dosage forms. Fluid-bed coating and controlled layering are used to distribute itraconazole uniformly across the pellet system while maintaining controlled particle characteristics, flow, and physical integrity for downstream capsule filling.",
+
+    "Overview: Itraconazole is a triazole antifungal used in pharmaceutical formulations. The pelletized format provides a practical multiparticulate platform for capsule manufacturing. Rraynex focuses on controlled coating, particle-size distribution, potency, residual-solvent monitoring, and pellet friability to support reproducible pharmaceutical processing.",
+
+    "Key Features & Benefits:",
+    "• Uniform active distribution.",
+    "• Controlled pellet morphology and sphericity.",
+    "• Suitable for capsule filling and multiparticulate dosage forms.",
+    "• Controlled residual-solvent and physical-quality parameters.",
+    "• Technical support for formulation development and commercial supply.",
+
+    "SEO Content: Rraynex manufactures Itraconazole Pellets, Itraconazole IR Pellets, Itraconazole Triazole Pellets, Itraconazole Pellet Manufacturer, Itraconazole Pellet Supplier, Itraconazole Manufacturer India, Bulk Itraconazole Pellets, Antifungal Pellets, Triazole Antifungal Pellets, Pharmaceutical Pellets Manufacturer, Capsule Filling Pellets, Multiparticulate Pellets, Oral Solid Dosage Pellets, Bulk Pharmaceutical Pellets, Pharmaceutical Pellet Supplier, GMP Pharmaceutical Manufacturer, Pharmaceutical Contract Manufacturing, CDMO, Pharmaceutical Exporter and Pharmaceutical Formulation Pellets."
+  ],
+  "product-itopride": [
+    "Itopride Pellets – Multiparticulate Prokinetic Formulation Platform for Gastrointestinal Products. Rraynex Itopride Pellets are developed for pharmaceutical manufacturers seeking a consistent pelletized format for gastrointestinal formulations. Controlled pellet processing provides uniformity, flow characteristics, and reliable handling for capsule filling and other multiparticulate dosage-form applications.",
+
+    "Overview: Itopride is a gastrointestinal prokinetic used in formulations addressing disorders associated with impaired gastrointestinal motility. The pelletized format provides a flexible platform for pharmaceutical manufacturers and formulation developers requiring controlled particle characteristics and reproducible downstream processing.",
+
+    "Key Features & Benefits:",
+    "• Pelletized Itopride formulation.",
+    "• Consistent particle characteristics for capsule filling.",
+    "• Suitable for multiparticulate pharmaceutical development.",
+    "• Supports formulation scale-up and commercial manufacturing.",
+    "• Available according to the product specifications maintained in the Rraynex product portfolio.",
+
+    "SEO Content: Rraynex manufactures Itopride Pellets, Itopride Pellet Manufacturer, Itopride Pellet Supplier, Itopride Pharmaceutical Pellets, Prokinetic Pellets, Gastrointestinal Pellets, GI Motility Pellets, Capsule Filling Pellets, Multiparticulate Pellets, Pharmaceutical Pellets Manufacturer, Bulk Pharmaceutical Pellets, Pharmaceutical Pellet Supplier, Itopride Manufacturer India, GMP Pharmaceutical Manufacturer, Pharmaceutical Contract Manufacturing, CDMO, Pharmaceutical Exporter and Bulk Itopride Pellets."
   ],
   "product-lansoprazole": [
-    `Lansoprazole pellets from Rraynex offer rapid acid control supported by enteric coatings that withstand harsh gastric environments. Manufacturing begins with pharmacopeial-grade active material, processed in contained equipment to protect the benzimidazole structure from oxidative stress. Pellets undergo layering that balances seal coats, drug deposition, and enteric polymers, preserving low ash content for clean downstream compression. Particle size distribution remains tight, enabling high-speed capsule filling without segregation or dusting. Each batch is scrutinized for assay, moisture, and dissolution in acidic and neutral media to guarantee robust proton pump inhibition.`,
-    `Commercial partners receive data packs featuring comparative dissolution against reference products, stability studies across climatic zones, and nitrosamine risk assessments. We offer packaging choices from moisture-barrier drums to nitrogen-flushed bags sized for clinical trials or hospital repacks. Technical support includes method transfers, compatibility studies with disintegrants, and recommendations for capsule shell selection when pursuing fast-disintegrating presentations. With our responsive quality management system and transparent change-control processes, lansoprazole supply from Rraynex remains consistent as brands expand into new geographies or line extensions.`
+    "Lansoprazole EC Pellets – Enteric-Coated PPI Pellets for Reliable Delayed-Release Formulations. Rraynex Lansoprazole Pellets are developed for pharmaceutical manufacturers producing delayed-release oral dosage forms. Controlled pelletization, seal coating, and enteric protection are used to provide consistent pellet characteristics and gastro-resistant performance suitable for capsule filling and multiparticulate formulations.",
+
+    "Overview: Lansoprazole is a proton pump inhibitor used in acid-related gastrointestinal therapies. Its acid-labile nature makes controlled enteric protection an important part of pellet formulation. Rraynex processes Lansoprazole Pellets with controlled particle size, coating, moisture, and dissolution characteristics to support reliable downstream manufacturing.",
+
+    "Key Features & Benefits:",
+    "• Enteric-coated delayed-release platform.",
+    "• Uniform pellet morphology for capsule filling.",
+    "• Controlled coating for gastro-resistance.",
+    "• Suitable for MUPS and multiparticulate development.",
+    "• Bulk pharmaceutical supply for formulation and commercial programs.",
+
+    "SEO Content: Rraynex supplies Lansoprazole Pellets, Lansoprazole EC Pellets, Lansoprazole Delayed Release Pellets, Lansoprazole Enteric Coated Pellets, Lansoprazole Gastro Resistant Pellets, Lansoprazole Pellet Manufacturer, Lansoprazole Pellet Supplier, Lansoprazole Manufacturer India, Bulk Lansoprazole Pellets, Proton Pump Inhibitor Pellets, PPI Pellets Manufacturer, Pharmaceutical Pellets Manufacturer, Capsule Filling Pellets, MUPS Pellets, Multiparticulate Pellets, Bulk Pharmaceutical Pellets, Pharmaceutical Exporter, CDMO and Contract Manufacturing solutions."
   ],
   "product-levosulpiride": [
     `Levosulpiride SR pellets are crafted to support prokinetic and antipsychotic regimens that demand controlled release. We select high-purity levosulpiride and employ solvent layering to achieve uniform deposition across inert cores, followed by polymer coats that stage the release profile over the dosing interval. Tight size control maintains flow in capsule and sachet applications, while low friability protects pellets during high-shear blending. Comprehensive in-process testing verifies assay uniformity, moisture levels, and dissolution to ensure the sustained-release curve remains within specification.`,
@@ -3276,8 +3369,18 @@ const PRODUCT_NARRATIVES = {
   `Customers receive extensive technical documentation, including dissolution comparisons at multiple pH levels, accelerated stability outcomes, and validated analytical procedures for related substances. Packaging versatility - moisture-safe drums, nitrogen-flushed bags, or pilot-scale packs - allows easy integration into supply chains. Our technical teams advise on capsule lubricant optimization, blend uniformity strategies, and bioequivalence study planning. With proactive change-control communication and audit-ready records, Rraynex keeps nifedipine sustained-release supply dependable for domestic and international cardiovascular portfolios.`
   ],
   "product-omeprazole": [
-    `Omeprazole EC pellets are tuned for GERD, erosive esophagitis, and H. pylori regimens, keeping acid uptake below pharmacopeial limits while supporting multiple dosage formats. Manufacturing combines inert core preparation, active layering, and enteric coating under tightly controlled humidity to protect the acid-labile benzimidazole. Pellets exhibit narrow size distribution and low ash content, enabling smooth capsule filling, MUPS compression, or sachet use. In-process analytics monitor assay, loss on drying, and coating thickness, ensuring reliable gastric resistance across strengths.`,
-    `Rraynex provides comprehensive data packages covering dissolution in acidic and neutral media, impurity trends, and stability studies through climatic zones II to IV. Packaging choices range from 25 kilogram drums to foil-lined bags, each validated for international shipping. Technical liaisons assist with method transfer, capsule formulation, and compatibility checks for excipients such as HPMC, MCC, or sucralose-based flavor systems. Transparent change-control processes keep regulatory files current, helping partners launch or expand omeprazole offerings without supply-chain surprises.`
+    "Omeprazole Pellets – Enteric-Coated Proton Pump Inhibitor Pellets for Delayed-Release Formulations. Rraynex Omeprazole Pellets are developed for pharmaceutical manufacturers producing gastro-resistant oral dosage forms. Controlled pellet sizing, seal coating, active layering, and enteric protection provide a reliable multiparticulate platform for capsule filling, MUPS, and other delayed-release formulations.",
+
+    "Overview: Omeprazole is a proton pump inhibitor used in acid-suppression formulations. Because the active is sensitive to acidic conditions, appropriate protective coating is important for delayed-release dosage forms. Rraynex focuses on controlled coating, moisture management, particle-size distribution, and dissolution performance to support consistent pharmaceutical manufacturing.",
+
+    "Key Features & Benefits:",
+    "• Enteric-coated delayed-release platform.",
+    "• Uniform pellet size for capsule filling and MUPS applications.",
+    "• Controlled moisture and coating characteristics.",
+    "• Suitable for formulation strengths maintained in the existing Rraynex product portfolio.",
+    "• Technical support for pharmaceutical development, scale-up, and regulatory documentation.",
+
+    "SEO Content: Rraynex manufactures Omeprazole Pellets, Omeprazole EC Pellets, Omeprazole Enteric Coated Pellets, Omeprazole Delayed Release Pellets, Omeprazole Gastro Resistant Pellets, Omeprazole MUPS Pellets, Omeprazole Pellet Manufacturer, Omeprazole Pellet Supplier, Omeprazole Manufacturer India, Bulk Omeprazole Pellets, Proton Pump Inhibitor Pellets, PPI Pellets Manufacturer, Pharmaceutical Pellets Manufacturer, Capsule Filling Pellets, Multiparticulate Pellets, Bulk Pharmaceutical Pellets, GMP Pharmaceutical Manufacturer, Pharmaceutical Exporter, CDMO, Contract Manufacturing and Bulk Pellet Supplier."
   ],
   "product-omeprazole-domperidone-10": [
     `Omeprazole + Domperidone (20 mg + 10 mg) pellets are designed for patients who need acid suppression alongside relief from reflux-associated nausea. Rraynex sequences production so omeprazole receives a moisture-resistant seal and enteric coat before domperidone layering, preventing interactions and maintaining independent dissolution profiles. Pellets are balanced for density and size to ensure homogeneous blends during capsule filling and sachet packing. Quality checkpoints verify assay, residual solvents, and mechanical integrity, safeguarding performance during global distribution.`,
@@ -3288,50 +3391,47 @@ const PRODUCT_NARRATIVES = {
     `Customers receive detailed documentation with dissolution comparisons, interaction studies, and stability data that confirm both actives remain within specification across harsh climates. Packaging formats include barrier drums, nitrogen-flushed bags, and pilot-scale quantities for new market entry. Our technical teams advise on bioequivalence planning, lubricant systems, and excipient compatibility so that higher domperidone strengths integrate smoothly into existing production lines. With rigorous quality oversight and proactive communication, Rraynex supports global access to enhanced reflux management therapies.`
   ],
   "product-orlistat": [
+    "Orlistat Pellets – Pharmaceutical Multiparticulate Pellets for Weight-Management Formulations. Rraynex Orlistat Pellets are developed for pharmaceutical manufacturers seeking a consistent pelletized format for anti-obesity and weight-management formulations. Controlled processing and drying support uniform active distribution, while optimized particle characteristics provide smooth flow and reliable handling during capsule filling and other multiparticulate manufacturing processes.",
 
-  "Orlistat Pellets – Premium Pharmaceutical Pellets for Advanced Weight Management Formulations. Rraynex's Orlistat Pellets are precision-engineered using advanced pelletization technology to deliver consistent quality, excellent flow properties, and reliable formulation performance for anti-obesity pharmaceutical products. Manufactured under stringent WHO-GMP compliant processes, these pharmaceutical pellets provide uniform particle size distribution, high stability, and reproducible drug release characteristics, making them an ideal choice for pharmaceutical manufacturers, contract development organizations, and global healthcare companies seeking premium-quality Orlistat pellet solutions.",
+    "Overview: Orlistat is a gastrointestinal lipase inhibitor used in weight-management formulations. Rraynex pellet technology focuses on controlled drug distribution, particle-size consistency, moisture management, and physical integrity to support downstream pharmaceutical processing. The pelletized format is suitable for capsule-based and multiparticulate dosage-form development where reproducibility and processability are important.",
 
-  "Overview: Orlistat is a clinically established gastrointestinal lipase inhibitor widely used in weight management therapies to reduce dietary fat absorption. Rraynex Orlistat Pellets are manufactured using optimized extrusion-spheronization and precision layering technologies to ensure excellent manufacturability, superior flowability, and consistent batch-to-batch performance. These pellets are specifically designed for capsule filling and multiparticulate oral dosage forms, supporting pharmaceutical companies in developing effective anti-obesity formulations while maintaining product stability throughout manufacturing, storage, and transportation.",
+    "Key Features & Benefits:",
+    "• Controlled active distribution across the pellet matrix.",
+    "• Smooth flow characteristics for downstream capsule filling.",
+    "• Controlled moisture and drying conditions.",
+    "• Suitable for development and commercial pharmaceutical manufacturing.",
+    "• Technical support for capsule filling, excipient compatibility, and formulation optimization.",
 
-  "Key Features & Benefits:",
-  "• Precision Pellet Technology: Uniform pellet size distribution ensures consistent drug loading, predictable dissolution profiles, and improved manufacturing efficiency.",
-  "• Excellent Flow Properties: Optimized pellet morphology minimizes segregation and supports high-speed capsule filling and automated pharmaceutical production lines.",
-  "• High Stability & Quality: Manufactured under controlled environmental conditions with strict monitoring of moisture content, assay, and physical characteristics for superior product stability.",
-  "• GMP-Compliant Manufacturing: Produced following internationally accepted pharmaceutical manufacturing practices to maintain reproducible quality and regulatory compliance.",
-  "• Flexible Formulation Development: Suitable for capsule formulations, multiparticulate dosage systems, and customized pharmaceutical development requirements.",
-  "• Scalable Commercial Production: Designed to support laboratory development, pilot-scale manufacturing, and large-volume commercial pharmaceutical production.",
-
-  "Educational Insight: Orlistat acts locally within the gastrointestinal tract by inhibiting gastric and pancreatic lipase enzymes responsible for breaking down dietary fats. By reducing fat absorption, it supports long-term weight management when combined with a balanced diet and regular physical activity. Pelletized Orlistat formulations provide improved processing characteristics, excellent content uniformity, and consistent manufacturing performance compared to conventional powder-based formulations, making them highly suitable for modern pharmaceutical production.",
-
-  "Technical Specifications:",
-  "• API: Orlistat",
-  "• Assay: 98.0–102.0%",
-  "• Pellet Size Range: 600–1180 μm (customizable)",
-  "• Loss on Drying: ≤1.5%",
-  "• Bulk Density: Optimized for high-speed capsule filling",
-  "• Packaging: 25 kg HDPE drum with double-layer LDPE liner and moisture-protective sealing",
-  "• Storage: Store below 25°C in a cool, dry place, protected from excessive moisture, heat, and direct sunlight.",
-
-  "Applications:",
-  "• Pharmaceutical manufacturers producing anti-obesity capsules and oral solid dosage formulations.",
-  "• Contract Development and Manufacturing Organizations (CDMOs) developing pellet-based weight management products.",
-  "• Pharmaceutical exporters supplying regulated and semi-regulated international markets.",
-  "• Research and formulation development laboratories working on advanced multiparticulate drug delivery systems.",
-  "• Companies seeking reliable bulk pharmaceutical pellets for commercial manufacturing.",
-
-  "Pharmaceutical Profile: Rraynex is a trusted Orlistat Pellets manufacturer and supplier providing high-quality pharmaceutical pellets for global pharmaceutical companies. Our Orlistat Pellets are manufactured to support consistent formulation performance, regulatory-focused quality systems, and scalable commercial production. Available in bulk quantities, these anti-obesity pellets are suitable for pharmaceutical manufacturers, formulation developers, contract manufacturers, and exporters seeking dependable supply of premium pharmaceutical pellet technologies.",
-
-  "SEO Content: Pharmaceutical companies searching for Orlistat Pellets, Orlistat Pellet Manufacturer, Orlistat Pellet Supplier, Anti-Obesity Pellets, Weight Management Pellets, Pharmaceutical Pellets Manufacturer, Bulk Orlistat Pellets, Orlistat Pellets Manufacturer in India, GMP Pharmaceutical Pellet Manufacturer, Contract Manufacturing Services, Pharmaceutical Pellet Exporter, Capsule Filling Pellets, Multiparticulate Pellet Systems, Bulk Pharmaceutical Pellet Supplier, or Orlistat Raw Material Solutions can rely on Rraynex for technically advanced manufacturing, stringent quality control, regulatory-focused production, scalable manufacturing capabilities, and dependable global supply solutions.",
-
-  "Usage Note: Intended exclusively for pharmaceutical manufacturing, formulation development, research, and industrial applications. Orlistat-containing pharmaceutical products should be formulated, validated, and administered in accordance with applicable pharmacopeial standards, regulatory requirements, and healthcare professional guidance before commercial distribution."
-],
+    "SEO Content: Rraynex manufactures Orlistat Pellets, Orlistat Pellet formulations, Anti-Obesity Pellets, Weight Management Pellets and Lipase Inhibitor Pellets for pharmaceutical companies and formulation developers. As an Orlistat Pellet Manufacturer, Orlistat Pellet Supplier and Pharmaceutical Pellet Manufacturer in India, Rraynex supports Bulk Orlistat Pellets, Pharmaceutical Pellet Supply, Capsule Filling Pellets, Multiparticulate Pellets, GMP-oriented manufacturing, CDMO programs, Contract Manufacturing and Pharmaceutical Export requirements."
+  ],
   "product-pantoprazole": [
     `Pantoprazole pellets from Rraynex underpin a broad portfolio of proton pump inhibitor therapies that call for multiple strengths. Manufacturing starts with pharmacopeial pantoprazole sodium sesquihydrate processed in humidity-controlled suites. Seal coats, drug layering, and enteric polymers are carefully sequenced to protect the acid-labile core while delivering low ash content for downstream compression. Pellets exhibit consistent size distribution, supporting MUPS tablets, capsules, or sachet formulations without segregation. Quality monitoring covers assay, moisture, and dissolution across strengths to maintain predictable gastric resistance.`,
     `We supply detailed technical information encompassing dissolution comparisons, impurity trend analyses, and stability data aligned to ICH zones. Packaging is flexible, with moisture-barrier drums, foil-lined bags, and pilot-scale packs available to match forecast demand. Technical teams assist with method transfers, lubricant selection, and compatibility evaluations with excipients such as MCC, crospovidone, or mannitol. Regulatory specialists maintain ready-to-file CTD modules and transparent change-control logs, allowing customers to launch or scale pantoprazole products efficiently.`
   ],
+  "product-pantoprazole-itopride": [
+    "Pantoprazole + Itopride Pellets – Combination Multiparticulates for Acid Suppression and Prokinetic Support. Rraynex Pantoprazole + Itopride Pellets are designed for developers building gastroenterology formulations that require both proton pump inhibition and motility support. Controlled layering and barrier protection help maintain the intended release characteristics of both actives.",
+
+    "Overview: Pantoprazole provides acid suppression while Itopride contributes prokinetic action. The pellet system is structured for homogeneous filling and reliable downstream processing in capsules and multiparticulate dosage forms.",
+
+    "Key Features & Benefits:",
+    "• Dual-action combination platform.",
+    "• Controlled pellet density and particle-size distribution.",
+    "• Suitable for capsule and multiparticulate development.",
+    "• Support for stability, excipient compatibility, and scale-up."
+  ],
   "product-pantoprazole-domperidone": [
-    `Pantoprazole + Domperidone pellets deliver coordinated acid suppression and antiemetic support for persistent reflux sufferers. We apply seal coats to pantoprazole cores before layering domperidone, ensuring each active retains its intended release profile. Pellets are tuned for density uniformity, enabling homogeneous blends in capsules or stick packs. Extensive in-process checks monitor assay, residual solvent, and mechanical resilience, guaranteeing the combination withstands shipping and downstream handling.`,
-    `Customers receive comprehensive dossiers detailing simultaneous dissolution curves, impurity control, and accelerated stability. Packaging configurations include co-packed drums, segregated liners, or smaller barrier bags for targeted launches. Our technical specialists advise on capsule sizing, blend lubrication, and sprinkle formulation, while regulatory teams keep CTD documentation current. Rraynex maintains open change-control communication, helping partners deliver dual-action reflux therapies with confidence in quality and compliance.`
+    "Pantoprazole + Domperidone Pellets – Combination PPI and Prokinetic Pellets for Gastrointestinal Formulations. Rraynex Pantoprazole + Domperidone Pellets are developed for pharmaceutical manufacturers producing combination formulations requiring acid suppression and prokinetic support. Controlled seal coating, layering, and pellet processing help maintain the intended characteristics of both active components while supporting homogeneous capsule and sachet filling.",
+
+    "Overview: Pantoprazole provides proton pump inhibition, while Domperidone is used as the prokinetic component. Rraynex focuses on density uniformity, particle-size consistency, moisture control, and formulation-specific dissolution to support reproducible manufacturing and downstream handling.",
+
+    "Key Features & Benefits:",
+    "• Dual-API multiparticulate platform.",
+    "• Controlled protection of the PPI component.",
+    "• Uniform pellet density for reduced segregation.",
+    "• Suitable for capsule, sachet, and multiparticulate applications.",
+    "• Technical support for formulation development and scale-up.",
+
+    "SEO Content: Rraynex supplies Pantoprazole Domperidone Pellets, Pantoprazole + Domperidone Pellets, Panto Dome Pellets, Pantoprazole Domperidone Manufacturer, Pantoprazole Domperidone Supplier, PPI Prokinetic Pellets, Gastrointestinal Combination Pellets, GERD Combination Pellets, Pantoprazole Pellets, Domperidone Pellets, Pharmaceutical Pellets Manufacturer, Combination Pellets Manufacturer, Capsule Filling Pellets, Multiparticulate Pellets, Bulk Pharmaceutical Pellets, GMP Pharmaceutical Manufacturer, CDMO, Contract Manufacturing, Pharmaceutical Exporter and Bulk Pellet Supplier."
   ],
   "product-pantoprazole-levosulpiride": [
     `Pantoprazole + Levosulpiride pellets serve gastroenterology and functional dyspepsia programs seeking combined acid suppression and prokinetic action. Production isolates each API during layering, using barrier coats to avoid interaction and preserve assays. Pellets are harmonized for density and particle size, reducing segregation risk in capsules or sachet formats. Dissolution testing validates staggered release profiles, with pantoprazole protected until intestinal pH while levosulpiride becomes available earlier to stimulate motility.`,
@@ -3345,13 +3445,44 @@ const PRODUCT_NARRATIVES = {
     `Rabeprazole Sodium EC pellets offer the sodium salt’s fast onset in a gastro-resistant multiparticulate format. Rraynex processes the active under controlled conditions to prevent oxidative degradation, then applies seal and enteric coats that preserve potency while ensuring timed intestinal release. Pellets achieve tight particle size distribution, promoting uniform flow through capsule fillers and compatibility with sachet presentations. Continuous analytics track assay, moisture, and dissolution to maintain consistent acid suppression performance.`,
     `Customers receive comprehensive technical data, including dissolution comparisons, impurity profiles, and stability results across ICH zones. Packaging configurations such as moisture-resistant drums, nitrogen-flushed bags, or pilot-scale packs accommodate diverse commercial needs. Our technical experts guide blend optimization, lubricant choices, and regulatory documentation preparation. With proactive change-control communication and audit-ready files, Rraynex supports dependable rabeprazole sodium supply for global markets.`
   ],
+  "product-rabeprazole-itopride": [
+    "Rabeprazole + Itopride Pellets – Combination PPI and Prokinetic Multiparticulates for Reflux and Motility Programs. Rraynex Rabeprazole + Itopride Pellets are developed for pharmaceutical manufacturers designing gastrointestinal formulations that require acid suppression and prokinetic action in a single pellet platform.",
+
+    "Overview: Rabeprazole provides proton pump inhibition while Itopride supports gastrointestinal motility. The system is built around controlled pellet characteristics to support reliable capsule filling and formulation scale-up.",
+
+    "Key Features & Benefits:",
+    "• Dual-action combination pellets.",
+    "• Controlled release support for both actives.",
+    "• Suitable for capsule and multiparticulate development.",
+    "• Support for formulation optimization and technical documentation."
+  ],
   "product-rabeprazole-domperidone": [
-    `Rabeprazole + Domperidone pellets combine potent acid suppression with antiemetic support for comprehensive reflux management. Production sequencing shields rabeprazole with enteric coatings while presenting domperidone for earlier gastric release, achieving coordinated therapeutic action. Pellets are balanced for density and size to keep blends homogeneous in capsules or sachets. Rigorous in-process controls watch assay, residual solvent, moisture, and friability, ensuring the dual formulation remains stable during storage and transport.`,
-    `Regulatory dossiers feature simultaneous dissolution, compatibility studies, and stability data under accelerated conditions. Packaging offerings include co-packed drums, segregated compartments, or barrier bags sized to forecast demand. Technical teams assist with method transfers, capsule shell selection, and sprinkle-format development, while regulatory specialists maintain CTD-ready modules. Rraynex’s collaborative quality system keeps rabeprazole-domperidone supply responsive to physician demand and market expansion.`
+    "Rabeprazole + Domperidone Pellets – Combination PPI and Prokinetic Multiparticulates for Reflux Formulations. Rraynex Rabeprazole + Domperidone Pellets are developed for pharmaceutical manufacturers seeking a combination pellet platform for acid suppression and gastrointestinal motility support. Controlled formulation sequencing and enteric protection help maintain distinct release characteristics for the two active components.",
+
+    "Overview: Rabeprazole provides proton pump inhibition, while Domperidone is used as the prokinetic component. Rraynex focuses on uniform pellet density, particle-size control, formulation compatibility, and downstream capsule or sachet processing. Technical packages can include dissolution, impurity, stability, and formulation-development information according to project requirements.",
+
+    "Key Features & Benefits:",
+    "• Dual-API combination pellets.",
+    "• Controlled enteric protection for the PPI component.",
+    "• Balanced pellet characteristics for homogeneous filling.",
+    "• Suitable for capsule and sachet formulations.",
+    "• Support for pharmaceutical development and commercial scale-up.",
+
+    "SEO Content: Rraynex manufactures Rabeprazole Domperidone Pellets, Rabeprazole + Domperidone Pellets, Rabe Dome Pellets, Rabeprazole Domperidone Manufacturer, Rabeprazole Domperidone Supplier, PPI Prokinetic Pellets, Gastrointestinal Combination Pellets, GERD Combination Pellets, Pharmaceutical Pellets Manufacturer, Combination Pellets Supplier, Capsule Filling Pellets, Multiparticulate Pellets, Bulk Pharmaceutical Pellets, GMP Pharmaceutical Manufacturer, CDMO, Contract Manufacturing, Pharmaceutical Exporter and Bulk Pellet Supplier."
   ],
   "product-rabeprazole-levosulpiride": [
-    `Rabeprazole + Levosulpiride pellets deliver dual relief for GERD patients needing acid control and prokinetic support. Rraynex isolates each API during layering, employing sealing coats and density harmonization to maintain uniform distribution. Dissolution testing confirms rabeprazole remains gastro-resistant while levosulpiride becomes available earlier to encourage motility. Pellets are monitored for assay, moisture, and mechanical strength to withstand downstream processing.`,
-  `Customers gain access to technical files covering dual-API dissolution, stability across multiple climates, and excipient compatibility insights. Packaging is adaptable - moisture-barrier drums, nitrogen-flushed bags, or pilot quantities - each validated for logistics. Our formulation advisors support capsule fill tuning, lubricant selection, and sprinkle-format innovation. Regulatory teams maintain CTD-ready data sets and transparent change-control notices, helping brands launch combined reflux therapies efficiently.`
+    "Rabeprazole + Levosulpiride Pellets – Dual-Action PPI and Prokinetic Multiparticulates. Rraynex Rabeprazole + Levosulpiride Pellets are developed for gastrointestinal combination formulations requiring coordinated acid suppression and prokinetic support. Controlled layering and barrier protection help maintain the individual characteristics of both active ingredients while producing a uniform multiparticulate system.",
+
+    "Overview: Rabeprazole provides proton pump inhibition, while Levosulpiride provides prokinetic activity. The formulation is designed around controlled particle size, density matching, and appropriate release characteristics to reduce segregation and support reliable capsule or sachet filling. Technical development can include dissolution, compatibility, stability, and formulation assessments according to the intended product specification.",
+
+    "Key Features & Benefits:",
+    "• Dual-API pellet system.",
+    "• Controlled density and particle-size distribution.",
+    "• Reduced segregation risk during filling.",
+    "• Suitable for capsule and sachet development.",
+    "• Technical support for formulation optimization and regulatory documentation.",
+
+    "SEO Content: Rraynex supplies Rabeprazole Levosulpiride Pellets, Rabeprazole + Levosulpiride Pellets, Rabe Levo Pellets, Rabeprazole Levosulpiride Manufacturer, Rabeprazole Levosulpiride Supplier, PPI Prokinetic Pellets, Gastrointestinal Combination Pellets, GERD Combination Pellets, Pharmaceutical Pellets Manufacturer, Combination Pellets Manufacturer, Capsule Filling Pellets, Multiparticulate Pellets, Bulk Pharmaceutical Pellets, GMP Pharmaceutical Manufacturer, CDMO, Contract Manufacturing, Pharmaceutical Exporter and Bulk Pellet Supplier."
   ],
   "product-diltiazem": [
     `Diltiazem FR/SR pellets supply flexible release kinetics for angina and hypertension management. Rraynex manufactures immediate- and sustained-release fractions using solvent layering and polymer coatings that modulate drug release across the dosing interval. Pellets are harmonized for size and density to maintain blend uniformity in capsules or multiparticulate tablets. Comprehensive in-process checks verify assay, moisture, and dissolution, ensuring both fast- and sustained-release components behave predictably.`,
@@ -3361,8 +3492,8 @@ const PRODUCT_NARRATIVES = {
     `Rosuvastatin pellets cater to lipid-lowering regimens that demand consistent reduction in LDL cholesterol. Starting with pharmacopeial-grade rosuvastatin calcium, we employ solvent layering to achieve uniform deposition, followed by protective coats that guard against photolysis and oxidation. Pellets are spheronised to a tight distribution, enabling smooth capsule filling or integration into multiparticulate tablets. Process analytics monitor potency, residual solvents, and dissolution so each lot maintains the pharmacokinetic profile clinicians expect.`,
     `Customers receive full technical dossiers with dissolution comparisons, impurity trending, and stability outcomes across climates. Packaging options include moisture-barrier drums, foil-lined bags, and development-scale packs. Technical liaisons support method transfer, excipient compatibility assessments, and scale-up planning for high-speed capsule lines. With proactive change-control communication and robust quality governance, Rraynex ensures rosuvastatin pellet supply remains reliable for cardiovascular portfolios.`
   ],
-  "product-tamsulosin-dutasteride-02": [
-    `Tamsulosin + Dutasteride (0.2% + 0.5%) pellets target lower-dose benign prostatic hyperplasia therapy by combining alpha-blocker relief with 5-alpha-reductase inhibition. Rraynex sequences layering to stabilize each active, employing seal coats that prevent cross-reactivity and maintain potency. Pellets are controlled for size and density, delivering uniform blends in capsules or sachet presentations. Continuous analytics track assay, moisture, and dissolution to protect therapeutic performance throughout distribution.`,
+  "product-tamsulosin-dutasteride": [
+    `Tamsulosin + Dutasteride pellets target benign prostatic hyperplasia therapy by combining alpha-blocker relief with 5-alpha-reductase inhibition. Rraynex sequences layering to stabilize each active, employing seal coats that prevent cross-reactivity and maintain potency. Pellets are controlled for size and density, delivering uniform blends in capsules or sachet presentations. Continuous analytics track assay, moisture, and dissolution to protect therapeutic performance throughout distribution.`,
     `Technical documentation includes dual-API dissolution curves, impurity profiles, and stability data that address combination-product requirements. Packaging configurations span co-packed drums, segregated liners, and small pilot lots for market testing. Our technical team advises on capsule shell selection, blend lubrication, and sprinkle-format development, while regulatory specialists prepare CTD-ready submissions. With responsive quality management, Rraynex supports dependable rollout of lower-dose BPH therapies.`
   ],
   "product-tamsulosin-dutasteride-04": [
@@ -3378,8 +3509,18 @@ const PRODUCT_NARRATIVES = {
     `Technical dossiers supply dissolution data in water, milk, and buffer media, impurity profiles, and stability outcomes under multiple climates. Packaging programs include moisture-proof drums, foil-lined sachet kits, and small packs for pediatric formulation trials. Our development experts guide partners on suspension flavoring, sweetener compatibility, and device selection, while regulatory teams maintain CTD-ready modules. With dependable quality oversight, Rraynex helps brands deliver patient-friendly MUPS presentations.`
   ],
   "product-esomeprazole-mups": [
-    `Esomeprazole MUPS pellets are tailored for pediatric and geriatric populations requiring dispersed or orally disintegrating presentations. Manufacturing controls particle size tightly to ensure smooth dispersion without clogging administration devices. Seal coats, drug layering, and enteric polymers are sequenced to safeguard the active until it reaches intestinal pH. Real-time analytics monitor assay, moisture, and dissolution, confirming consistent behavior across strengths.`,
-    `Customers receive comprehensive technical data, including reconstitution studies, impurity trends, and stability results in humid, temperate, and tropical climates. Packaging can be configured into bulk drums, unit-dose sachet kits, or nitrogen-flushed bags for hospital pharmacies. Our formulation support covers flavor selection, sweetener compatibility, and suspending agent optimization, while regulatory teams maintain CTD-ready submissions. Rraynex keeps esomeprazole MUPS supply aligned with the needs of patient-centric dosage forms.`
+    "Esomeprazole MUPS Pellets – Multi-Unit Pellet System for Flexible PPI Formulations. Rraynex Esomeprazole MUPS Pellets are developed for pharmaceutical manufacturers creating dispersed, sprinkle, and orally disintegrating dosage forms. Controlled particle size, seal coating, drug layering, and enteric protection support consistent dispersion and delayed-release performance across formulation platforms.",
+
+    "Overview: Esomeprazole MUPS technology provides a multiparticulate approach to proton pump inhibitor delivery, particularly where dispersion and flexible administration are important. Rraynex controls pellet size, coating sequence, moisture, assay, and dissolution to support reproducible formulation behavior and downstream manufacturing.",
+
+    "Key Features & Benefits:",
+    "• MUPS-grade multiparticulate technology.",
+    "• Controlled particle size for uniform dispersion.",
+    "• Enteric protection for delayed release.",
+    "• Suitable for capsule, sprinkle, suspension, and orally disintegrating formats where validated.",
+    "• Development support for formulation compatibility and scale-up.",
+
+    "SEO Content: Rraynex supplies Esomeprazole MUPS Pellets, Esomeprazole MUPS Manufacturer, Esomeprazole MUPS Supplier, Esomeprazole MUPS Exporter, Esomeprazole MUPS Manufacturer India, Esomeprazole Pellets, Multiple Unit Pellet System, MUPS Pellets, Proton Pump Inhibitor Pellets, PPI Pellets Manufacturer, Enteric Coated Pellets, Delayed Release Pellets, Gastro Resistant Pellets, Pharmaceutical Pellets Manufacturer, Capsule Filling Pellets, Multiparticulate Pellets, Bulk Pharmaceutical Pellets, GMP Pharmaceutical Manufacturer, CDMO and Pharmaceutical Export solutions."
   ],
   "product-rabeprazole-mups": [
     `Rabeprazole MUPS pellets enable fast dispersal and patient-friendly dosing, particularly for pediatric or geriatric care. Rraynex designs the pellets with uniform size and low friability so they suspend evenly in water or soft foods without grittiness. Enteric coatings protect the acid-labile rabeprazole until intestinal transit, while seal coats prevent moisture uptake during storage. In-process controls track assay, moisture, and dissolution to ensure reproducible performance.`,
@@ -3513,6 +3654,51 @@ function injectJsonLd(id, obj) {
 
 /* ----------------- ProductDetail (polished, responsive, accessible) ----------------- */
 
+const PRODUCT_NARRATIVE_ALIASES = {
+  "product-clopidogrel-aspirin": "product-clopidogrel",
+  "product-tamsulosin-dutasteride-02": "product-tamsulosin-dutasteride",
+  "product-tamsulosin-dutasteride-04": "product-tamsulosin-dutasteride",
+  "product-omeprazole-ec": "product-omeprazole",
+  "product-dexlansoprazole-ddr": "product-dexlansoprazole",
+  "product-ibuprofen-dc": "product-mebeverine",
+  "product-metformin-hcl-dc": "product-omeprazole",
+  "product-rosuvastatin-granules": "product-rosuvastatin",
+  "product-azithromycin-dc": "product-omeprazole",
+  "product-pantoprazole-dc": "product-pantoprazole",
+  "product-esomeprazole-dc": "product-esomeprazole-ec",
+  "product-omeprazole-dc": "product-omeprazole",
+  "product-rabeprazole-dc": "product-rabeprazole-sodium",
+  "product-atorvastatin-dc": "product-rosuvastatin",
+  "product-clopidogrel-dc": "product-clopidogrel",
+  "product-paracetamol-ibuprofen": "product-mebeverine",
+  "product-pantoprazole-domperidone-granules": "product-pantoprazole-domperidone",
+  "product-rabeprazole-domperidone-granules": "product-rabeprazole-domperidone",
+  "product-omeprazole-domperidone-granules": "product-omeprazole-domperidone-30",
+  "product-esomeprazole-domperidone-granules": "product-esomeprazole-domperidone",
+  "product-clopidogrel-domperidone-granules": "product-clopidogrel",
+  "product-metformin-pantoprazole-granules": "product-pantoprazole",
+  "product-clopidogrel-pantoprazole-granules": "product-pantoprazole",
+  "product-paracetamol-domperidone": "product-omeprazole-domperidone-10",
+  "product-api-pantoprazole": "product-pantoprazole",
+  "product-api-rabeprazole": "product-rabeprazole-sodium",
+  "product-api-fluconazole": "product-itraconazole",
+  "product-api-mebendazole": "product-omeprazole",
+  "product-esomeprazole-ec-plus-itopride-sr": "product-itopride",
+};
+
+function getProductNarrativeEntries(slug) {
+  if (PRODUCT_NARRATIVES[slug]) {
+    return PRODUCT_NARRATIVES[slug];
+  }
+
+  const alias = PRODUCT_NARRATIVE_ALIASES[slug];
+  if (alias && PRODUCT_NARRATIVES[alias]) {
+    return PRODUCT_NARRATIVES[alias];
+  }
+
+  return [];
+}
+
 function ProductDetail({ product, onBack }) {
   const [openIdx, setOpenIdx] = useState(null);
 
@@ -3624,7 +3810,7 @@ function ProductDetail({ product, onBack }) {
 
   if (!product) return null;
 
-  const longDescription = (PRODUCT_NARRATIVES[product.slug] || []).join("\n\n") || product.description;
+  const longDescription = (getProductNarrativeEntries(product.slug) || []).join("\n\n") || product.description;
 
   const specs = [
     { label: "Grade", value: product.grade || "IP / BP / USP / EP" },
