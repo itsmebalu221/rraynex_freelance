@@ -3713,7 +3713,7 @@ function ProductDetail({ product, onBack }) {
   const title = `${product.name} | Rraynex - Pharma Pellets & APIs`;
 
     // Canonical URL without hash fragment
-    const url = `${window.location.origin}${window.location.pathname}`;
+    const canonicalUrl = `${window.location.origin}${window.location.pathname}`;
 
     const productSchema = {
       "@context": "https://schema.org/",
@@ -3968,6 +3968,7 @@ function ProductDetail({ product, onBack }) {
         </aside>
       </div>
     </article>
+    </>
   );
 }
 
