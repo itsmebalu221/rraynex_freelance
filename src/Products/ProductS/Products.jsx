@@ -1,5 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { Link, NavLink, useParams, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import "./products.css";
 import bg from "./bg.jpg";
 import Hero from "../../Components/Hero/Hero";
@@ -3710,11 +3711,9 @@ function ProductDetail({ product, onBack }) {
       product.strengths?.length ? product.strengths.join(", ") : "various strengths"
     }. Grade: ${product.grade || "IP / BP / USP / EP"}.`;
   const title = `${product.name} | Rraynex - Pharma Pellets & APIs`;
-    setMetaTitle(title);
-    setMetaDescription(shortDesc);
 
-    const url = `${window.location.origin}${window.location.pathname}#${product.slug}`;
-    setCanonical(url);
+    // Canonical URL without hash fragment
+    const url = `${window.location.origin}${window.location.pathname}`;
 
     const productSchema = {
       "@context": "https://schema.org/",
@@ -3742,7 +3741,7 @@ function ProductDetail({ product, onBack }) {
           price: String(pInfo.price),
           priceCurrency: pInfo.priceCurrency,
           availability: pInfo.availability || "https://schema.org/InStock",
-          url: `${window.location.origin}${window.location.pathname}#${product.slug}`,
+          url: canonicalUrl,
         };
       } else if (pInfo && pInfo.lowPrice && pInfo.highPrice && pInfo.priceCurrency) {
         // If a price range provided
@@ -3753,7 +3752,7 @@ function ProductDetail({ product, onBack }) {
           priceCurrency: pInfo.priceCurrency,
           offerCount: String(pInfo.offerCount || 1),
           availability: pInfo.availability || "https://schema.org/InStock",
-          url: `${window.location.origin}${window.location.pathname}#${product.slug}`,
+          url: canonicalUrl,
         };
       }
     } catch (e) {
@@ -3810,6 +3809,13 @@ function ProductDetail({ product, onBack }) {
 
   if (!product) return null;
 
+  // SEO: Use Helmet for proper meta tag management
+  const shortDesc = `${product.name} - ${product.type} (${product.category}). ${product.description} Available in strengths: ${
+    product.strengths?.length ? product.strengths.join(", ") : "various strengths"
+  }. Grade: ${product.grade || "IP / BP / USP / EP"}.`;
+  const title = `${product.name} | Rraynex - Pharma Pellets & APIs`;
+  const canonicalUrl = `https://www.rraynex.com/products/view/${product.slug}`;
+
   const longDescription = (getProductNarrativeEntries(product.slug) || []).join("\n\n") || product.description;
 
   const specs = [
@@ -3841,7 +3847,21 @@ function ProductDetail({ product, onBack }) {
   }
 
   return (
-    <article className="rr-detail" itemScope itemType="https://schema.org/Product">
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={shortDesc} />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={shortDesc} />
+        {product.image && <meta property="og:image" content={product.image} />}
+        <meta property="og:site_name" content="Rraynex Pharmaceuticals" />
+      </Helmet>
+      <article className="rr-detail" itemScope itemType="https://schema.org/Product">
       <button className="back-link" onClick={onBack}>← Back to products</button>
 
       <div className="rr-detail-grid">

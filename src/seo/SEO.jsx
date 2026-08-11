@@ -2,34 +2,32 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { commonOGData, generateStructuredData } from './seoConfig';
 
-// Define pages that SHOULD be indexed by Google
-const INDEXABLE_PAGES = new Set([
+// Define core pages that SHOULD be indexed by Google
+// NOTE: Product pages are now handled by ProductDetail component via Helmet meta tags
+// This set only includes non-product pages
+const CORE_INDEXABLE_PAGES = new Set([
   '/',
   '/about',
   '/about/quality',
+  '/about/vision-and-values',
+  '/about/milestone-and-recognitions',
+  '/about/innovation',
+  '/about/board-of-directors',
   '/contact',
   '/manufacturing',
-  // Product pages - add your 20 products here
-  '/products/view/product-aspirin',
-  '/products/view/product-clopidogrel',
-  '/products/view/product-clopidogrel-aspirin',
-  '/products/view/product-duloxetine',
-  '/products/view/product-dexlansoprazole',
-  '/products/view/product-esomeprazole-ec',
-  '/products/view/product-omeprazole',
-  '/products/view/product-pantoprazole',
-  '/products/view/product-rabeprazole',
-  '/products/view/product-lansoprazole',
-  '/products/view/product-metoprolol',
-  '/products/view/product-tamsulosin',
-  '/products/view/product-venlafaxine',
-  '/products/view/product-pregabalin',
-  '/products/view/product-gabapentin',
-  '/products/view/product-mesalamine',
-  '/products/view/product-budesonide',
-  '/products/view/product-orlistat',
-  '/products/view/product-aceclofenac',
-  '/products/view/product-diclofenac',
+  '/products',
+  '/products/categories',
+  '/products/categories/pellets',
+  '/products/categories/granules',
+  '/products/categories/apis-and-intermediary',
+  '/products/categories/rraynex-luxe',
+  '/blog',
+  '/worldwide',
+  '/responsibility',
+  '/responsibility/csr',
+  '/responsibility/sustainability',
+  '/responsibility/ehs',
+  '/responsibility/uplifting-ecosystem',
 ]);
 
 /**
@@ -40,7 +38,11 @@ const INDEXABLE_PAGES = new Set([
 const shouldIndex = (path) => {
   if (!path) return false;
   const normalizedPath = path.replace(/\/$/, '') || '/';
-  return INDEXABLE_PAGES.has(normalizedPath);
+  // Check if it's a product page - these are handled by ProductDetail component
+  if (normalizedPath.startsWith('/products/view/')) {
+    return true; // ProductDetail sets robots via Helmet
+  }
+  return CORE_INDEXABLE_PAGES.has(normalizedPath);
 };
 
 /**
@@ -125,4 +127,4 @@ const SEO = ({
 };
 
 export default SEO;
-export { INDEXABLE_PAGES, shouldIndex };
+export { CORE_INDEXABLE_PAGES, shouldIndex };
