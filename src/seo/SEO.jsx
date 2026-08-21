@@ -28,6 +28,7 @@ const CORE_INDEXABLE_PAGES = new Set([
   '/responsibility/sustainability',
   '/responsibility/ehs',
   '/responsibility/uplifting-ecosystem',
+  '/rraynex-luxe',
 ]);
 
 /**
@@ -43,6 +44,48 @@ const shouldIndex = (path) => {
     return true; // ProductDetail sets robots via Helmet
   }
   return CORE_INDEXABLE_PAGES.has(normalizedPath);
+};
+
+/**
+ * Generate BreadcrumbList structured data
+ * @param {string} pageName - Current page name
+ * @param {string} canonical - Current page canonical URL
+ * @returns {Object} BreadcrumbList schema
+ */
+export const generateBreadcrumbSchema = (pageName, canonical) => {
+  const breadcrumbs = [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://rraynex.com/" }
+  ];
+  
+  const breadcrumbMap = {
+    'aboutUs': [{ "@type": "ListItem", position: 2, name: "About Us", item: canonical }],
+    'visionValues': [{ "@type": "ListItem", position: 2, name: "About", item: "https://rraynex.com/about" }, { "@type": "ListItem", position: 3, name: "Vision & Values", item: canonical }],
+    'milestones': [{ "@type": "ListItem", position: 2, name: "About", item: "https://rraynex.com/about" }, { "@type": "ListItem", position: 3, name: "Milestones", item: canonical }],
+    'innovation': [{ "@type": "ListItem", position: 2, name: "About", item: "https://rraynex.com/about" }, { "@type": "ListItem", position: 3, name: "Innovation", item: canonical }],
+    'quality': [{ "@type": "ListItem", position: 2, name: "About", item: "https://rraynex.com/about" }, { "@type": "ListItem", position: 3, name: "Quality", item: canonical }],
+    'board': [{ "@type": "ListItem", position: 2, name: "About", item: "https://rraynex.com/about" }, { "@type": "ListItem", position: 3, name: "Board", item: canonical }],
+    'responsibility': [{ "@type": "ListItem", position: 2, name: "Responsibility", item: canonical }],
+    'csr': [{ "@type": "ListItem", position: 2, name: "Responsibility", item: "https://rraynex.com/responsibility" }, { "@type": "ListItem", position: 3, name: "CSR", item: canonical }],
+    'sustainability': [{ "@type": "ListItem", position: 2, name: "Responsibility", item: "https://rraynex.com/responsibility" }, { "@type": "ListItem", position: 3, name: "Sustainability", item: canonical }],
+    'ehs': [{ "@type": "ListItem", position: 2, name: "Responsibility", item: "https://rraynex.com/responsibility" }, { "@type": "ListItem", position: 3, name: "EHS", item: canonical }],
+    'ecosystem': [{ "@type": "ListItem", position: 2, name: "Responsibility", item: "https://rraynex.com/responsibility" }, { "@type": "ListItem", position: 3, name: "Ecosystem", item: canonical }],
+    'manufacturing': [{ "@type": "ListItem", position: 2, name: "Manufacturing", item: canonical }],
+    'products': [{ "@type": "ListItem", position: 2, name: "Products", item: canonical }],
+    'productCategories': [{ "@type": "ListItem", position: 2, name: "Products", item: "https://rraynex.com/products" }, { "@type": "ListItem", position: 3, name: "Categories", item: canonical }],
+    'luxe': [{ "@type": "ListItem", position: 2, name: "Rraynex Luxe", item: canonical }],
+    'blog': [{ "@type": "ListItem", position: 2, name: "Blog", item: canonical }],
+    'worldwide': [{ "@type": "ListItem", position: 2, name: "Worldwide", item: canonical }],
+    'contact': [{ "@type": "ListItem", position: 2, name: "Contact", item: canonical }],
+  };
+  
+  const items = breadcrumbMap[pageName] || [];
+  if (items.length === 0) return null;
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [...breadcrumbs, ...items]
+  };
 };
 
 /**
